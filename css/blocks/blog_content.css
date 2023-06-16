@@ -1,0 +1,28 @@
+.blog_content--section {
+ padding-top: 0;
+}
+.blog_content--text_area {
+ --start: calc((14 - var(--columns)) / 2 + 1);
+ grid-column: var(--start)/span var(--columns);
+ position: relative;
+ --columns: 8;
+}
+@media (max-width: 991px) {
+ .blog_content--text_area {
+  --columns: 10;
+ }
+}
+@media (max-width: 767px) {
+ .blog_content--text_area {
+  --columns: 12;
+ }
+}
+.blog_content--text_area hr {
+ margin-block: var(--gap);
+ width: 100%;
+ border: 0;
+ border-bottom-color: currentcolor;
+ border-bottom-style: none;
+ border-bottom-width: 0px;
+ border-bottom: 1px solid var(--theme_color-100);
+}

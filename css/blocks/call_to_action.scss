@@ -1,0 +1,112 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Call to Action
+// Visual:https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=279%3A41938&t=hDouzfnbvM1Nsxym-1
+// Dependancy:
+
+.call_to_action {
+	&-- {
+		&section {
+			--top: 3rem;
+			isolation: isolate;
+			padding: 0;
+		}
+
+		&media_area {
+			position: absolute;
+			inset: var(--top) 0 0 0;
+			background-color: var(--theme_color-900);
+			overflow: hidden;
+			&::after {
+				content: "";
+				display: block;
+				@include image_cover;
+				background-color: black;
+				opacity: 0.6;
+			}
+			img {
+				@include image_cover;
+				opacity: 0.8;
+			}
+		}
+
+		&action {
+			padding: 60/16 * 1rem 0;
+			@include base_grid;
+			position: relative;
+			grid-column: 1/-1;
+			margin-top: var(--top);
+			--columns: 14;
+
+			&.on-grid {
+				--columns: 12;
+				grid-column: 2/-2;
+				border-radius: 1rem;
+				overflow: hidden;
+				margin: var(--gap) 0;
+				@include inner_grid;
+			}
+
+			.background_fill {
+				@include image_cover;
+				background-color: var(--theme_color-900);
+				overflow: hidden;
+				&::after {
+					content: "";
+					display: block;
+					@include image_cover;
+					background-color: black;
+					opacity: 0.6;
+				}
+				img {
+					@include image_cover;
+					transition: 1s all;
+				}
+			}
+		}
+		&text_area {
+			--col_length: 8;
+			--start: calc((var(--columns) - var(--col_length)) / 2 + 1);
+			grid-column: var(--start) / span var(--col_length);
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			position: relative;
+			padding: var(--rp);
+
+			@include xl {
+				--col_length: 6;
+			}
+
+			@include md {
+				--col_length: 10;
+			}
+			@include sm {
+				--col_length: 12;
+			}
+			&.long {
+				--col_length: 10;
+				@include xl {
+					--col_length: 8;
+				}
+				@include md {
+					--col_length: 12;
+				}
+			}
+		}
+		&text_content {
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			@include text_nodes {
+				color: $white;
+			}
+		}
+	}
+
+	//add hover effect to image - no firefox support
+	&section:has(.button:hover) .background_fill img {
+		transform: scale(1.125);
+	}
+}

@@ -1,0 +1,46 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+//================================================
+/*css/components/items_per_row.scsss*/
+//================================================
+@for $i from 1 through 8 {
+  .ipr-#{$i} {
+    --items_per_row: #{$i};
+  }
+} //loop
+@include md {
+  @for $i from 1 through 8 {
+    .ipr-md-#{$i} {
+      --items_per_row: #{$i};
+    }
+  } //loop
+} //md
+@include sm {
+  @for $i from 1 through 8 {
+    .ipr-sm-#{$i} {
+      --items_per_row: #{$i};
+    }
+  } //loop
+} //sm
+@include xs {
+  @for $i from 1 through 8 {
+    .ipr-xs-#{$i} {
+      --items_per_row: #{$i};
+    }
+  } //loop
+} //xs
+@include lg {
+  @for $i from 1 through 8 {
+    .ipr-lg-#{$i} {
+      --items_per_row: #{$i};
+    }
+  } //loop
+} //lg
+@include xl {
+  @for $i from 1 through 8 {
+    .ipr-xl-#{$i} {
+      --items_per_row: #{$i};
+    }
+  } //loop
+} //xl

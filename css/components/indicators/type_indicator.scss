@@ -1,0 +1,51 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Type Indicatior
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=262%3A38130&t=yebcauEJcmg80xcX-1
+
+// Dependancy: none
+
+// <div class="type_indicator">
+// <span class="type_indicator--text"></span>
+// </div>
+
+//================================================
+/*css/components/indicators/type_indicatior.scss*/
+//================================================
+
+.type_indicator {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3/16 * 1rem 11/16 * 1rem;
+	gap: 6/16 * 1rem;
+	background: var(--theme_color-500);
+	border-radius: 2rem;
+	color: $brand-900;
+	font-size: 10/16 * 1rem;
+	font-weight: 500;
+	margin-right: auto;
+	margin-left: 0;
+
+	&-- {
+		&icon {
+		}
+		&text {
+		}
+	}
+
+	&[type="grass"] {
+		background: $grass-500;
+	}
+	&[type="indoor"] {
+		background: $indoor-500;
+	}
+	&[type="beach"] {
+		background: $beach-500;
+	}
+	&[type="clinic"],
+	&[type="sitting"] {
+		background: $brand-500;
+	}
+}

@@ -1,0 +1,43 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Featured Hero
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=134%3A20347&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: none
+
+.blog_content {
+	&-- {
+		&section {
+			padding-top: 0;
+		}
+		&text_area {
+			--start: calc((14 - var(--columns)) / 2 + 1);
+			grid-column: var(--start) / span var(--columns);
+			position: relative;
+
+			--columns: 8;
+			@include md {
+				--columns: 10;
+			}
+			@include sm {
+				--columns: 12;
+			}
+			hr {
+				margin-block: var(--gap);
+				width: 100%;
+				border: 0;
+				border-bottom-color: currentcolor;
+				border-bottom-style: none;
+				border-bottom-width: 0px;
+				border-bottom: 1px solid var(--theme_color-100);
+			}
+		}
+		&text_content {
+		}
+
+		&media_area {
+		}
+		&media_content {
+		}
+	} //--
+}

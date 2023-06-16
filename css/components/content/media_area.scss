@@ -1,0 +1,36 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Text Area
+// Visual:--
+// Dependancy: none
+
+//================================================
+/*css/components/content/media_area.scss*/
+//================================================
+
+.media_area {
+	@include f-center;
+	position: relative;
+}
+.media_content {
+	border-radius: 16/16 * 1rem;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	img,
+	video {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	&.cover {
+		--ratio: 9/16;
+		padding-top: calc(var(--ratio) * 100%);
+		img,
+		video {
+			@include image_cover;
+		}
+	}
+}

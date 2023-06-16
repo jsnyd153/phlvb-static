@@ -1,0 +1,63 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+//================================================
+/*css/components/section_modifiers.scss*/
+//================================================
+
+section {
+	// overflow-x: hidden;
+
+	--padding_base: #{90/16 * 1rem};
+	@include md {
+		--padding_base: #{75/16 * 1rem};
+	}
+	@include sm {
+		--padding_base: #{60/16 * 1rem};
+	}
+	@include xs {
+		--padding_base: #{45/16 * 1rem};
+	}
+
+	padding-block: var(--padding_base);
+
+	.page-wrapper > &:nth-child(1) {
+		padding-top: calc(var(--padding_base) + #{86 / 16 * 1rem});
+	}
+	.page-wrapper > &:nth-child(1).core_hero--section {
+		padding-top: #{86 / 16 * 1rem};
+	}
+
+	@for $i from 0 through 9 {
+		&.padding-v-#{$i}00 {
+			padding-block: calc(var(--padding_base) * #{$i} / 5);
+		}
+	}
+
+	@for $i from 0 through 9 {
+		&.padding-b-#{$i}00 {
+			padding-bottom: calc(var(--padding_base) * #{$i} / 5);
+		}
+	}
+	@for $i from 0 through 9 {
+		&.gap-v-#{$i}00 {
+			row-gap: calc(var(--gap) * #{$i}/ 2);
+		}
+	}
+
+	&.o-hidden {
+		overflow: hidden;
+	}
+	&.x-hidden {
+		overflow-x: hidden;
+	}
+	&.y-hidden {
+		overflow-y: hidden;
+	}
+	&.x-scroll {
+		overflow-x: scroll;
+	}
+	&.y-scroll {
+		overflow-y: scroll;
+	}
+}

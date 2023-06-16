@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+//================================================
+/*css/components/colors.scss*/
+//================================================
+
+//Color Utility Classes
+@each $type in $colors_full {
+	.has-#{nth($type, 1)}-background {
+		--background_color: #{nth($type, 2)};
+		& ~ * {
+			--background_color: #{nth($type, 2)};
+		}
+
+		&.background_fill {
+			--background_color: #{nth($type, 2)};
+		}
+	}
+
+	.is-#{nth($type, 1)} {
+		color: #{nth($type, 2)};
+	}
+	.has-#{nth($type, 1)}-fill {
+		fill: #{nth($type, 2)};
+	}
+	.has-#{nth($type, 1)}-stroke {
+		stroke: #{nth($type, 2)};
+	}
+}

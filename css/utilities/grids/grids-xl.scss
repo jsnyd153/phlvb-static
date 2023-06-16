@@ -1,0 +1,27 @@
+@use "../../abstracts" as *;
+
+.block {
+  @include xl {
+    @for $i from 1 through 14 {
+      &.col-xl-#{$i} {
+        --column_span: #{$i};
+        --column_start: #{round((14 - $i) / 2 + 1)};
+      }
+      &.start-xl-#{$i} {
+        grid-column-start: $i + 1;
+      }
+    } //loop
+    &.start-xl-0 {
+      grid-column-start: 1;
+    }
+
+    @for $i from 1 through 4 {
+      &.row-xl-#{$i} {
+        grid-row: #{$i};
+      }
+    }
+    &.row-xl-auto {
+      grid-row: auto;
+    }
+  } //xl
+}

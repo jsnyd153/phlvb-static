@@ -1,0 +1,34 @@
+/*css/components/content/media_area.scss*/
+.media_area {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+
+.media_content {
+ border-radius: 1rem;
+ position: relative;
+ overflow: hidden;
+ width: 100%;
+}
+.media_content img,
+.media_content video {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+.media_content.cover {
+ --ratio: 9/16;
+ padding-top: calc(var(--ratio) * 100%);
+}
+.media_content.cover img,
+.media_content.cover video {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+}

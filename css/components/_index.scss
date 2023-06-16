@@ -1,0 +1,25 @@
+@forward "text_styles.scss";
+@forward "buttons";
+@forward "content";
+// @forward "inputs";
+// @forward "modals";
+@forward "cards";
+
+.locations--list {
+	i {
+		color: var(--theme_color-900);
+		border-radius: 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 7/16 * 1rem 11/16 * 1rem;
+		gap: 6/16 * 1rem;
+		font-size: 10/16 * 1rem;
+
+		&[data-indicator="grass"] {
+			content: "grass";
+			background: $grass-500;
+		}
+	}
+}

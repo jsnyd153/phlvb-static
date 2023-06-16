@@ -1,0 +1,352 @@
+/*css/components/_backgrounds.scss*/
+.background_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.background_area .background_fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.background_area .background_fill img,
+.background_area .background_fill video,
+.background_area .background_fill iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.background_area .background_fill {
+  background-color: var(--background_color);
+}
+
+.has-electric_green-background {
+  --background_color: #b9fa3d;
+}
+.has-electric_green-background ~ * {
+  --background_color: #b9fa3d;
+}
+.has-electric_green-background.background_fill {
+  --background_color: #b9fa3d;
+}
+
+.has-forest_green-background {
+  --background_color: #176c1f;
+}
+.has-forest_green-background ~ * {
+  --background_color: #176c1f;
+}
+.has-forest_green-background.background_fill {
+  --background_color: #176c1f;
+}
+
+.has-tea_green-background {
+  --background_color: #e5ffb4;
+}
+.has-tea_green-background ~ * {
+  --background_color: #e5ffb4;
+}
+.has-tea_green-background.background_fill {
+  --background_color: #e5ffb4;
+}
+
+.has-interface_purple-background {
+  --background_color: #6800ec;
+}
+.has-interface_purple-background ~ * {
+  --background_color: #6800ec;
+}
+.has-interface_purple-background.background_fill {
+  --background_color: #6800ec;
+}
+
+.has-interface_purple_dark-background {
+  --background_color: #340076;
+}
+.has-interface_purple_dark-background ~ * {
+  --background_color: #340076;
+}
+.has-interface_purple_dark-background.background_fill {
+  --background_color: #340076;
+}
+
+.has-interface_purple_light-background {
+  --background_color: #d3bffc;
+}
+.has-interface_purple_light-background ~ * {
+  --background_color: #d3bffc;
+}
+.has-interface_purple_light-background.background_fill {
+  --background_color: #d3bffc;
+}
+
+.has-electric_teal-background {
+  --background_color: #4fe9de;
+}
+.has-electric_teal-background ~ * {
+  --background_color: #4fe9de;
+}
+.has-electric_teal-background.background_fill {
+  --background_color: #4fe9de;
+}
+
+.has-dark_teal-background {
+  --background_color: #00857e;
+}
+.has-dark_teal-background ~ * {
+  --background_color: #00857e;
+}
+.has-dark_teal-background.background_fill {
+  --background_color: #00857e;
+}
+
+.has-light_mint-background {
+  --background_color: #ccf9f6;
+}
+.has-light_mint-background ~ * {
+  --background_color: #ccf9f6;
+}
+.has-light_mint-background.background_fill {
+  --background_color: #ccf9f6;
+}
+
+.has-neon_fuschia-background {
+  --background_color: #f04ccb;
+}
+.has-neon_fuschia-background ~ * {
+  --background_color: #f04ccb;
+}
+.has-neon_fuschia-background.background_fill {
+  --background_color: #f04ccb;
+}
+
+.has-dark_fuschia-background {
+  --background_color: #c6109c;
+}
+.has-dark_fuschia-background ~ * {
+  --background_color: #c6109c;
+}
+.has-dark_fuschia-background.background_fill {
+  --background_color: #c6109c;
+}
+
+.has-scarlet_red-background {
+  --background_color: #e32b39;
+}
+.has-scarlet_red-background ~ * {
+  --background_color: #e32b39;
+}
+.has-scarlet_red-background.background_fill {
+  --background_color: #e32b39;
+}
+
+.has-dark_scarlet-background {
+  --background_color: #bf000e;
+}
+.has-dark_scarlet-background ~ * {
+  --background_color: #bf000e;
+}
+.has-dark_scarlet-background.background_fill {
+  --background_color: #bf000e;
+}
+
+.has-peach_pink-background {
+  --background_color: #ffdcdf;
+}
+.has-peach_pink-background ~ * {
+  --background_color: #ffdcdf;
+}
+.has-peach_pink-background.background_fill {
+  --background_color: #ffdcdf;
+}
+
+.has-ultraviolet-background {
+  --background_color: #3e74ff;
+}
+.has-ultraviolet-background ~ * {
+  --background_color: #3e74ff;
+}
+.has-ultraviolet-background.background_fill {
+  --background_color: #3e74ff;
+}
+
+.has-deep_ultraviolet-background {
+  --background_color: #042cb9;
+}
+.has-deep_ultraviolet-background ~ * {
+  --background_color: #042cb9;
+}
+.has-deep_ultraviolet-background.background_fill {
+  --background_color: #042cb9;
+}
+
+.has-cornflower_blue-background {
+  --background_color: #c6d6ff;
+}
+.has-cornflower_blue-background ~ * {
+  --background_color: #c6d6ff;
+}
+.has-cornflower_blue-background.background_fill {
+  --background_color: #c6d6ff;
+}
+
+.has-dark_fog-background {
+  --background_color: #ece8ee;
+}
+.has-dark_fog-background ~ * {
+  --background_color: #ece8ee;
+}
+.has-dark_fog-background.background_fill {
+  --background_color: #ece8ee;
+}
+
+.has-fog_grey-background {
+  --background_color: #f4f0f7;
+}
+.has-fog_grey-background ~ * {
+  --background_color: #f4f0f7;
+}
+.has-fog_grey-background.background_fill {
+  --background_color: #f4f0f7;
+}
+
+.has-black-background {
+  --background_color: #000000;
+}
+.has-black-background ~ * {
+  --background_color: #000000;
+}
+.has-black-background.background_fill {
+  --background_color: #000000;
+}
+
+.has-grey-900-background {
+  --background_color: #222221;
+}
+.has-grey-900-background ~ * {
+  --background_color: #222221;
+}
+.has-grey-900-background.background_fill {
+  --background_color: #222221;
+}
+
+.has-grey-850-background {
+  --background_color: #2b2b2a;
+}
+.has-grey-850-background ~ * {
+  --background_color: #2b2b2a;
+}
+.has-grey-850-background.background_fill {
+  --background_color: #2b2b2a;
+}
+
+.has-grey-800-background {
+  --background_color: #333331;
+}
+.has-grey-800-background ~ * {
+  --background_color: #333331;
+}
+.has-grey-800-background.background_fill {
+  --background_color: #333331;
+}
+
+.has-grey-700-background {
+  --background_color: #595959;
+}
+.has-grey-700-background ~ * {
+  --background_color: #595959;
+}
+.has-grey-700-background.background_fill {
+  --background_color: #595959;
+}
+
+.has-grey-600-background {
+  --background_color: #808080;
+}
+.has-grey-600-background ~ * {
+  --background_color: #808080;
+}
+.has-grey-600-background.background_fill {
+  --background_color: #808080;
+}
+
+.has-grey-500-background {
+  --background_color: #9b9da0;
+}
+.has-grey-500-background ~ * {
+  --background_color: #9b9da0;
+}
+.has-grey-500-background.background_fill {
+  --background_color: #9b9da0;
+}
+
+.has-grey-400-background {
+  --background_color: #b0b2b4;
+}
+.has-grey-400-background ~ * {
+  --background_color: #b0b2b4;
+}
+.has-grey-400-background.background_fill {
+  --background_color: #b0b2b4;
+}
+
+.has-grey-300-background {
+  --background_color: #c3c1c3;
+}
+.has-grey-300-background ~ * {
+  --background_color: #c3c1c3;
+}
+.has-grey-300-background.background_fill {
+  --background_color: #c3c1c3;
+}
+
+.has-grey-200-background {
+  --background_color: #eeeeee;
+}
+.has-grey-200-background ~ * {
+  --background_color: #eeeeee;
+}
+.has-grey-200-background.background_fill {
+  --background_color: #eeeeee;
+}
+
+.has-grey-100-background {
+  --background_color: #f6f6f6;
+}
+.has-grey-100-background ~ * {
+  --background_color: #f6f6f6;
+}
+.has-grey-100-background.background_fill {
+  --background_color: #f6f6f6;
+}
+
+.has-offwhite-background {
+  --background_color: #fafafa;
+}
+.has-offwhite-background ~ * {
+  --background_color: #fafafa;
+}
+.has-offwhite-background.background_fill {
+  --background_color: #fafafa;
+}
+
+.has-white-background {
+  --background_color: #ffffff;
+}
+.has-white-background ~ * {
+  --background_color: #ffffff;
+}
+.has-white-background.background_fill {
+  --background_color: #ffffff;
+}

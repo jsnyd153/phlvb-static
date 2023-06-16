@@ -1,0 +1,60 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Text Area
+// Visual:--
+// Dependancy: none
+
+//================================================
+/*css/components/content/location_list.scss*/
+//================================================
+
+//
+.locations--list {
+	li {
+		display: flex;
+		gap: 0.5rem;
+	}
+	i {
+		color: var(--theme_color-900);
+		border-radius: 2rem;
+		display: none;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 4/16 * 1rem 10/16 * 1rem;
+		gap: 6/16 * 1rem;
+		font-size: 11/16 * 1rem;
+		font-weight: 500;
+		margin-bottom: auto;
+	}
+}
+
+[data-indicator="grass"] {
+	&:after {
+		content: "Grass";
+	}
+	background: $grass-500;
+}
+[data-indicator="indoor"] {
+	&:after {
+		content: "Indoor";
+	}
+	background: $indoor-500;
+}
+[data-indicator="beach"] {
+	&:after {
+		content: "Beach";
+	}
+	background: $beach-500;
+}
+
+[location-data~="grass"] i[data-indicator="grass"] {
+	display: flex;
+}
+[location-data~="indoor"] i[data-indicator="indoor"] {
+	display: flex;
+}
+[location-data~="beach"] i[data-indicator="beach"] {
+	display: flex;
+}

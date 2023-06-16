@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+//================================================
+/*css/components/_backgrounds.scss*/
+//================================================
+
+//================================================
+//Background setup for individual section blocks
+//each section has a .background_area element to run colors and images through
+//they cover the section
+//================================================
+.background_area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+	.background_fill {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img,
+		video,
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		//add utility classes to control the center point of the image?
+	}
+}
+
+//Color Utility Classes
+@each $type in $colors_full {
+	.has-#{nth($type, 1)}-background {
+		--background_color: #{nth($type, 2)};
+		& ~ * {
+			--background_color: #{nth($type, 2)};
+		}
+
+		&.background_fill {
+			--background_color: #{nth($type, 2)};
+		}
+	}
+}
+
+@for $i from 1 through 10 {
+	$a: $i / 10;
+	.overlay-darken-#{$i}0 {
+		--alpha: #{$a};
+		@include image_cover;
+		background-color: rgba(0, 0, 0, var(--alpha));
+	}
+}
+
+.overlay-gradient {
+	@include image_cover;
+	--color_start: #{$brand-900};
+	--color_end: #{rgba($brand-900, 0)};
+	--direction: 0deg;
+
+	background: linear-gradient(
+		var(--direction),
+		var(--color_start) 10%,
+		var(--color_end) 90%
+	);
+
+	&-from_bottom {
+		//default values
+	}
+
+	&-from_left {
+		--direction: 90deg;
+	}
+
+	&-from_top {
+		--direction: 180deg;
+	}
+
+	&-from_right {
+		--direction: 270deg;
+	}
+
+	@each $type in $colors_full {
+		&-#{nth($type, 1)} {
+			--color_start: #{nth($type, 2)};
+			--color_end: #{rgba(nth($type, 2), 0)};
+		}
+	}
+}

@@ -1,0 +1,114 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Featured Hero
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=134%3A20347&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: /js/setCustomAttr.js  = $(".reel--wrapper").each(function(){});
+
+.graphic_hero {
+	&-- {
+		&section {
+			padding: 160/16 * 1rem 0;
+			@include md {
+				padding: 120/16 * 1rem 0;
+			}
+			@include sm {
+				padding: 90/16 * 1rem 0;
+			}
+
+			.background_area {
+				@include image_cover;
+			}
+			.background_fill {
+				@include image_cover;
+				img {
+					@include image_cover;
+				}
+			}
+
+			& + section {
+				padding-top: 0;
+			}
+		}
+
+		&text_area {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			grid-column: 2 / span 7;
+			z-index: 1;
+			// padding: ;
+			@include xl {
+				grid-column: 2 / span 7;
+			}
+			@include md {
+				grid-column: 2 / span 7;
+			}
+			@include sm {
+				grid-column: 2 / -2;
+			}
+		}
+		&text_content {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			align-items: flex-start;
+			@include text_nodes {
+				color: $white;
+			}
+		}
+		&reel {
+			grid-column: span 6 / -1;
+			container-type: inline-size;
+			@include xl {
+				grid-column: span 6 / -1;
+			}
+			@include md {
+				grid-column: span 6 / -1;
+			}
+			height: 100%;
+			@include sm {
+				grid-column: span 13 / -1;
+			}
+		}
+	} //--
+}
+
+.reel-- {
+	&wrapper {
+		//Fall back value for autoGrid
+		//Value set using javascript to allow cards to scale slightly but maintain rendered size between 140px-160px
+		//--autoGrid: calc((1000 - (renderedWwidth) +  ) / 12 * 1%);
+		--autoGrid: 45%;
+
+		display: grid;
+		gap: var(--gap);
+		grid-auto-flow: column;
+		grid-auto-columns: var(--autoGrid);
+		-webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%);
+		mask-image: linear-gradient(to left, transparent 0%, black 10%);
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
+		height: 100%;
+		padding: var(--gap) var(--gap) var(--gap) 0;
+
+		//cap the card scaling when the container reaches 700px wide
+		@container (min-width: 700px) {
+			grid-auto-columns: 25%;
+		}
+
+		> * {
+			scroll-snap-align: start;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		/* Hide scrollbar for IE, Edge and Firefox */
+		& {
+			-ms-overflow-style: none; /* IE and Edge */
+			scrollbar-width: none; /* Firefox */
+		}
+	}
+}

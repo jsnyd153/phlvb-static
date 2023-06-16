@@ -1,0 +1,116 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Featured Hero
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=134%3A20347&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: none
+
+.feature_hero {
+	&-- {
+		&section {
+			position: relative;
+			overflow: visible;
+		}
+
+		&text_area,
+		&media_area {
+			--columns: 12;
+			--start: calc((14 - var(--columns)) / 2 + 1);
+			grid-column: var(--start) / span var(--columns);
+			position: relative;
+
+			&.inset {
+				--columns: 10;
+				@include md {
+					--columns: 12;
+				}
+			}
+			&.narrow {
+				--columns: 8;
+				@include md {
+					--columns: 10;
+				}
+				@include sm {
+					--columns: 12;
+				}
+			}
+		}
+
+		&text_area {
+			@include f-center;
+			flex-direction: column;
+			gap: var(--gap);
+			z-index: 1;
+		}
+		&text_content {
+			h1 {
+				text-align: center;
+				@include f-center;
+				flex-direction: column;
+				gap: 20/16 * 1rem;
+				@include md {
+					gap: 0.25em;
+				}
+			}
+			p {
+				text-align: center;
+			}
+		}
+
+		&media_area {
+			@include f-center;
+			flex-direction: column;
+			z-index: 1;
+		}
+		&media_content {
+			border-radius: 0.75rem;
+		}
+
+		&page_nav {
+			align-items: center;
+			.button-container {
+				@include sm {
+					gap: 0.5rem;
+				}
+			}
+			.button {
+				@include sm {
+					font-size: 0.625rem;
+				}
+			}
+		}
+		&background_media {
+			@include base_grid;
+			position: absolute;
+			inset: 0;
+
+			&-image {
+				// grid-column: 1 / span 5;
+				@include cover_container;
+				padding-top: 18/9 * 100%;
+				// border-radius: 0.75rem;
+				img {
+					@include image_cover;
+				}
+			}
+		}
+	} //--
+}
+
+.sticky_nav {
+	padding: 1rem 0;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	top: 0;
+	background: rgba($brand-900, 0.75);
+	backdrop-filter: blur(0.5rem);
+	transform: translateY(-100%);
+	z-index: 201;
+
+	.scroll_past {
+		transform: translateY(0);
+	}
+}

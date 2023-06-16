@@ -1,0 +1,131 @@
+/*css/components/section_modifiers.scss*/
+section {
+ --padding_base: 5.625rem;
+ padding-block: var(--padding_base);
+}
+@media (max-width: 991px) {
+ section {
+  --padding_base: 4.6875rem;
+ }
+}
+@media (max-width: 767px) {
+ section {
+  --padding_base: 3.75rem;
+ }
+}
+@media (max-width: 477px) {
+ section {
+  --padding_base: 2.8125rem;
+ }
+}
+.page-wrapper > section:nth-child(1) {
+ padding-top: calc(var(--padding_base) + 5.375rem);
+}
+.page-wrapper > section:nth-child(1).core_hero--section {
+ padding-top: 5.375rem;
+}
+section.padding-v-000 {
+ padding-block: calc(var(--padding_base) * 0 / 5);
+}
+section.padding-v-100 {
+ padding-block: calc(var(--padding_base) * 1 / 5);
+}
+section.padding-v-200 {
+ padding-block: calc(var(--padding_base) * 2 / 5);
+}
+section.padding-v-300 {
+ padding-block: calc(var(--padding_base) * 3 / 5);
+}
+section.padding-v-400 {
+ padding-block: calc(var(--padding_base) * 4 / 5);
+}
+section.padding-v-500 {
+ padding-block: calc(var(--padding_base) * 5 / 5);
+}
+section.padding-v-600 {
+ padding-block: calc(var(--padding_base) * 6 / 5);
+}
+section.padding-v-700 {
+ padding-block: calc(var(--padding_base) * 7 / 5);
+}
+section.padding-v-800 {
+ padding-block: calc(var(--padding_base) * 8 / 5);
+}
+section.padding-v-900 {
+ padding-block: calc(var(--padding_base) * 9 / 5);
+}
+section.padding-b-000 {
+ padding-bottom: calc(var(--padding_base) * 0 / 5);
+}
+section.padding-b-100 {
+ padding-bottom: calc(var(--padding_base) * 1 / 5);
+}
+section.padding-b-200 {
+ padding-bottom: calc(var(--padding_base) * 2 / 5);
+}
+section.padding-b-300 {
+ padding-bottom: calc(var(--padding_base) * 3 / 5);
+}
+section.padding-b-400 {
+ padding-bottom: calc(var(--padding_base) * 4 / 5);
+}
+section.padding-b-500 {
+ padding-bottom: calc(var(--padding_base) * 5 / 5);
+}
+section.padding-b-600 {
+ padding-bottom: calc(var(--padding_base) * 6 / 5);
+}
+section.padding-b-700 {
+ padding-bottom: calc(var(--padding_base) * 7 / 5);
+}
+section.padding-b-800 {
+ padding-bottom: calc(var(--padding_base) * 8 / 5);
+}
+section.padding-b-900 {
+ padding-bottom: calc(var(--padding_base) * 9 / 5);
+}
+section.gap-v-000 {
+ row-gap: calc(var(--gap) * 0/ 2);
+}
+section.gap-v-100 {
+ row-gap: calc(var(--gap) * 1/ 2);
+}
+section.gap-v-200 {
+ row-gap: calc(var(--gap) * 2/ 2);
+}
+section.gap-v-300 {
+ row-gap: calc(var(--gap) * 3/ 2);
+}
+section.gap-v-400 {
+ row-gap: calc(var(--gap) * 4/ 2);
+}
+section.gap-v-500 {
+ row-gap: calc(var(--gap) * 5/ 2);
+}
+section.gap-v-600 {
+ row-gap: calc(var(--gap) * 6/ 2);
+}
+section.gap-v-700 {
+ row-gap: calc(var(--gap) * 7/ 2);
+}
+section.gap-v-800 {
+ row-gap: calc(var(--gap) * 8/ 2);
+}
+section.gap-v-900 {
+ row-gap: calc(var(--gap) * 9/ 2);
+}
+section.o-hidden {
+ overflow: hidden;
+}
+section.x-hidden {
+ overflow-x: hidden;
+}
+section.y-hidden {
+ overflow-y: hidden;
+}
+section.x-scroll {
+ overflow-x: scroll;
+}
+section.y-scroll {
+ overflow-y: scroll;
+}

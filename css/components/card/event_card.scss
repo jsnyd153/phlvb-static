@@ -1,0 +1,188 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Event Item
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=148%3A10022&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: none
+
+//================================================
+/*css/components/cards/event_card.scss*/
+//================================================
+
+.event_card {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 24/16 * 1rem;
+	gap: 1rem;
+
+	&.has-media {
+		display: grid;
+		grid-template-rows: auto 1fr;
+		border-radius: 10/16 * 1rem;
+		padding: 10/16 * 1rem;
+		background: var(--theme_color-500);
+		color: $white;
+		gap: 10/16 * 1rem;
+		aspect-ratio: 250 / 350;
+		box-shadow: 0px 8px 12px -5px rgba(15, 0, 0, 0.5);
+		container-type: inline-size;
+		transition: 0.3s all;
+		&:hover {
+			color: $white;
+			box-shadow: 0px 8px 20px -5px rgba(15, 0, 0, 0.8);
+		}
+	}
+
+	&-- {
+		&date {
+			font-size: 14/16 * 1rem;
+			line-height: 100%;
+			font-weight: $sans_font;
+			text-transform: uppercase;
+			display: flex;
+			gap: 10/16 * 1rem;
+			align-items: justify;
+			.date {
+				font-weight: 500;
+				display: flex;
+				gap: inherit;
+				color: var(--theme_color-100);
+				.has-media & {
+					color: var(--theme_color-900);
+					font-weight: 400;
+					font-size: 7.5cqi;
+				}
+				a:hover & {
+					color: var(--theme_color-900);
+				}
+				&::after {
+					content: "";
+					display: block;
+					height: 100%;
+					border-right: 1px solid currentColor;
+					.has-media & {
+						display: none;
+					}
+				}
+			}
+			.time {
+				color: var(--theme_color-200);
+				a:hover & {
+					color: var(--theme_color-800);
+				}
+			}
+		}
+
+		&media_area {
+			.has-media & {
+				grid-column: 1;
+				grid-row: 2;
+				border-radius: 8/16 * 1rem;
+				overflow: hidden;
+				box-shadow: 0px 8px 12px -5px rgba(15, 0, 0, 0.3);
+				img {
+					@include image_cover;
+					transition: 0.3s all;
+				}
+				&::after {
+					content: "";
+					display: block;
+					@include image_cover;
+					--color_start: rgba(0, 0, 0, 0.6);
+					--color_end: #{rgba(0, 0, 0, 0)};
+					--direction: 0deg;
+
+					background: linear-gradient(
+						var(--direction),
+						var(--color_start) 20%,
+						var(--color_end) 80%
+					);
+				}
+			}
+			a.has-media:hover & {
+				// scale: 1.02;
+				box-shadow: 0px 8px 20px -5px rgba(15, 0, 0, 0.8);
+				img {
+					scale: 1.1;
+				}
+			}
+		}
+
+		&description {
+			display: grid;
+			gap: 0.75rem;
+			grid-template-columns: 1fr auto;
+			position: relative;
+			.has-media & {
+				grid-column: 1;
+				grid-row: 2;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				padding: 12/16 * 1rem 12/16 * 1rem 1rem 12/16 * 1rem;
+				gap: 0.5rem;
+			}
+		}
+		&title {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+			h4 {
+				color: var(--theme_color-100);
+				line-height: 110%;
+				a:hover & {
+					color: var(--theme_color-900);
+				}
+				.has-media & {
+					color: $white;
+					font-size: 15cqi;
+				}
+				a.has-media:hover & {
+					color: $white;
+				}
+			}
+			.type {
+				.has-media & {
+					display: none;
+				}
+			}
+		}
+		&level {
+			grid-column: 1;
+			align-self: end;
+			display: flex;
+			gap: 0.5em;
+			font-size: 14/16 * 1rem;
+			line-height: 100%;
+			font-weight: $sans_font;
+
+			.has-media & {
+				align-self: start;
+				font-size: 8cqi;
+			}
+
+			.rank {
+				font-weight: 600;
+			}
+		}
+		&location {
+			grid-column: 2;
+			grid-row: 1/3;
+			align-self: end;
+			.has-media & {
+				align-self: start;
+				.location {
+					padding: 0.5em 1em;
+					font-size: 5cqi;
+					color: $white;
+				}
+			}
+			.has-media:hover & {
+				.location {
+					color: $white;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,237 @@
+// Fluid Measurements
+@use "_media_queries" as *;
+@use "_colors" as *;
+@use "_fonts" as *;
+
+@mixin fluid_size_text($scale: 2.5, $floor: 38/16) {
+	$cap: $scale * 1440 / 100 /16 * 1;
+	font-size: calc($scale * 1vw + $floor * 1rem);
+	@include xl() {
+		font-size: calc($cap * 1rem + $floor * 1rem);
+	}
+}
+
+@mixin fluid_line-height($scale: 2.5, $floor: 38/16) {
+	$cap: $scale * 1440 / 100 /16 * 1;
+	line-height: calc($scale * 1vw + $floor * 1rem);
+	@include xl() {
+		line-height: calc($cap * 1rem + $floor * 1rem);
+	}
+}
+
+// functions for scss color adjustments
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+///
+@function tint($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+///
+@function shade($color, $percentage) {
+	@return mix(black, $color, $percentage);
+}
+
+//text selectors
+@mixin header_tags {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@content;
+	}
+}
+
+@mixin text_nodes {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		@content;
+	}
+}
+
+//nasic text styles
+@mixin text_base($p: 14, $h: 1, $w: 300) {
+	font-size: $p/16 * 1rem;
+	line-height: $h;
+	font-family: $sans_font;
+	font-weight: $w;
+	// $color: $grey-700;
+	letter-spacing: -0.01em;
+}
+//basic setting for pseudo element
+@mixin psuedo_el() {
+	display: block;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+// sets and image to cover - parent must have position property
+@mixin image_cover() {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	inset: 0;
+	object-fit: cover;
+}
+
+//sets up container for use with @image_cover
+@mixin cover_container() {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+@mixin t-center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin f-center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin base_grid() {
+	display: grid;
+	grid-template-columns: var(--grid_layout);
+	gap: var(--gap);
+}
+
+@mixin inner_grid($c: 12) {
+	--columns: #{$c};
+	display: grid;
+	grid-column: 2/-2;
+	grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+	gap: var(--gap);
+}
+
+@mixin gradient_text_fill {
+	display: inline-block;
+	background: var(--theme_gradient);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+// @mixin hover_underline() {
+//   &::after {
+//     color: inherit;
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     bottom: -0.125rem;
+//     left: 0;
+//     height: 0.125rem;
+//     width: 0%;
+//     transition: 0.15s all;
+//     background: currentColor;
+//   }
+
+//   &:hover {
+//     &::after {
+//       width: 100%;
+//     }
+//   }
+// }
+
+// @mixin hover_underline_span() {
+//   span {
+//     position: relative;
+//     &::after {
+//       color: inherit;
+//       content: "";
+//       display: block;
+//       position: absolute;
+//       bottom: -0.125rem;
+//       left: 0;
+//       height: 0.125rem;
+//       width: 0%;
+//       transition: 0.15s all;
+//       background: currentColor;
+//     }
+//   }
+
+//   &:hover,
+//   &:focus {
+//     span {
+//       &::after {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// @mixin nav_transition_in() {
+//   max-height: 3em;
+//   opacity: 0.9;
+//   transition: 0.5s 0.3s max-height, 0.3s 0.3s opacity;
+// }
+
+// @mixin nav_transition_out() {
+//   opacity: 0;
+//   max-height: 0;
+//   transition: 0.3s max-height, 0.3s opacity;
+//   overflow: hidden;
+// }
+
+@mixin button_reset() {
+	display: inline-block;
+	border: none;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	background: none;
+	color: $black;
+	font-family: $sans_font;
+	font-size: 1rem;
+	line-height: 1;
+	cursor: pointer;
+	text-align: center;
+	transition: background 250ms ease-in-out, transform 150ms ease;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+@mixin hover_underline() {
+	&::after {
+		color: inherit;
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -0.125rem;
+		left: 0;
+		height: 0.125rem;
+		width: 0%;
+		transition: 0.15s all;
+		background: currentColor;
+	}
+
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+}

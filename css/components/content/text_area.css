@@ -1,0 +1,18 @@
+/*css/components/content/text_area.scss*/
+.text_area {
+ gap: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ position: relative;
+}
+
+.text_content {
+ gap: 0.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+ position: relative;
+}

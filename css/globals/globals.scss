@@ -1,0 +1,102 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+html {
+	scroll-behavior: smooth;
+	background-color: var(--theme_color-900);
+}
+
+:root {
+	--gap: 1.5rem;
+	--fr_unit: 5vw;
+	--rp: calc(var(--fr_unit) * 0.5);
+
+	@include md {
+		--gap: 1.25rem;
+		--rp: calc(var(--fr_unit) * 0.75);
+	}
+	@include sm {
+		--gap: 1rem;
+		--rp: calc(var(--fr_unit) * 1);
+	}
+	@include xs {
+		--gap: 0.75rem;
+		--rp: calc(var(--fr_unit) * 1.5);
+	}
+}
+
+* {
+	font-family: $sans_font;
+	letter-spacing: -0.02em;
+	line-height: 1.35;
+	// font-weight: 300;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+main {
+	// background-color: var(--theme_color-900);
+	// padding: 3rem;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		// padding: 3rem;
+	}
+}
+
+// :root {
+// 	--margin-none: 0rem;
+// 	--margin-narrow: 1rem;
+// 	--margin-wide: 2rem;
+// 	--background_color: #{$white};
+// 	--text_color-primary: #{$grey-900};
+// 	--text_color-secondary: #{$grey-700};
+// }
+
+// *,
+// *::after,
+// *::before {
+// 	font-family: $sans_font;
+// }
+
+// main {
+// 	margin: 40/16 * 1rem var(--margin-narrow);
+// 	--background_color: #{$white};
+
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 24/16 * 1rem;
+// }
+
+// hr {
+// 	width: 100%;
+// 	height: 0;
+// 	border: 0;
+// 	border-bottom: 1/16 * 1rem solid $grey-100;
+// }
+
+// .intro {
+// 	--background_color: #{$blue-500};
+// 	--text_color-primary: #{$white};
+// 	--text_color-secondary: #{$grey-100};
+// }
+
+// .margin- {
+// 	&narrow {
+// 		margin-left: var(--margin-narrow);
+// 		margin-right: var(--margin-narrow);
+// 	}
+// 	&inset {
+// 		margin-left: var(--margin-wide);
+// 		margin-right: var(--margin-wide);
+// 	}
+// 	&bleed {
+// 		margin-left: 0;
+// 		margin-right: 0;
+// 	}
+// }

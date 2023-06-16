@@ -1,0 +1,31 @@
+/*css/components/content/intro_area.scss*/
+.intro_area {
+ gap: var(--gap);
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: flex-start;
+ grid-column: 2/-2;
+ position: relative;
+}
+.intro_area.inset {
+ grid-column: 3/-3;
+}
+@media (max-width: 991px) {
+ .intro_area.inset {
+  grid-column: 2/-2;
+ }
+}
+.intro_area.narrow {
+ grid-column: 4/-4;
+}
+@media (max-width: 991px) {
+ .intro_area.narrow {
+  grid-column: 3/-3;
+ }
+}
+@media (max-width: 767px) {
+ .intro_area.narrow {
+  grid-column: 2/-2;
+ }
+}

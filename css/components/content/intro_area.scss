@@ -1,0 +1,35 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Intro Area
+// Visual:--
+// Dependancy: none
+
+//================================================
+/*css/components/content/intro_area.scss*/
+//================================================
+
+.intro_area {
+	gap: var(--gap);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	grid-column: 2/-2;
+	position: relative;
+	&.inset {
+		grid-column: 3/-3;
+		@include md {
+			grid-column: 2/-2;
+		}
+	}
+	&.narrow {
+		grid-column: 4/-4;
+		@include md {
+			grid-column: 3/-3;
+		}
+		@include sm {
+			grid-column: 2/-2;
+		}
+	}
+}

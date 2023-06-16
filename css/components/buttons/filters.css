@@ -1,0 +1,75 @@
+/*css/components/buttons/filters.scss*/
+.checkbox_filter--label {
+ display: flex;
+ padding: 0.625rem 0.9375rem;
+ border: 0.0625rem solid var(--theme_color-200);
+ color: var(--theme_color-200);
+ font-size: 0.75rem;
+ line-height: 100%;
+ font-weight: 500;
+ gap: 0.625rem;
+ align-items: center;
+ border-radius: 2rem;
+ font-family: "Roc Grotesk", Helvetica, Arial, sans-serif;
+ transition: 0.125s all;
+}
+.checkbox_filter--label.echo {
+ color: var(--theme_color-500);
+ border: 0.0625rem solid var(--theme_color-500);
+}
+.checkbox_filter--label.inactive {
+ opacity: 0.5;
+}
+.checkbox_filter--label.inactive:hover, .checkbox_filter--label.inactive:focus-visible, .checkbox_filter--label.inactive:focus {
+ color: var(--theme_color-200);
+ background-color: transparent;
+ border: 0.0625rem solid var(--theme_color-200);
+}
+.checkbox_filter--label:hover, .checkbox_filter--label:focus-visible, .checkbox_filter--label:focus {
+ color: var(--theme_color-100);
+ background-color: var(--theme_color-700t);
+ border: 0.0625rem solid var(--theme_color-100);
+}
+.checkbox_filter--label.current {
+ color: var(--theme_color-900);
+ background-color: var(--theme_color-200);
+ border: 0.0625rem solid var(--theme_color-200);
+}
+.checkbox_filter--label.current:hover, .checkbox_filter--label.current:focus-visible, .checkbox_filter--label.current:focus {
+ color: var(--theme_color-900);
+ background-color: var(--theme_color-100);
+ border: 0.0625rem solid var(--theme_color-100);
+}
+.checkbox_filter--input {
+ display: none;
+}
+.checkbox_filter--text {
+ flex-grow: 1;
+}
+.checkbox_filter--ex {
+ position: relative;
+ height: 0.5em;
+ width: 0.5em;
+ display: none;
+}
+.checkbox_filter--ex::before, .checkbox_filter--ex::after {
+ content: "";
+ display: block;
+ width: 0.5em;
+ height: 0.0625rem;
+ background-color: currentColor;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%) rotate(45deg);
+}
+.checkbox_filter--ex::after {
+ transform: translate(-50%, -50%) rotate(-45deg);
+}
+.echo .checkbox_filter--ex {
+ display: block;
+}
+.echo:hover .checkbox_filter--ex {
+ transform: scale(1.25);
+}

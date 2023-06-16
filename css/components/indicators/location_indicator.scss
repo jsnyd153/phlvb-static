@@ -1,0 +1,38 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Type Indicatior
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=262%3A38130&t=yebcauEJcmg80xcX-1
+
+// Dependancy: none
+
+// <div class="type_indicator">
+// <span class="type_indicator--text"></span>
+// </div>
+
+//================================================
+/*css/components/indicators/location_indicator.scss*/
+//================================================
+
+.location {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6/16 * 1rem 11/16 * 1rem 6/16 * 1rem 11/16 * 1rem;
+	gap: 6/16 * 1rem;
+	border: 1px solid currentColor;
+	border-radius: 2rem;
+	color: var(--theme_color-200);
+	font-size: 12/16 * 1rem;
+	font-weight: 500;
+	transition: 0.3s all;
+
+	a:hover & {
+		color: var(--theme_color-900);
+	}
+
+	&-- {
+		&text {
+		}
+	}
+}

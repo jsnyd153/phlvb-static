@@ -1,0 +1,117 @@
+.feature_hero--section {
+ position: relative;
+ overflow: visible;
+}
+.feature_hero--text_area, .feature_hero--media_area {
+ --columns: 12;
+ --start: calc((14 - var(--columns)) / 2 + 1);
+ grid-column: var(--start)/span var(--columns);
+ position: relative;
+}
+.feature_hero--text_area.inset, .feature_hero--media_area.inset {
+ --columns: 10;
+}
+@media (max-width: 991px) {
+ .feature_hero--text_area.inset, .feature_hero--media_area.inset {
+  --columns: 12;
+ }
+}
+.feature_hero--text_area.narrow, .feature_hero--media_area.narrow {
+ --columns: 8;
+}
+@media (max-width: 991px) {
+ .feature_hero--text_area.narrow, .feature_hero--media_area.narrow {
+  --columns: 10;
+ }
+}
+@media (max-width: 767px) {
+ .feature_hero--text_area.narrow, .feature_hero--media_area.narrow {
+  --columns: 12;
+ }
+}
+.feature_hero--text_area {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: var(--gap);
+ z-index: 1;
+}
+.feature_hero--text_content h1 {
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ gap: 1.25rem;
+}
+@media (max-width: 991px) {
+ .feature_hero--text_content h1 {
+  gap: 0.25em;
+ }
+}
+.feature_hero--text_content p {
+ text-align: center;
+}
+.feature_hero--media_area {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ z-index: 1;
+}
+.feature_hero--media_content {
+ border-radius: 0.75rem;
+}
+.feature_hero--page_nav {
+ align-items: center;
+}
+@media (max-width: 767px) {
+ .feature_hero--page_nav .button-container {
+  gap: 0.5rem;
+ }
+}
+@media (max-width: 767px) {
+ .feature_hero--page_nav .button {
+  font-size: 0.625rem;
+ }
+}
+.feature_hero--background_media {
+ display: grid;
+ grid-template-columns: var(--grid_layout);
+ gap: var(--gap);
+ position: absolute;
+ inset: 0;
+}
+.feature_hero--background_media-image {
+ width: 100%;
+ overflow: hidden;
+ position: relative;
+ padding-top: 200%;
+}
+.feature_hero--background_media-image img {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.sticky_nav {
+ padding: 1rem 0;
+ position: fixed;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 100%;
+ top: 0;
+ background: rgba(25, 45, 98, 0.75);
+ -webkit-backdrop-filter: blur(0.5rem);
+         backdrop-filter: blur(0.5rem);
+ transform: translateY(-100%);
+ z-index: 201;
+}
+.sticky_nav .scroll_past {
+ transform: translateY(0);
+}

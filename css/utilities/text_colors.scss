@@ -1,0 +1,68 @@
+@use "../abstracts" as *;
+
+//================================================
+/*css/components/_backgrounds.scss*/
+//================================================
+
+//================================================
+//Background setup for individual section blocks
+//each section has a .background_area element to run colors and images through
+//they cover the section
+//================================================
+.background_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  .background_fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img,
+    video,
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    //add utility classes to control the center point of the image?
+  }
+}
+
+.background_area .background_fill {
+  background-color: var(--background_color);
+}
+
+// //Color Utility Classes
+// @each $type in $colors_all {
+//   .has-#{nth($type, 1)}-background {
+//     &.background_fill {
+//       background-color: #{nth($type, 2)};
+//     }
+//     .background_fill {
+//       background-color: #{nth($type, 2)};
+//     }
+//   }
+// }
+
+//Color Utility Classes
+@each $type in $colors_all {
+  .has-#{nth($type, 1)}-background {
+    --background_color: #{nth($type, 2)};
+    & ~ * {
+      --background_color: #{nth($type, 2)};
+    }
+
+    &.background_fill {
+      --background_color: #{nth($type, 2)};
+    }
+  }
+}

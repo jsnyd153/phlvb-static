@@ -1,0 +1,52 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Play Intro
+// Visual:https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=148%3A10585&t=1QlgtlE9DRKZgmzq-1
+// Dependancy: none
+
+.event_list {
+	&-- {
+		&section {
+			padding: var(--gap) 0;
+		}
+		&text_area {
+			grid-column: 3/-3;
+			display: flex;
+			flex-direction: column;
+			gap: var(--gap);
+			@include md {
+				grid-column: 2/-2;
+			}
+			&.full_width {
+				grid-column: 2/-2;
+			}
+		}
+		&text_content {
+			display: flex;
+			flex-direction: column;
+			gap: 10/16 * 1rem;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		&list {
+			grid-column: 3/-3;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			position: relative;
+			z-index: 1;
+			@include md {
+				grid-column: 2/-2;
+			}
+			&.full_width {
+				grid-column: 2/-2;
+			}
+			.empty_state {
+				padding: 24/16 * 1rem 16/16 * 1rem;
+				color: var(--theme_color-500);
+				text-align: center;
+			}
+		}
+	} //--
+}

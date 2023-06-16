@@ -1,0 +1,146 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+@import url("https://use.typekit.net/cue8qlh.css");
+
+// @mixin fluid_size_text($scale: 2.5, $floor: 38/16) {
+// 	$cap: $scale * 1440 / 100 /16 * 1;
+// 	font-size: calc($scale * 1vw + $floor * 1rem);
+// 	@include xl() {
+// 		font-size: calc($cap * 1rem + $floor * 1rem);
+// 	}
+// }
+
+// @mixin fluid_line-height($scale: 2.5, $floor: 38/16) {
+// 	$cap: $scale * 1440 / 100 /16 * 1;
+// 	line-height: calc($scale * 1vw + $floor * 1rem);
+// 	@include xl() {
+// 		line-height: calc($cap * 1rem + $floor * 1rem);
+// 	}
+// }
+
+// text styles
+
+@mixin fluid_size_text($scale: 2.5, $floor: 38/16) {
+	$cap: $scale * 1440 / 100 /16 * 1;
+	font-size: calc($scale * 1vw + $floor * 1rem);
+	@include xl() {
+		font-size: calc($cap * 1rem + $floor * 1rem);
+	}
+}
+
+//================================================
+/*css/components/text_styles.scss*/
+//================================================
+
+h1 {
+	@include fluid_size_text($scale: 2.2657, $floor: 24.2535/16);
+	font-family: $sans_font;
+	font-weight: 500;
+	line-height: 105%;
+	letter-spacing: -0.02em;
+	color: var(--theme_color-200);
+	&.feature {
+		@include fluid_size_text($scale: 8.4507, $floor: 20.3099/16);
+		line-height: 100%;
+		text-transform: uppercase;
+		span {
+			line-height: 70%;
+		}
+	}
+}
+h2 {
+	font-family: $sans_font;
+	font-weight: 500;
+	@include fluid_size_text(1.439, $floor: 22.4789/16);
+	line-height: 115%;
+	letter-spacing: -0.02em;
+	color: var(--theme_color-100);
+}
+
+h3 {
+	font-family: $sans_font;
+	font-weight: 500;
+	@include fluid_size_text($scale: 0.9273, $floor: 16.5352/16);
+	line-height: 125%;
+	letter-spacing: -0.02em;
+	color: var(--theme_color-200);
+}
+h4 {
+	font-family: $sans_font;
+	font-weight: 500;
+	@include fluid_size_text($scale: 0.9695, $floor: 15.2394/16);
+	line-height: 125%;
+	letter-spacing: -0.02em;
+	color: var(--theme_color-200);
+}
+h5 {
+	@include fluid_size_text($scale: 0.6878, $floor: 12.2958/16);
+	font-family: $sans_font;
+	font-weight: 500;
+	line-height: 120%;
+	letter-spacing: -0.02em;
+	color: var(--theme_color-200);
+}
+h6 {
+	font-family: $sans_font;
+	font-weight: 500;
+	line-height: 120%;
+	color: var(--theme_color-500);
+	text-transform: uppercase;
+	.theme_beach & {
+		--theme_color-500: #{$brand-600};
+	}
+}
+
+p {
+	@include fluid_size_text($scale: 0.344, $floor: 12.2958/16);
+	font-family: $sans_font;
+	font-weight: 300;
+	line-height: 135%;
+	letter-spacing: -0.02em;
+	color: var(--theme_color-200);
+
+	b {
+		font-weight: 600;
+	}
+	&.small {
+		@include fluid_size_text($scale: 0.1878, $floor: 12.2958/16);
+	}
+	&.jumbo {
+		@include fluid_size_text($scale: 0.8451, $floor: 17.831/16);
+	}
+	&.large {
+		@include fluid_size_text($scale: 0.2817, $floor: 16.9437/16);
+	}
+	a {
+		.theme_beach & {
+			--theme_color-500: #{$brand-600};
+		}
+		color: var(--theme_color-500);
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+		font-weight: 500;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			top: 80%;
+			height: 3/32 * 1em;
+			left: 0;
+			background-color: currentColor;
+			transition: all 0.25s ease-in 0s;
+		}
+		&:hover:after {
+			width: 100%;
+		}
+	}
+}
+
+@each $type in $colors_full {
+	.is-#{nth($type, 1)} {
+		color: #{nth($type, 2)};
+	}
+}

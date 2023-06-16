@@ -1,0 +1,83 @@
+/*css/components/cards/icon_card.scss*/
+.icon_card {
+ padding: 2rem;
+ border-radius: 0.75rem;
+ transition: 0.3s all;
+}
+@media (min-width: 1440px) {
+ .icon_card {
+  padding: 3rem 2rem;
+ }
+}
+.icon_card--text_area {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ align-items: flex-start;
+ justify-content: flex-start;
+}
+.icon_card--text_content {
+ display: flex;
+ flex-direction: column;
+ gap: 0.5rem;
+}
+.icon_card--text_content p {
+ color: var(--theme_color-200);
+ transition: 0.3s all;
+}
+a:hover .icon_card--text_content p {
+ color: var(--theme_color-900);
+}
+.icon_card--text_content .arrow_button {
+ color: var(--theme_color-500);
+ transition: 0.3s all;
+}
+a:hover .icon_card--text_content .arrow_button {
+ color: var(--theme_color-900);
+ transform: translateX(1rem);
+}
+.icon_card--text_content .arrow_button svg {
+ width: 2rem;
+}
+.icon_card--text_content .arrow_button svg .stroke {
+ stroke: currentColor;
+ stroke-width: 2.5;
+}
+.icon_card--header {
+ display: flex;
+ gap: 1rem;
+ color: var(--theme_color-500);
+ transition: 0.3s all;
+ align-items: center;
+ align-items: center;
+}
+a:hover .icon_card--header {
+ color: var(--theme_color-900);
+}
+.icon_card--header h1,
+.icon_card--header h2,
+.icon_card--header h3,
+.icon_card--header h4,
+.icon_card--header h5,
+.icon_card--header h6 {
+ flex-grow: 1;
+ color: inherit;
+}
+.icon_card--icon {
+ width: 2.125em;
+ height: 2.125em;
+ flex-shrink: 0;
+}
+.icon_card--icon .fill {
+ fill: currentColor;
+}
+
+a.icon_card:hover {
+ background: var(--theme_color-500);
+}
+a.icon_card:hover.for-indoor {
+ background: #f16122;
+}
+a.icon_card:hover.for-grass {
+ background: #94d13d;
+}

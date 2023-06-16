@@ -1,0 +1,43 @@
+/*css/components/content/inline_alert.scss*/
+.inline_alert--container {
+ padding: 2rem;
+ border-radius: 0.625rem;
+ border: 1px dashed var(--theme_color-500);
+ display: flex;
+ gap: 1.5rem;
+ align-items: center;
+ background-color: var(--theme_color-51);
+}
+.inline_alert--container.small {
+ padding: 1rem;
+}
+.inline_alert--icon {
+ flex-grow: 0;
+ flex-shrink: 0;
+ font-family: Times;
+ font-size: 1.25rem;
+ background-color: var(--theme_color-500);
+ width: 1.875rem;
+ height: 1.875rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: var(--theme_color-900);
+ border-radius: 50%;
+}
+.small .inline_alert--icon {
+ font-size: 1rem;
+ width: 1.5rem;
+ height: 1.5rem;
+}
+.inline_alert--text_content {
+ flex-grow: 1;
+}
+.inline_alert--text_content p {
+ color: var(--theme_color-100);
+ font-weight: 500;
+}
+.inline_alert--text_content p.small {
+ color: var(--theme_color-200);
+ font-weight: 300;
+}

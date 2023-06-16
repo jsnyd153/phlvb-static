@@ -1,0 +1,292 @@
+@import url("https://use.typekit.net/cue8qlh.css");
+/*css/components/text_styles.scss*/
+h1 {
+ font-size: calc(2.2657vw + 1.51584375rem);
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 500;
+ line-height: 105%;
+ letter-spacing: -0.02em;
+ color: var(--theme_color-200);
+}
+@media (min-width: 1440px) {
+ h1 {
+  font-size: 3.55497375rem;
+ }
+}
+h1.feature {
+ font-size: calc(8.4507vw + 1.26936875rem);
+ line-height: 100%;
+ text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+ h1.feature {
+  font-size: 8.87499875rem;
+ }
+}
+h1.feature span {
+ line-height: 70%;
+}
+
+h2 {
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 500;
+ font-size: calc(1.439vw + 1.40493125rem);
+ line-height: 115%;
+ letter-spacing: -0.02em;
+ color: var(--theme_color-100);
+}
+@media (min-width: 1440px) {
+ h2 {
+  font-size: 2.70003125rem;
+ }
+}
+
+h3 {
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 500;
+ font-size: calc(0.9273vw + 1.03345rem);
+ line-height: 125%;
+ letter-spacing: -0.02em;
+ color: var(--theme_color-200);
+}
+@media (min-width: 1440px) {
+ h3 {
+  font-size: 1.86802rem;
+ }
+}
+
+h4 {
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 500;
+ font-size: calc(0.9695vw + 0.9524625rem);
+ line-height: 125%;
+ letter-spacing: -0.02em;
+ color: var(--theme_color-200);
+}
+@media (min-width: 1440px) {
+ h4 {
+  font-size: 1.8250125rem;
+ }
+}
+
+h5 {
+ font-size: calc(0.6878vw + 0.7684875rem);
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 500;
+ line-height: 120%;
+ letter-spacing: -0.02em;
+ color: var(--theme_color-200);
+}
+@media (min-width: 1440px) {
+ h5 {
+  font-size: 1.3875075rem;
+ }
+}
+
+h6 {
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 500;
+ line-height: 120%;
+ color: var(--theme_color-500);
+ text-transform: uppercase;
+}
+.theme_beach h6 {
+ --theme_color-500: #1b40a6;
+}
+
+p {
+ font-size: calc(0.344vw + 0.7684875rem);
+ font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: 300;
+ line-height: 135%;
+ letter-spacing: -0.02em;
+ color: var(--theme_color-200);
+}
+@media (min-width: 1440px) {
+ p {
+  font-size: 1.0780875rem;
+ }
+}
+p b {
+ font-weight: 600;
+}
+p.small {
+ font-size: calc(0.1878vw + 0.7684875rem);
+}
+@media (min-width: 1440px) {
+ p.small {
+  font-size: 0.9375075rem;
+ }
+}
+p.jumbo {
+ font-size: calc(0.8451vw + 1.1144375rem);
+}
+@media (min-width: 1440px) {
+ p.jumbo {
+  font-size: 1.8750275rem;
+ }
+}
+p.large {
+ font-size: calc(0.2817vw + 1.05898125rem);
+}
+@media (min-width: 1440px) {
+ p.large {
+  font-size: 1.31251125rem;
+ }
+}
+p a {
+ color: var(--theme_color-500);
+ display: inline-block;
+ position: relative;
+ text-decoration: none;
+ font-weight: 500;
+}
+.theme_beach p a {
+ --theme_color-500: #1b40a6;
+}
+p a:after {
+ content: "";
+ display: block;
+ position: absolute;
+ width: 0;
+ top: 80%;
+ height: 0.09375em;
+ left: 0;
+ background-color: currentColor;
+ transition: all 0.25s ease-in 0s;
+}
+p a:hover:after {
+ width: 100%;
+}
+
+.is-brand-900 {
+ color: #192d62;
+}
+
+.is-brand-800 {
+ color: #1c326f;
+}
+
+.is-brand-800t {
+ color: rgba(29, 52, 114, 0.8);
+}
+
+.is-brand-800 {
+ color: #1c326f;
+}
+
+.is-brand-800t {
+ color: rgba(33, 60, 131, 0.8);
+}
+
+.is-brand-500 {
+ color: #76affe;
+}
+
+.is-brand-200 {
+ color: #a9bfeb;
+}
+
+.is-brand-100 {
+ color: #bccceb;
+}
+
+.is-indoor-900 {
+ color: #592817;
+}
+
+.is-indoor-800 {
+ color: #662e1a;
+}
+
+.is-indoor-800t {
+ color: rgba(105, 47, 27, 0.8);
+}
+
+.is-indoor-800 {
+ color: #70321d;
+}
+
+.is-indoor-800t {
+ color: rgba(121, 55, 31, 0.8);
+}
+
+.is-indoor-500 {
+ color: #f16122;
+}
+
+.is-indoor-200 {
+ color: #f0c4b5;
+}
+
+.is-indoor-100 {
+ color: #ebd5cd;
+}
+
+.is-grass-900 {
+ color: #3b520e;
+}
+
+.is-grass-800 {
+ color: #456010;
+}
+
+.is-grass-800t {
+ color: rgba(72, 99, 17, 0.8);
+}
+
+.is-grass-800 {
+ color: #4f6e13;
+}
+
+.is-grass-800t {
+ color: rgba(84, 117, 20, 0.8);
+}
+
+.is-grass-500 {
+ color: #94d13d;
+}
+
+.is-grass-200 {
+ color: #d1f095;
+}
+
+.is-grass-100 {
+ color: #e2f5ba;
+}
+
+.is-beach-900 {
+ color: #625619;
+}
+
+.is-beach-800 {
+ color: #6f611c;
+}
+
+.is-beach-800t {
+ color: rgba(114, 100, 29, 0.8);
+}
+
+.is-beach-500 {
+ color: #f9d452;
+}
+
+.is-beach-300t {
+ color: rgba(223, 215, 176, 0.8);
+}
+
+.is-beach-300 {
+ color: #f0e6b5;
+}
+
+.is-beach-200t {
+ color: rgba(229, 223, 190, 0.8);
+}
+
+.is-beach-200 {
+ color: #f0e6b5;
+}
+
+.is-beach-100 {
+ color: #ebe6cd;
+}

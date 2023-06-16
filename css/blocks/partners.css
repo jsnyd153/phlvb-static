@@ -1,0 +1,23 @@
+.partners--text_area {
+ grid-column: 2/-2;
+}
+.partners--row {
+ grid-column: 2/-2;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ gap: var(--gap);
+ border: 1px solid var(--theme_color-200);
+ padding: 2.5rem;
+ border-radius: 0.75rem;
+}
+.partners--logo img {
+ max-height: 3.125rem;
+ max-width: 15.625rem;
+ mix-blend-mode: screen;
+}
+.theme_light .partners--logo img {
+ mix-blend-mode: multiply;
+}

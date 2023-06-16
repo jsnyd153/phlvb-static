@@ -1,0 +1,27 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Text Area
+// Visual:--
+// Dependancy: none
+
+//================================================
+/*css/components/content/text_area.scss*/
+//================================================
+
+.text_area {
+	gap: 24/16 * 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+}
+.text_content {
+	gap: 8/16 * 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+}

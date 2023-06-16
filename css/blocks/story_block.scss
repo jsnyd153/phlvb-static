@@ -1,0 +1,172 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Story Block
+// Visual:https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=279%3A41769&t=mtKVidobmbDz1PFi-1
+// Dependancy: text_area, media_area
+
+.story_block {
+	&-- {
+		&section {
+			padding: var(--gap) 0;
+			row-gap: 0;
+		} //section
+
+		&row {
+			@include inner_grid($c: 12);
+			//calculate columns on the section level grid > adjust --columns for change the width of the row
+			//centers the content inside the row
+			//only accepts even --column values
+			--start: calc((14 - var(--columns)) / 2 + 1);
+			grid-column: var(--start) / span var(--columns);
+			position: relative;
+
+			&.inset {
+				--columns: 10;
+				@include md {
+					--columns: 12;
+				}
+			}
+			&.narrow {
+				--columns: 8;
+				@include md {
+					--columns: 10;
+				}
+				@include sm {
+					--columns: 12;
+				}
+			}
+		} //row
+
+		&media_area {
+			//only works with even --column value
+			grid-column: span calc(var(--columns) / 2 - 1);
+			@include sm {
+				padding: 0 var(--rp);
+				//full width, force image to first item in the row
+				grid-column: 1/-1;
+				grid-row: 1;
+			}
+			@include xs {
+				padding: 0;
+			}
+		} //media
+
+		&text_area {
+			grid-column: span calc(var(--columns) / 2 + 1);
+			padding: var(--rp);
+			@include sm {
+				grid-column: 1/-1;
+				padding: 0.5rem var(--rp);
+			}
+			@include xs {
+				padding: 0;
+			}
+		} //text
+
+		&single {
+			--span: 8;
+			grid-column: 1 / span var(--span);
+			.inset & {
+				--span: 7;
+			}
+			display: flex;
+			flex-direction: column;
+			gap: 24/16 * 1rem;
+			padding: var(--rp) 0;
+
+			&.full_width {
+				--span: 12;
+				padding: 0;
+			}
+			> .text_area,
+			> .media_area {
+				margin: 0 var(--rp);
+			}
+
+			@include md {
+				--span: 9;
+				.inset & {
+					--span: 9;
+				}
+			}
+
+			@include sm {
+				grid-column: 1 / span var(--columns);
+				padding: var(--rp);
+				> .text_area,
+				> .media_area {
+					margin: 0 32/16 * 1rem;
+				}
+			}
+			@include xs {
+				padding: var(--rp) 0;
+				> .text_area,
+				> .media_area {
+					margin: 0;
+				}
+			}
+
+			&.right {
+				grid-column: span var(--span) / -1;
+				@include sm {
+					grid-column: 1 / span var(--columns);
+				}
+			}
+		} //single
+		&stats {
+			display: grid;
+			--items_per_row: 3;
+			//set min width for card before stacking
+			// Holy Albatross
+			//https://blog.logrocket.com/flexible-layouts-without-media-queries/
+			--min-card-width: 15rem;
+			--preferred-value: (
+					(var(--min-card-width) * var(--items_per_row) - var(--gap) * 2) - 100%
+				) * 999;
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(min(var(--preferred-value), 100%), 1fr)
+			);
+			background-color: var(--theme_color-500);
+			color: #fff;
+			box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.3);
+			transition: 0.3s all;
+			border-radius: 0.75rem;
+			padding: 3rem;
+			container-type: inline-size;
+		} //stats
+
+		&columns {
+			--min_column_width: #{260/16 * 1rem};
+			grid-template-columns: repeat(
+				auto-fit,
+				minmax(var(--min_column_width), 1fr)
+			);
+			display: grid;
+			gap: 0.75rem;
+		} //columns
+	}
+}
+
+.stat-- {
+	&item {
+		@include f-center;
+		flex-direction: column;
+		padding: 1.5rem 0;
+
+		&:not(:last-child) {
+			@container (max-width:41.875rem) {
+				border-bottom: 1px solid currentColor;
+			}
+		}
+	}
+	&number {
+		font-size: 80/16 * 1rem;
+		font-weight: 800;
+		line-height: 100%;
+	}
+	&description {
+		color: white;
+	}
+}

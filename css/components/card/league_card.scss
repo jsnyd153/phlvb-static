@@ -1,0 +1,87 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// League Item
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=148%3A10379&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: none
+
+//================================================
+/*css/components/cards/league_card.scss*/
+//================================================
+
+.league_card {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding: 24/16 * 1rem;
+	gap: 1rem;
+	&-- {
+		&date {
+			font-size: 14/16 * 1rem;
+			line-height: 100%;
+			font-weight: $sans_font;
+			text-transform: uppercase;
+			display: flex;
+			gap: 10/16 * 1rem;
+			align-items: justify;
+			font-weight: 500;
+			display: flex;
+			gap: inherit;
+			color: var(--theme_color-100);
+			a:hover & {
+				color: var(--theme_color-900);
+			}
+			.expected {
+				font-weight: 400;
+				color: var(--theme_color-200);
+				a:hover & {
+					color: var(--theme_color-800);
+				}
+			}
+		}
+		&description {
+			display: grid;
+			gap: 16/16 * 1rem;
+			grid-template-columns: 1fr 1fr auto;
+			@include sm {
+				grid-template-columns: 1fr auto;
+			}
+			@include xs {
+				grid-template-columns: 1fr;
+			}
+		}
+		&title {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+
+			@include header_tags {
+				color: var(--theme_color-100);
+				a:hover & {
+					color: var(--theme_color-900);
+				}
+			}
+		}
+		&body {
+			p {
+				font-size: 15/16 * 1rem;
+			}
+			@include sm {
+				grid-column: 1;
+			}
+		}
+		&location {
+			@include sm {
+				grid-row: 1;
+				grid-column: 2;
+				margin-top: 0.5rem;
+			}
+			@include xs {
+				margin-right: auto;
+				grid-row: auto;
+				grid-column: auto;
+				margin-top: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,128 @@
+@use "sass:color";
+
+//blues
+$brand-900: #192d62;
+$brand-800: #1c326f;
+$brand-800t: color.adjust($brand-900, $lightness: +4, $alpha: -0.2);
+$brand-700: #1c326f;
+$brand-700t: color.adjust($brand-900, $lightness: +8, $alpha: -0.2);
+$brand-600: #1b40a6;
+$brand-500: #76affe;
+$brand-200: #a9bfeb;
+$brand-100: #bccceb;
+$brand-200t: color.adjust($brand-100, $lightness: -4, $alpha: -0.2);
+
+//indoor
+$indoor-900: #592817;
+$indoor-800: #662e1a;
+$indoor-800t: color.adjust($indoor-900, $lightness: +4, $alpha: -0.2);
+$indoor-700: #70321d;
+$indoor-700t: color.adjust($indoor-900, $lightness: +8, $alpha: -0.2);
+$indoor-500: #f16122;
+$indoor-200: #f0c4b5;
+$indoor-100: #ebd5cd;
+
+//grass
+$grass-900: #3b520e;
+$grass-800: #456010;
+$grass-800t: color.adjust($grass-900, $lightness: +4, $alpha: -0.2);
+$grass-700: #4f6e13;
+$grass-700t: color.adjust($grass-900, $lightness: +8, $alpha: -0.2);
+$grass-500: #94d13d;
+$grass-200: #d1f095;
+$grass-100: #e2f5ba;
+
+//beach
+$beach-900: #625619;
+$beach-800: #6f611c;
+$beach-800t: color.adjust($beach-900, $lightness: +4, $alpha: -0.2);
+$beach-500: #f9d452;
+$beach-200: #f0e6b5;
+$beach-100: #ebe6cd;
+$beach-300t: color.adjust($beach-100, $lightness: -8, $alpha: -0.2);
+$beach-300: #f0e6b5;
+$beach-200t: color.adjust($beach-100, $lightness: -4, $alpha: -0.2);
+
+//neutrals
+$black: #000000;
+$white: #ffffff;
+
+$colors_full: (
+	//blue
+	"brand-900" $brand-900 $brand-100,
+	"brand-800" $brand-800 $brand-100,
+	"brand-800t" $brand-800t $brand-100,
+	"brand-800" $brand-700 $brand-100,
+	"brand-800t" $brand-700t $brand-100,
+	"brand-500" $brand-500 $brand-100,
+	"brand-200" $brand-200 $brand-900,
+	"brand-100" $brand-100 $brand-900,
+
+	"indoor-900" $indoor-900 $indoor-100,
+	"indoor-800" $indoor-800 $indoor-100,
+	"indoor-800t" $indoor-800t $indoor-100,
+	"indoor-800" $indoor-700 $indoor-100,
+	"indoor-800t" $indoor-700t $indoor-100,
+	"indoor-500" $indoor-500 $indoor-100,
+	"indoor-200" $indoor-200 $indoor-900,
+	"indoor-100" $indoor-100 $indoor-900,
+
+	"grass-900" $grass-900 $grass-100,
+	"grass-800" $grass-800 $grass-100,
+	"grass-800t" $grass-800t $grass-100,
+	"grass-800" $grass-700 $grass-100,
+	"grass-800t" $grass-700t $grass-100,
+	"grass-500" $grass-500 $grass-100,
+	"grass-200" $grass-200 $grass-900,
+	"grass-100" $grass-100 $grass-900,
+
+	"beach-900" $beach-900 $beach-100,
+	"beach-800" $beach-800 $beach-100,
+	"beach-800t" $beach-800t $beach-100,
+	"beach-500" $beach-500 $beach-100,
+	"beach-300t" $beach-300t $beach-900,
+	"beach-300" $beach-300 $beach-900,
+	"beach-200t" $beach-200t $beach-900,
+	"beach-200" $beach-200 $beach-900,
+	"beach-100" $beach-100 $beach-900
+);
+
+$colors_dark: (
+	//blue
+	"brand-900" $brand-900 $brand-100,
+	"brand-800" $brand-800 $brand-100,
+	"brand-800t" $brand-800t $brand-100,
+	"brand-800" $brand-700 $brand-100,
+	"brand-800t" $brand-700t $brand-100,
+	//red
+	"indoor-900" $indoor-900 $indoor-100,
+	"indoor-800" $indoor-800 $indoor-100,
+	"indoor-800t" $indoor-800t $indoor-100,
+	"indoor-800" $indoor-700 $indoor-100,
+	"indoor-800t" $indoor-700t $indoor-100,
+	//green
+	"grass-900" $grass-900 $grass-100,
+	"grass-800" $grass-800 $grass-100,
+	"grass-800t" $grass-800t $grass-100,
+	"grass-800" $grass-700 $grass-100,
+	"grass-800t" $grass-700t $grass-100,
+	//yellow
+	"beach-900" $beach-900 $beach-100,
+	"beach-800" $beach-800 $beach-100,
+	"beach-800t" $beach-800t $beach-100
+);
+
+$colors_light: (
+	//blue
+	"brand-200" $brand-200 $brand-900,
+	"brand-100" $brand-100 $brand-900,
+	//red
+	"indoor-200" $indoor-200 $indoor-900,
+	"indoor-100" $indoor-100 $indoor-900,
+	//green
+	"grass-200" $grass-200 $grass-900,
+	"grass-100" $grass-100 $grass-900,
+	//yellow
+	"beach-200" $beach-200 $beach-900,
+	"beach-100" $beach-100 $beach-900
+);

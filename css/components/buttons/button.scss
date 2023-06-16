@@ -1,0 +1,191 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Buttons
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=94%3A3668&t=AB86wLnKMiwyKBK5-1
+// Dependancy: none
+
+//================================================
+/*css/components/buttons/button.scss*/
+//================================================
+
+.button {
+	--inital_background: var(--theme_color-500);
+	--inital_text: var(--theme_color-900);
+	--hover_background: var(--theme_color-900);
+	--hover_text: var(--theme_color-200);
+
+	color: var(--inital_text);
+
+	position: relative;
+	font-family: $sans_font;
+	font-size: 15/16 * 1rem;
+	border: 1px solid var(--inital_background);
+	padding: 8/12 * 1em 20/12 * 1em 7/12 * 1em 20/12 * 1em;
+	border-radius: 26/16 * 1rem;
+	outline: 0;
+	line-height: 1;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10/16 * 1rem;
+	font-weight: 400;
+	overflow: hidden;
+	isolation: isolate;
+	transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+
+	@include sm {
+		font-size: 13/16 * 1rem;
+	}
+
+	svg {
+		height: 0.875em;
+		transform: translateX(0);
+		transition: all 200ms cubic-bezier(0.1, 0.5, 0.45, 0.25);
+		.stroke {
+			stroke: currentColor;
+			stroke-width: 1.5;
+		}
+	}
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+		@include image_cover;
+		border-radius: inherit;
+	}
+	&::after {
+		background-color: var(--inital_background);
+		z-index: -2;
+	}
+	&::before {
+		background-color: var(--hover_background);
+		z-index: -1;
+		transform: translate(-100%, 0);
+		opacity: 0;
+		transition: all 200ms cubic-bezier(0.1, 0.5, 0.45, 0.25);
+	}
+	//hover
+
+	&:hover,
+	&:focus,
+	a:hover &,
+	a:focus &,
+	&.current {
+		color: var(--hover_text);
+		border: 1px solid var(--hover_text);
+		svg {
+			transform: translateX(0.5em);
+		}
+		&::before {
+			transform: translate(0, 0);
+			opacity: 1;
+			transition: all 200ms cubic-bezier(0.1, 0.5, 0.45, 0.25);
+		}
+	}
+
+	&.small {
+		font-size: 14/16 * 1rem;
+		padding: 6/12 * 1em 16/12 * 1em 5/12 * 1em 16/12 * 1em;
+		@include sm {
+			font-size: 12/16 * 1rem;
+		}
+	} //small
+
+	&.ghost {
+		color: var(--hover_text);
+		border: 1px solid var(--hover_text);
+		&::after {
+			background-color: transparent;
+			z-index: -2;
+		}
+		&::before {
+			background-color: var(--hover_text);
+		}
+		&:hover,
+		&:focus,
+		a:hover &,
+		a:focus &,
+		&.current {
+			color: var(--inital_text);
+			border: 1px solid var(--hover_text);
+		}
+	}
+
+	//color variations
+
+	//rewrite as @each $type in $var {}
+
+	&.is-grass {
+		--inital_background: #{$grass-500};
+		--inital_text: #{$grass-900};
+		--hover_background: #{$grass-900};
+		--hover_text: #{$grass-200};
+	}
+
+	&.is-grass-light {
+		--inital_background: #{$grass-200};
+		--inital_text: #{$grass-900};
+		--hover_background: #{$grass-500};
+		--hover_text: #{$grass-900};
+	}
+
+	&.is-indoor {
+		--inital_background: #{$indoor-500};
+		--inital_text: #{$indoor-900};
+		--hover_background: #{$indoor-900};
+		--hover_text: #{$indoor-200};
+	}
+
+	&.is-indoor-light {
+		--inital_background: #{$indoor-200};
+		--inital_text: #{$indoor-900};
+		--hover_background: #{$indoor-500};
+		--hover_text: #{$indoor-900};
+	}
+
+	&.is-beach,
+	.theme_beach & {
+		--inital_background: #{$brand-800};
+		--inital_text: #{$beach-200};
+		--hover_background: #{$brand-500};
+		--hover_text: #{$brand-800};
+	}
+
+	&.is-beach-light {
+		--inital_background: #{$beach-200};
+		--inital_text: #{$brand-900};
+		--hover_background: #{$beach-500};
+		--hover_text: #{$beach-900};
+	}
+
+	&.is-white {
+		--inital_background: #{$white};
+		--inital_text: #{$brand-900};
+		--hover_background: #{$brand-100};
+		--hover_text: #{$brand-900};
+	}
+
+	&.is-brand-dark {
+		--inital_background: #{$brand-900};
+		--inital_text: #{$brand-200};
+		--hover_background: #{$brand-500};
+		--hover_text: #{$brand-900};
+	}
+
+	&.is-brand-light {
+		--inital_background: #{$brand-200};
+		--inital_text: #{$brand-900};
+		--hover_background: #{$brand-500};
+		--hover_text: #{$brand-900};
+	}
+} //button
+
+.button-container {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+}

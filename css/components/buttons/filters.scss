@@ -1,0 +1,102 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Filters
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=202%3A21799&t=yebcauEJcmg80xcX-1
+
+// Dependancy: none
+
+// <div class="filter">
+//  <label class="checkbox_filter--label">
+//     <input type="checkbox" class="checkbox_filter--input" />
+//     <span class="checkbox_filter--text"> Filter Name </span>
+//  </label>
+// </div>
+
+//================================================
+/*css/components/buttons/filters.scss*/
+//================================================
+
+.checkbox_filter {
+	&-- {
+		&label {
+			display: flex;
+			padding: 10/16 * 1rem 15/16 * 1rem;
+			border: 1/16 * 1rem solid var(--theme_color-200);
+			color: var(--theme_color-200);
+			font-size: 12/16 * 1rem;
+			line-height: 100%;
+			font-weight: 500;
+			gap: 10/16 * 1rem;
+			align-items: center;
+			border-radius: 2rem;
+			font-family: $sans_font;
+			transition: 0.125s all;
+			&.echo {
+				color: var(--theme_color-500);
+				border: 1/16 * 1rem solid var(--theme_color-500);
+			}
+			&.inactive {
+				opacity: 0.5;
+				&:hover,
+				&:focus-visible,
+				&:focus {
+					color: var(--theme_color-200);
+					background-color: transparent;
+					border: 1/16 * 1rem solid var(--theme_color-200);
+				}
+			}
+			&:hover,
+			&:focus-visible,
+			&:focus {
+				color: var(--theme_color-100);
+				background-color: var(--theme_color-700t);
+				border: 1/16 * 1rem solid var(--theme_color-100);
+			}
+			&.current {
+				color: var(--theme_color-900);
+				background-color: var(--theme_color-200);
+				border: 1/16 * 1rem solid var(--theme_color-200);
+				&:hover,
+				&:focus-visible,
+				&:focus {
+					color: var(--theme_color-900);
+					background-color: var(--theme_color-100);
+					border: 1/16 * 1rem solid var(--theme_color-100);
+				}
+			}
+		}
+		&input {
+			display: none;
+		}
+		&text {
+			flex-grow: 1;
+		}
+		&ex {
+			position: relative;
+			height: 0.5em;
+			width: 0.5em;
+			display: none;
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				width: 0.5em;
+				height: 1/16 * 1rem;
+				background-color: currentColor;
+				@include t-center;
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			&::after {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			.echo & {
+				display: block;
+			}
+			.echo:hover & {
+				transform: scale(1.25);
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+//compile button styles
+@use "../../abstracts" as *;
+@forward "icon_card";
+@forward "resource_card";
+@forward "location_card";
+
+@forward "tournament_card";
+@forward "event_card";
+@forward "league_card";
+
+.card {
+	border-radius: 0.75rem;
+	background-color: var(--theme_color-700t);
+	backdrop-filter: blur(0.5rem);
+	color: var(--theme_color-200);
+}
+
+a.card {
+	text-decoration: none;
+	box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0);
+	transition: 0.3s all;
+	* {
+		// transition: 0.3s all;
+		//need to fix onload transitions
+	}
+	&:hover {
+		background-color: var(--theme_color-500);
+		box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.08);
+		color: var(--theme_color-800);
+		transform: translateY(-0.2em);
+		@include text_nodes {
+			color: var(--theme_color-800);
+		}
+		&.theme_beach,
+		.theme_beach & {
+			box-shadow: 0px 10px 16px -4px rgba(255, 255, 200, 0.3);
+			@include text_nodes {
+				color: var(--theme_color-200);
+			}
+		}
+	}
+}

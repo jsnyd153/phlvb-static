@@ -1,0 +1,78 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Person Profile
+// Visual:--
+// Dependancy: none
+
+//================================================
+/*css/components/content/person_profile.scss*/
+//================================================
+
+.person_profile {
+	&-- {
+		&list {
+		}
+		&item {
+			display: flex;
+			flex-direction: column;
+			gap: 20/16 * 1rem;
+		}
+		&media_area {
+			position: relative;
+		}
+		&media_content {
+			@include cover_container;
+			padding-top: 100%;
+			border-radius: 12/16 * 1rem;
+			img {
+				@include image_cover;
+			}
+		}
+		&locations {
+			position: absolute;
+			inset: 0;
+			padding: 0.75rem;
+			align-items: flex-end;
+			z-index: 1;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.6) 100%
+			);
+			color: $white;
+			font-size: 0.875rem;
+			padding: 0.75rem;
+
+			display: none;
+			.organizers & {
+				display: flex;
+			}
+		}
+
+		&text_content {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 6/16 * 1rem;
+			@include sm {
+				grid-template-columns: 1fr;
+			}
+			//set this up with container queries
+		}
+		&title {
+			font-size: 13/16 * 1rem;
+			grid-column: 1/-1;
+			display: none;
+			.board_members & {
+				display: block;
+			}
+		}
+		&name {
+			align-self: end;
+		}
+		&pronouns {
+			font-size: 13/16 * 1rem;
+			align-self: end;
+		}
+	}
+}

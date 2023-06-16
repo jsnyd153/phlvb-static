@@ -1,0 +1,95 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Icon Card
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=230%3A60458&t=qtCFQvZbBAM85yM2-1
+// Dependancy: none
+
+//================================================
+/*css/components/cards/icon_card.scss*/
+//================================================
+
+.icon_card {
+	padding: 32/16 * 1rem;
+	border-radius: 12/16 * 1rem;
+	transition: 0.3s all;
+
+	@include xl {
+		padding: 48/16 * 1rem 32/16 * 1rem;
+	}
+
+	&-- {
+		&text_area {
+			display: flex;
+			flex-direction: column;
+			gap: 24/16 * 1rem;
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+		&text_content {
+			display: flex;
+			flex-direction: column;
+			gap: 8/16 * 1rem;
+			p {
+				color: var(--theme_color-200);
+				transition: 0.3s all;
+				a:hover & {
+					color: var(--theme_color-900);
+				}
+			}
+			.arrow_button {
+				color: var(--theme_color-500);
+				transition: 0.3s all;
+				a:hover & {
+					color: var(--theme_color-900);
+					transform: translateX(1rem);
+				}
+				svg {
+					width: 2rem;
+					.stroke {
+						stroke: currentColor;
+						stroke-width: 2.5;
+					}
+				}
+			}
+		}
+		&header {
+			display: flex;
+			gap: 16/16 * 1rem;
+			color: var(--theme_color-500);
+			transition: 0.3s all;
+			align-items: center;
+			// flex-wrap: wrap;
+			a:hover & {
+				color: var(--theme_color-900);
+			}
+			align-items: center;
+			@include header_tags {
+				flex-grow: 1;
+				color: inherit;
+			}
+		}
+		&icon {
+			width: 2.125em;
+			height: 2.125em;
+			flex-shrink: 0;
+			.fill {
+				fill: currentColor;
+			}
+		}
+	}
+}
+
+a {
+	&.icon_card {
+		&:hover {
+			background: var(--theme_color-500);
+			&.for-indoor {
+				background: $indoor-500;
+			}
+			&.for-grass {
+				background: $grass-500;
+			}
+		}
+	}
+}

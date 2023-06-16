@@ -1,0 +1,100 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+//================================================
+/*css/components/color_themes.scss*/
+//================================================
+
+:root {
+	--theme_color-500: #{$brand-500};
+	--theme_color-51: #{rgba($brand-500, 0.1)};
+	--theme_color-100: #{$brand-100};
+	--theme_color-200: #{$brand-200};
+	--theme_color-900: #{$brand-900};
+	--theme_color-800: #{$brand-800};
+	--theme_color-700: #{$brand-700};
+	--theme_color-800t: #{$brand-800t};
+	--theme_color-700t: #{$brand-700t};
+	--theme_fade: linear-gradient(
+		180deg,
+		rgba($brand-900, 0) 0%,
+		rgba($brand-900, 1) 100%
+	);
+}
+
+.background_fill {
+	@include image_cover;
+	background: var(--theme_color-900);
+}
+.theme_brand {
+	--theme_color-500: #{$brand-500};
+	--theme_color-51: #{rgba($brand-500, 0.1)};
+	--theme_color-100: #{$brand-100};
+	--theme_color-200: #{$brand-200};
+	--theme_color-900: #{$brand-900};
+	--theme_color-800: #{$brand-800};
+	--theme_color-700: #{$brand-700};
+	--theme_color-800t: #{$brand-800t};
+	--theme_color-700t: #{$brand-700t};
+	--theme_fade: linear-gradient(
+		180deg,
+		rgba($brand-900, 0) 0%,
+		rgba($brand-900, 1) 100%
+	);
+}
+.theme_indoor {
+	--theme_color-900: #{$indoor-900};
+	--theme_color-800: #{$indoor-800};
+	--theme_color-800t: #{$indoor-800t};
+	--theme_color-700: #{$indoor-700};
+	--theme_color-700t: #{$indoor-700t};
+	--theme_color-500: #{$indoor-500};
+	--theme_color-51: #{rgba($indoor-500, 0.1)};
+	--theme_color-200: #{$indoor-200};
+	--theme_color-100: #{$indoor-100};
+	--theme_fade: linear-gradient(
+		180deg,
+		rgba($indoor-900, 0) 0%,
+		rgba($indoor-900, 1) 100%
+	);
+}
+
+.theme_grass {
+	--theme_color-900: #{$grass-900};
+	--theme_color-800: #{$grass-800};
+	--theme_color-800t: #{$grass-800t};
+	--theme_color-700: #{$grass-700};
+	--theme_color-700t: #{$grass-700t};
+	--theme_color-500: #{$grass-500};
+	--theme_color-51: #{rgba($grass-500, 0.1)};
+	--theme_color-200: #{$grass-200};
+	--theme_color-100: #{$grass-100};
+	--theme_fade: linear-gradient(
+		180deg,
+		rgba($grass-900, 0) 0%,
+		rgba($grass-900, 1) 100%
+	);
+}
+.theme_beach {
+	--theme_color-500: #{$beach-500};
+	--theme_color-100: #{$brand-900};
+	--theme_color-200: #{$brand-800};
+	--theme_color-51: #{rgba($beach-500, 0.1)};
+	--theme_color-900: #f8e99c;
+	--theme_color-800: #fbea9b;
+	--theme_color-800t: #{rgba(#fbeca2, 0.8)};
+	--theme_color-700: #fbeca9;
+	--theme_color-700t: #{rgba(#fbefb5, 0.8)};
+	a:hover {
+		--theme_color-900: #193fa8;
+	}
+}
+.theme_light {
+	--theme_color-500: #{$brand-500};
+	--theme_color-100: #{$brand-900};
+	--theme_color-200: #{$brand-800};
+	--theme_color-900: #{$brand-100};
+	--theme_color-800: #{$brand-200};
+	--theme_color-800-t: #{$brand-200t};
+	--theme_color-51: #{rgba($brand-500, 0.1)};
+}

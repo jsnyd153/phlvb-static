@@ -1,0 +1,116 @@
+@use "../abstracts" as *;
+
+.mobile_screen {
+  border-radius: 1rem;
+}
+
+.video_embed {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cos- {
+  &media {
+    position: relative;
+  }
+  &intial {
+  }
+  &switch {
+    @include image_cover;
+  }
+}
+
+.story_block--content-media.double-offset {
+  > {
+    * {
+      &:nth-child(1) {
+        width: 90%;
+        @include sm {
+          width: 95%;
+        }
+        @include xs {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        width: 90%;
+        margin-left: 10%;
+        margin-top: -7.5%;
+        @include sm {
+          width: 95%;
+          margin-left: 5%;
+          margin-top: -5%;
+        }
+        @include xs {
+          width: 100%;
+          margin-left: 0;
+          margin-top: var(--gap);
+        }
+      }
+    }
+  }
+}
+
+[screen_to_play="true"] {
+  figure.has-video.direct-embed {
+    position: relative;
+    width: 100%;
+    .video_embed {
+      // display: contents;
+      transition: 0.15s all;
+      video {
+        width: 100%;
+        height: auto;
+        display: block;
+        opacity: 0;
+        transition: 0.15s all;
+      }
+    }
+    img {
+      @include image_cover;
+      transition: 0.15s all;
+    }
+    .button_embed {
+      @include t-center;
+      transition: 0.15s all;
+      .play_button {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+  .show_video {
+    --blend: none;
+    .button_embed {
+      transform: scale(0) !important;
+    }
+    img {
+      opacity: 0 !important;
+    }
+    .video {
+      opacity: 1 !important;
+    }
+  }
+  &:hover {
+    figure.has-video.direct-embed {
+      img {
+        opacity: 0;
+      }
+      .video_embed {
+        video {
+          opacity: 1;
+        }
+      }
+      .button_embed {
+        transition: 0.15s all;
+        .play_button {
+          transition: 0.15s all;
+          background: rgba($color: #000000, $alpha: 0.5);
+          border: 2px solid rgba($color: #000000, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}

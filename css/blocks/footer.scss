@@ -1,0 +1,168 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Call to Action
+// Visual:https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=279%3A41938&t=hDouzfnbvM1Nsxym-1
+// Dependancy:
+
+footer {
+	background: #000000;
+	@include base_grid;
+	row-gap: 0;
+	margin-top: 3rem;
+	.call_to_action--section + & {
+		margin-top: 0rem;
+	}
+}
+
+.footer {
+	&-- {
+		&top {
+			grid-column: 2/-2;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 2rem 0;
+			gap: var(--gap);
+			@include sm {
+				flex-direction: column;
+			}
+		}
+		&branding {
+			width: 200/16 * 1rem;
+		}
+		&navigation {
+			flex-grow: 1;
+			grid-column: 5 / span 8;
+			max-width: 800/16 * 1rem;
+			display: grid;
+			gap: 1.5rem;
+			grid-template-columns: repeat(4, 1fr);
+			@include sm {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		&play {
+			grid-column: 1/-1;
+			display: flex;
+			flex-wrap: wrap;
+			--min_width: calc(40rem - 100%);
+			&_link {
+				min-width: 33%;
+				max-width: 100%;
+				flex-grow: 1;
+				flex-basis: calc(var(--min_width) * 999);
+				@include f-center;
+				position: relative;
+				text-decoration: none;
+			}
+		}
+		&end {
+			@include inner_grid;
+			padding: 2rem 0;
+		}
+
+		&social_nav {
+			grid-column: span 6;
+		}
+		&credit,
+		&copyright {
+			grid-column: span 3;
+			color: #484a50;
+			p {
+				color: inherit;
+				font-size: 10/16 * 1rem;
+			}
+		}
+		&credit {
+			text-align: right;
+		}
+	}
+}
+
+.footer_nav {
+	&-- {
+		&column {
+			display: flex;
+			flex-direction: column;
+			gap: 12/16 * 1rem;
+		}
+		&item {
+			color: var(--theme_color-100);
+			font-size: 14/16 * 1rem;
+			font-weight: 300;
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+			&.header {
+				// margin-bottom: 12/16 * 1rem;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.play_link {
+	&-- {
+		&media {
+			@include image_cover;
+			overflow: hidden;
+			img {
+				@include image_cover;
+				transition: 0.3s all;
+				a:hover & {
+					scale: 1.125;
+				}
+			}
+			&::after {
+				display: block;
+				content: "";
+				background: rgba($color: #000000, $alpha: 0.6);
+				mix-blend-mode: multiply;
+				@include image_cover;
+				transition: 0.3s all;
+				a:hover & {
+					background: rgba($color: #000000, $alpha: 0.8);
+				}
+			}
+		}
+		&text {
+			position: relative;
+			padding: 4rem 0;
+			text-align: center;
+			color: #fff;
+			h3 {
+				text-transform: uppercase;
+				color: inherit;
+				font-size: calc(0.9273vw + 2.3345rem);
+			}
+		}
+	}
+}
+
+.social_nav {
+	&-- {
+		&list {
+			display: flex;
+			gap: 60/16 * 1rem;
+			justify-content: center;
+		}
+		&item {
+		}
+		&link {
+			color: #fff;
+			opacity: 0.6;
+			transition: 0.3s all;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&icon {
+			color: inherit;
+			* {
+				fill: currentColor;
+			}
+		}
+	}
+}

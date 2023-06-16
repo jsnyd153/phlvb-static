@@ -1,0 +1,37 @@
+/*css/components/grids/grids-base.scss*/
+:root {
+ --main_columns: 12;
+ --grid_layout: var(--page_margin) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+ 	minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+ 	minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+ 	var(--page_margin);
+ --gap: 1.5rem;
+ --page_margin: clamp(0.25rem, calc(5vw - var(--gap)), 3.75rem);
+}
+@media (max-width: 767px) {
+ :root {
+  --gap: 1.25rem;
+ }
+}
+@media (max-width: 477px) {
+ :root {
+  --gap: 1rem;
+ }
+}
+@media (min-width: 1280px) {
+ :root {
+  --gap: 1.5rem;
+ }
+}
+@media (min-width: 1440px) {
+ :root {
+  --page_margin: calc((100vw - 80rem) / 2 - var(--gap));
+ }
+}
+
+section {
+ position: relative;
+ display: grid;
+ grid-template-columns: var(--grid_layout);
+ gap: var(--gap);
+}

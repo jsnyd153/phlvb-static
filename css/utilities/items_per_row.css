@@ -1,0 +1,163 @@
+/*css/components/items_per_row.scsss*/
+.ipr-1 {
+  --items_per_row: 1;
+}
+
+.ipr-2 {
+  --items_per_row: 2;
+}
+
+.ipr-3 {
+  --items_per_row: 3;
+}
+
+.ipr-4 {
+  --items_per_row: 4;
+}
+
+.ipr-5 {
+  --items_per_row: 5;
+}
+
+.ipr-6 {
+  --items_per_row: 6;
+}
+
+.ipr-7 {
+  --items_per_row: 7;
+}
+
+.ipr-8 {
+  --items_per_row: 8;
+}
+
+@media (max-width: 991px) {
+  .ipr-md-1 {
+    --items_per_row: 1;
+  }
+  .ipr-md-2 {
+    --items_per_row: 2;
+  }
+  .ipr-md-3 {
+    --items_per_row: 3;
+  }
+  .ipr-md-4 {
+    --items_per_row: 4;
+  }
+  .ipr-md-5 {
+    --items_per_row: 5;
+  }
+  .ipr-md-6 {
+    --items_per_row: 6;
+  }
+  .ipr-md-7 {
+    --items_per_row: 7;
+  }
+  .ipr-md-8 {
+    --items_per_row: 8;
+  }
+}
+@media (max-width: 767px) {
+  .ipr-sm-1 {
+    --items_per_row: 1;
+  }
+  .ipr-sm-2 {
+    --items_per_row: 2;
+  }
+  .ipr-sm-3 {
+    --items_per_row: 3;
+  }
+  .ipr-sm-4 {
+    --items_per_row: 4;
+  }
+  .ipr-sm-5 {
+    --items_per_row: 5;
+  }
+  .ipr-sm-6 {
+    --items_per_row: 6;
+  }
+  .ipr-sm-7 {
+    --items_per_row: 7;
+  }
+  .ipr-sm-8 {
+    --items_per_row: 8;
+  }
+}
+@media (max-width: 477px) {
+  .ipr-xs-1 {
+    --items_per_row: 1;
+  }
+  .ipr-xs-2 {
+    --items_per_row: 2;
+  }
+  .ipr-xs-3 {
+    --items_per_row: 3;
+  }
+  .ipr-xs-4 {
+    --items_per_row: 4;
+  }
+  .ipr-xs-5 {
+    --items_per_row: 5;
+  }
+  .ipr-xs-6 {
+    --items_per_row: 6;
+  }
+  .ipr-xs-7 {
+    --items_per_row: 7;
+  }
+  .ipr-xs-8 {
+    --items_per_row: 8;
+  }
+}
+@media (min-width: 1280px) {
+  .ipr-lg-1 {
+    --items_per_row: 1;
+  }
+  .ipr-lg-2 {
+    --items_per_row: 2;
+  }
+  .ipr-lg-3 {
+    --items_per_row: 3;
+  }
+  .ipr-lg-4 {
+    --items_per_row: 4;
+  }
+  .ipr-lg-5 {
+    --items_per_row: 5;
+  }
+  .ipr-lg-6 {
+    --items_per_row: 6;
+  }
+  .ipr-lg-7 {
+    --items_per_row: 7;
+  }
+  .ipr-lg-8 {
+    --items_per_row: 8;
+  }
+}
+@media (min-width: 1440px) {
+  .ipr-xl-1 {
+    --items_per_row: 1;
+  }
+  .ipr-xl-2 {
+    --items_per_row: 2;
+  }
+  .ipr-xl-3 {
+    --items_per_row: 3;
+  }
+  .ipr-xl-4 {
+    --items_per_row: 4;
+  }
+  .ipr-xl-5 {
+    --items_per_row: 5;
+  }
+  .ipr-xl-6 {
+    --items_per_row: 6;
+  }
+  .ipr-xl-7 {
+    --items_per_row: 7;
+  }
+  .ipr-xl-8 {
+    --items_per_row: 8;
+  }
+}
