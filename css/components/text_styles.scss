@@ -40,6 +40,7 @@ h1 {
 	line-height: 105%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-200);
+	text-wrap: balance;
 	&.feature {
 		@include fluid_size_text($scale: 8.4507, $floor: 20.3099/16);
 		line-height: 100%;
@@ -56,6 +57,7 @@ h2 {
 	line-height: 115%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-100);
+	text-wrap: balance;
 }
 
 h3 {
@@ -65,6 +67,7 @@ h3 {
 	line-height: 125%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-200);
+	text-wrap: balance;
 }
 h4 {
 	font-family: $sans_font;
@@ -73,6 +76,7 @@ h4 {
 	line-height: 125%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-200);
+	text-wrap: balance;
 }
 h5 {
 	@include fluid_size_text($scale: 0.6878, $floor: 12.2958/16);
@@ -81,6 +85,7 @@ h5 {
 	line-height: 120%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-200);
+	text-wrap: balance;
 }
 h6 {
 	font-family: $sans_font;
@@ -100,6 +105,7 @@ p {
 	line-height: 135%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-200);
+	text-wrap: balance;
 
 	b {
 		font-weight: 600;

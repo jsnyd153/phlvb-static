@@ -61,6 +61,12 @@
 				@include md {
 					height: 36/16 * 1rem;
 				}
+				.logo-ball_color {
+					fill: $white;
+				}
+				.logo-text_color {
+					fill: var(--theme_color-200);
+				}
 			}
 		}
 

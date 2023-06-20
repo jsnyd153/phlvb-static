@@ -49,7 +49,10 @@ a:hover .icon_card--text_content .arrow_button {
  color: var(--theme_color-500);
  transition: 0.3s all;
  align-items: center;
- align-items: center;
+}
+.icon_card--header span {
+ display: inline-block;
+ margin-top: 0.25em;
 }
 a:hover .icon_card--header {
  color: var(--theme_color-900);
@@ -64,8 +67,8 @@ a:hover .icon_card--header {
  color: inherit;
 }
 .icon_card--icon {
- width: 2.125em;
- height: 2.125em;
+ width: 1.5em;
+ height: 1.5em;
  flex-shrink: 0;
 }
 .icon_card--icon .fill {

@@ -61,6 +61,12 @@
   height: 2.25rem;
  }
 }
+.header_nav--logo svg .logo-ball_color {
+ fill: #ffffff;
+}
+.header_nav--logo svg .logo-text_color {
+ fill: var(--theme_color-200);
+}
 .header_nav--actions {
  display: flex;
  gap: 1rem;

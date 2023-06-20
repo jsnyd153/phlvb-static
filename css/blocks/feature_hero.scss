@@ -43,6 +43,7 @@
 			z-index: 1;
 		}
 		&text_content {
+			@include f-center;
 			h1 {
 				text-align: center;
 				@include f-center;
@@ -64,6 +65,7 @@
 		}
 		&media_content {
 			border-radius: 0.75rem;
+			overflow: hidden;
 		}
 
 		&page_nav {
@@ -85,14 +87,84 @@
 			inset: 0;
 
 			&-image {
-				// grid-column: 1 / span 5;
+				--height: 18;
+				--width: 9;
+				--aspect_ratio: calc(var(--height) / var(--width) * 100%);
+				--intial_x: 0%;
+				--intial_y: 0%;
+
 				@include cover_container;
-				padding-top: 18/9 * 100%;
-				// border-radius: 0.75rem;
+				padding-top: var(--aspect_ratio);
+				height: 0;
+				top: var(--intial_y);
+				left: var(--intial_x);
+
+				&::after {
+					content: "";
+					display: block;
+					inset: 0;
+					position: absolute;
+
+					background: linear-gradient(
+							0deg,
+							rgba(25, 45, 98, 0.3),
+							rgba(25, 45, 98, 0.3)
+						),
+						linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+					background-blend-mode: multiply, normal;
+
+					.theme_indoor & {
+						background: linear-gradient(
+								0deg,
+								rgba(89, 40, 23, 0.5),
+								rgba(89, 40, 23, 0.5)
+							),
+							linear-gradient(
+								360deg,
+								rgba(0, 0, 0, 0.4) 0%,
+								rgba(0, 0, 0, 0) 100%
+							);
+					}
+					.theme_grass & {
+						background: linear-gradient(
+								0deg,
+								rgba(74, 98, 25, 0.5),
+								rgba(74, 98, 25, 0.5)
+							),
+							linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+					}
+					.theme_beach & {
+						/* image 35 */
+
+						background: linear-gradient(
+								0deg,
+								rgba(255, 222, 54, 0.3),
+								rgba(255, 222, 54, 0.3)
+							),
+							linear-gradient(
+								0deg,
+								rgba(255, 255, 255, 0.3),
+								rgba(255, 255, 255, 0.3)
+							);
+					}
+				}
 				img {
 					@include image_cover;
 				}
-			}
+
+				&[data-side="left"] {
+					--start: 1;
+					--span: span 5;
+					grid-column: var(--start) / var(--span);
+					border-radius: 0px 20/16 * 1rem 20/16 * 1rem 0px;
+				}
+				&[data-side="right"] {
+					--start: -1;
+					--span: span 5;
+					grid-column: var(--span) / var(--start);
+					border-radius: 20/16 * 1rem 0px 0px 20/16 * 1rem;
+				}
+			} //-image
 		}
 	} //--
 }

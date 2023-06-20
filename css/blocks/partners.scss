@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "../abstracts" as *;
 
-// Partners
+/*css/blocks/partners.scss*/
 // Visual:
 // Dependancy:
 
@@ -17,7 +17,7 @@
 			position: relative;
 			@include f-center;
 			flex-wrap: wrap;
-			gap: var(--gap);
+			gap: calc(var(--gap) * 2);
 			border: 1px solid var(--theme_color-200);
 			padding: 40/16 * 1rem;
 			border-radius: 12/16 * 1rem;

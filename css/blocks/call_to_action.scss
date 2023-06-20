@@ -38,6 +38,7 @@
 			grid-column: 1/-1;
 			margin-top: var(--top);
 			--columns: 14;
+			text-decoration: none;
 
 			&.on-grid {
 				--columns: 12;

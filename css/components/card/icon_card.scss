@@ -59,19 +59,23 @@
 			color: var(--theme_color-500);
 			transition: 0.3s all;
 			align-items: center;
-			// flex-wrap: wrap;
+
+			span {
+				display: inline-block;
+				margin-top: 0.25em;
+			}
 			a:hover & {
 				color: var(--theme_color-900);
 			}
-			align-items: center;
+
 			@include header_tags {
 				flex-grow: 1;
 				color: inherit;
 			}
 		}
 		&icon {
-			width: 2.125em;
-			height: 2.125em;
+			width: 1.5em;
+			height: 1.5em;
 			flex-shrink: 0;
 			.fill {
 				fill: currentColor;
