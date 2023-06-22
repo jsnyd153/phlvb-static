@@ -1,0 +1,87 @@
+/*css/components/content/accordian.scss*/
+/*css/components/content/location_list.scss*/
+.toggle {
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ text-align: left;
+ gap: var(--spacing);
+ --spacing: 1.5rem;
+}
+.toggle--title {
+ display: flex;
+ gap: var(--gap);
+}
+.toggle--checkbox {
+ display: none;
+}
+.toggle--thumb {
+ background-color: white;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ padding: 0.1875rem;
+ border-radius: 2em;
+}
+.toggle--thumb .indicator {
+ display: block;
+ grid-column: 1;
+ grid-row: 1;
+ background-color: red;
+ height: 100%;
+ width: 100%;
+ border-radius: 2em;
+ transition: 0.3s all;
+}
+[data-toggle=indoor-outdoor] .toggle--thumb .indicator {
+ background-color: #f16122;
+}
+.toggle--thumb .option {
+ font-size: 0.6875rem;
+ grid-column: 1;
+ grid-row: 1;
+ text-align: center;
+ position: relative;
+ transition: 0.3s all;
+ padding: 0.5rem 0.875rem;
+ line-height: 100%;
+ display: block;
+ color: white;
+}
+.toggle--thumb .option:last-child {
+ grid-column: 2;
+ color: var(--theme_color-200);
+}
+input:checked + .toggle--thumb .option {
+ color: var(--theme_color-200);
+}
+input:checked + .toggle--thumb .option:last-child {
+ color: white;
+}
+input:checked + .toggle--thumb .indicator {
+ transform: translateX(100%);
+}
+[data-toggle=indoor-outdoor] input:checked + .toggle--thumb .indicator {
+ background-color: #94d13d;
+}
+.toggle--content {
+ display: grid;
+ transition: 0.5s grid-template-rows;
+}
+.toggle--content > .text_content {
+ overflow: hidden;
+ padding-bottom: 0rem;
+ transition: 0.5s padding;
+ gap: 1rem;
+}
+.toggle--content.initial {
+ grid-template-rows: 1fr;
+}
+[toggle-state=checked] .toggle--content.initial {
+ grid-template-rows: 0fr;
+}
+.toggle--content.toggled {
+ grid-template-rows: 0fr;
+}
+[toggle-state=checked] .toggle--content.toggled {
+ grid-template-rows: 1fr;
+}

@@ -90,11 +90,11 @@
 	}
 }
 .theme_light {
-	--theme_color-500: #{$brand-500};
+	--theme_color-500: #3f73d1;
 	--theme_color-100: #{$brand-900};
 	--theme_color-200: #{$brand-800};
-	--theme_color-900: #{$brand-100};
+	--theme_color-900: #edf0f8;
 	--theme_color-800: #{$brand-200};
-	--theme_color-800-t: #{$brand-200t};
+	--theme_color-800t: #{$brand-200t};
 	--theme_color-51: #{rgba($brand-500, 0.1)};
 }

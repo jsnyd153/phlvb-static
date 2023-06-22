@@ -43,6 +43,11 @@
 				z-index: -1;
 				opacity: calc(var(--bg_opacity) / 100);
 				backdrop-filter: blur(0.25rem);
+
+				.theme_light & {
+					background: rgba(#edf0f8, $alpha: 0.8);
+					//
+				}
 			}
 		} //container
 		&branding {
@@ -157,6 +162,9 @@
 			}
 			&:hover {
 				color: var(--theme_color-500);
+				.theme_light & {
+					// color: var(--theme_color-700);
+				}
 				&::after {
 					width: 100%;
 					@include sm {
@@ -254,6 +262,9 @@
 		}
 		&[aria-current="page"] {
 			color: var(--theme_color-500);
+			.theme_light & {
+				// color: var(--theme_color-700);
+			}
 		}
 
 		&::after {
@@ -271,6 +282,9 @@
 		}
 		&:hover {
 			color: var(--theme_color-500);
+			.theme_light & {
+				// color: var(--theme_color-700);
+			}
 			&::after {
 				width: 100%;
 			}
@@ -331,6 +345,10 @@
 		&selector:hover &button {
 			border: 2/16 * 1rem solid var(--theme_color-500);
 			color: var(--theme_color-500);
+			.theme_light & {
+				// color: var(--theme_color-700);
+				// border: 2/16 * 1rem solid var(--theme_color-700);
+			}
 		}
 		&selector.active &button {
 			color: var(--theme_color-900);
@@ -439,6 +457,9 @@
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
 	color: var(--theme_color-500);
+	.theme_light & {
+		// color: var(--theme_color-700);
+	}
 	background-color: transparent;
 	border: 0;
 	display: none;

@@ -93,11 +93,11 @@
 }
 
 .theme_light {
- --theme_color-500: #76affe;
+ --theme_color-500: #3f73d1;
  --theme_color-100: #192d62;
  --theme_color-200: #1c326f;
- --theme_color-900: #bccceb;
+ --theme_color-900: #edf0f8;
  --theme_color-800: #a9bfeb;
- --theme_color-800-t: rgba(172, 192, 230, 0.8);
+ --theme_color-800t: rgba(172, 192, 230, 0.8);
  --theme_color-51: rgba(118, 175, 254, 0.1);
 }

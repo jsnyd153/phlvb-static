@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*css/components/content/inline_alert.scss*/
 .inline_alert--container {
  padding: 2rem;
@@ -82,10 +83,10 @@
 }
 .text_content ul li p {
  display: flex;
- gap: 0.75rem;
+ gap: 0.25em;
  color: var(--theme_color-200);
  margin-left: 1.25em;
- max-width: 50ch;
+ max-width: 60ch;
 }
 .text_content ul li p::before {
  content: "";
@@ -96,8 +97,15 @@
  color: inherit;
  flex-shrink: 0;
  border-radius: 50%;
+ margin-right: 0.5rem;
  background: currentColor;
  box-shadow: inset 0 0 0 0.75em var(--theme_color-900), 0 0 0 1px var(--theme_color-100);
+}
+.text_content ul.no-decoration li p {
+ max-width: 70ch;
+}
+.text_content ul.no-decoration li p::before {
+ display: none;
 }
 
 /*css/components/content/media_area.scss*/
@@ -259,7 +267,7 @@
  display: flex;
  flex-direction: column;
  justify-content: center;
- align-items: flex-start;
+ align-items: stretch;
  position: relative;
 }
 
@@ -268,7 +276,7 @@
  display: flex;
  flex-direction: column;
  justify-content: center;
- align-items: flex-start;
+ align-items: stretch;
  position: relative;
 }
 
@@ -322,4 +330,142 @@
 
 [location-data~=beach] i[data-indicator=beach] {
  display: flex;
+}
+
+/*css/components/content/accordian.scss*/
+/*css/components/content/location_list.scss*/
+.accordion {
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ text-align: left;
+ gap: var(--spacing);
+ border-bottom: 1px solid var(--theme_color-800);
+ --spacing: 1.5rem;
+}
+.accordion:last-child {
+ border-bottom: 0px solid var(--theme_color-800);
+}
+.accordion--trigger {
+ border: 0;
+ padding: 0;
+ margin: 0;
+ background: transparent;
+ text-align: left;
+}
+.accordion--trigger h4 {
+ display: flex;
+ justify-content: space-between;
+ gap: var(--spacing);
+}
+.accordion--content {
+ display: grid;
+ grid-template-rows: 0fr;
+ transition: 0.5s grid-template-rows;
+}
+.accordion--content > .text_content {
+ overflow: hidden;
+ padding-bottom: 0rem;
+ transition: 0.5s padding;
+ gap: 1rem;
+}
+[aria-expanded=true] + .accordion--content {
+ grid-template-rows: 1fr;
+}
+[aria-expanded=true] + .accordion--content > .text_content {
+ padding-bottom: var(--spacing);
+}
+.accordion--icon::after {
+ content: "+";
+}
+[aria-expanded=true] .accordion--icon::after {
+ content: "—";
+}
+
+/*css/components/content/accordian.scss*/
+/*css/components/content/location_list.scss*/
+.toggle {
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ text-align: left;
+ gap: var(--spacing);
+ --spacing: 1.5rem;
+}
+.toggle--title {
+ display: flex;
+ gap: var(--gap);
+}
+.toggle--checkbox {
+ display: none;
+}
+.toggle--thumb {
+ background-color: white;
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ padding: 0.1875rem;
+ border-radius: 2em;
+}
+.toggle--thumb .indicator {
+ display: block;
+ grid-column: 1;
+ grid-row: 1;
+ background-color: red;
+ height: 100%;
+ width: 100%;
+ border-radius: 2em;
+ transition: 0.3s all;
+}
+[data-toggle=indoor-outdoor] .toggle--thumb .indicator {
+ background-color: #f16122;
+}
+.toggle--thumb .option {
+ font-size: 0.6875rem;
+ grid-column: 1;
+ grid-row: 1;
+ text-align: center;
+ position: relative;
+ transition: 0.3s all;
+ padding: 0.5rem 0.875rem;
+ line-height: 100%;
+ display: block;
+ color: white;
+}
+.toggle--thumb .option:last-child {
+ grid-column: 2;
+ color: var(--theme_color-200);
+}
+input:checked + .toggle--thumb .option {
+ color: var(--theme_color-200);
+}
+input:checked + .toggle--thumb .option:last-child {
+ color: white;
+}
+input:checked + .toggle--thumb .indicator {
+ transform: translateX(100%);
+}
+[data-toggle=indoor-outdoor] input:checked + .toggle--thumb .indicator {
+ background-color: #94d13d;
+}
+.toggle--content {
+ display: grid;
+ transition: 0.5s grid-template-rows;
+}
+.toggle--content > .text_content {
+ overflow: hidden;
+ padding-bottom: 0rem;
+ transition: 0.5s padding;
+ gap: 1rem;
+}
+.toggle--content.initial {
+ grid-template-rows: 1fr;
+}
+[toggle-state=checked] .toggle--content.initial {
+ grid-template-rows: 0fr;
+}
+.toggle--content.toggled {
+ grid-template-rows: 0fr;
+}
+[toggle-state=checked] .toggle--content.toggled {
+ grid-template-rows: 1fr;
 }

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/*css/components/content/accordian.scss*/
+/*css/components/content/location_list.scss*/
+.accordion {
+ display: flex;
+ flex-direction: column;
+ align-items: stretch;
+ text-align: left;
+ gap: var(--spacing);
+ border-bottom: 1px solid var(--theme_color-800);
+ --spacing: 1.5rem;
+}
+.accordion:last-child {
+ border-bottom: 0px solid var(--theme_color-800);
+}
+.accordion--trigger {
+ border: 0;
+ padding: 0;
+ margin: 0;
+ background: transparent;
+ text-align: left;
+}
+.accordion--trigger h4 {
+ display: flex;
+ justify-content: space-between;
+ gap: var(--spacing);
+}
+.accordion--content {
+ display: grid;
+ grid-template-rows: 0fr;
+ transition: 0.5s grid-template-rows;
+}
+.accordion--content > .text_content {
+ overflow: hidden;
+ padding-bottom: 0rem;
+ transition: 0.5s padding;
+ gap: 1rem;
+}
+[aria-expanded=true] + .accordion--content {
+ grid-template-rows: 1fr;
+}
+[aria-expanded=true] + .accordion--content > .text_content {
+ padding-bottom: var(--spacing);
+}
+.accordion--icon::after {
+ content: "+";
+}
+[aria-expanded=true] .accordion--icon::after {
+ content: "—";
+}

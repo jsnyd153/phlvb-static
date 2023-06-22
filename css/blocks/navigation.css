@@ -39,6 +39,9 @@
  -webkit-backdrop-filter: blur(0.25rem);
          backdrop-filter: blur(0.25rem);
 }
+.theme_light .header_nav--container::after {
+ background: rgba(237, 240, 248, 0.8);
+}
 .header_nav--branding {
  flex-grow: 1;
  padding: 0.5rem 0;

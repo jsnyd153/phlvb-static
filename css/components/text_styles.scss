@@ -72,7 +72,7 @@ h3 {
 h4 {
 	font-family: $sans_font;
 	font-weight: 500;
-	@include fluid_size_text($scale: 0.9695, $floor: 15.2394/16);
+	@include fluid_size_text($scale: 0.8695, $floor: 14.2394/16);
 	line-height: 125%;
 	letter-spacing: -0.02em;
 	color: var(--theme_color-200);

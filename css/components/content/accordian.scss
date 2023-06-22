@@ -1,0 +1,64 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+/*css/components/content/accordian.scss*/
+// Visual:--
+// Dependancy: none
+
+//================================================
+/*css/components/content/location_list.scss*/
+//================================================
+.accordion {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	text-align: left;
+	gap: var(--spacing);
+	border-bottom: 1px solid var(--theme_color-800);
+	--spacing: 1.5rem;
+	&:last-child {
+		border-bottom: 0px solid var(--theme_color-800);
+	}
+	&-- {
+		&trigger {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			background: transparent;
+			text-align: left;
+
+			h4 {
+				display: flex;
+				justify-content: space-between;
+				gap: var(--spacing);
+			}
+		}
+		&content {
+			display: grid;
+			grid-template-rows: 0fr;
+			transition: 0.5s grid-template-rows;
+
+			> .text_content {
+				overflow: hidden;
+				padding-bottom: 0rem;
+				transition: 0.5s padding;
+				gap: 1rem;
+			}
+
+			[aria-expanded="true"] + & {
+				grid-template-rows: 1fr;
+				> .text_content {
+					padding-bottom: var(--spacing);
+				}
+			}
+		}
+		&icon {
+			&::after {
+				content: "+";
+				[aria-expanded="true"] & {
+					content: "—";
+				}
+			}
+		}
+	}
+}
