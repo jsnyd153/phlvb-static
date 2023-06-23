@@ -1,6 +1,5 @@
 .story_block--section {
  padding: var(--gap) 0;
- row-gap: 0;
 }
 .story_block--row {
  --columns: 12;
@@ -36,11 +35,24 @@
 .story_block--media_area {
  grid-column: span calc(var(--columns) / 2 - 1);
 }
+[distribute-columns="1:3"] .story_block--media_area {
+ grid-column: span calc(var(--columns) / 2 - 2);
+}
+[distribute-columns="1:1"] .story_block--media_area {
+ grid-column: span calc(var(--columns) / 2);
+}
+[distribute-columns="7:5"] .story_block--media_area {
+ grid-column: span calc(var(--columns) / 2 + 1);
+}
+[distribute-columns="3:1"] .story_block--media_area {
+ grid-column: span calc(var(--columns) / 2 + 2);
+}
 @media (max-width: 767px) {
  .story_block--media_area {
   padding: 0 var(--rp);
+ }
+ .story_block--media_area, [distribute-columns] .story_block--media_area {
   grid-column: 1/-1;
-  grid-row: 1;
  }
 }
 @media (max-width: 477px) {
@@ -52,16 +64,34 @@
  grid-column: span calc(var(--columns) / 2 + 1);
  padding: var(--rp);
 }
+[distribute-columns="1:3"] .story_block--text_area {
+ grid-column: span calc(var(--columns) / 2 + 2);
+}
+[distribute-columns="1:1"] .story_block--text_area {
+ grid-column: span calc(var(--columns) / 2);
+}
+[distribute-columns="7:5"] .story_block--text_area {
+ grid-column: span calc(var(--columns) / 2 - 1);
+}
+[distribute-columns="3:1"] .story_block--text_area {
+ grid-column: span calc(var(--columns) / 2 - 2);
+}
 @media (max-width: 767px) {
  .story_block--text_area {
-  grid-column: 1/-1;
   padding: 0.5rem var(--rp);
+ }
+ .story_block--text_area, [distribute-columns] .story_block--text_area {
+  grid-column: 1/-1;
  }
 }
 @media (max-width: 477px) {
  .story_block--text_area {
   padding: 0;
  }
+}
+.story_block--text_area.full_width {
+ grid-column: 1/-1;
+ padding: 0;
 }
 .story_block--single {
  --span: 8;
@@ -74,13 +104,17 @@
 .inset .story_block--single {
  --span: 7;
 }
+.story_block--single > .text_area,
+.story_block--single > .media_area {
+ margin: 0 var(--rp);
+}
 .story_block--single.full_width {
  --span: 12;
  padding: 0;
 }
-.story_block--single > .text_area,
-.story_block--single > .media_area {
- margin: 0 var(--rp);
+.story_block--single.full_width > .text_area,
+.story_block--single.full_width > .media_area {
+ margin: 0;
 }
 @media (max-width: 991px) {
  .story_block--single {

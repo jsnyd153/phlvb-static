@@ -5,6 +5,10 @@
 		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<title>Frequently Asked Questions - Philadelphia Volleyball</title>
+		<meta
+			content="Simple tools that make it easy for brands, agencies and companies of all sizes to work with creators. Pay freelancers and influencers anywhere in the world. We’ll handle vendor onboarding, compliance and everything else."
+			name="description"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -50,6 +54,9 @@
 				<div class="text_area feature_hero--text_area">
 					<div class="text_content feature_hero--text_content">
 						<h1>Frequently Asked Questions</h1>
+						<p class="post_summary">
+							Read up on some of our members most frequently asked questions.
+						</p>
 					</div>
 				</div>
 				<div class="media_area feature_hero--media_area">
@@ -575,6 +582,20 @@
 				$(this).attr("aria-expanded", function (i, attr) {
 					return attr == "true" ? "false" : "true";
 				});
+			});
+
+			// Assuming you have included jQuery library in your HTML file
+
+			$(document).ready(function () {
+				// Get the meta description tag
+				var metaDescription = $('meta[name="description"]').attr("content");
+
+				// Check if the meta description exists
+				if (metaDescription) {
+					console.log("Meta Description:", metaDescription);
+				} else {
+					console.log("Meta Description not found.");
+				}
 			});
 		</script>
 	</body>

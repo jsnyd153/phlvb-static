@@ -26,6 +26,9 @@
  border-bottom-width: 0px;
  border-bottom: 1px solid var(--theme_color-800);
 }
+.blog_content--text_content {
+ align-items: stretch;
+}
 .blog_content--columns {
  display: grid;
  gap: var(--gap);

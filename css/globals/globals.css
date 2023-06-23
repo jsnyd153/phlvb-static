@@ -46,3 +46,13 @@ main .container {
  flex-direction: column;
  gap: 0.75rem;
 }
+
+hr {
+ margin-block: var(--gap);
+ width: 100%;
+ border: 0;
+ border-bottom-color: currentcolor;
+ border-bottom-style: none;
+ border-bottom-width: 0px;
+ border-bottom: 1px solid var(--theme_color-800);
+}

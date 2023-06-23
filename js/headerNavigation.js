@@ -148,3 +148,75 @@ $(document).ready(function () {
 		}
 	});
 });
+
+//Create resource card by fetching content from blog pages
+
+$("[data-resource]").each(function () {
+	// Get the original element
+	var originalElement = $(this);
+
+	// Fetch the HTML file
+	var fetchedPageURL =
+		"../_static_pages/" + originalElement.data("resource") + ".html";
+	fetch(fetchedPageURL)
+		.then(function (response) {
+			return response.text();
+		})
+		.then(function (html) {
+			// Parse the fetched HTML
+			var fetchedHTML = $(html);
+
+			// Get the required elements from the fetched HTML
+			var headline = fetchedHTML.find(".feature_hero--section h1").text();
+			var featureImage = fetchedHTML
+				.find(".feature_hero--section img")
+				.prop("outerHTML");
+			var postSummary = fetchedHTML
+				.find(".feature_hero--section .post_summary")
+				.html();
+
+			// Create the new element
+			var newElement = $("<a>", {
+				href: fetchedPageURL,
+				class: "card resource_card",
+				html: $("<div>", {
+					class: "resource_card--media_area media_area",
+					html: $("<div>", {
+						class: "resource_card--media_content media_content",
+						html: featureImage,
+					}),
+				}).add(
+					$("<div>", {
+						class: "text_area resource_card--text_area",
+						html: $("<div>", {
+							class: "resource_card--text_area text_area",
+							html: $("<div>", {
+								class: "resource_card--text_content text_content",
+								html: $("<h5>", {
+									text: headline,
+								}).add(
+									$("<p>", {
+										html: postSummary,
+									})
+								),
+							}).add(
+								$("<div>", {
+									class: "resource_card--text_content text_content",
+									html: $("<span>", {
+										class: "button small",
+										text: "Read more",
+									}),
+								})
+							),
+						}),
+					})
+				),
+			});
+
+			// Replace the original element with the new element
+			originalElement.replaceWith(newElement);
+		})
+		.catch(function (error) {
+			console.log("Error fetching the HTML file:", error);
+		});
+});
