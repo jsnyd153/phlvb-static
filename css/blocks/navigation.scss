@@ -152,6 +152,8 @@
 		&link {
 			display: block;
 			padding: 24/16 * 1rem 20/16 * 1rem;
+			color: inherit;
+			text-decoration: none;
 			&::after {
 				content: "";
 				display: block;
@@ -162,9 +164,9 @@
 			}
 			&:hover {
 				color: var(--theme_color-500);
-				.theme_light & {
-					// color: var(--theme_color-700);
-				}
+				// .theme_light & {
+				// 	// color: var(--theme_color-700);
+				// }
 				&::after {
 					width: 100%;
 					@include sm {
@@ -262,9 +264,9 @@
 		}
 		&[aria-current="page"] {
 			color: var(--theme_color-500);
-			.theme_light & {
-				// color: var(--theme_color-700);
-			}
+			// .theme_light & {
+			// 	// color: var(--theme_color-700);
+			// }
 		}
 
 		&::after {
@@ -282,9 +284,9 @@
 		}
 		&:hover {
 			color: var(--theme_color-500);
-			.theme_light & {
-				// color: var(--theme_color-700);
-			}
+			// .theme_light & {
+			// 	// color: var(--theme_color-700);
+			// }
 			&::after {
 				width: 100%;
 			}
@@ -345,10 +347,10 @@
 		&selector:hover &button {
 			border: 2/16 * 1rem solid var(--theme_color-500);
 			color: var(--theme_color-500);
-			.theme_light & {
-				// color: var(--theme_color-700);
-				// border: 2/16 * 1rem solid var(--theme_color-700);
-			}
+			// .theme_light & {
+			// 	// color: var(--theme_color-700);
+			// 	// border: 2/16 * 1rem solid var(--theme_color-700);
+			// }
 		}
 		&selector.active &button {
 			color: var(--theme_color-900);
@@ -367,7 +369,7 @@
 			border-radius: 12/16 * 1rem;
 			display: flex;
 			gap: 1rem;
-			background-color: var(--theme_color-800t);
+			background-color: var(--theme_color-700t);
 			backdrop-filter: blur(2px);
 			position: absolute;
 			top: 70%;
@@ -457,9 +459,9 @@
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
 	color: var(--theme_color-500);
-	.theme_light & {
-		// color: var(--theme_color-700);
-	}
+	// .theme_light & {
+	// 	// color: var(--theme_color-700);
+	// }
 	background-color: transparent;
 	border: 0;
 	display: none;

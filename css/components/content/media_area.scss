@@ -33,4 +33,9 @@
 			@include image_cover;
 		}
 	}
+
+	.faux-mask {
+		@include image_cover;
+		background-color: var(--theme_color-900);
+	}
 }

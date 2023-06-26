@@ -1,6 +1,7 @@
 .feature_hero--section {
  position: relative;
  overflow: visible;
+ padding-block: calc(var(--padding_base) * 1.75);
 }
 .feature_hero--text_area, .feature_hero--media_area {
  --columns: 12;

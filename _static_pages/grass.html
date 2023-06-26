@@ -35,6 +35,7 @@
 		<link rel="stylesheet" href="../css/blocks/footer.css" />
 
 		<link rel="stylesheet" href="../css/utilities/items_per_row.css" />
+		<link rel="stylesheet" href="../css/custom/grass.css" />
 
 		<style></style>
 	</head>
@@ -51,15 +52,12 @@
 							style="
 								--height: 612;
 								--width: 391;
-								--intial_x: 0%;
-								--intial_y: 20%;
+								--intial_x: -8%;
+								--intial_y: 28%;
 								--span: span 5;
 							"
 						>
-							<img
-								src="../assets/media/pexels-pavel-danilyuk-6203583.jpg"
-								alt=""
-							/>
+							<img src="../assets/media/grass-feature-1.jpg" alt="" />
 						</div>
 						<div
 							class="feature_hero--background_media-image"
@@ -68,11 +66,11 @@
 								--height: 300;
 								--width: 334;
 								--intial_x: 0%;
-								--intial_y: 0%;
+								--intial_y: 10%;
 								--span: span 4;
 							"
 						>
-							<img src="../assets/media/img7.png" alt="" />
+							<img src="../assets/media/grass-feature-2.jpg" alt="" />
 						</div>
 					</div>
 				</div>
@@ -87,10 +85,13 @@
 						class="text_content feature_hero--text_content feature_hero--page_nav"
 					>
 						<div class="button-container">
-							<a href="#rules" class="button ghost">Rules</a
-							><a href="#pickup" class="button ghost">Pickup</a
-							><a href="#leagues" class="button ghost">Leagues</a
-							><a href="#tournaments" class="button ghost">Tournaments</a>
+							<a href="#rules" class="button is-grass-bright ghost">Rules</a
+							><a href="#pickup" class="button is-grass-bright ghost">Pickup</a
+							><a href="#leagues" class="button is-grass-bright ghost"
+								>Leagues</a
+							><a href="#tournaments" class="button is-grass-bright ghost"
+								>Tournaments</a
+							>
 						</div>
 					</div>
 				</div>
@@ -115,7 +116,7 @@
 							</div>
 						</div>
 						<div class="media_area">
-							<figure class="media_content is-cutout-top">
+							<figure class="media_content mask-reveal">
 								<img
 									src="https://lh3.googleusercontent.com/pw/AJFCJaXevnKjSqS-rjHknO8xfn53Yn6sO6u4mFEb3diq4DB1ns9M1-nWTdnKy7Uy3_0LL2g6f2M363Bi6TXXzgMQJA9fESFpN8_Crqj4WWb6oy1ZV7yspEM_vegUTzi7Gp3dIEc0ppwlfUYWpK0WBhH2tx33WQ=w1626-h915-s-no?authuser=0"
 									alt=""
@@ -212,6 +213,12 @@
 					</div>
 				</div>
 				<div class="event_list--list">
+					<img
+						src="../assets/media/optx-ball.png"
+						alt=""
+						class=""
+						id="optix-grass-1"
+					/>
 					<a href="#opensports" class="card event_card" data-copies="6">
 						<div class="event_card--date">
 							<span class="date">v.eventDate</span>
@@ -257,7 +264,13 @@
 					</div>
 				</div>
 				<div class="event_list--list">
-					<a href="#opensports" class="card tournament_card" data-copies="3">
+					<img
+						src="../assets/media/optx-ball.png"
+						alt=""
+						class=""
+						id="optix-grass-2"
+					/>
+					<a href="#opensports" class="card tournament_card" data-copies="5">
 						<div class="tournament_card--date">
 							<span class="date">v.tournamentDates</span>
 						</div>
@@ -284,7 +297,71 @@
 		<script src="../js/setCustomAttr.js"></script>
 		<script src="../js/headerNavigation.js"></script>
 		<script src="../js/navigation.js"></script>
+		<script src="../js/scrollAnimations.js"></script>
 
-		<script></script>
+		<script>
+			// Dealy till after content is loaded
+
+			setTimeout(() => {
+				$("#optix-grass-1").each(function () {
+					const ball = $(this);
+					const container = $(this).parents("section");
+
+					// Outlines the container
+					// $(container).css("border", "1px solid blue");
+
+					ScrollTrigger.defaults({
+						// toggleActions: "restart complete reverse reset",
+						start: "-55% center",
+						end: "120% center",
+						scrub: 1,
+						markers: true, //for debugging
+					});
+
+					var tlone = gsap
+						.timeline({
+							paused: true,
+							scrollTrigger: { trigger: container },
+						})
+						.fromTo(
+							ball,
+							{ top: "-10%", y: "-65%", rotation: 0, x: "55%" },
+							{
+								top: "100%",
+								y: "-80%",
+								rotation: 380,
+								x: "55%",
+								ease: "power.out",
+							}
+						);
+				});
+				$("#optix-grass-2").each(function () {
+					const ball = $(this);
+					const container = $(this).parents("section");
+
+					// Outlines the container
+					// $(container).css("border", "1px solid red");
+
+					ScrollTrigger.defaults({
+						// toggleActions: "restart complete reverse reset",
+						start: "-55% center",
+						end: "120% center",
+						scrub: 1,
+						markers: "true", //for debugging
+					});
+
+					var tlone = gsap
+						.timeline({
+							paused: true,
+							scrollTrigger: { trigger: container },
+						})
+						.fromTo(
+							ball,
+							{ top: "0%", y: "-20%", rotation: 0, x: "-80%" },
+							{ top: "90%", y: "-80%", rotation: 270, x: "-80%" }
+						);
+				});
+			}, "100");
+		</script>
 	</body>
 </html>

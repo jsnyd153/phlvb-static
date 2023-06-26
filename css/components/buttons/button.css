@@ -103,6 +103,12 @@
  --hover_background: #3b520e;
  --hover_text: #d1f095;
 }
+.button.is-grass-bright {
+ --inital_background: #3b520e;
+ --inital_text: #3b520e;
+ --hover_background: #3b520e;
+ --hover_text: #94d13d;
+}
 .button.is-grass-light {
  --inital_background: #d1f095;
  --inital_text: #3b520e;

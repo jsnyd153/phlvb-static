@@ -143,6 +143,8 @@
 .primary_nav--link {
  display: block;
  padding: 1.5rem 1.25rem;
+ color: inherit;
+ text-decoration: none;
 }
 .primary_nav--link::after {
  content: "";
@@ -343,7 +345,7 @@ li:hover .primary_nav--dropdown {
  border-radius: 0.75rem;
  display: flex;
  gap: 1rem;
- background-color: var(--theme_color-800t);
+ background-color: var(--theme_color-700t);
  -webkit-backdrop-filter: blur(2px);
          backdrop-filter: blur(2px);
  position: absolute;

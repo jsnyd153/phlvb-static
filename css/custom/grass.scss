@@ -1,0 +1,23 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+#optix-grass-1 {
+	position: absolute;
+	max-width: 225/16 * 1rem;
+	min-width: 130/16 * 1rem;
+	width: 20%;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+#optix-grass-2 {
+	position: absolute;
+	max-width: 425/16 * 1rem;
+	max-height: 425/16 * 1rem;
+	min-width: 180/16 * 1rem;
+	width: 30%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}

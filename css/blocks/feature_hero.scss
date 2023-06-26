@@ -10,6 +10,7 @@
 		&section {
 			position: relative;
 			overflow: visible;
+			padding-block: calc(var(--padding_base) * 1.75);
 		}
 
 		&text_area,
