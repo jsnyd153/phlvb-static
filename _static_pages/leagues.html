@@ -74,14 +74,13 @@
 				<div class="text_area feature_hero--text_area inset">
 					<div class="text_content feature_hero--text_content">
 						<p class="large">
-							The Philadelphia Volleyball Leagues are a great way to get in
-							shape and meet new people. Our leagues run on a quarterly basis
+							Philadelphia Volleyball Leagues are a great way to get in shape
+							and meet new people. Our leagues run on a quarterly basis
 							throughout the year. We currently offer two levels of adult co-ed
 							indoor volleyball played at North Light Community Center. Make a
-							team and play every week, then grab a beer at our sponsor bar down
+							team, play every week, then grab a beer at our sponsor bar down
 							the street.
 						</p>
-						<p></p>
 					</div>
 				</div>
 			</section>
@@ -216,81 +215,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script src="../js/setCustomAttr.js"></script>
-		<script src="../js/headerNavigation.js"></script>
+		<script src="../js/generateContent.js"></script>
 		<script src="../js/navigation.js"></script>
-
-		<script>
-			$("#filter-toggle").click(function () {
-				const filterContainer = $(this).parents(".pickup--filters");
-
-				$(filterContainer).attr(
-					"state-filter-open",
-					$(filterContainer).attr("state-filter-open") === "true"
-						? "false"
-						: "true"
-				);
-			});
-
-			//create duplicae indicator li for checkboxes that display all current filters
-			$(document).ready(function () {
-				$('.filter--checkbox:not([data-state="inactive"])').on(
-					"change",
-					function () {
-						var $currentFilters = $(".filter--current");
-						$currentFilters.empty();
-
-						$(".filter--checkbox:checked").each(function () {
-							var $checkbox = $(this);
-							var $label = $checkbox.parent("label");
-							var labelText = $label.html();
-
-							var $selectedItem = $(
-								'<li class="filter--selected-item filter--item">' +
-									labelText +
-									"</li>"
-							);
-							$selectedItem.on("click", function () {
-								$checkbox.prop("checked", false);
-								updateCurrentFilters();
-							});
-
-							$currentFilters.append($selectedItem);
-						});
-					}
-				);
-
-				$("#resetBtn").on("click", function () {
-					$(".filter--checkbox").prop("checked", false);
-					updateCurrentFilters();
-				});
-
-				function updateCurrentFilters() {
-					var $currentFilters = $(".filter--current");
-					$currentFilters.empty();
-
-					$(".filter--checkbox:checked").each(function () {
-						var $checkbox = $(this);
-						var $label = $checkbox.parent("label");
-						var labelText = $label.html();
-
-						var $selectedItem = $(
-							'<li class="filter--selected-item filter--item">' +
-								labelText +
-								"</li>"
-						);
-						$selectedItem.on("click", function () {
-							$checkbox.prop("checked", false);
-							updateCurrentFilters();
-						});
-
-						$currentFilters.append($selectedItem);
-					});
-				}
-
-				updateCurrentFilters();
-			});
-		</script>
-
-		<script></script>
 	</body>
 </html>

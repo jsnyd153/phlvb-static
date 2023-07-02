@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<title>Play Indoor - Philadelphia Volleyball</title>
+		<title>Indoor Volleyball - Philadelphia Volleyball</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -35,6 +35,7 @@
 		<link rel="stylesheet" href="../css/blocks/footer.css" />
 
 		<link rel="stylesheet" href="../css/utilities/items_per_row.css" />
+		<link rel="stylesheet" href="../css/custom/indoor.css" />
 
 		<style></style>
 	</head>
@@ -52,14 +53,11 @@
 								--height: 612;
 								--width: 391;
 								--intial_x: 0%;
-								--intial_y: 20%;
+								--intial_y: 40%;
 								--span: span 5;
 							"
 						>
-							<img
-								src="../assets/media/pexels-pavel-danilyuk-6203583.jpg"
-								alt=""
-							/>
+							<img src="../assets/media/indoor_hero.png" alt="" />
 						</div>
 						<div
 							class="feature_hero--background_media-image"
@@ -72,7 +70,7 @@
 								--span: span 4;
 							"
 						>
-							<img src="../assets/media/img7.png" alt="" />
+							<img src="../assets/media/indoor_hero-right.png" alt="" />
 						</div>
 					</div>
 				</div>
@@ -101,45 +99,29 @@
 						<div class="text_area">
 							<div class="text_content">
 								<p class="jumbo">
-									Excepteur sint occaecat cupidatat non proident, sunt in culpa
-									qui officia deserunt mollit anim id est laborum.
+									Indoor volleyball is an exhilarating and fast-paced sport that
+									has captivated players and spectators alike for decades.
 								</p>
 								<p>
-									Ut enim ad minim veniam. quis nostrud exercitation ullamco
-									laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-									irure dolor in reprehenderit in voluptate velit esse cillum
-									dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-									cupidatat non proident, sunt in culpa qui officia deserunt
-									mollit anim id est laborum.
+									Whether you're a seasoned player looking for a competitive
+									challenge or a beginner seeking a fun and inclusive activity,
+									indoor volleyball offers something for everyone. Philadelphia
+									Volleyball hosts open gyms and leagues in gyms across the
+									city.
+								</p>
+								<p>
+									We organize various tournaments, leagues, and training
+									programs to cater to different skill levels and interests. Our
+									focus is not only on the competitive aspect of the sport but
+									also on fostering a sense of community and sportsmanship among
+									participants.
 								</p>
 							</div>
 						</div>
 						<div class="media_area">
-							<figure class="media_content is-cutout-top">
-								<img src="../assets/media/banner-leagues-md.png" alt="" />
+							<figure class="media_content mask-reveal">
+								<img src="../assets/media/indoor_main.png" alt="" />
 							</figure>
-						</div>
-					</div>
-				</div>
-				<div class="story_block--row inset">
-					<div class="story_block--single">
-						<div class="text_content">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam. quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								sunt in culpa qui officia deserunt mollit anim id est laborum.
-							</p>
-							<p>
-								Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-								commodo consequat. Duis aute irure dolor in reprehenderit in
-								voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-								Excepteur sint occaecat cupidatat non proident, sunt in culpa
-								qui officia deserunt mollit anim id est laborum.
-							</p>
 						</div>
 					</div>
 				</div>
@@ -152,9 +134,21 @@
 				<div class="event_list--text_area text_area">
 					<div class="text_content">
 						<h2>Upcoming Events</h2>
+						<p>
+							Philadelphia Volleyball is a As a 501c7 non-profit organization.
+							The cost of our events goes directly towards renting gym space and
+							purchasing equipment. Prices for each event will vary depending on
+							the cost of the location.
+						</p>
 					</div>
 				</div>
 				<div class="event_list--list">
+					<img
+						src="../assets/molten_blue.png"
+						alt=""
+						class=""
+						id="optix-grass-1"
+					/>
 					<a href="#opensports" class="card event_card" data-copies="6">
 						<div class="event_card--date">
 							<span class="date">v.eventDate</span>
@@ -180,12 +174,19 @@
 				<div class="background_block">
 					<div class="background_fill"></div>
 				</div>
+
 				<div class="event_list--text_area text_area">
 					<div class="text_content">
 						<h2>Upcoming Leagues</h2>
 					</div>
 				</div>
 				<div class="event_list--list">
+					<img
+						src="../assets/molten_blue.png"
+						alt=""
+						class=""
+						id="optix-grass-2"
+					/>
 					<a href="#opensports" class="card league_card" data-copies="3">
 						<div class="league_card--date">
 							<span class="expected">Expected Start:</span
@@ -226,9 +227,74 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script src="../js/setCustomAttr.js"></script>
-		<script src="../js/headerNavigation.js"></script>
+		<script src="../js/generateContent.js"></script>
 		<script src="../js/navigation.js"></script>
 
-		<script></script>
+		<script src="../js/scrollAnimations.js"></script>
+
+		<script>
+			// Dealy till after content is loaded
+
+			setTimeout(() => {
+				$("#optix-grass-1").each(function () {
+					const ball = $(this);
+					const container = $(this).parents("section");
+
+					// Outlines the container
+					// $(container).css("border", "1px solid blue");
+
+					ScrollTrigger.defaults({
+						// toggleActions: "restart complete reverse reset",
+						start: "-55% center",
+						end: "120% center",
+						scrub: 1,
+						markers: true, //for debugging
+					});
+
+					var tlone = gsap
+						.timeline({
+							paused: true,
+							scrollTrigger: { trigger: container },
+						})
+						.fromTo(
+							ball,
+							{ top: "-10%", y: "-65%", rotation: 0, x: "-55%" },
+							{
+								top: "100%",
+								y: "-80%",
+								rotation: 380,
+								x: "-55%",
+								ease: "power.out",
+							}
+						);
+				});
+				$("#optix-grass-2").each(function () {
+					const ball = $(this);
+					const container = $(this).parents("section");
+
+					// Outlines the container
+					// $(container).css("border", "1px solid red");
+
+					ScrollTrigger.defaults({
+						// toggleActions: "restart complete reverse reset",
+						start: "-55% center",
+						end: "120% center",
+						scrub: 1,
+						markers: "true", //for debugging
+					});
+
+					var tlone = gsap
+						.timeline({
+							paused: true,
+							scrollTrigger: { trigger: container },
+						})
+						.fromTo(
+							ball,
+							{ top: "0%", y: "-20%", rotation: 0, x: "80%" },
+							{ top: "90%", y: "-80%", rotation: 270, x: "80%" }
+						);
+				});
+			}, "100");
+		</script>
 	</body>
 </html>

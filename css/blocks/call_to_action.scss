@@ -40,6 +40,10 @@
 			--columns: 14;
 			text-decoration: none;
 
+			&:hover .background_fill img {
+				transform: scale(1.125);
+			}
+
 			&.on-grid {
 				--columns: 12;
 				grid-column: 2/-2;
@@ -104,10 +108,5 @@
 				color: $white;
 			}
 		}
-	}
-
-	//add hover effect to image - no firefox support
-	&section:has(.button:hover) .background_fill img {
-		transform: scale(1.125);
 	}
 }

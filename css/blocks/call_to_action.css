@@ -41,6 +41,9 @@
  --columns: 14;
  text-decoration: none;
 }
+.call_to_action--action:hover .background_fill img {
+ transform: scale(1.125);
+}
 .call_to_action--action.on-grid {
  --columns: 12;
  grid-column: 2/-2;
@@ -135,7 +138,4 @@
 .call_to_action--text_content h6,
 .call_to_action--text_content p {
  color: #ffffff;
-}
-.call_to_actionsection:has(.button:hover) .background_fill img {
- transform: scale(1.125);
 }
