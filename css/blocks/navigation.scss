@@ -24,7 +24,7 @@
 				--page_margin: 5rem;
 			}
 			display: flex;
-			border-bottom: 1px solid currentColor;
+			border-bottom: 1px solid var(--theme_color-100);
 			color: var(--theme_color-100);
 			font-family: $sans_font;
 			font-size: 14/16 * 1rem;
@@ -32,14 +32,14 @@
 			align-items: center;
 			transition: background-color 0.3s;
 			&.nav_open {
-				background: var(--theme_color-800);
+				background: var(--theme_color-900);
 			}
 
 			&::after {
 				content: "";
 				display: block;
 				@include image_cover;
-				background: var(--theme_color-800t);
+				background: var(--theme_color-900);
 				z-index: -1;
 				opacity: calc(var(--bg_opacity) / 100);
 				backdrop-filter: blur(0.25rem);
@@ -164,9 +164,6 @@
 			}
 			&:hover {
 				color: var(--theme_color-500);
-				// .theme_light & {
-				// 	// color: var(--theme_color-700);
-				// }
 				&::after {
 					width: 100%;
 					@include sm {

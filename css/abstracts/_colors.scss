@@ -2,6 +2,7 @@
 
 //blues
 $brand-900: #192d62;
+$brand-900t: color.adjust($brand-900, $alpha: -0.2);
 $brand-800: #1c326f;
 $brand-800t: color.adjust($brand-900, $lightness: +4, $alpha: -0.2);
 $brand-700: #1c326f;
@@ -14,6 +15,7 @@ $brand-200t: color.adjust($brand-100, $lightness: -4, $alpha: -0.2);
 
 //indoor
 $indoor-900: #592817;
+$indoor-900t: color.adjust($indoor-900, $alpha: -0.2);
 $indoor-800: #662e1a;
 $indoor-800t: color.adjust($indoor-900, $lightness: +4, $alpha: -0.2);
 $indoor-700: #70321d;
@@ -23,7 +25,9 @@ $indoor-200: #f0c4b5;
 $indoor-100: #ebd5cd;
 
 //grass
+
 $grass-900: #3b520e;
+$grass-900t: color.adjust($grass-900, $alpha: -0.2);
 $grass-800: #456010;
 $grass-800t: color.adjust($grass-900, $lightness: +4, $alpha: -0.2);
 $grass-700: #4f6e13;
@@ -33,7 +37,9 @@ $grass-200: #d1f095;
 $grass-100: #e2f5ba;
 
 //beach
+
 $beach-900: #625619;
+$beach-900t: color.adjust($beach-900, $alpha: -0.2);
 $beach-800: #6f611c;
 $beach-800t: color.adjust($beach-900, $lightness: +4, $alpha: -0.2);
 $beach-500: #f9d452;

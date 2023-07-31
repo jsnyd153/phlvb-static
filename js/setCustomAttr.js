@@ -1,6 +1,6 @@
 //create sample column element
 $("main").prepend(
-	'<section style="padding:0;"><div id="main_grid_column" style="grid-column: 2 / span 1"></div></section>'
+	'<section style="padding:0;"id="units"><div id="main_grid_column" style="grid-column: 2 / span 1"></div></section>'
 );
 
 $(window).on("load resize", function () {

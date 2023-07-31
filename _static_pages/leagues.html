@@ -55,7 +55,9 @@
 					</div>
 				</div>
 				<div class="media_area feature_hero--media_area">
-					<picture class="media_content feature_hero--media_content">
+					<picture
+						class="media_content feature_hero--media_content mask-reveal"
+					>
 						<source
 							srcset="../assets/media/banner-leagues-default.png"
 							media="(min-width: 768px)"
@@ -189,7 +191,7 @@
 					</article>
 				</div>
 				<div class="grid_content--load_more">
-					<button class="button">Load more</button>
+					<button class="button" id="load_more">Load more</button>
 					<i class="loading-icon"></i>
 				</div>
 			</section>
@@ -216,6 +218,24 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script src="../js/setCustomAttr.js"></script>
 		<script src="../js/generateContent.js"></script>
+		<script src="../js/scrollAnimations.js"></script>
 		<script src="../js/navigation.js"></script>
+
+		<script>
+			$("#load_more").click(function () {
+				const item = $(this).parents("section").find("article:first-child");
+
+				$(item).clone().insertAfter($(item));
+				setTimeout(() => {
+					$(item).clone().insertAfter($(item));
+				}, 100);
+				setTimeout(() => {
+					$(item).clone().insertAfter($(item));
+				}, 200);
+				setTimeout(() => {
+					$(item).clone().insertAfter($(item));
+				}, 300);
+			});
+		</script>
 	</body>
 </html>

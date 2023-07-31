@@ -15,6 +15,7 @@
 	--theme_color-700: #{$brand-700};
 	--theme_color-800t: #{$brand-800t};
 	--theme_color-700t: #{$brand-700t};
+	--theme_color-900t: #{$brand-900t};
 	--theme_fade: linear-gradient(
 		180deg,
 		rgba($brand-900, 0) 0%,
@@ -36,6 +37,7 @@
 	--theme_color-700: #{$brand-700};
 	--theme_color-800t: #{$brand-800t};
 	--theme_color-700t: #{$brand-700t};
+	--theme_color-900t: #{$brand-900t};
 	--theme_fade: linear-gradient(
 		180deg,
 		rgba($brand-900, 0) 0%,
@@ -52,6 +54,7 @@
 	--theme_color-51: #{rgba($indoor-500, 0.1)};
 	--theme_color-200: #{$indoor-200};
 	--theme_color-100: #{$indoor-100};
+	--theme_color-900t: #{$indoor-900t};
 	--theme_fade: linear-gradient(
 		180deg,
 		rgba($indoor-900, 0) 0%,
@@ -69,6 +72,7 @@
 	--theme_color-51: #{rgba($grass-500, 0.1)};
 	--theme_color-200: #{$grass-200};
 	--theme_color-100: #{$grass-100};
+	--theme_color-900t: #{$grass-900t};
 	--theme_fade: linear-gradient(
 		180deg,
 		rgba($grass-900, 0) 0%,
@@ -85,6 +89,7 @@
 	--theme_color-800t: #{rgba(#fbeca2, 0.8)};
 	--theme_color-700: #fbeca9;
 	--theme_color-700t: #{rgba(#fbefb5, 0.8)};
+	--theme_color-900t: #{rgba(#f8e99c, 0.8)};
 	a:hover {
 		--theme_color-900: #193fa8;
 	}

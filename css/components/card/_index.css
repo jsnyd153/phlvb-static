@@ -248,6 +248,7 @@ a.location_card:hover {
  font-weight: 500;
  display: flex;
  gap: inherit;
+ transition: 0.5s color;
  color: var(--theme_color-100);
 }
 a:hover .tournament_card--date {
@@ -272,6 +273,7 @@ a:hover .tournament_card--date {
  display: flex;
  flex-direction: column;
  gap: 0.25rem;
+ transition: 0.5s color;
 }
 .tournament_card--title h1,
 .tournament_card--title h2,
@@ -280,6 +282,7 @@ a:hover .tournament_card--date {
 .tournament_card--title h5,
 .tournament_card--title h6 {
  color: var(--theme_color-100);
+ transition: 0.5s color;
 }
 a:hover .tournament_card--title h1,
 a:hover .tournament_card--title h2,
@@ -289,12 +292,21 @@ a:hover .tournament_card--title h5,
 a:hover .tournament_card--title h6 {
  color: var(--theme_color-900);
 }
+aside .tournament_card--title .type {
+ display: none;
+}
 .tournament_card--body p {
  font-size: 0.9375rem;
+ color: var(--theme_color-100);
+ transition: 0.5s color;
+}
+a:hover .tournament_card--body p {
+ color: var(--theme_color-900);
 }
 .tournament_card--body .host {
  font-weight: 600;
  text-decoration: underline;
+ transition: 0.5s color;
  color: var(--theme_color-100);
 }
 a:hover .tournament_card--body .host {
@@ -304,6 +316,9 @@ a:hover .tournament_card--body .host {
  .tournament_card--body {
   grid-column: 1;
  }
+}
+aside .tournament_card--body {
+ display: none;
 }
 @media (max-width: 767px) {
  .tournament_card--location {
@@ -320,6 +335,9 @@ a:hover .tournament_card--body .host {
   margin-top: auto;
  }
 }
+aside .tournament_card--location {
+ display: none;
+}
 
 /*css/components/cards/event_card.scss*/
 .event_card {
@@ -328,23 +346,6 @@ a:hover .tournament_card--body .host {
  align-items: stretch;
  padding: 1.5rem;
  gap: 1rem;
-}
-.event_card.has-media {
- display: grid;
- grid-template-rows: auto 1fr;
- border-radius: 0.625rem;
- padding: 0.625rem;
- background: var(--theme_color-500);
- color: #ffffff;
- gap: 0.625rem;
- aspect-ratio: 250/350;
- box-shadow: 0px 8px 12px -5px rgba(15, 0, 0, 0.5);
- container-type: inline-size;
- transition: 0.3s all;
-}
-.event_card.has-media:hover {
- color: #ffffff;
- box-shadow: 0px 8px 20px -5px rgba(15, 0, 0, 0.8);
 }
 .event_card--date {
  font-size: 0.875rem;
@@ -355,19 +356,15 @@ a:hover .tournament_card--body .host {
  gap: 0.625rem;
  align-items: justify;
 }
+@media (max-width: 767px) {
+ .event_card--date {
+  font-size: 0.75rem;
+ }
+}
 .event_card--date .date {
  font-weight: 500;
  display: flex;
  gap: inherit;
- color: var(--theme_color-100);
-}
-.has-media .event_card--date .date {
- color: var(--theme_color-900);
- font-weight: 400;
- font-size: 7.5cqi;
-}
-a:hover .event_card--date .date {
- color: var(--theme_color-900);
 }
 .event_card--date .date::after {
  content: "";
@@ -375,65 +372,11 @@ a:hover .event_card--date .date {
  height: 100%;
  border-right: 1px solid currentColor;
 }
-.has-media .event_card--date .date::after {
- display: none;
-}
-.event_card--date .time {
- color: var(--theme_color-200);
-}
-a:hover .event_card--date .time {
- color: var(--theme_color-800);
-}
-.has-media .event_card--media_area {
- grid-column: 1;
- grid-row: 2;
- border-radius: 0.5rem;
- overflow: hidden;
- box-shadow: 0px 8px 12px -5px rgba(15, 0, 0, 0.3);
-}
-.has-media .event_card--media_area img {
- position: absolute;
- width: 100%;
- height: 100%;
- inset: 0;
- -o-object-fit: cover;
-    object-fit: cover;
- transition: 0.3s all;
-}
-.has-media .event_card--media_area::after {
- content: "";
- display: block;
- position: absolute;
- width: 100%;
- height: 100%;
- inset: 0;
- -o-object-fit: cover;
-    object-fit: cover;
- --color_start: rgba(0, 0, 0, 0.6);
- --color_end: rgba(0, 0, 0, 0);
- --direction: 0deg;
- background: linear-gradient(var(--direction), var(--color_start) 20%, var(--color_end) 80%);
-}
-a.has-media:hover .event_card--media_area {
- box-shadow: 0px 8px 20px -5px rgba(15, 0, 0, 0.8);
-}
-a.has-media:hover .event_card--media_area img {
- scale: 1.1;
-}
 .event_card--description {
  display: grid;
  gap: 0.75rem;
  grid-template-columns: 1fr auto;
  position: relative;
-}
-.has-media .event_card--description {
- grid-column: 1;
- grid-row: 2;
- display: flex;
- flex-direction: column;
- justify-content: flex-end;
- padding: 0.75rem 0.75rem 1rem 0.75rem;
- gap: 0.5rem;
 }
 .event_card--title {
  display: flex;
@@ -443,19 +386,16 @@ a.has-media:hover .event_card--media_area img {
 .event_card--title h4 {
  color: var(--theme_color-100);
  line-height: 110%;
+ transition: 0.5s color;
+}
+@media (max-width: 767px) {
+ .event_card--title h4 {
+  transition: 0.5s all;
+  font-size: 1.25rem;
+ }
 }
 a:hover .event_card--title h4 {
  color: var(--theme_color-900);
-}
-.has-media .event_card--title h4 {
- color: #ffffff;
- font-size: 15cqi;
-}
-a.has-media:hover .event_card--title h4 {
- color: #ffffff;
-}
-.has-media .event_card--title .type {
- display: none;
 }
 .event_card--level {
  grid-column: 1;
@@ -464,11 +404,6 @@ a.has-media:hover .event_card--title h4 {
  gap: 0.5em;
  font-size: 0.875rem;
  line-height: 100%;
- font-weight: "roc-grotesk", Helvetica, sans-serif;
-}
-.has-media .event_card--level {
- align-self: start;
- font-size: 8cqi;
 }
 .event_card--level .rank {
  font-weight: 600;
@@ -477,17 +412,6 @@ a.has-media:hover .event_card--title h4 {
  grid-column: 2;
  grid-row: 1/3;
  align-self: end;
-}
-.has-media .event_card--location {
- align-self: start;
-}
-.has-media .event_card--location .location {
- padding: 0.5em 1em;
- font-size: 5cqi;
- color: #ffffff;
-}
-.has-media:hover .event_card--location .location {
- color: #ffffff;
 }
 
 /*css/components/cards/league_card.scss*/
@@ -509,6 +433,7 @@ a.has-media:hover .event_card--title h4 {
  font-weight: 500;
  display: flex;
  gap: inherit;
+ transition: 0.5s color;
  color: var(--theme_color-100);
 }
 a:hover .league_card--date {
@@ -517,6 +442,7 @@ a:hover .league_card--date {
 .league_card--date .expected {
  font-weight: 400;
  color: var(--theme_color-200);
+ transition: 0.5s color;
 }
 a:hover .league_card--date .expected {
  color: var(--theme_color-800);
@@ -540,6 +466,7 @@ a:hover .league_card--date .expected {
  display: flex;
  flex-direction: column;
  gap: 0.25rem;
+ transition: 0.5s color;
 }
 .league_card--title h1,
 .league_card--title h2,
@@ -547,6 +474,7 @@ a:hover .league_card--date .expected {
 .league_card--title h4,
 .league_card--title h5,
 .league_card--title h6 {
+ transition: 0.5s color;
  color: var(--theme_color-100);
 }
 a:hover .league_card--title h1,
@@ -557,8 +485,20 @@ a:hover .league_card--title h5,
 a:hover .league_card--title h6 {
  color: var(--theme_color-900);
 }
+.league_card--title .day {
+ transition: 0.5s color;
+ color: var(--theme_color-100);
+}
+a:hover .league_card--title .day {
+ color: var(--theme_color-900);
+}
 .league_card--body p {
  font-size: 0.9375rem;
+ color: var(--theme_color-100);
+ transition: 0.5s color;
+}
+a:hover .league_card--body p {
+ color: var(--theme_color-900);
 }
 @media (max-width: 767px) {
  .league_card--body {
@@ -582,7 +522,7 @@ a:hover .league_card--title h6 {
 }
 
 .card {
- border-radius: 0.75rem;
+ border-radius: calc(0.75 * var(--corner));
  background-color: var(--theme_color-700t);
  -webkit-backdrop-filter: blur(0.5rem);
          backdrop-filter: blur(0.5rem);
@@ -592,7 +532,7 @@ a:hover .league_card--title h6 {
 a.card {
  text-decoration: none;
  box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0);
- transition: 0.3s all;
+ transition: 0.5s background-color, 0.5s color;
 }
 a.card:hover {
  background-color: var(--theme_color-500);
@@ -600,30 +540,6 @@ a.card:hover {
  color: var(--theme_color-800);
  transform: translateY(-0.2em);
 }
-a.card:hover h1,
-a.card:hover h2,
-a.card:hover h3,
-a.card:hover h4,
-a.card:hover h5,
-a.card:hover h6,
-a.card:hover p {
- color: var(--theme_color-800);
-}
 a.card:hover.theme_beach, .theme_beach a.card:hover {
  box-shadow: 0px 10px 16px -4px rgba(255, 255, 200, 0.3);
-}
-a.card:hover.theme_beach h1,
-a.card:hover.theme_beach h2,
-a.card:hover.theme_beach h3,
-a.card:hover.theme_beach h4,
-a.card:hover.theme_beach h5,
-a.card:hover.theme_beach h6,
-a.card:hover.theme_beach p, .theme_beach a.card:hover h1,
-.theme_beach a.card:hover h2,
-.theme_beach a.card:hover h3,
-.theme_beach a.card:hover h4,
-.theme_beach a.card:hover h5,
-.theme_beach a.card:hover h6,
-.theme_beach a.card:hover p {
- color: var(--theme_color-200);
 }

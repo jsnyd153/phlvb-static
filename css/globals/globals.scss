@@ -13,18 +13,22 @@ body {
 	--gap: 1.5rem;
 	--fr_unit: 5vw;
 	--rp: calc(var(--fr_unit) * 0.5);
+	--corner: #{16/16 * 1rem};
 
 	@include md {
 		--gap: 1.25rem;
 		--rp: calc(var(--fr_unit) * 0.75);
+		--corner: #{12/16 * 1rem};
 	}
 	@include sm {
 		--gap: 1rem;
 		--rp: calc(var(--fr_unit) * 1);
+		--corner: #{10/16 * 1rem};
 	}
 	@include xs {
 		--gap: 0.75rem;
 		--rp: calc(var(--fr_unit) * 1.5);
+		--corner: #{8/16 * 1rem};
 	}
 }
 

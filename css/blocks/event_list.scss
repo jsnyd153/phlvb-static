@@ -9,6 +9,7 @@
 	&-- {
 		&section {
 			padding: var(--gap) 0;
+			// overflow: hidden;
 		}
 		&text_area {
 			grid-column: 3/-3;

@@ -12,6 +12,13 @@
 			overflow: visible;
 			padding-bottom: calc(var(--padding_base) * 3 / 5);
 			padding-top: calc(var(--padding_base) * 5 / 5);
+
+			&.has-background_media {
+				@include sm {
+					padding-bottom: calc(var(--padding_base) * 15 / 5);
+					padding-top: calc(var(--padding_base) * 15 / 5);
+				}
+			}
 		}
 
 		&text_area,
@@ -158,13 +165,13 @@
 					--start: 1;
 					--span: span 5;
 					grid-column: var(--start) / var(--span);
-					border-radius: 0px 20/16 * 1rem 20/16 * 1rem 0px;
+					border-radius: 0px var(--corner) var(--corner) 0px;
 				}
 				&[data-side="right"] {
 					--start: -1;
 					--span: span 5;
 					grid-column: var(--span) / var(--start);
-					border-radius: 20/16 * 1rem 0px 0px 20/16 * 1rem;
+					border-radius: var(--corner) 0px 0px var(--corner);
 				}
 			} //-image
 		}

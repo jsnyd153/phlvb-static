@@ -1,0 +1,101 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+@mixin label_active {
+	top: 0.5em;
+	font-size: 0.75em;
+	translate: 0 0%;
+	color: var(--theme_color-500);
+}
+
+.input_area {
+	position: relative;
+	display: flex;
+	justify-content: stretch;
+	width: 100%;
+	label {
+		font-family: Roc Grotesk;
+		font-size: 1em;
+		font-weight: 400;
+		line-height: 100%;
+		position: absolute;
+		top: 50%;
+		translate: 0 -50%;
+		left: 1.5em;
+		pointer-events: none;
+		color: var(--theme_color-200);
+		transition: 0.3s all;
+	}
+}
+
+input[type="text"],
+input[type="number"] {
+	display: flex;
+	padding: 18/16 * 1em 1.5em 10/16 * 1em 1.5em;
+	align-items: flex-start;
+	align-self: stretch;
+	border-radius: 1.5em;
+	border: 1px solid var(--theme_color-700t);
+	background: var(--theme_color-800t);
+	color: var(--theme_color-100);
+	font-family: Roc Grotesk;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 400;
+	width: 100%;
+	transition: 0.3s all;
+
+	&:hover {
+		border: 1px solid var(--theme_color-500);
+	}
+
+	&:focus {
+		outline-offset: 0.25em;
+		outline: 1px solid var(--theme_color-100);
+		& + label {
+			@include label_active;
+		}
+	}
+	&:not(:placeholder-shown) {
+		& + label {
+			@include label_active;
+		}
+	}
+}
+
+textarea {
+	display: flex;
+	padding: 18/16 * 1em 1.5em 10/16 * 1em 1.5em;
+	align-items: flex-start;
+	align-self: stretch;
+	border-radius: 1.5em;
+	border: 1px solid var(--theme_color-700t);
+	background: var(--theme_color-800t);
+	color: var(--theme_color-100);
+	font-size: 1em;
+	font-weight: 400;
+	width: 100%;
+	transition: 0.3s all;
+
+	& + label {
+		top: 1em;
+		translate: 0 0;
+	}
+
+	&:hover {
+		border: 1px solid var(--theme_color-500);
+	}
+
+	&:focus {
+		outline-offset: 0.25em;
+		outline: 1px solid var(--theme_color-100);
+		& + label {
+			@include label_active;
+		}
+	}
+	&:not(:placeholder-shown) {
+		& + label {
+			@include label_active;
+		}
+	}
+}

@@ -42,34 +42,18 @@
 
 	<body class="theme_indoor">
 		<main>
-			<section class="feature_hero--section">
+			<section class="feature_hero--section has-background_media">
 				<div class="background_block">
 					<div class="background_fill"></div>
 					<div class="feature_hero--background_media">
 						<div
 							class="feature_hero--background_media-image"
 							data-side="left"
-							style="
-								--height: 612;
-								--width: 391;
-								--intial_x: 0%;
-								--intial_y: 40%;
-								--span: span 5;
-							"
+							style=""
 						>
 							<img src="../assets/media/indoor_hero.png" alt="" />
 						</div>
-						<div
-							class="feature_hero--background_media-image"
-							data-side="right"
-							style="
-								--height: 300;
-								--width: 334;
-								--intial_x: 0%;
-								--intial_y: 0%;
-								--span: span 4;
-							"
-						>
+						<div class="feature_hero--background_media-image" data-side="right">
 							<img src="../assets/media/indoor_hero-right.png" alt="" />
 						</div>
 					</div>
@@ -128,17 +112,14 @@
 			</section>
 
 			<section class="event_list--section" id="pickup">
-				<div class="background_block">
-					<div class="background_fill"></div>
-				</div>
 				<div class="event_list--text_area text_area">
 					<div class="text_content">
 						<h2>Upcoming Events</h2>
 						<p>
-							Philadelphia Volleyball is a As a 501c7 non-profit organization.
-							The cost of our events goes directly towards renting gym space and
-							purchasing equipment. Prices for each event will vary depending on
-							the cost of the location.
+							Philadelphia Volleyball is a non-profit organization. The cost of
+							our events goes towards renting gym space and purchasing
+							equipment. Prices for each event will vary depending on the cost
+							of the location.
 						</p>
 					</div>
 				</div>
@@ -147,7 +128,7 @@
 						src="../assets/molten_blue.png"
 						alt=""
 						class=""
-						id="optix-grass-1"
+						id="molten-blue-1"
 					/>
 					<a href="#opensports" class="card event_card" data-copies="6">
 						<div class="event_card--date">
@@ -156,7 +137,6 @@
 						</div>
 						<div class="event_card--description">
 							<div class="event_card--title">
-								<!-- <div class="type">v.eventType</div> -->
 								<h4>v.eventTitle</h4>
 							</div>
 							<div class="event_card--level">
@@ -171,9 +151,9 @@
 			</section>
 
 			<section class="event_list--section" id="leagues">
-				<div class="background_block">
+				<!-- <div class="background_block">
 					<div class="background_fill"></div>
-				</div>
+				</div> -->
 
 				<div class="event_list--text_area text_area">
 					<div class="text_content">
@@ -185,7 +165,7 @@
 						src="../assets/molten_blue.png"
 						alt=""
 						class=""
-						id="optix-grass-2"
+						id="molten-blue-2"
 					/>
 					<a href="#opensports" class="card league_card" data-copies="3">
 						<div class="league_card--date">
@@ -209,9 +189,9 @@
 			</section>
 
 			<section class="event_list--section" id="tournaments">
-				<div class="background_block">
+				<!-- <div class="background_block">
 					<div class="background_fill"></div>
-				</div>
+				</div> -->
 				<div class="event_list--text_area text_area">
 					<div class="text_content">
 						<h2>Upcoming Tournaments</h2>
@@ -236,10 +216,11 @@
 			// Dealy till after content is loaded
 
 			setTimeout(() => {
-				$("#optix-grass-1").each(function () {
+				$("#molten-blue-1").each(function () {
 					const ball = $(this);
 					const container = $(this).parents("section");
-
+					const containerHeight = $(this).parents("section").height();
+					console.log(containerHeight);
 					// Outlines the container
 					// $(container).css("border", "1px solid blue");
 
@@ -248,7 +229,7 @@
 						start: "-55% center",
 						end: "120% center",
 						scrub: 1,
-						markers: true, //for debugging
+						// markers: true, //for debugging
 					});
 
 					var tlone = gsap
@@ -258,19 +239,18 @@
 						})
 						.fromTo(
 							ball,
-							{ top: "-10%", y: "-65%", rotation: 0, x: "-55%" },
+							{ y: "50%", rotation: 0, x: "-65%" },
 							{
-								top: "100%",
-								y: "-80%",
-								rotation: 380,
-								x: "-55%",
-								ease: "power.out",
+								y: "200%",
+								rotation: containerHeight / 4,
+								x: "-65%",
 							}
 						);
 				});
-				$("#optix-grass-2").each(function () {
+				$("#molten-blue-2").each(function () {
 					const ball = $(this);
 					const container = $(this).parents("section");
+					const containerHeight = $(this).parents("section").height();
 
 					// Outlines the container
 					// $(container).css("border", "1px solid red");
@@ -280,7 +260,7 @@
 						start: "-55% center",
 						end: "120% center",
 						scrub: 1,
-						markers: "true", //for debugging
+						// markers: "true", //for debugging
 					});
 
 					var tlone = gsap
@@ -290,8 +270,12 @@
 						})
 						.fromTo(
 							ball,
-							{ top: "0%", y: "-20%", rotation: 0, x: "80%" },
-							{ top: "90%", y: "-80%", rotation: 270, x: "80%" }
+							{ top: "-50%", y: "50%", rotation: 0, x: "55%" },
+							{
+								y: "200%",
+								rotation: containerHeight / 4,
+								x: "55%",
+							}
 						);
 				});
 			}, "100");

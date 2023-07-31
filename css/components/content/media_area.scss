@@ -14,7 +14,7 @@
 	position: relative;
 }
 .media_content {
-	border-radius: 16/16 * 1rem;
+	border-radius: var(--corner);
 	position: relative;
 	overflow: hidden;
 	width: 100%;
@@ -37,5 +37,7 @@
 	.faux-mask {
 		@include image_cover;
 		background-color: var(--theme_color-900);
+		height: 105%;
+		width: 105%;
 	}
 }

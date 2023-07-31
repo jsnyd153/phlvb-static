@@ -7,7 +7,7 @@
 }
 
 .media_content {
- border-radius: 1rem;
+ border-radius: var(--corner);
  position: relative;
  overflow: hidden;
  width: 100%;
@@ -39,4 +39,6 @@
  -o-object-fit: cover;
     object-fit: cover;
  background-color: var(--theme_color-900);
+ height: 105%;
+ width: 105%;
 }

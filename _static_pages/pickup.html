@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
-		<title>Play Pickup | Philadlephia Volleyball</title>
+		<title>Pickup Volleyball| Philadlephia Volleyball</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -48,18 +48,16 @@
 				<div class="text_area feature_hero--text_area">
 					<div class="text_content feature_hero--text_content">
 						<h1 class="feature">
-							<span>PICKUP</span>
-							<span>EVENTS</span>
+							<span>Pickup</span>
 						</h1>
 					</div>
 				</div>
-				<div
-					class="media_area feature_hero--media_area narrow"
-					style="margin-top: -3rem"
-				>
-					<figure class="media_content feature_hero--media_content">
+				<div class="media_area feature_hero--media_area">
+					<picture
+						class="media_content feature_hero--media_content mask-reveal"
+					>
 						<img src="../assets/media/banner-pickup-default.png" alt="" />
-					</figure>
+					</picture>
 				</div>
 				<div class="text_area feature_hero--text_area inset">
 					<div class="text_content feature_hero--text_content">
@@ -629,6 +627,9 @@
 		<script src="../js/scrollAnimations.js"></script>
 
 		<script>
+			//Triggers for the filter open/close button on mobile
+			const filterButtonInitialContent = $("#filter-toggle").html();
+
 			$("#filter-toggle").click(function () {
 				const filterContainer = $(this).parents(".pickup--filters");
 
@@ -638,6 +639,14 @@
 						? "false"
 						: "true"
 				);
+
+				if ($(filterContainer).attr("state-filter-open") === "true") {
+					$("#filter-toggle").html(
+						'Close Filters <span class="material-symbols-outlined"> close </span>'
+					);
+				} else {
+					$("#filter-toggle").html(filterButtonInitialContent);
+				}
 			});
 
 			//create duplicae indicator li for checkboxes that display all current filters

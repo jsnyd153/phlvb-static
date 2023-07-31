@@ -21,3 +21,28 @@
 	top: 0;
 	z-index: -1;
 }
+
+.feature_hero--background_media-image[data-side="right"] {
+	--height: 300;
+	--width: 334;
+	--intial_x: 0%;
+	--intial_y: 0%;
+	--span: span 4;
+
+	@include sm {
+		--span: span 6;
+	}
+}
+
+.feature_hero--background_media-image[data-side="left"] {
+	--height: 612;
+	--width: 300;
+	--intial_x: 0%;
+	--intial_y: 40%;
+	--span: span 5;
+
+	@include sm {
+		--span: span 5;
+		--intial_y: 45%;
+	}
+}

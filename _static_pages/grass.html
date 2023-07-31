@@ -57,7 +57,10 @@
 								--span: span 5;
 							"
 						>
-							<img src="../assets/media/grass-feature-1.jpg" alt="" />
+							<img
+								src="https://lh3.googleusercontent.com/pw/AIL4fc-zfprI6LzeNbGzFBluCQqDarSE_qrjGksDd2tISVC1NhOoQp1ZPlsMBJ3ny0FvEPlkQPxP8SHtU3OM3iFf818i4CB2i2yAIv0lge8bytUtEruLBrJum5jDh_pPsC16jZkNh7rKzCENKYnYg1z6BoJDDA=w1231-h943-s-no?authuser=0"
+								alt=""
+							/>
 						</div>
 						<div
 							class="feature_hero--background_media-image"
@@ -70,7 +73,10 @@
 								--span: span 4;
 							"
 						>
-							<img src="../assets/media/grass-feature-2.jpg" alt="" />
+							<img
+								src="https://lh3.googleusercontent.com/pw/AIL4fc9AoIBmvNdL58vR4o3Kt17arXFbptMEs3O1v-S8Ji5YAV3qX6d4w1YDVKY9tzAcb5Guy7SnhvCqabrVQ1bVXqpe3tZ_PQAjT-TrU7IPgP1e6eKUL8XHvKHiAEIlvwMz6QliAUftK0YH26kRo_Aw4h8IoQ=w1600-h872-s-no?authuser=0"
+								alt=""
+							/>
 						</div>
 					</div>
 				</div>
@@ -118,7 +124,7 @@
 						<div class="media_area">
 							<figure class="media_content mask-reveal">
 								<img
-									src="https://lh3.googleusercontent.com/pw/AJFCJaXevnKjSqS-rjHknO8xfn53Yn6sO6u4mFEb3diq4DB1ns9M1-nWTdnKy7Uy3_0LL2g6f2M363Bi6TXXzgMQJA9fESFpN8_Crqj4WWb6oy1ZV7yspEM_vegUTzi7Gp3dIEc0ppwlfUYWpK0WBhH2tx33WQ=w1626-h915-s-no?authuser=0"
+									src="https://lh3.googleusercontent.com/pw/AIL4fc85cDi2znLhiksBg6r3AMEECKg9s-zhaE8lKUmG4EgwgCqXcTcRWDi3gd-_VWPDxgV24NylkKPVpXLYOfeWdhz0CcdhUwGns3XN4tzFeNC1jnqN6wtAz-CME8swlUtJtEmfqtsqHKAnn4aNXOLZuzbwXg=w1600-h805-s-no?authuser=0"
 									alt=""
 								/>
 							</figure>
@@ -306,7 +312,8 @@
 				$("#optix-grass-1").each(function () {
 					const ball = $(this);
 					const container = $(this).parents("section");
-
+					const containerHeight = $(this).parents("section").height();
+					console.log(containerHeight);
 					// Outlines the container
 					// $(container).css("border", "1px solid blue");
 
@@ -315,7 +322,7 @@
 						start: "-55% center",
 						end: "120% center",
 						scrub: 1,
-						markers: true, //for debugging
+						// markers: true, //for debugging
 					});
 
 					var tlone = gsap
@@ -325,19 +332,18 @@
 						})
 						.fromTo(
 							ball,
-							{ top: "-10%", y: "-65%", rotation: 0, x: "55%" },
+							{ y: "100%", rotation: 0, x: "65%" },
 							{
-								top: "100%",
-								y: "-80%",
-								rotation: 380,
-								x: "55%",
-								ease: "power.out",
+								y: "100%",
+								rotation: containerHeight / 4,
+								x: "65%",
 							}
 						);
 				});
 				$("#optix-grass-2").each(function () {
 					const ball = $(this);
 					const container = $(this).parents("section");
+					const containerHeight = $(this).parents("section").height();
 
 					// Outlines the container
 					// $(container).css("border", "1px solid red");
@@ -347,7 +353,7 @@
 						start: "-55% center",
 						end: "120% center",
 						scrub: 1,
-						markers: "true", //for debugging
+						// markers: "true", //for debugging
 					});
 
 					var tlone = gsap
@@ -357,8 +363,11 @@
 						})
 						.fromTo(
 							ball,
-							{ top: "0%", y: "-20%", rotation: 0, x: "-80%" },
-							{ top: "90%", y: "-80%", rotation: 270, x: "-80%" }
+							{ rotation: 0, y: "25%", x: "-55%" },
+							{
+								rotation: containerHeight / 4,
+								x: "-55%",
+							}
 						);
 				});
 			}, "100");
