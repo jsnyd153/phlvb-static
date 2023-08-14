@@ -1,3 +1,32 @@
+setTimeout(() => {
+	gsap.from(".fixed-header #navigation--background", {
+		opacity: 0,
+
+		scrollTrigger: {
+			onEnter: () => {
+				// text.innerText = "onEnter";
+				// console.log(this);
+			},
+			onLeave: () => {
+				// text.innerText = "onLeave";
+			},
+			onEnterBack: () => {
+				// text.innerText = "onEnterBack";
+			},
+			onLeaveBack: () => {
+				// text.innerText = "onLeaveBack";
+			},
+			//onEnter, onLeave, onEnterBack, onLeaveBack
+			toggleActions: "play pause reverse reset",
+			markers: true,
+			start: "top 60%",
+			end: "bottom 60%",
+			scrub: 1,
+			trigger: ".fixed-header #navScrollControl",
+		},
+	});
+}, "100");
+
 //Feature Hero animation (text area, background images)
 $(" .feature_hero--section").each(function () {
 	const container = $(this);

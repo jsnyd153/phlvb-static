@@ -15,8 +15,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
 }
@@ -24,8 +23,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
 }
@@ -33,8 +31,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
 }
@@ -97,34 +94,4 @@
  .graphic_hero--reel {
   grid-column: span 13/-1;
  }
-}
-
-.reel--wrapper {
- --autoGrid: 45%;
- display: grid;
- gap: var(--gap);
- grid-auto-flow: column;
- grid-auto-columns: var(--autoGrid);
- -webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%);
- mask-image: linear-gradient(to left, transparent 0%, black 10%);
- overflow-x: scroll;
- scroll-snap-type: x mandatory;
- height: 100%;
- padding: var(--gap) var(--gap) var(--gap) 0;
- /* Hide scrollbar for IE, Edge and Firefox */
-}
-@container (min-width: 700px) {
- .reel--wrapper {
-  grid-auto-columns: 25%;
- }
-}
-.reel--wrapper > * {
- scroll-snap-align: start;
-}
-.reel--wrapper::-webkit-scrollbar {
- display: none;
-}
-.reel--wrapper {
- -ms-overflow-style: none; /* IE and Edge */
- scrollbar-width: none; /* Firefox */
 }

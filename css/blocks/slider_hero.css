@@ -1,0 +1,71 @@
+/*css/blocks/slider_hero.scss*/
+.slider_hero--slider_area {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+}
+.slider_hero--slide img {
+ width: 100%;
+ height: 100%;
+ -o-object-fit: cover;
+    object-fit: cover;
+}
+.slider_hero--text_area {
+ grid-column: 2/span 7;
+ position: relative;
+ z-index: 2;
+ padding: var(--fr_unit) 0;
+ margin: var(--rp) 0;
+}
+.slider_hero--text_area h1 {
+ font-weight: 700;
+ color: var(--theme_color-50, #edf0f8);
+}
+.slider_hero--overlay {
+ pointer-events: none;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+ background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 28.13%);
+ mix-blend-mode: multiply;
+ z-index: 1;
+}
+.slider_hero--pagination {
+ --swiper-pagination-bullet-horizontal-gap: 0.625rem;
+ --swiper-pagination-bottom: var(--gap);
+ transition: 0.3s all;
+}
+.slider_hero--pagination .swiper-pagination-bullet {
+ transition: 0.3s all;
+ --swiper-pagination-bullet-width: 1.875rem;
+ --swiper-pagination-bullet-height: 0.25rem;
+ --swiper-pagination-bullet-border-radius: 1rem;
+ --swiper-pagination-bullet-inactive-color: var(--theme_color-50);
+ --swiper-pagination-bullet-inactive-opacity: 0.5;
+ --swiper-pagination-bullet-active-width: 5rem;
+ --swiper-pagination-bullet-active-color: var(--theme_color-500);
+}
+.slider_hero--pagination .swiper-pagination-bullet-active {
+ background-color: var(--swiper-pagination-bullet-active-color);
+ width: var(--swiper-pagination-bullet-active-width);
+}
+
+.faux_mask {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+ background-color: var(--theme_color-500);
+ transition: 0.5s 0.5s all;
+}
+.swiper-slide-active .faux_mask {
+ transform: translateX(-100%);
+}

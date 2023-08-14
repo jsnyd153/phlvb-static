@@ -6,6 +6,7 @@
 //================================================
 
 :root {
+	--theme_color-50: #edf0f8;
 	--theme_color-500: #{$brand-500};
 	--theme_color-51: #{rgba($brand-500, 0.1)};
 	--theme_color-100: #{$brand-100};
@@ -23,10 +24,6 @@
 	);
 }
 
-.background_fill {
-	@include image_cover;
-	background: var(--theme_color-900);
-}
 .theme_brand {
 	--theme_color-500: #{$brand-500};
 	--theme_color-51: #{rgba($brand-500, 0.1)};

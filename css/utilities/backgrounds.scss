@@ -23,6 +23,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		background-color: var(--background_color);
 		img,
 		video,
 		iframe {
@@ -41,7 +42,7 @@
 @each $type in $colors_full {
 	.has-#{nth($type, 1)}-background {
 		--background_color: #{nth($type, 2)};
-		& ~ * {
+		& > * {
 			--background_color: #{nth($type, 2)};
 		}
 

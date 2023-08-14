@@ -1,0 +1,78 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+/*css/blocks/slider_hero.scss*/
+// Slider Hero
+// Visual:
+// Dependancy: swiper.js
+
+.slider_hero {
+	&-- {
+		&section {
+		}
+		&slider_area {
+			@include image_cover;
+		}
+		&slide {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&text_area {
+			grid-column: 2 / span 7;
+			position: relative;
+			z-index: 2;
+			padding: var(--fr_unit) 0;
+			margin: var(--rp) 0;
+			h1 {
+				font-weight: 700;
+				color: var(--theme_color-50, #edf0f8);
+			}
+		}
+		&overlay {
+			pointer-events: none;
+			@include image_cover;
+			background: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.2) 0%,
+					rgba(0, 0, 0, 0.2) 100%
+				),
+				linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 28.13%);
+			mix-blend-mode: multiply;
+			z-index: 1;
+		}
+		&pagination {
+			--swiper-pagination-bullet-horizontal-gap: #{10/16 * 1rem};
+			--swiper-pagination-bottom: var(--gap);
+			transition: 0.3s all;
+
+			.swiper-pagination-bullet {
+				transition: 0.3s all;
+				--swiper-pagination-bullet-width: #{30/16 * 1rem};
+				--swiper-pagination-bullet-height: #{4/16 * 1rem};
+				--swiper-pagination-bullet-border-radius: 1rem;
+				--swiper-pagination-bullet-inactive-color: var(--theme_color-50);
+				--swiper-pagination-bullet-inactive-opacity: 0.5;
+				--swiper-pagination-bullet-active-width: #{80/16 * 1rem};
+				--swiper-pagination-bullet-active-color: var(--theme_color-500);
+			}
+
+			.swiper-pagination-bullet-active {
+				background-color: var(--swiper-pagination-bullet-active-color);
+				width: var(--swiper-pagination-bullet-active-width);
+			}
+		}
+	} //--
+}
+
+.faux_mask {
+	@include image_cover;
+	background-color: var(--theme_color-500);
+	transition: 0.5s 0.5s all;
+
+	.swiper-slide-active & {
+		transform: translateX(-100%);
+	}
+}

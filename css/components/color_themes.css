@@ -1,5 +1,6 @@
 /*css/components/color_themes.scss*/
 :root {
+ --theme_color-50: #edf0f8;
  --theme_color-500: #76affe;
  --theme_color-51: rgba(118, 175, 254, 0.1);
  --theme_color-100: #bccceb;
@@ -15,16 +16,6 @@
  	rgba($brand-900, 0) 0%,
  	rgba($brand-900, 1) 100%
  );
-}
-
-.background_fill {
- position: absolute;
- width: 100%;
- height: 100%;
- inset: 0;
- -o-object-fit: cover;
-    object-fit: cover;
- background: var(--theme_color-900);
 }
 
 .theme_brand {

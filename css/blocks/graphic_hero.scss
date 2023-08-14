@@ -74,41 +74,41 @@
 	} //--
 }
 
-.reel-- {
-	&wrapper {
-		//Fall back value for autoGrid
-		//Value set using javascript to allow cards to scale slightly but maintain rendered size between 140px-160px
-		//--autoGrid: calc((1000 - (renderedWwidth) +  ) / 12 * 1%);
-		--autoGrid: 45%;
+// .reel-- {
+// 	&wrapper {
+// 		//Fall back value for autoGrid
+// 		//Value set using javascript to allow cards to scale slightly but maintain rendered size between 140px-160px
+// 		//--autoGrid: calc((1000 - (renderedWwidth) +  ) / 12 * 1%);
+// 		--autoGrid: 45%;
 
-		display: grid;
-		gap: var(--gap);
-		grid-auto-flow: column;
-		grid-auto-columns: var(--autoGrid);
-		-webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%);
-		mask-image: linear-gradient(to left, transparent 0%, black 10%);
-		overflow-x: scroll;
-		scroll-snap-type: x mandatory;
-		height: 100%;
-		padding: var(--gap) var(--gap) var(--gap) 0;
+// 		display: grid;
+// 		gap: var(--gap);
+// 		grid-auto-flow: column;
+// 		grid-auto-columns: var(--autoGrid);
+// 		-webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%);
+// 		mask-image: linear-gradient(to left, transparent 0%, black 10%);
+// 		overflow-x: scroll;
+// 		scroll-snap-type: x mandatory;
+// 		height: 100%;
+// 		padding: var(--gap) var(--gap) var(--gap) 0;
 
-		//cap the card scaling when the container reaches 700px wide
-		@container (min-width: 700px) {
-			grid-auto-columns: 25%;
-		}
+// 		//cap the card scaling when the container reaches 700px wide
+// 		@container (min-width: 700px) {
+// 			grid-auto-columns: 25%;
+// 		}
 
-		> * {
-			scroll-snap-align: start;
-		}
+// 		> * {
+// 			scroll-snap-align: start;
+// 		}
 
-		&::-webkit-scrollbar {
-			display: none;
-		}
+// 		&::-webkit-scrollbar {
+// 			display: none;
+// 		}
 
-		/* Hide scrollbar for IE, Edge and Firefox */
-		& {
-			-ms-overflow-style: none; /* IE and Edge */
-			scrollbar-width: none; /* Firefox */
-		}
-	}
-}
+// 		/* Hide scrollbar for IE, Edge and Firefox */
+// 		& {
+// 			-ms-overflow-style: none; /* IE and Edge */
+// 			scrollbar-width: none; /* Firefox */
+// 		}
+// 	}
+// }

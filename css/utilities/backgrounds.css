@@ -14,6 +14,7 @@
  left: 0;
  width: 100%;
  height: 100%;
+ background-color: var(--background_color);
 }
 .background_area .background_fill img,
 .background_area .background_fill video,
@@ -30,7 +31,7 @@
 .has-brand-900-background {
  --background_color: #192d62;
 }
-.has-brand-900-background ~ * {
+.has-brand-900-background > * {
  --background_color: #192d62;
 }
 .has-brand-900-background.background_fill {
@@ -40,7 +41,7 @@
 .has-brand-800-background {
  --background_color: #1c326f;
 }
-.has-brand-800-background ~ * {
+.has-brand-800-background > * {
  --background_color: #1c326f;
 }
 .has-brand-800-background.background_fill {
@@ -50,7 +51,7 @@
 .has-brand-800t-background {
  --background_color: rgba(29, 52, 114, 0.8);
 }
-.has-brand-800t-background ~ * {
+.has-brand-800t-background > * {
  --background_color: rgba(29, 52, 114, 0.8);
 }
 .has-brand-800t-background.background_fill {
@@ -60,7 +61,7 @@
 .has-brand-800-background {
  --background_color: #1c326f;
 }
-.has-brand-800-background ~ * {
+.has-brand-800-background > * {
  --background_color: #1c326f;
 }
 .has-brand-800-background.background_fill {
@@ -70,7 +71,7 @@
 .has-brand-800t-background {
  --background_color: rgba(33, 60, 131, 0.8);
 }
-.has-brand-800t-background ~ * {
+.has-brand-800t-background > * {
  --background_color: rgba(33, 60, 131, 0.8);
 }
 .has-brand-800t-background.background_fill {
@@ -80,7 +81,7 @@
 .has-brand-500-background {
  --background_color: #76affe;
 }
-.has-brand-500-background ~ * {
+.has-brand-500-background > * {
  --background_color: #76affe;
 }
 .has-brand-500-background.background_fill {
@@ -90,7 +91,7 @@
 .has-brand-200-background {
  --background_color: #a9bfeb;
 }
-.has-brand-200-background ~ * {
+.has-brand-200-background > * {
  --background_color: #a9bfeb;
 }
 .has-brand-200-background.background_fill {
@@ -100,7 +101,7 @@
 .has-brand-100-background {
  --background_color: #bccceb;
 }
-.has-brand-100-background ~ * {
+.has-brand-100-background > * {
  --background_color: #bccceb;
 }
 .has-brand-100-background.background_fill {
@@ -110,7 +111,7 @@
 .has-indoor-900-background {
  --background_color: #592817;
 }
-.has-indoor-900-background ~ * {
+.has-indoor-900-background > * {
  --background_color: #592817;
 }
 .has-indoor-900-background.background_fill {
@@ -120,7 +121,7 @@
 .has-indoor-800-background {
  --background_color: #662e1a;
 }
-.has-indoor-800-background ~ * {
+.has-indoor-800-background > * {
  --background_color: #662e1a;
 }
 .has-indoor-800-background.background_fill {
@@ -130,7 +131,7 @@
 .has-indoor-800t-background {
  --background_color: rgba(105, 47, 27, 0.8);
 }
-.has-indoor-800t-background ~ * {
+.has-indoor-800t-background > * {
  --background_color: rgba(105, 47, 27, 0.8);
 }
 .has-indoor-800t-background.background_fill {
@@ -140,7 +141,7 @@
 .has-indoor-800-background {
  --background_color: #70321d;
 }
-.has-indoor-800-background ~ * {
+.has-indoor-800-background > * {
  --background_color: #70321d;
 }
 .has-indoor-800-background.background_fill {
@@ -150,7 +151,7 @@
 .has-indoor-800t-background {
  --background_color: rgba(121, 55, 31, 0.8);
 }
-.has-indoor-800t-background ~ * {
+.has-indoor-800t-background > * {
  --background_color: rgba(121, 55, 31, 0.8);
 }
 .has-indoor-800t-background.background_fill {
@@ -160,7 +161,7 @@
 .has-indoor-500-background {
  --background_color: #f16122;
 }
-.has-indoor-500-background ~ * {
+.has-indoor-500-background > * {
  --background_color: #f16122;
 }
 .has-indoor-500-background.background_fill {
@@ -170,7 +171,7 @@
 .has-indoor-200-background {
  --background_color: #f0c4b5;
 }
-.has-indoor-200-background ~ * {
+.has-indoor-200-background > * {
  --background_color: #f0c4b5;
 }
 .has-indoor-200-background.background_fill {
@@ -180,7 +181,7 @@
 .has-indoor-100-background {
  --background_color: #ebd5cd;
 }
-.has-indoor-100-background ~ * {
+.has-indoor-100-background > * {
  --background_color: #ebd5cd;
 }
 .has-indoor-100-background.background_fill {
@@ -190,7 +191,7 @@
 .has-grass-900-background {
  --background_color: #3b520e;
 }
-.has-grass-900-background ~ * {
+.has-grass-900-background > * {
  --background_color: #3b520e;
 }
 .has-grass-900-background.background_fill {
@@ -200,7 +201,7 @@
 .has-grass-800-background {
  --background_color: #456010;
 }
-.has-grass-800-background ~ * {
+.has-grass-800-background > * {
  --background_color: #456010;
 }
 .has-grass-800-background.background_fill {
@@ -210,7 +211,7 @@
 .has-grass-800t-background {
  --background_color: rgba(72, 99, 17, 0.8);
 }
-.has-grass-800t-background ~ * {
+.has-grass-800t-background > * {
  --background_color: rgba(72, 99, 17, 0.8);
 }
 .has-grass-800t-background.background_fill {
@@ -220,7 +221,7 @@
 .has-grass-800-background {
  --background_color: #4f6e13;
 }
-.has-grass-800-background ~ * {
+.has-grass-800-background > * {
  --background_color: #4f6e13;
 }
 .has-grass-800-background.background_fill {
@@ -230,7 +231,7 @@
 .has-grass-800t-background {
  --background_color: rgba(84, 117, 20, 0.8);
 }
-.has-grass-800t-background ~ * {
+.has-grass-800t-background > * {
  --background_color: rgba(84, 117, 20, 0.8);
 }
 .has-grass-800t-background.background_fill {
@@ -240,7 +241,7 @@
 .has-grass-500-background {
  --background_color: #94d13d;
 }
-.has-grass-500-background ~ * {
+.has-grass-500-background > * {
  --background_color: #94d13d;
 }
 .has-grass-500-background.background_fill {
@@ -250,7 +251,7 @@
 .has-grass-200-background {
  --background_color: #d1f095;
 }
-.has-grass-200-background ~ * {
+.has-grass-200-background > * {
  --background_color: #d1f095;
 }
 .has-grass-200-background.background_fill {
@@ -260,7 +261,7 @@
 .has-grass-100-background {
  --background_color: #e2f5ba;
 }
-.has-grass-100-background ~ * {
+.has-grass-100-background > * {
  --background_color: #e2f5ba;
 }
 .has-grass-100-background.background_fill {
@@ -270,7 +271,7 @@
 .has-beach-900-background {
  --background_color: #625619;
 }
-.has-beach-900-background ~ * {
+.has-beach-900-background > * {
  --background_color: #625619;
 }
 .has-beach-900-background.background_fill {
@@ -280,7 +281,7 @@
 .has-beach-800-background {
  --background_color: #6f611c;
 }
-.has-beach-800-background ~ * {
+.has-beach-800-background > * {
  --background_color: #6f611c;
 }
 .has-beach-800-background.background_fill {
@@ -290,7 +291,7 @@
 .has-beach-800t-background {
  --background_color: rgba(114, 100, 29, 0.8);
 }
-.has-beach-800t-background ~ * {
+.has-beach-800t-background > * {
  --background_color: rgba(114, 100, 29, 0.8);
 }
 .has-beach-800t-background.background_fill {
@@ -300,7 +301,7 @@
 .has-beach-500-background {
  --background_color: #f9d452;
 }
-.has-beach-500-background ~ * {
+.has-beach-500-background > * {
  --background_color: #f9d452;
 }
 .has-beach-500-background.background_fill {
@@ -310,7 +311,7 @@
 .has-beach-300t-background {
  --background_color: rgba(223, 215, 176, 0.8);
 }
-.has-beach-300t-background ~ * {
+.has-beach-300t-background > * {
  --background_color: rgba(223, 215, 176, 0.8);
 }
 .has-beach-300t-background.background_fill {
@@ -320,7 +321,7 @@
 .has-beach-300-background {
  --background_color: #f0e6b5;
 }
-.has-beach-300-background ~ * {
+.has-beach-300-background > * {
  --background_color: #f0e6b5;
 }
 .has-beach-300-background.background_fill {
@@ -330,7 +331,7 @@
 .has-beach-200t-background {
  --background_color: rgba(229, 223, 190, 0.8);
 }
-.has-beach-200t-background ~ * {
+.has-beach-200t-background > * {
  --background_color: rgba(229, 223, 190, 0.8);
 }
 .has-beach-200t-background.background_fill {
@@ -340,7 +341,7 @@
 .has-beach-200-background {
  --background_color: #f0e6b5;
 }
-.has-beach-200-background ~ * {
+.has-beach-200-background > * {
  --background_color: #f0e6b5;
 }
 .has-beach-200-background.background_fill {
@@ -350,7 +351,7 @@
 .has-beach-100-background {
  --background_color: #ebe6cd;
 }
-.has-beach-100-background ~ * {
+.has-beach-100-background > * {
  --background_color: #ebe6cd;
 }
 .has-beach-100-background.background_fill {
@@ -362,8 +363,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -374,8 +374,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -386,8 +385,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -398,8 +396,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -410,8 +407,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -422,8 +418,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -434,8 +429,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -446,8 +440,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -458,8 +451,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -470,8 +462,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  background-color: rgba(0, 0, 0, var(--alpha));
@@ -481,8 +472,7 @@
  position: absolute;
  width: 100%;
  height: 100%;
- top: 0;
- left: 0;
+ inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
  --color_start: #192d62;

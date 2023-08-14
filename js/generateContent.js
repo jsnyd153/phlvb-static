@@ -73,6 +73,42 @@ $('[html-data="use_CardTournaments"]').each(function () {
 		});
 });
 
+$('[html-data="use_CardClinic"]').each(function () {
+	// Fetch the HTML content from "_static_pages/block-grid_content.html"
+	fetch("../_html-blocks/block-grid_content.html")
+		.then((response) => response.text())
+		.then((html) => {
+			console.log("fetched");
+			// Create a temporary div element to hold the fetched HTML
+			const tempDiv = document.createElement("div");
+			tempDiv.innerHTML = html;
+
+			// Get the element with the id "cardClinic" from the fetched HTML
+			const cardClinicElement = tempDiv.querySelector("#cardClinic");
+			console.log("cardClinicElement", cardClinicElement);
+
+			// Find the element with attribute html-data="use_CardClinic"
+			const elementToReplace = document.querySelector(
+				'[html-data="use_CardClinic"]'
+			);
+
+			// Replace the element with cardClinicElement
+			if (elementToReplace) {
+				elementToReplace.parentNode.replaceChild(
+					cardClinicElement,
+					elementToReplace
+				);
+			} else {
+				console.error(
+					'Element with attribute html-data="use_CardClinic" not found.'
+				);
+			}
+		})
+		.catch((error) => {
+			console.error("Error fetching the HTML file:", error);
+		});
+});
+
 $('[html-data="use_CardPickup"]').each(function () {
 	// Fetch the HTML content from "_static_pages/block-grid_content.html"
 	fetch("../_html-blocks/block-grid_content.html")
