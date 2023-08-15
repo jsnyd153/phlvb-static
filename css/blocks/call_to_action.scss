@@ -40,19 +40,6 @@
 			--columns: 14;
 			text-decoration: none;
 
-			&:hover .background_fill img {
-				transform: scale(1.125);
-			}
-
-			&.on-grid {
-				--columns: 12;
-				grid-column: 2/-2;
-				border-radius: 1rem;
-				overflow: hidden;
-				margin: var(--gap) 0;
-				@include inner_grid;
-			}
-
 			.background_fill {
 				@include image_cover;
 				background-color: var(--theme_color-900);
@@ -62,12 +49,20 @@
 					display: block;
 					@include image_cover;
 					background-color: black;
-					opacity: 0.6;
+					opacity: 0.4;
+					transition: 1s all;
 				}
 				img {
 					@include image_cover;
 					transition: 1s all;
 				}
+			}
+
+			&:hover .background_fill img {
+				transform: scale(1.125);
+			}
+			&:hover .background_fill::after {
+				opacity: 0.6;
 			}
 		}
 		&text_area {

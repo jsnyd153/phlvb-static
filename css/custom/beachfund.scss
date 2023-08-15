@@ -53,7 +53,7 @@
 	&-- {
 		&container {
 			border-radius: 0.5rem;
-			background: rgba(251, 239, 181, 0.7);
+			background: rgba(255, 255, 255, 0.9);
 			backdrop-filter: blur(6px);
 			padding: 1.5rem;
 			flex-direction: column;
@@ -70,11 +70,16 @@
 			text-align: center;
 		}
 		&tab_panels {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
 			.tab-content:not([hidden="true"]):not([hidden=""]) {
 				@include f-center;
 				gap: 1rem;
 				text-align: center;
 				flex-direction: column;
+				max-width: 22.5rem;
 			}
 		}
 	}
@@ -85,10 +90,12 @@
 .tab- {
 	&list {
 		background-color: white;
-		border-radius: 2rem;
+		border-radius: 0.25rem;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		padding: 6/16 * 1rem;
+		max-width: 22.5rem;
+		margin-inline: auto;
 		&::after {
 			display: block;
 			content: "";
@@ -96,7 +103,7 @@
 			grid-column: 1;
 			grid-row: 1;
 			position: relative;
-			border-radius: 2rem;
+			border-radius: 0.25rem;
 			transition: 0.3s transform;
 			[tab-state="0"] & {
 				transform: translateX(0);
@@ -112,6 +119,7 @@
 
 		li {
 			grid-row: 1;
+			padding-inline: 0.5rem;
 			&:nth-child(1) {
 				grid-column: 1;
 				[tab-state="0"] & {
@@ -173,6 +181,8 @@
 		border-radius: 50%;
 		box-sizing: border-box;
 		aspect-ratio: 1;
+		box-shadow: 0px 4.962596416473389px 42.18206787109375px 0px
+			rgba(248, 233, 156, 0.5);
 
 		.ball_image-fill {
 			position: absolute;
@@ -200,12 +210,14 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			font-size: 18cqi;
-			transform: translate(-50%, -50%);
-			font-weight: 700;
 			color: #18181a;
+			font-family: $sans_font-condensed;
+			//text shadow for faux stroke
 			text-shadow: -1px -1px 0 $beach-500, 1px -1px 0 $beach-500,
 				-1px 1px 0 $beach-500, 1px 1px 0 $beach-500;
+			font-size: 21cqi;
+			transform: translate(-45%, -50%);
+			font-weight: 900;
 		}
 	}
 

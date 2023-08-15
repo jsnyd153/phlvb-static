@@ -22,18 +22,13 @@
  gap: 0.5rem;
 }
 .icon_card--text_content p {
- color: var(--theme_color-200);
+ color: #1c326f;
  transition: 0.3s all;
 }
-a:hover .icon_card--text_content p {
- color: var(--theme_color-900);
-}
 .icon_card--text_content .arrow_button {
- color: var(--theme_color-500);
  transition: 0.3s all;
 }
 a:hover .icon_card--text_content .arrow_button {
- color: var(--theme_color-900);
  transform: translateX(1rem);
 }
 .icon_card--text_content .arrow_button svg {
@@ -46,16 +41,12 @@ a:hover .icon_card--text_content .arrow_button {
 .icon_card--header {
  display: flex;
  gap: 1rem;
- color: var(--theme_color-500);
  transition: 0.3s all;
  align-items: center;
 }
 .icon_card--header span {
  display: inline-block;
  margin-top: 0.25em;
-}
-a:hover .icon_card--header {
- color: var(--theme_color-900);
 }
 .icon_card--header h1,
 .icon_card--header h2,

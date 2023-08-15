@@ -22,18 +22,13 @@
  gap: 0.5rem;
 }
 .icon_card--text_content p {
- color: var(--theme_color-200);
+ color: #1c326f;
  transition: 0.3s all;
 }
-a:hover .icon_card--text_content p {
- color: var(--theme_color-900);
-}
 .icon_card--text_content .arrow_button {
- color: var(--theme_color-500);
  transition: 0.3s all;
 }
 a:hover .icon_card--text_content .arrow_button {
- color: var(--theme_color-900);
  transform: translateX(1rem);
 }
 .icon_card--text_content .arrow_button svg {
@@ -46,16 +41,12 @@ a:hover .icon_card--text_content .arrow_button {
 .icon_card--header {
  display: flex;
  gap: 1rem;
- color: var(--theme_color-500);
  transition: 0.3s all;
  align-items: center;
 }
 .icon_card--header span {
  display: inline-block;
  margin-top: 0.25em;
-}
-a:hover .icon_card--header {
- color: var(--theme_color-900);
 }
 .icon_card--header h1,
 .icon_card--header h2,
@@ -101,14 +92,13 @@ a.icon_card:hover.for-grass {
  min-width: 50%;
  max-height: 12.5rem;
  overflow: hidden;
- border-radius: 0.5rem;
+ border-radius: 0.25rem;
 }
 .resource_card--media_content {
  width: 100%;
  overflow: hidden;
  position: relative;
  padding-top: 50%;
- border-radius: 0.5rem;
 }
 .resource_card--media_content img {
  transition: 1s all;
@@ -136,36 +126,27 @@ a:hover .resource_card--media_content img {
 .resource_card--text_content {
  display: flex;
  flex-direction: column;
- gap: 0.5rem;
+ gap: 0.25rem;
 }
 .resource_card--text_content:first-child {
  flex-grow: 1;
  justify-content: flex-start;
 }
+.resource_card--text_content h4 {
+ font-size: calc(0.8695vw + 0.6399625rem);
+ font-weight: 600;
+}
+@media (min-width: 1440px) {
+ .resource_card--text_content h4 {
+  font-size: 1.4225125rem;
+ }
+}
 .resource_card--text_content p {
- color: var(--theme_color-200);
+ color: #1c326f;
  transition: 0.3s all;
- font-size: 0.875rem;
 }
 a:hover .resource_card--text_content p {
- color: var(--theme_color-900);
-}
-.resource_card--text_content h1,
-.resource_card--text_content h2,
-.resource_card--text_content h3,
-.resource_card--text_content h4,
-.resource_card--text_content h5,
-.resource_card--text_content h6 {
- color: var(--theme_color-100);
- transition: 0.3s all;
-}
-a:hover .resource_card--text_content h1,
-a:hover .resource_card--text_content h2,
-a:hover .resource_card--text_content h3,
-a:hover .resource_card--text_content h4,
-a:hover .resource_card--text_content h5,
-a:hover .resource_card--text_content h6 {
- color: var(--theme_color-900);
+ color: #192d62;
 }
 
 /*css/components/cards/location_card.scss*/
@@ -193,33 +174,20 @@ a:hover .resource_card--text_content h6 {
 .location_card--text_content hr {
  width: 100%;
  display: block;
- color: var(--theme_color-200);
+ color: #1c326f;
  border: 0;
  border-bottom: 1px solid currentColor;
  transition: 0.3s all;
-}
-a:hover .location_card--text_content hr {
- color: var(--theme_color-900);
 }
 .location_card--text_content h1,
 .location_card--text_content h2,
 .location_card--text_content h3,
 .location_card--text_content h4,
 .location_card--text_content h5,
-.location_card--text_content h6,
-.location_card--text_content p {
- font-weight: 500;
+.location_card--text_content h6 {
+ font-weight: 600;
  flex-grow: 1;
  transition: 0.3s all;
-}
-a:hover .location_card--text_content h1,
-a:hover .location_card--text_content h2,
-a:hover .location_card--text_content h3,
-a:hover .location_card--text_content h4,
-a:hover .location_card--text_content h5,
-a:hover .location_card--text_content h6,
-a:hover .location_card--text_content p {
- color: var(--theme_color-900);
 }
 
 a.location_card {
@@ -240,7 +208,7 @@ a.location_card:hover {
 .tournament_card--date {
  font-size: 0.875rem;
  line-height: 100%;
- font-weight: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: trade-gothic-next, "Gothic A1", sans-serif;
  text-transform: uppercase;
  display: flex;
  gap: 0.625rem;
@@ -249,10 +217,6 @@ a.location_card:hover {
  display: flex;
  gap: inherit;
  transition: 0.5s color;
- color: var(--theme_color-100);
-}
-a:hover .tournament_card--date {
- color: var(--theme_color-900);
 }
 .tournament_card--description {
  display: grid;
@@ -264,7 +228,7 @@ a:hover .tournament_card--date {
   grid-template-columns: 1fr auto;
  }
 }
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  .tournament_card--description {
   grid-template-columns: 1fr;
  }
@@ -281,27 +245,10 @@ a:hover .tournament_card--date {
 .tournament_card--title h4,
 .tournament_card--title h5,
 .tournament_card--title h6 {
- color: var(--theme_color-100);
- transition: 0.5s color;
-}
-a:hover .tournament_card--title h1,
-a:hover .tournament_card--title h2,
-a:hover .tournament_card--title h3,
-a:hover .tournament_card--title h4,
-a:hover .tournament_card--title h5,
-a:hover .tournament_card--title h6 {
- color: var(--theme_color-900);
-}
-aside .tournament_card--title .type {
- display: none;
+ font-weight: 600;
 }
 .tournament_card--body p {
  font-size: 0.9375rem;
- color: var(--theme_color-100);
- transition: 0.5s color;
-}
-a:hover .tournament_card--body p {
- color: var(--theme_color-900);
 }
 .tournament_card--body .host {
  font-weight: 600;
@@ -327,7 +274,7 @@ aside .tournament_card--body {
   margin-top: 0.5rem;
  }
 }
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  .tournament_card--location {
   margin-right: auto;
   grid-row: auto;
@@ -350,11 +297,12 @@ aside .tournament_card--location {
 .event_card--date {
  font-size: 0.875rem;
  line-height: 100%;
- font-weight: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: trade-gothic-next, "Gothic A1", sans-serif;
  text-transform: uppercase;
  display: flex;
  gap: 0.625rem;
  align-items: justify;
+ align-items: center;
 }
 @media (max-width: 767px) {
  .event_card--date {
@@ -365,12 +313,8 @@ aside .tournament_card--location {
  font-weight: 500;
  display: flex;
  gap: inherit;
-}
-.event_card--date .date::after {
- content: "";
- display: block;
- height: 100%;
  border-right: 1px solid currentColor;
+ padding-right: 0.625rem;
 }
 .event_card--description {
  display: grid;
@@ -384,18 +328,15 @@ aside .tournament_card--location {
  gap: 0.25rem;
 }
 .event_card--title h4 {
- color: var(--theme_color-100);
  line-height: 110%;
  transition: 0.5s color;
+ font-weight: 600;
 }
 @media (max-width: 767px) {
  .event_card--title h4 {
   transition: 0.5s all;
   font-size: 1.25rem;
  }
-}
-a:hover .event_card--title h4 {
- color: var(--theme_color-900);
 }
 .event_card--level {
  grid-column: 1;
@@ -425,7 +366,7 @@ a:hover .event_card--title h4 {
 .league_card--date {
  font-size: 0.875rem;
  line-height: 100%;
- font-weight: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: trade-gothic-next, "Gothic A1", sans-serif;
  text-transform: uppercase;
  display: flex;
  gap: 0.625rem;
@@ -434,18 +375,10 @@ a:hover .event_card--title h4 {
  display: flex;
  gap: inherit;
  transition: 0.5s color;
- color: var(--theme_color-100);
-}
-a:hover .league_card--date {
- color: var(--theme_color-900);
 }
 .league_card--date .expected {
- font-weight: 400;
- color: var(--theme_color-200);
+ font-weight: 600;
  transition: 0.5s color;
-}
-a:hover .league_card--date .expected {
- color: var(--theme_color-800);
 }
 .league_card--description {
  display: grid;
@@ -457,7 +390,7 @@ a:hover .league_card--date .expected {
   grid-template-columns: 1fr auto;
  }
 }
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  .league_card--description {
   grid-template-columns: 1fr;
  }
@@ -475,30 +408,13 @@ a:hover .league_card--date .expected {
 .league_card--title h5,
 .league_card--title h6 {
  transition: 0.5s color;
- color: var(--theme_color-100);
-}
-a:hover .league_card--title h1,
-a:hover .league_card--title h2,
-a:hover .league_card--title h3,
-a:hover .league_card--title h4,
-a:hover .league_card--title h5,
-a:hover .league_card--title h6 {
- color: var(--theme_color-900);
+ font-weight: 600;
 }
 .league_card--title .day {
  transition: 0.5s color;
- color: var(--theme_color-100);
-}
-a:hover .league_card--title .day {
- color: var(--theme_color-900);
 }
 .league_card--body p {
  font-size: 0.9375rem;
- color: var(--theme_color-100);
- transition: 0.5s color;
-}
-a:hover .league_card--body p {
- color: var(--theme_color-900);
 }
 @media (max-width: 767px) {
  .league_card--body {
@@ -512,7 +428,7 @@ a:hover .league_card--body p {
   margin-top: 0.5rem;
  }
 }
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  .league_card--location {
   margin-right: auto;
   grid-row: auto;
@@ -523,23 +439,22 @@ a:hover .league_card--body p {
 
 .card {
  border-radius: calc(0.75 * var(--corner));
- background-color: var(--theme_color-700t);
+ background-color: rgba(255, 255, 255, 0.8);
  -webkit-backdrop-filter: blur(0.5rem);
          backdrop-filter: blur(0.5rem);
- color: var(--theme_color-200);
+ color: #1c326f;
 }
 
 a.card {
  text-decoration: none;
  box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0);
- transition: 0.5s background-color, 0.5s color;
+ transition: 0.5s all;
+ position: relative;
+ top: 0;
 }
 a.card:hover {
  background-color: var(--theme_color-500);
  box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.08);
- color: var(--theme_color-800);
- transform: translateY(-0.2em);
-}
-a.card:hover.theme_beach, .theme_beach a.card:hover {
- box-shadow: 0px 10px 16px -4px rgba(255, 255, 200, 0.3);
+ color: #192d62;
+ top: -0.2em;
 }

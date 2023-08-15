@@ -22,11 +22,9 @@
 // text styles
 
 @mixin fluid_size_text($scale: 2.5, $floor: 38/16) {
-	$cap: $scale * 1440 / 100 /16 * 1;
-	font-size: calc($scale * 1vw + $floor * 1rem);
-	@include xl() {
-		font-size: calc($cap * 1rem + $floor * 1rem);
-	}
+	$cap: $scale * 1440 / 100 /16 * 1rem + $floor * 1rem;
+	$min: $scale * 375 / 100 /16 * 1rem + $floor * 1rem;
+	font-size: clamp($min, calc($scale * 1vw + $floor * 1rem), $cap);
 }
 
 //================================================
@@ -34,39 +32,33 @@
 //================================================
 
 h1 {
-	@include fluid_size_text($scale: 2.2657, $floor: 24.2535/16);
-	font-family: $sans_font;
+	font-size: 116/16 * 1rem;
+	@include fluid_size_text($scale: 4.2657, $floor: 32/16);
+	font-family: $serif_font;
 	font-weight: 500;
 	line-height: 105%;
 	letter-spacing: -0.02em;
-	color: var(--theme_color-200);
-	text-wrap: balance;
-	&.feature {
-		@include fluid_size_text($scale: 8.4507, $floor: 20.3099/16);
-		line-height: 100%;
-		text-transform: uppercase;
-		span {
-			line-height: 70%;
-		}
-	}
-}
-h2 {
-	font-family: $sans_font;
-	font-weight: 500;
-	@include fluid_size_text(1.439, $floor: 22.4789/16);
-	line-height: 115%;
-	letter-spacing: -0.02em;
-	color: var(--theme_color-100);
+	color: $brand-900;
 	text-wrap: balance;
 }
 
+h2 {
+	font-family: $serif_font;
+	font-weight: 400;
+	@include fluid_size_text(1.439, $floor: 19.4789/16);
+	line-height: 115%;
+	letter-spacing: -0.02em;
+	text-wrap: balance;
+	color: $brand-900;
+}
+
 h3 {
-	font-family: $sans_font;
-	font-weight: 500;
-	@include fluid_size_text($scale: 0.9273, $floor: 16.5352/16);
+	font-family: $serif_font;
+	font-weight: 400;
+	@include fluid_size_text($scale: 0.9273, $floor: 14.5352/16);
 	line-height: 125%;
 	letter-spacing: -0.02em;
-	color: var(--theme_color-200);
+	color: $brand-900;
 	text-wrap: balance;
 }
 h4 {
@@ -75,27 +67,26 @@ h4 {
 	@include fluid_size_text($scale: 0.8695, $floor: 14.2394/16);
 	line-height: 125%;
 	letter-spacing: -0.02em;
-	color: var(--theme_color-200);
+	color: $brand-900;
 	text-wrap: balance;
 }
 h5 {
 	@include fluid_size_text($scale: 0.6878, $floor: 12.2958/16);
 	font-family: $sans_font;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 120%;
 	letter-spacing: -0.02em;
-	color: var(--theme_color-200);
+	color: $brand-700;
 	text-wrap: balance;
 }
 h6 {
 	font-family: $sans_font;
-	font-weight: 500;
+	font-style: italic;
+	font-weight: 900;
 	line-height: 120%;
-	color: var(--theme_color-500);
+	letter-spacing: 0.125em;
+	color: $brand-500;
 	text-transform: uppercase;
-	.theme_beach & {
-		--theme_color-500: #{$brand-600};
-	}
 }
 
 p {
@@ -104,7 +95,7 @@ p {
 	font-weight: 300;
 	line-height: 135%;
 	letter-spacing: -0.02em;
-	color: var(--theme_color-200);
+	color: $brand-700;
 	text-wrap: balance;
 
 	b {
@@ -120,14 +111,11 @@ p {
 		@include fluid_size_text($scale: 0.2817, $floor: 16.9437/16);
 	}
 	a {
-		.theme_beach & {
-			--theme_color-500: #{$brand-600};
-		}
-		color: var(--theme_color-500);
+		color: $brand-500;
 		display: inline-block;
 		position: relative;
 		text-decoration: none;
-		font-weight: 500;
+		font-weight: 600;
 		&:after {
 			content: "";
 			display: block;
@@ -139,8 +127,24 @@ p {
 			background-color: currentColor;
 			transition: all 0.25s ease-in 0s;
 		}
-		&:hover:after {
+		&:not(.arrow):hover:after {
 			width: 100%;
+		}
+		&.arrow {
+			svg {
+				margin-left: 0.75em;
+				height: 0.75em;
+				transition: 300ms all;
+				.stroke {
+					stroke: currentColor;
+					stroke-width: 1.5;
+				}
+			}
+			&:hover {
+				svg {
+					margin-left: 1.25em;
+				}
+			}
 		}
 	}
 }

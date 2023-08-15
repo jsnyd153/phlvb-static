@@ -5,8 +5,8 @@
  width: calc(100% - var(--page_margin) - var(--page_margin) - var(--gap) - var(--gap));
  padding: 0 calc(var(--page_margin) + var(--gap));
  display: flex;
- color: var(--theme_color-100);
- font-family: "roc-grotesk", Helvetica, sans-serif;
+ color: #bccceb;
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-size: 0.875rem;
  font-weight: 500;
  align-items: center;
@@ -21,7 +21,7 @@
  }
 }
 .header_nav--container.nav_open {
- background: var(--theme_color-900);
+ background: #192d62;
 }
 .header_nav--branding {
  flex-grow: 1;
@@ -49,7 +49,7 @@
  fill: #ffffff;
 }
 .header_nav--logo svg .logo-text_color {
- fill: var(--theme_color-200);
+ fill: #a9bfeb;
 }
 .header_nav--actions {
  display: flex;
@@ -90,7 +90,7 @@
   padding: 0 2rem;
   overflow: hidden;
   flex-direction: column;
-  background: var(--theme_color-800);
+  background: #1c326f;
   gap: 1.5rem;
  }
  .nav_open .primary_nav--list {
@@ -136,7 +136,7 @@
  transition: 0.3s all;
 }
 .primary_nav--link:hover {
- color: var(--theme_color-500);
+ color: #76affe;
 }
 .primary_nav--link:hover::after {
  width: 100%;
@@ -155,7 +155,7 @@
  .primary_nav--link {
   font-size: 2rem;
   font-weight: 500;
-  color: var(--theme_color-200);
+  color: #a9bfeb;
   padding: 0;
  }
 }
@@ -164,7 +164,7 @@
  border-radius: 0.75rem;
  display: flex;
  gap: 1rem;
- background-color: var(--theme_color-800t);
+ background-color: rgba(29, 52, 114, 0.8);
  -webkit-backdrop-filter: blur(2px);
          backdrop-filter: blur(2px);
  position: absolute;
@@ -221,7 +221,7 @@ li:hover .primary_nav--dropdown {
 
 .bullet-link {
  text-decoration: none;
- color: var(--theme_color-200);
+ color: #a9bfeb;
  display: flex;
  gap: 0.75rem;
  min-width: 8.75rem;
@@ -229,10 +229,10 @@ li:hover .primary_nav--dropdown {
  align-items: center;
 }
 .current .bullet-link {
- color: var(--theme_color-100);
+ color: #bccceb;
 }
 .bullet-link[aria-current=page] {
- color: var(--theme_color-500);
+ color: #76affe;
 }
 .bullet-link::after {
  content: "";
@@ -248,7 +248,7 @@ li:hover .primary_nav--dropdown {
  width: 100%;
 }
 .bullet-link:hover {
- color: var(--theme_color-500);
+ color: #76affe;
 }
 .bullet-link:hover::after {
  width: 100%;
@@ -280,17 +280,17 @@ li:hover .primary_nav--dropdown {
 .language--button {
  width: 3.25rem;
  height: 1.5rem;
- border: 0.125rem solid currentColor;
+ border: 0.0625rem solid currentColor;
  font-size: 0.8125rem;
- color: var(--theme_color-200);
+ color: #a9bfeb;
  background-color: transparent;
- font-family: "roc-grotesk", Helvetica, sans-serif;
- border-radius: 1rem;
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ border-radius: 0.25rem;
  display: flex;
  justify-content: center;
  align-items: center;
  gap: 0.25rem;
- line-height: 80%;
+ line-height: 100%;
  font-weight: 700;
  transition: 0.3s all;
 }
@@ -299,34 +299,31 @@ li:hover .primary_nav--dropdown {
  content: "";
  width: 0;
  height: 0;
- border-left: 0.25rem solid transparent;
- border-right: 0.25rem solid transparent;
- border-top: 0.25rem solid currentColor;
- margin-top: -0.125rem;
+ border-left: 0.375em solid transparent;
+ border-right: 0.375em solid transparent;
+ border-top: 0.375em solid currentColor;
+ margin-top: 0.125rem;
  transition: 0.3s all;
 }
 .language--selector:hover .language--button {
- border: 0.125rem solid var(--theme_color-500);
- color: var(--theme_color-500);
+ border: 0.0625rem solid #76affe;
+ color: #76affe;
 }
 .language--selector.active .language--button {
- color: var(--theme_color-900);
- background-color: var(--theme_color-200);
- border: 0.125rem solid var(--theme_color-200);
+ color: #192d62;
+ background-color: #a9bfeb;
+ border: 0.125rem solid #a9bfeb;
 }
 .language--selector.active .language--button::after {
  border-bottom: 0.25rem solid currentColor;
  border-top: 0rem solid currentColor;
-}
-.language--current {
- padding-top: 0.125rem;
 }
 .language--dropdown {
  padding: 1.5rem;
  border-radius: 0.75rem;
  display: flex;
  gap: 1rem;
- background-color: var(--theme_color-700t);
+ background-color: rgba(33, 60, 131, 0.8);
  -webkit-backdrop-filter: blur(2px);
          backdrop-filter: blur(2px);
  position: absolute;
@@ -360,7 +357,7 @@ li:hover .primary_nav--dropdown {
  width: var(--size);
  position: relative;
  flex-shrink: 0;
- color: var(--theme_color-100);
+ color: #bccceb;
  padding: 0;
 }
 @media (max-width: 767px) {
@@ -396,7 +393,7 @@ li:hover .primary_nav--dropdown {
 }
 
 #navigation--background {
- background-color: var(--theme_color-900);
+ background-color: #192d62;
  position: absolute;
  width: 100%;
  height: 100%;
@@ -415,7 +412,7 @@ li:hover .primary_nav--dropdown {
  line-height: 115%;
  letter-spacing: -0.02em;
  text-transform: uppercase;
- color: var(--theme_color-500);
+ color: #76affe;
  background-color: transparent;
  border: 0;
  display: none;

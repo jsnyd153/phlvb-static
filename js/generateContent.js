@@ -241,15 +241,7 @@ $("[data-resource]").each(function () {
 										html: postSummary,
 									})
 								),
-							}).add(
-								$("<div>", {
-									class: "resource_card--text_content text_content",
-									html: $("<span>", {
-										class: "button small",
-										text: "Read more",
-									}),
-								})
-							),
+							}),
 						}),
 					})
 				),

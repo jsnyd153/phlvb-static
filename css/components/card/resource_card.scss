@@ -27,14 +27,11 @@
 			//ideal height set using padding on _content, max is set here to crop it
 			max-height: 200/16 * 1rem;
 			overflow: hidden;
-			border-radius: 0.5rem;
-			// @include f-center;
+			border-radius: 0.25rem;
 		}
 		&media_content {
 			@include cover_container;
-			// @include t-center;
 			padding-top: 50%;
-			border-radius: 0.5rem;
 
 			img {
 				transition: 1s all;
@@ -59,26 +56,22 @@
 		&text_content {
 			display: flex;
 			flex-direction: column;
-			gap: 8/16 * 1rem;
+			gap: 4/16 * 1rem;
 
 			&:first-child {
 				flex-grow: 1;
 				justify-content: flex-start;
 			}
-
-			p {
-				color: var(--theme_color-200);
-				transition: 0.3s all;
-				font-size: 14/16 * 1rem;
-				a:hover & {
-					color: var(--theme_color-900);
-				}
+			h4 {
+				@include fluid_size_text($scale: 0.8695, $floor: 10.2394/16);
+				font-weight: 600;
 			}
-			@include header_tags {
-				color: var(--theme_color-100);
+			p {
+				color: $brand-700;
 				transition: 0.3s all;
+				// font-size: 14/16 * 1rem;
 				a:hover & {
-					color: var(--theme_color-900);
+					color: $brand-900;
 				}
 			}
 		}

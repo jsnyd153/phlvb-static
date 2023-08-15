@@ -40,27 +40,24 @@
 
 	<body class="">
 		<main>
-			<section class="feature_hero--section padding-b-300">
-				<div class="background_block">
-					<div class="background_fill"></div>
-				</div>
-
-				<div class="text_area feature_hero--text_area">
-					<div class="text_content feature_hero--text_content">
-						<h1 class="feature">
-							<span>Pickup</span>
-						</h1>
+			<section class="basic_hero--section">
+				<div class="background_area">
+					<div class="background_fill">
+						<svg
+							class="ring"
+							width="500"
+							height="500"
+							viewBox="0 0 500 500"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle cx="250" cy="250" r="204.5" />
+						</svg>
 					</div>
 				</div>
-				<div class="media_area feature_hero--media_area">
-					<picture
-						class="media_content feature_hero--media_content mask-reveal"
-					>
-						<img src="../assets/media/banner-pickup-default.png" alt="" />
-					</picture>
-				</div>
-				<div class="text_area feature_hero--text_area inset">
-					<div class="text_content feature_hero--text_content">
+				<div class="text_area basic_hero--text_area">
+					<div class="text_content">
+						<h1>Pickup Events</h1>
 						<p class="large">
 							Pickup events are a great way to get out and meet new people. No
 							long term commitment — play once, or over and over again. No need
@@ -482,8 +479,38 @@
 					</div>
 					<div class="pickup--list">
 						<div class="event_list--list">
-							<a href="#opensports" class="card event_card" data-copies="12">
+							<a
+								href="#opensports"
+								class="card event_card theme_grass"
+								data-copies="3"
+								type="grass"
+							>
 								<div class="event_card--date">
+									<span class="type-indicator dot"></span>
+									<span class="date">v.eventDate</span>
+									<span class="time">v.eventStart - v.eventEnd</span>
+								</div>
+								<div class="event_card--description">
+									<div class="event_card--title">
+										<div class="type">v.eventType</div>
+										<h4>v.eventTitle</h4>
+									</div>
+									<div class="event_card--level">
+										Level:<span class="rank">v.eventLevel</span>
+									</div>
+									<div class="event_card--location">
+										<span class="location">v.eventLocation</span>
+									</div>
+								</div>
+							</a>
+							<a
+								href="#opensports"
+								class="card event_card theme_indoor"
+								data-copies="3"
+								type="indoor"
+							>
+								<div class="event_card--date">
+									<span class="type-indicator dot"></span>
 									<span class="date">v.eventDate</span>
 									<span class="time">v.eventStart - v.eventEnd</span>
 								</div>
@@ -544,18 +571,11 @@
 						<div class="text_area resource_card--text_area">
 							<div class="resource_card--text_area text_area">
 								<div class="resource_card--text_content text_content">
-									<h5>Frequently Asked Questions</h5>
+									<h4>Frequently Asked Questions</h4>
 									<p>
 										Read up on some of our members most frequently asked
 										questions
 									</p>
-								</div>
-								<div class="resource_card--text_content text_content">
-									<span
-										href="frequently-asked-questions.html"
-										class="button small"
-										>Read more</span
-									>
 								</div>
 							</div>
 						</div>
@@ -572,18 +592,13 @@
 						<div class="text_area resource_card--text_area">
 							<div class="resource_card--text_area text_area">
 								<div class="resource_card--text_content text_content">
-									<h5>Understanding Levels</h5>
+									<h4>Understanding Levels</h4>
 									<p>
 										Making sure you are the proper level for an event is
 										important for ensuring everyone stays safe and has a good
 										time, but they can be confusing if you’re new to volleyball
 										or new to the region.
 									</p>
-								</div>
-								<div class="resource_card--text_content text_content">
-									<span href="understanding-levels.html" class="button small"
-										>Read more</span
-									>
 								</div>
 							</div>
 						</div>
@@ -600,16 +615,11 @@
 						<div class="text_area resource_card--text_area">
 							<div class="resource_card--text_area text_area">
 								<div class="resource_card--text_content text_content">
-									<h5>Getting Started</h5>
+									<p class="large">Getting Started</p>
 									<p>
 										Having trouble signing up for your first event? Not sure
 										what to expect when you get there?
 									</p>
-								</div>
-								<div class="resource_card--text_content text_content">
-									<span href="getting-started.html" class="button small"
-										>Read more</span
-									>
 								</div>
 							</div>
 						</div>

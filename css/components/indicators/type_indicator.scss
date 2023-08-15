@@ -14,13 +14,44 @@
 /*css/components/indicators/type_indicatior.scss*/
 //================================================
 
-.type_indicator {
+.type-indicator {
+	&[type="grass"],
+	[type="grass"] & {
+		--_theme_color-500: #{$grass-500};
+		--_theme_color-200: #{$grass-200};
+	}
+
+	&[type="indoor"],
+	[type="indoor"] & {
+		--_theme_color-500: #{$indoor-500};
+		--_theme_color-200: #{$indoor-200};
+	}
+
+	&[type="beach"],
+	[type="beach"] & {
+		--_theme_color-500: #{$beach-500};
+		--_theme_color-200: #{$beach-200};
+	}
+
+	&[type="clinic"],
+	[type="clinic"] & {
+		--_theme_color-500: #{$brand-500};
+		--_theme_color-200: #{$brand-200};
+	}
+	&[type="sitting"],
+	[type="sitting"] & {
+		--_theme_color-500: #{$brand-500};
+		--_theme_color-200: #{$brand-200};
+	}
+}
+
+.type-indicator.text {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 3/16 * 1rem 11/16 * 1rem;
 	gap: 6/16 * 1rem;
-	background: var(--theme_color-500);
+	background: var(--_theme_color-500);
 	border-radius: 2rem;
 	color: $brand-900;
 	font-size: 10/16 * 1rem;
@@ -34,18 +65,15 @@
 		&text {
 		}
 	}
+}
 
-	&[type="grass"] {
-		background: $grass-500;
-	}
-	&[type="indoor"] {
-		background: $indoor-500;
-	}
-	&[type="beach"] {
-		background: $beach-500;
-	}
-	&[type="clinic"],
-	&[type="sitting"] {
-		background: $brand-500;
+.type-indicator.dot {
+	width: 1em;
+	height: 1em;
+	border: 2px solid $brand-900;
+	border-radius: 50%;
+	background: var(--_theme_color-500);
+	a:hover & {
+		background: var(--_theme_color-200);
 	}
 }

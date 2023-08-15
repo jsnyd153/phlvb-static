@@ -28,10 +28,6 @@
 			display: flex;
 			gap: inherit;
 			transition: 0.5s color;
-			color: var(--theme_color-100);
-			a:hover & {
-				color: var(--theme_color-900);
-			}
 		}
 		&description {
 			display: grid;
@@ -50,27 +46,13 @@
 			gap: 0.25rem;
 			transition: 0.5s color;
 			@include header_tags {
-				color: var(--theme_color-100);
-				transition: 0.5s color;
-				a:hover & {
-					color: var(--theme_color-900);
-				}
-			}
-			.type {
-				aside & {
-					display: none;
-				}
+				font-weight: 600;
 			}
 		}
 
 		&body {
 			p {
 				font-size: 15/16 * 1rem;
-				color: var(--theme_color-100);
-				transition: 0.5s color;
-				a:hover & {
-					color: var(--theme_color-900);
-				}
 			}
 			.host {
 				font-weight: 600;

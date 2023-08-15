@@ -1,0 +1,45 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Featured Hero
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=134%3A20347&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: /js/setCustomAttr.js  = $(".reel--wrapper").each(function(){});
+
+.column_hero {
+	&-- {
+		&section {
+			min-height: 80vh;
+
+			.background_fill {
+				background: $brand-900;
+				@include cover_obj;
+				img {
+					@include cover_obj;
+					opacity: 0.25;
+				}
+			}
+		}
+
+		&column {
+			grid-column: span 6;
+			text-align: center;
+
+			&.center-content {
+				@include f-center;
+			}
+			.text_area {
+				@include text_nodes {
+					color: $brand-50;
+				}
+				h1 {
+					//this should be utilities
+					font-size: 3.9225rem;
+					color: $beach-500;
+				}
+			}
+			.text_content {
+				@include f-center;
+			}
+		}
+	}
+}

@@ -9,11 +9,12 @@
 .event_card--date {
  font-size: 0.875rem;
  line-height: 100%;
- font-weight: "roc-grotesk", Helvetica, sans-serif;
+ font-weight: trade-gothic-next, "Gothic A1", sans-serif;
  text-transform: uppercase;
  display: flex;
  gap: 0.625rem;
  align-items: justify;
+ align-items: center;
 }
 @media (max-width: 767px) {
  .event_card--date {
@@ -24,12 +25,8 @@
  font-weight: 500;
  display: flex;
  gap: inherit;
-}
-.event_card--date .date::after {
- content: "";
- display: block;
- height: 100%;
  border-right: 1px solid currentColor;
+ padding-right: 0.625rem;
 }
 .event_card--description {
  display: grid;
@@ -43,18 +40,15 @@
  gap: 0.25rem;
 }
 .event_card--title h4 {
- color: var(--theme_color-100);
  line-height: 110%;
  transition: 0.5s color;
+ font-weight: 600;
 }
 @media (max-width: 767px) {
  .event_card--title h4 {
   transition: 0.5s all;
   font-size: 1.25rem;
  }
-}
-a:hover .event_card--title h4 {
- color: var(--theme_color-900);
 }
 .event_card--level {
  grid-column: 1;

@@ -1,64 +1,97 @@
 /*css/components/content/person_profile.scss*/
 .person_profile--item {
  display: flex;
- flex-direction: column;
- gap: 1.25rem;
+ gap: 1.5em;
+ position: relative;
+ align-items: center;
+ container-type: inline-size;
 }
 .person_profile--media_area {
- position: relative;
-}
-.person_profile--media_content {
- width: 100%;
+ height: 4.75em;
+ width: 4.75em;
+ background-color: #76affe;
+ border-radius: 50%;
+ opacity: 0.1;
  overflow: hidden;
+ transition: 500ms all;
+ flex-shrink: 0;
+}
+.secondary .person_profile--media_area {
+ height: 3.75em;
+ width: 3.75em;
+}
+.person_profile--media_area img {
+ opacity: 0.5;
+}
+li:hover .person_profile--media_area {
+ opacity: 1;
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #76affe, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f16122, 0px 0px 0px 11px #192d62, 0px 0px 0px 15px #f9d452, 0px 0px 0px 16px #192d62;
+}
+.secondary li:hover .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #76affe, 0px 0px 0px 6px #192d62;
+}
+li:hover .person_profile--media_area img {
+ opacity: 1;
+}
+.secondary li:hover[type=grass] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62;
+}
+.secondary li:hover[type=indoor] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #f16122, 0px 0px 0px 6px #192d62;
+}
+.secondary li:hover[type=beach] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #f9d452, 0px 0px 0px 6px #192d62;
+}
+.secondary li:hover[type~=grass][type~=beach] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f9d452, 0px 0px 0px 11px #192d62;
+}
+.secondary li:hover[type~=grass][type~=indoor] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f16122, 0px 0px 0px 11px #192d62;
+}
+.secondary li:hover[type~=beach][type~=indoor] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #f16122, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f9d452, 0px 0px 0px 11px #192d62;
+}
+.secondary li:hover[type~=beach][type~=indoor][type~=grass] .person_profile--media_area {
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f16122, 0px 0px 0px 11px #192d62, 0px 0px 0px 15px #f9d452, 0px 0px 0px 16px #192d62;
+}
+.person_profile--text_area {
  position: relative;
- padding-top: 100%;
- border-radius: 0.75rem;
+ margin: 1em 0 0 -3em;
+ flex-grow: 1;
+ transition: 500ms all;
 }
-.person_profile--media_content img {
- position: absolute;
- width: 100%;
- height: 100%;
- inset: 0;
- -o-object-fit: cover;
-    object-fit: cover;
-}
-.person_profile--locations {
- position: absolute;
- inset: 0;
- padding: 0.75rem;
- align-items: flex-end;
- z-index: 1;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
- color: #ffffff;
- font-size: 0.875rem;
- padding: 0.75rem;
- display: none;
-}
-.organizers .person_profile--locations {
- display: flex;
-}
-.person_profile--text_content {
- display: grid;
- grid-template-columns: 1fr auto;
- gap: 0.375rem;
-}
-@media (max-width: 767px) {
- .person_profile--text_content {
-  grid-template-columns: 1fr;
- }
+li:hover .person_profile--text_area {
+ margin: 0 -3em 0 0;
 }
 .person_profile--title {
- font-size: 0.8125rem;
- grid-column: 1/-1;
- display: none;
-}
-.board_members .person_profile--title {
- display: block;
+ color: #76affe;
+ font-size: 0.875em;
+ font-style: italic;
+ font-weight: 800;
+ line-height: 135%;
+ letter-spacing: -0.02rem;
+ text-transform: uppercase;
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
 }
 .person_profile--name {
- align-self: end;
+ color: #192d62;
+ font-size: 1.375em;
+ font-weight: 400;
+}
+.secondary .person_profile--name {
+ font-size: 1.1875em;
 }
 .person_profile--pronouns {
- font-size: 0.8125rem;
- align-self: end;
+ color: #192d62;
+ font-size: 0.75em;
+ font-weight: 400;
+}
+.person_profile--locations {
+ color: #76affe;
+ font-size: 0.875em;
+ font-style: normal;
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
+ font-weight: 700;
+ line-height: 135%;
+ letter-spacing: -0.0175rem;
 }

@@ -1,0 +1,20 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+.basic_hero-- {
+	&text_area {
+		margin-bottom: var(--rp);
+	}
+}
+
+.map_embed-- {
+	&section {
+		margin-top: calc(var(--rp) * -1);
+		padding-top: 0;
+	}
+	&wrapper {
+		grid-column: 2/-2;
+		border-radius: 0.25rem;
+		overflow: hidden;
+	}
+}

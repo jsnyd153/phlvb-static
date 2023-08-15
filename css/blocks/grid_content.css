@@ -1,7 +1,4 @@
 /*css/blocks/grid_content.scss*/
-.grid_content--section {
- padding: var(--gap) 0;
-}
 .grid_content--text_area, .grid_content--grid_area, .grid_content--flex_area, .grid_content--load_more {
  --columns: 12;
  --start: calc((14 - var(--columns)) / 2 + 1);

@@ -3,39 +3,36 @@ html {
 }
 
 body {
- background-color: var(--theme_color-900);
+ background-color: #edf0f8;
 }
 
 :root {
  --gap: 1.5rem;
  --fr_unit: 5vw;
  --rp: calc(var(--fr_unit) * 0.5);
- --corner: 1rem;
+ --corner: 0.25rem;
 }
 @media (max-width: 991px) {
  :root {
   --gap: 1.25rem;
   --rp: calc(var(--fr_unit) * 0.75);
-  --corner: 0.75rem;
  }
 }
 @media (max-width: 767px) {
  :root {
   --gap: 1rem;
   --rp: calc(var(--fr_unit) * 1);
-  --corner: 0.625rem;
  }
 }
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  :root {
   --gap: 0.75rem;
   --rp: calc(var(--fr_unit) * 1.5);
-  --corner: 0.5rem;
  }
 }
 
 * {
- font-family: "roc-grotesk", Helvetica, sans-serif;
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
  letter-spacing: -0.02em;
  line-height: 1.35;
 }

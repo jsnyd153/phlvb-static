@@ -5,7 +5,7 @@
 }
 .locations--list i {
  color: var(--theme_color-900);
- border-radius: 2rem;
+ border-radius: 0.25rem;
  display: none;
  flex-direction: row;
  justify-content: center;

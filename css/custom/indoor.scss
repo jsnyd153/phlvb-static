@@ -1,48 +1,22 @@
 @use "sass:color";
 @use "../abstracts" as *;
 
-#optix-grass-1 {
+#molten_blue-1 {
 	position: absolute;
-	max-width: 225/16 * 1rem;
-	min-width: 130/16 * 1rem;
-	width: 20%;
-	left: 0;
+	max-width: 17.1875rem;
+	min-width: 8.125rem;
+	width: 25%;
+	right: 0;
 	top: 0;
 	z-index: -1;
 }
 
 #optix-grass-2 {
 	position: absolute;
-	max-width: 425/16 * 1rem;
-	max-height: 425/16 * 1rem;
-	min-width: 180/16 * 1rem;
-	width: 30%;
-	right: 0;
+	max-width: 31.25rem;
+	min-width: 11.25rem;
+	width: 45%;
+	left: 0;
 	top: 0;
 	z-index: -1;
-}
-
-.feature_hero--background_media-image[data-side="right"] {
-	--height: 300;
-	--width: 334;
-	--intial_x: 0%;
-	--intial_y: 0%;
-	--span: span 4;
-
-	@include sm {
-		--span: span 6;
-	}
-}
-
-.feature_hero--background_media-image[data-side="left"] {
-	--height: 612;
-	--width: 300;
-	--intial_x: 0%;
-	--intial_y: 40%;
-	--span: span 5;
-
-	@include sm {
-		--span: span 5;
-		--intial_y: 45%;
-	}
 }

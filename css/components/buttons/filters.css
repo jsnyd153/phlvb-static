@@ -1,75 +1,108 @@
 /*css/components/buttons/filters.scss*/
-.checkbox_filter--label {
+.filter--group {
  display: flex;
- padding: 0.625rem 0.9375rem;
- border: 0.0625rem solid var(--theme_color-200);
- color: var(--theme_color-200);
- font-size: 0.75rem;
- line-height: 100%;
- font-weight: 500;
- gap: 0.625rem;
+ gap: 0.75rem;
+ flex-direction: column;
+ overflow: hidden;
+}
+.filter--current {
+ display: flex;
+ gap: 0.75rem;
+ flex-wrap: wrap;
+}
+.filter--current li span {
+ display: flex;
  align-items: center;
- border-radius: 2rem;
- font-family: "Roc Grotesk", Helvetica, Arial, sans-serif;
- transition: 0.125s all;
-}
-.checkbox_filter--label.echo {
+ gap: 0.5rem;
  color: var(--theme_color-500);
- border: 0.0625rem solid var(--theme_color-500);
 }
-.checkbox_filter--label.inactive {
+.filter--current li span::after {
+ content: "x";
+}
+.filter--container {
+ display: grid;
+ grid-template-rows: 1fr;
+ transition: grid-template-rows 0.3s;
+}
+@media (max-width: 767px) {
+ .filter--container {
+  grid-template-rows: 0fr;
+ }
+ [state-filter-open=true] .filter--container {
+  grid-template-rows: 1fr;
+ }
+}
+.filter--mobile_wrapper {
+ overflow: hidden;
+ display: flex;
+ gap: 1.5rem;
+ flex-direction: column;
+ align-items: flex-start;
+}
+.filter--list {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+}
+.filter--item {
+ font-size: 0.75rem;
+ font-weight: 500;
+ color: #192d62;
+}
+.filter--text {
+ display: block;
+ border: 1px solid currentColor;
+ border-radius: 0.25rem;
+ padding: 0.6666666667em 1.3333333333em;
+ line-height: 100%;
+}
+.filter--checkbox {
+ display: none;
+}
+.filter--checkbox:hover + .filter--text {
+ color: #a9bfeb;
+ background: #213d85;
+ border: 1px solid #213d85;
+}
+.filter--checkbox:checked + .filter--text {
+ background: #76affe;
+ color: #192d62;
+}
+.filter--checkbox[disabled=""] + .filter--text {
  opacity: 0.5;
-}
-.checkbox_filter--label.inactive:hover, .checkbox_filter--label.inactive:focus-visible, .checkbox_filter--label.inactive:focus {
+ background: transparent;
  color: var(--theme_color-200);
+}
+
+#filter-toggle {
+ display: none;
+ background-color: none;
+ color: #213d85;
+ border: 1px solid #213d85;
+ border-radius: 0.25rem;
+ padding: 0.5em 1em;
+ line-height: 100%;
  background-color: transparent;
- border: 0.0625rem solid var(--theme_color-200);
+ gap: 1rem;
+ justify-content: center;
+ align-items: center;
+ font-weight: 500;
+ font-size: 1.25rem;
 }
-.checkbox_filter--label:hover, .checkbox_filter--label:focus-visible, .checkbox_filter--label:focus {
- color: var(--theme_color-100);
- background-color: var(--theme_color-700t);
- border: 0.0625rem solid var(--theme_color-100);
+@media (max-width: 767px) {
+ #filter-toggle {
+  display: flex;
+ }
 }
-.checkbox_filter--label.current {
- color: var(--theme_color-900);
- background-color: var(--theme_color-200);
- border: 0.0625rem solid var(--theme_color-200);
+#filter-toggle .material-symbols-outlined {
+ font-size: 1.25em;
 }
-.checkbox_filter--label.current:hover, .checkbox_filter--label.current:focus-visible, .checkbox_filter--label.current:focus {
- color: var(--theme_color-900);
- background-color: var(--theme_color-100);
- border: 0.0625rem solid var(--theme_color-100);
+#filter-toggle:hover {
+ color: var(--theme_color-500);
+ border: 1px solid var(--theme_color-500);
 }
-.checkbox_filter--input {
- display: none;
-}
-.checkbox_filter--text {
- flex-grow: 1;
-}
-.checkbox_filter--ex {
- position: relative;
- height: 0.5em;
- width: 0.5em;
- display: none;
-}
-.checkbox_filter--ex::before, .checkbox_filter--ex::after {
- content: "";
- display: block;
- width: 0.5em;
- height: 0.0625rem;
- background-color: currentColor;
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- transform: translate(-50%, -50%) rotate(45deg);
-}
-.checkbox_filter--ex::after {
- transform: translate(-50%, -50%) rotate(-45deg);
-}
-.echo .checkbox_filter--ex {
- display: block;
-}
-.echo:hover .checkbox_filter--ex {
- transform: scale(1.25);
+
+#resetBtn {
+ display: inline-block;
+ font-size: 0.875rem;
 }

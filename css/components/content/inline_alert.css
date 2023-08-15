@@ -1,12 +1,14 @@
 /*css/components/content/inline_alert.scss*/
 .inline_alert--container {
- padding: 2rem;
- border-radius: 0.625rem;
- border: 1px dashed var(--theme_color-500);
+ padding: 1.5rem;
+ border-radius: 0.25rem;
+ border: 1px dashed #192d62;
  display: flex;
  gap: 1.5rem;
  align-items: center;
- background-color: var(--theme_color-51);
+ background-color: rgba(118, 175, 254, 0.05);
+ width: 100%;
+ box-sizing: border-box;
 }
 .inline_alert--container.small {
  padding: 1rem;
@@ -15,15 +17,16 @@
  flex-grow: 0;
  flex-shrink: 0;
  font-family: Times;
+ color: #a9bfeb;
  font-size: 1.25rem;
- background-color: var(--theme_color-500);
+ background-color: #192d62;
  width: 1.875rem;
  height: 1.875rem;
  display: flex;
  justify-content: center;
  align-items: center;
- color: var(--theme_color-900);
  border-radius: 50%;
+ font-style: italic;
 }
 .small .inline_alert--icon {
  font-size: 1rem;
@@ -34,10 +37,10 @@
  flex-grow: 1;
 }
 .inline_alert--text_content p {
- color: var(--theme_color-100);
+ color: #192d62;
  font-weight: 500;
 }
 .inline_alert--text_content p.small {
- color: var(--theme_color-200);
+ color: #213d85;
  font-weight: 300;
 }

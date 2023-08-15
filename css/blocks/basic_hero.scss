@@ -1,0 +1,47 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Featured Hero
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=134%3A20347&t=YZtFunZ3xKrlzhUX-1
+// Dependancy: /js/setCustomAttr.js  = $(".reel--wrapper").each(function(){});
+
+.basic_hero {
+	&-- {
+		&section {
+			height: clamp(50vh, 450/16 * 1rem, 90vh);
+			overflow: hidden;
+			padding: 0;
+			--background_color: #{$brand-900};
+
+			.background_area {
+				.ring {
+					opacity: 0.3;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					translate: -30% 30%;
+					circle {
+						stroke: $brand-500;
+						stroke-width: 90;
+					}
+				}
+			}
+		}
+
+		&text_area {
+			grid-column: 2 / span 9;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding-inline: var(--rp);
+			padding-block: var(--fr_unit);
+
+			@include header_tags {
+				color: $brand-50;
+			}
+			p {
+				color: $brand-200;
+			}
+		}
+	} //--
+}

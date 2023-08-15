@@ -12,14 +12,15 @@
 .inline_alert {
 	&-- {
 		&container {
-			padding: 32/16 * 1rem;
-			border-radius: 10/16 * 1rem;
-			border: 1px dashed var(--theme_color-500);
+			padding: 24/16 * 1rem;
+			border-radius: 4/16 * 1rem;
+			border: 1px dashed $brand-900;
 			display: flex;
 			gap: 24/16 * 1rem;
 			align-items: center;
-			background-color: var(--theme_color-51);
-
+			background-color: rgba(118, 175, 254, 0.05);
+			width: 100%;
+			box-sizing: border-box;
 			&.small {
 				padding: 16/16 * 1rem;
 			}
@@ -29,13 +30,14 @@
 			flex-grow: 0;
 			flex-shrink: 0;
 			font-family: Times;
+			color: $brand-200;
 			font-size: 20/16 * 1rem;
-			background-color: var(--theme_color-500);
+			background-color: $brand-900;
 			width: 30/16 * 1rem;
 			height: 30/16 * 1rem;
 			@include f-center;
-			color: var(--theme_color-900);
 			border-radius: 50%;
+			font-style: italic;
 
 			.small & {
 				font-size: 16/16 * 1rem;
@@ -46,11 +48,11 @@
 		&text_content {
 			flex-grow: 1;
 			p {
-				color: var(--theme_color-100);
+				color: $brand-900;
 				font-weight: 500;
 			}
 			p.small {
-				color: var(--theme_color-200);
+				color: $brand-700;
 				font-weight: 300;
 			}
 		}

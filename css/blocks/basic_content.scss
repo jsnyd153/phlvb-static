@@ -1,0 +1,51 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+/*css/blocks/grid_content.scss*/
+// Visual:
+// Dependancy: text_area, media_area
+
+.basic_content-- {
+	&section {
+		article {
+			--span: 10;
+			// start calc centered the block
+			--start: calc((16 - var(--span)) / 2);
+			grid-column: var(--start) / span var(--span);
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			.inset & {
+				--span: 8;
+			}
+
+			@include md {
+				--span: 12;
+				.inset & {
+					--span: 10;
+				}
+			}
+
+			@include sm {
+				.inset & {
+					--span: 12;
+				}
+			}
+
+			> .text_area {
+				gap: var(--gap);
+				.text_content {
+					gap: 0.5rem;
+				}
+			}
+			> .media_area {
+				.medio_content {
+					img {
+						border-radius: 0.25rem;
+					}
+				}
+			}
+		} //article
+	}
+}

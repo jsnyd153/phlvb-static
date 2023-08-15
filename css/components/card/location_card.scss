@@ -34,21 +34,15 @@
 			hr {
 				width: 100%;
 				display: block;
-				color: var(--theme_color-200);
+				color: $brand-700;
 				border: 0;
 				border-bottom: 1px solid currentColor;
 				transition: 0.3s all;
-				a:hover & {
-					color: var(--theme_color-900);
-				}
 			}
-			@include text_nodes {
-				font-weight: 500;
+			@include header_tags {
+				font-weight: 600;
 				flex-grow: 1;
 				transition: 0.3s all;
-				a:hover & {
-					color: var(--theme_color-900);
-				}
 			}
 		}
 	}

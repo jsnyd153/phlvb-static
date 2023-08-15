@@ -1,0 +1,36 @@
+.basic_hero--section {
+ height: clamp(50vh, 28.125rem, 90vh);
+ overflow: hidden;
+ padding: 0;
+ --background_color: #192d62;
+}
+.basic_hero--section .background_area .ring {
+ opacity: 0.3;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ translate: -30% 30%;
+}
+.basic_hero--section .background_area .ring circle {
+ stroke: #76affe;
+ stroke-width: 90;
+}
+.basic_hero--text_area {
+ grid-column: 2/span 9;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ padding-inline: var(--rp);
+ padding-block: var(--fr_unit);
+}
+.basic_hero--text_area h1,
+.basic_hero--text_area h2,
+.basic_hero--text_area h3,
+.basic_hero--text_area h4,
+.basic_hero--text_area h5,
+.basic_hero--text_area h6 {
+ color: #edf0f8;
+}
+.basic_hero--text_area p {
+ color: #a9bfeb;
+}

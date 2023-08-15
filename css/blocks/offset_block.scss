@@ -1,0 +1,53 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+// Story Block
+// Visual:https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=279%3A41769&t=mtKVidobmbDz1PFi-1
+// Dependancy: text_area, media_area
+
+.offset_block {
+	&-- {
+		&section {
+			grid-template-rows: 1fr auto;
+		} //section
+
+		&media_area {
+			grid-column: 2 / span 12;
+			grid-row: 1 / span 2;
+			min-height: 580/16 * 1rem;
+			justify-content: flex-start;
+		} //media
+
+		&media_content {
+			width: calc(100% - var(--rp));
+			margin-bottom: var(--rp);
+			height: calc(100% - var(--rp));
+			img {
+				@include cover_obj;
+			}
+		}
+
+		&text_area {
+			position: relative;
+			grid-column: span 6 / -2;
+			grid-row: span 1/ -1;
+			background-color: $brand-900;
+			padding: var(--fr_unit) calc(var(--fr_unit) * 0.75);
+			gap: var(--gap);
+
+			@include header_tags {
+				color: var(--theme_color-500);
+			}
+			p,
+			li {
+				color: $brand-50;
+			}
+			p a {
+				color: var(--theme_color-500);
+			}
+		} //text
+		&text_content {
+			gap: 1rem;
+		}
+	}
+}

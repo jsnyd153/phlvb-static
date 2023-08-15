@@ -35,29 +35,32 @@
 		<link rel="stylesheet" href="../css/blocks/footer.css" />
 
 		<link rel="stylesheet" href="../css/utilities/items_per_row.css" />
-		<link rel="stylesheet" href="../css/pickup.css" />
+		<link rel="stylesheet" href="../css/custom/resources.css" />
 
 		<style></style>
 	</head>
 
 	<body class="">
 		<main>
-			<section class="graphic_hero--section">
-				<div class="background_block">
+			<section class="basic_hero--section">
+				<div class="background_area">
 					<div class="background_fill">
-						<img
-							src="https://lh3.googleusercontent.com/pw/AJFCJaVyMD2badyMrG3KX6lajL5bBdPiLFR5BTRaTAOPqp2NJE-cjCgWJZDq6sIm1HQ_hZCMgVJ5chvlfXkrijjC9HMkVLIG4jdDbX_cJ33Tds2T-tyMV1CNni08XM59IDsaWD_UmZz51vO89UJlmfA1bpVaxQ=w3252-h1830-s-no?authuser=0"
-							alt=""
-						/>
+						<svg
+							class="ring"
+							width="500"
+							height="500"
+							viewBox="0 0 500 500"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle cx="250" cy="250" r="204.5" />
+						</svg>
 					</div>
-					<div class="overlay-darken-30"></div>
-					<div class="overlay-gradient-from_bottom overlay-gradient"></div>
 				</div>
-
-				<div class="text_area graphic_hero--text_area">
-					<div class="text_content graphic_hero--text_content">
+				<div class="text_area basic_hero--text_area">
+					<div class="text_content">
 						<h1>Resources</h1>
-						<p>
+						<p class="large">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua.
 						</p>
@@ -98,6 +101,69 @@
 				<div class="grid_content--text_area text_area">
 					<div class="text_content">
 						<h2>All Resources</h2>
+						<div class="filter--container">
+							<h5>Categories</h5>
+							<div class="filter--group">
+								<ul class="filter--list">
+									<li class="filter--item">
+										<label class="filter--label"
+											><input
+												type="checkbox"
+												id="Checkbox-Type1"
+												name="Checkbox-Type1"
+												data-name="Checkbox Type1"
+												class="filter--checkbox"
+											/>
+											<span class="filter--text" for="Checkbox-Type1">
+												Support
+											</span>
+										</label>
+									</li>
+									<li class="filter--item">
+										<label class="filter--label"
+											><input
+												type="checkbox"
+												id="Checkbox-Type2"
+												name="Checkbox-Type2"
+												data-name="Checkbox Type2"
+												class="filter--checkbox"
+											/>
+											<span class="filter--text" for="Checkbox-Type2">
+												Organization
+											</span>
+										</label>
+									</li>
+									<li class="filter--item">
+										<label class="filter--label"
+											><input
+												type="checkbox"
+												id="Checkbox-Type3"
+												name="Checkbox-Type3"
+												data-name="Checkbox Type3"
+												class="filter--checkbox"
+											/>
+											<span class="filter--text" for="Checkbox-Type3">
+												Eductaion
+											</span>
+										</label>
+									</li>
+									<li class="filter--item">
+										<label class="filter--label"
+											><input
+												type="checkbox"
+												id="Checkbox-Type4"
+												name="Checkbox-Type4"
+												data-name="Checkbox Type4"
+												class="filter--checkbox"
+											/>
+											<span class="filter--text" for="Checkbox-Type4">
+												Community
+											</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -146,8 +212,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 		<script src="../js/setCustomAttr.js"></script>
-		<script src="../js/headerNavigation.js"></script>
+		<script src="../js/generateContent.js"></script>
 		<script src="../js/navigation.js"></script>
+		<script src="../js/scrollAnimations.js"></script>
 
 		<script></script>
 

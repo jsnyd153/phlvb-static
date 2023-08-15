@@ -10,25 +10,23 @@
 
 .card {
 	border-radius: calc(0.75 * var(--corner));
-	background-color: var(--theme_color-700t);
+	background-color: rgba(255, 255, 255, 0.8);
+
 	backdrop-filter: blur(0.5rem);
-	color: var(--theme_color-200);
+	color: $brand-700;
 }
 
 a.card {
 	text-decoration: none;
 	box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0);
-	transition: 0.5s background-color, 0.5s color;
+	transition: 0.5s all;
+	position: relative;
+	top: 0;
 
 	&:hover {
 		background-color: var(--theme_color-500);
 		box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.08);
-		color: var(--theme_color-800);
-		transform: translateY(-0.2em);
-
-		&.theme_beach,
-		.theme_beach & {
-			box-shadow: 0px 10px 16px -4px rgba(255, 255, 200, 0.3);
-		}
+		color: $brand-900;
+		top: -0.2em;
 	}
 }

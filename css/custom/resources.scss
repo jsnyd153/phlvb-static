@@ -1,0 +1,13 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+.filter--container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	flex-wrap: wrap;
+}
+
+.filter--header {
+}

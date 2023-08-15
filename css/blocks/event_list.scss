@@ -8,8 +8,6 @@
 .event_list {
 	&-- {
 		&section {
-			padding: var(--gap) 0;
-			// overflow: hidden;
 		}
 		&text_area {
 			grid-column: 3/-3;
@@ -45,7 +43,7 @@
 			}
 			.empty_state {
 				padding: 24/16 * 1rem 16/16 * 1rem;
-				color: var(--theme_color-500);
+				color: $brand-700;
 				text-align: center;
 			}
 		}

@@ -8,107 +8,79 @@
 .graphic_hero {
 	&-- {
 		&section {
-			padding: 160/16 * 1rem 0;
-			@include md {
-				padding: 120/16 * 1rem 0;
-			}
-			@include sm {
-				padding: 90/16 * 1rem 0;
-			}
-
-			.background_area {
-				@include image_cover;
-			}
-			.background_fill {
-				@include image_cover;
-				img {
-					@include image_cover;
-				}
-			}
-
-			& + section {
-				padding-top: 0;
-			}
+			height: clamp(50vh, 625/16 * 1rem, 90vh);
+			overflow: hidden;
+			padding: 0;
 		}
 
 		&text_area {
 			display: flex;
 			flex-direction: column;
+			justify-content: flex-end;
 			gap: 1rem;
-			grid-column: 2 / span 7;
-			z-index: 1;
-			// padding: ;
-			@include xl {
-				grid-column: 2 / span 7;
-			}
-			@include md {
-				grid-column: 2 / span 7;
-			}
-			@include sm {
-				grid-column: 2 / -2;
-			}
+			grid-column: 2 / span 9;
+			margin-block: var(--fr_unit);
 		}
 		&text_content {
 			display: flex;
 			flex-direction: column;
 			gap: 0.5rem;
 			align-items: flex-start;
-			@include text_nodes {
+
+			.eyebrow {
+				color: var(--theme_color-500);
+			}
+			h1,
+			p {
 				color: $white;
+				max-width: 80ch;
 			}
 		}
-		&reel {
-			grid-column: span 6 / -1;
-			container-type: inline-size;
-			@include xl {
-				grid-column: span 6 / -1;
+
+		&media_area {
+			@include cover_obj;
+		}
+		&layer_1 {
+			&::after {
+				content: "";
+				display: block;
+				background-color: black;
+				opacity: 0.25;
+				@include cover_obj;
 			}
-			@include md {
-				grid-column: span 6 / -1;
+			img {
+				@include cover_obj;
 			}
-			height: 100%;
-			@include sm {
-				grid-column: span 13 / -1;
+		}
+		&layer_2 {
+			@include t-center;
+			height: calc(100% - 0px);
+			aspect-ratio: 1;
+			transform: translate(-50%, -50%) rotate(35deg);
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				min-height: 100%;
+				object-fit: cover;
+			}
+		}
+		&layer_3 {
+			@include t-center;
+			height: calc(100% - 200px);
+			aspect-ratio: 1;
+			border-radius: 50%;
+			overflow: hidden;
+			&::after {
+				content: "";
+				display: block;
+				background-color: black;
+				opacity: 0.15;
+				@include cover_obj;
+			}
+			img {
+				min-height: 100%;
+				object-fit: cover;
 			}
 		}
 	} //--
 }
-
-// .reel-- {
-// 	&wrapper {
-// 		//Fall back value for autoGrid
-// 		//Value set using javascript to allow cards to scale slightly but maintain rendered size between 140px-160px
-// 		//--autoGrid: calc((1000 - (renderedWwidth) +  ) / 12 * 1%);
-// 		--autoGrid: 45%;
-
-// 		display: grid;
-// 		gap: var(--gap);
-// 		grid-auto-flow: column;
-// 		grid-auto-columns: var(--autoGrid);
-// 		-webkit-mask-image: linear-gradient(to left, transparent 0%, black 10%);
-// 		mask-image: linear-gradient(to left, transparent 0%, black 10%);
-// 		overflow-x: scroll;
-// 		scroll-snap-type: x mandatory;
-// 		height: 100%;
-// 		padding: var(--gap) var(--gap) var(--gap) 0;
-
-// 		//cap the card scaling when the container reaches 700px wide
-// 		@container (min-width: 700px) {
-// 			grid-auto-columns: 25%;
-// 		}
-
-// 		> * {
-// 			scroll-snap-align: start;
-// 		}
-
-// 		&::-webkit-scrollbar {
-// 			display: none;
-// 		}
-
-// 		/* Hide scrollbar for IE, Edge and Firefox */
-// 		& {
-// 			-ms-overflow-style: none; /* IE and Edge */
-// 			scrollbar-width: none; /* Firefox */
-// 		}
-// 	}
-// }

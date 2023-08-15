@@ -5,12 +5,13 @@ $brand-900: #192d62;
 $brand-900t: color.adjust($brand-900, $alpha: -0.2);
 $brand-800: #1c326f;
 $brand-800t: color.adjust($brand-900, $lightness: +4, $alpha: -0.2);
-$brand-700: #1c326f;
+$brand-700: #213d85;
 $brand-700t: color.adjust($brand-900, $lightness: +8, $alpha: -0.2);
 $brand-600: #1b40a6;
 $brand-500: #76affe;
 $brand-200: #a9bfeb;
 $brand-100: #bccceb;
+$brand-50: #edf0f8;
 $brand-200t: color.adjust($brand-100, $lightness: -4, $alpha: -0.2);
 
 //indoor

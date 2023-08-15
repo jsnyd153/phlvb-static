@@ -1,21 +1,21 @@
 /*css/components/section_modifiers.scss*/
 section {
- --padding_base: 5.625rem;
+ --padding_base: 3.75rem;
  padding-block: var(--padding_base);
 }
 @media (max-width: 991px) {
  section {
-  --padding_base: 4.6875rem;
+  --padding_base: 3.25rem;
  }
 }
 @media (max-width: 767px) {
  section {
-  --padding_base: 3.75rem;
+  --padding_base: 2.875rem;
  }
 }
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  section {
-  --padding_base: 2.8125rem;
+  --padding_base: 2.5rem;
  }
 }
 .page-wrapper > section:nth-child(1) {

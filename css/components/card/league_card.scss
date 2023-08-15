@@ -28,17 +28,13 @@
 			display: flex;
 			gap: inherit;
 			transition: 0.5s color;
-			color: var(--theme_color-100);
+
 			a:hover & {
-				color: var(--theme_color-900);
 			}
 			.expected {
-				font-weight: 400;
-				color: var(--theme_color-200);
+				font-weight: 600;
+
 				transition: 0.5s color;
-				a:hover & {
-					color: var(--theme_color-800);
-				}
 			}
 		}
 		&description {
@@ -59,27 +55,15 @@
 			transition: 0.5s color;
 			@include header_tags {
 				transition: 0.5s color;
-				color: var(--theme_color-100);
-				a:hover & {
-					color: var(--theme_color-900);
-				}
+				font-weight: 600;
 			}
 			.day {
 				transition: 0.5s color;
-				color: var(--theme_color-100);
-				a:hover & {
-					color: var(--theme_color-900);
-				}
 			}
 		}
 		&body {
 			p {
 				font-size: 15/16 * 1rem;
-				color: var(--theme_color-100);
-				transition: 0.5s color;
-				a:hover & {
-					color: var(--theme_color-900);
-				}
 			}
 			@include sm {
 				grid-column: 1;

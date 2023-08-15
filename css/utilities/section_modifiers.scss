@@ -8,15 +8,15 @@
 section {
 	// overflow-x: hidden;
 
-	--padding_base: #{90/16 * 1rem};
+	--padding_base: #{60/16 * 1rem};
 	@include md {
-		--padding_base: #{75/16 * 1rem};
+		--padding_base: #{52/16 * 1rem};
 	}
 	@include sm {
-		--padding_base: #{60/16 * 1rem};
+		--padding_base: #{46/16 * 1rem};
 	}
 	@include xs {
-		--padding_base: #{45/16 * 1rem};
+		--padding_base: #{40/16 * 1rem};
 	}
 
 	padding-block: var(--padding_base);

@@ -35,29 +35,32 @@
 		<link rel="stylesheet" href="../css/blocks/footer.css" />
 
 		<link rel="stylesheet" href="../css/utilities/items_per_row.css" />
-		<link rel="stylesheet" href="../css/pickup.css" />
+		<link rel="stylesheet" href="../css/custom/locations.css" />
 
 		<style></style>
 	</head>
 
 	<body class="">
 		<main>
-			<section class="feature_hero--section">
-				<div class="background_block">
-					<div class="background_fill"></div>
-				</div>
-
-				<div class="text_area feature_hero--text_area">
-					<div class="text_content feature_hero--text_content">
-						<h1 class="feature">
-							<span>Locations</span>
-						</h1>
+			<section class="basic_hero--section">
+				<div class="background_area">
+					<div class="background_fill">
+						<svg
+							class="ring"
+							width="500"
+							height="500"
+							viewBox="0 0 500 500"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle cx="250" cy="250" r="204.5" />
+						</svg>
 					</div>
 				</div>
-
-				<div class="text_area feature_hero--text_area inset">
-					<div class="text_content feature_hero--text_content">
-						<p class="jumbo">
+				<div class="text_area basic_hero--text_area">
+					<div class="text_content">
+						<h1>Locations</h1>
+						<p class="large">
 							We play all over the city of Philadelphia and the surrounding
 							area.
 						</p>
@@ -65,99 +68,80 @@
 				</div>
 			</section>
 
-			<section class="story_block--section padding-v-000">
-				<div class="background_block">
-					<div class="background_fill"></div>
-				</div>
-				<div class="story_block--row">
-					<div class="story_block--single full_width">
-						<figure class="media_content">
-							<img src="../assets/media/map-embed.png" alt="" />
-						</figure>
-					</div>
+			<section class="map_embed--section">
+				<div class="map_embed--wrapper">
+					<img src="../assets/media/map-embed.png" alt="" />
 				</div>
 			</section>
 
-			<section class="story_block--section">
-				<div class="background_area">
-					<div class="background_fill"></div>
-				</div>
-
-				<div class="story_block--row inset">
-					<div class="story_block--single" style="--span: 8">
-						<div class="text_content">
-							<h2>Neighborhoods</h2>
-						</div>
-						<div class="story_block--columns text_content">
-							<ul class="locations--list">
-								<li data-copies="3" location-data="beach  indoor">
-									<p>Point Breeze</p>
-									<i data-indicator="grass"></i><i data-indicator="beach"></i
-									><i data-indicator="indoor"></i>
-								</li>
-								<li data-copies="3" location-data="grass  indoor">
-									<p>Point Breeze</p>
-									<i data-indicator="grass"></i><i data-indicator="beach"></i
-									><i data-indicator="indoor"></i>
-								</li>
-								<li data-copies="3" location-data="grass  ">
-									<p>Point Breeze</p>
-									<i data-indicator="grass"></i><i data-indicator="beach"></i
-									><i data-indicator="indoor"></i>
-								</li>
-							</ul>
-							<ul class="locations--list">
-								<li data-copies="3" location-data="grass beach indoor">
-									<p>Point Breeze</p>
-									<i data-indicator="grass"></i><i data-indicator="beach"></i
-									><i data-indicator="indoor"></i>
-								</li>
-								<li data-copies="3" location-data="grass  indoor">
-									<p>Point Breeze</p>
-									<i data-indicator="grass"></i><i data-indicator="beach"></i
-									><i data-indicator="indoor"></i>
-								</li>
-								<li data-copies="3" location-data="  indoor">
-									<p>Point Breeze</p>
-									<i data-indicator="grass"></i><i data-indicator="beach"></i
-									><i data-indicator="indoor"></i>
-								</li>
-							</ul>
-						</div>
-						<div class="text_content">
-							<p class="jumbo">
-								Know a gym or field you think would be great for running
-								volleyball events? Let us know:
-							</p>
-						</div>
-						<div class="text_content">
-							<a href="#" class="button">Contact Us</a>
-						</div>
+			<section class="basic_content--section">
+				<article>
+					<div class="text_content">
+						<h2>Neighborhoods</h2>
 					</div>
-				</div>
+					<div class="basic_content--columns text_content">
+						<ul class="list_type--locations locations--list columns-2">
+							<li data-copies="3" location-data="beach  indoor">
+								<p>Point Breeze</p>
+								<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li data-copies="3" location-data="grass indoor">
+								<p>Point Breeze</p>
+								<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li data-copies="3" location-data="grass  ">
+								<p>Point Breeze</p>
+								<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li data-copies="3" location-data="grass beach indoor">
+								<p>Point Breeze</p>
+								<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li data-copies="3" location-data="grass  indoor">
+								<p>Point Breeze</p>
+								<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li data-copies="3" location-data="  indoor">
+								<p>Point Breeze</p>
+								<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+						</ul>
+					</div>
+					<div class="text_content">
+						<p class="jumbo">
+							Know a gym or field you think would be great for running
+							volleyball events? <br />We’re always looking for more locations.
+						</p>
+					</div>
+					<div class="text_content">
+						<a href="#" class="button">Let us Know</a>
+					</div>
+				</article>
 			</section>
 
-			<section class="call_to_action--section" id="1A">
-				<a href="pickup.html" class="call_to_action--action">
+			<section class="call_to_action--section">
+				<a href="tournament_tips.html" class="call_to_action--action">
 					<div class="background_area">
 						<div class="background_fill">
 							<img
-								src="https://images.unsplash.com/photo-1682832920180-3f216f81db4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60"
+								src="../assets/media/banner-tournament_tips-default.png"
 								alt=" background"
 							/>
 						</div>
 					</div>
 					<div class="call_to_action--text_area text_area">
 						<div class="call_to_action--text_content text_content">
-							<h3>Ready to play call to action</h3>
-							<p>
-								Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-								Repudiandae nostrum at officia ipsam ut doloremque dolor ab
-								amet.
-							</p>
+							<h3>Ready to play?</h3>
+							<p>Find an event near you.</p>
 						</div>
 						<div class="call_to_action--text_content text_content">
-							<div class="button">Learn more</div>
+							<div class="button small is-brand-200">See Upcoming Events</div>
 						</div>
 					</div>
 				</a>

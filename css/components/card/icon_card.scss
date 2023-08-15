@@ -31,17 +31,17 @@
 			flex-direction: column;
 			gap: 8/16 * 1rem;
 			p {
-				color: var(--theme_color-200);
+				color: $brand-700;
 				transition: 0.3s all;
 				a:hover & {
-					color: var(--theme_color-900);
+					// color: var(--theme_color-900);
 				}
 			}
 			.arrow_button {
-				color: var(--theme_color-500);
+				// color: var(--theme_color-500);
 				transition: 0.3s all;
 				a:hover & {
-					color: var(--theme_color-900);
+					// color: var(--theme_color-900);
 					transform: translateX(1rem);
 				}
 				svg {
@@ -56,7 +56,7 @@
 		&header {
 			display: flex;
 			gap: 16/16 * 1rem;
-			color: var(--theme_color-500);
+			// color: var(--theme_color-500);
 			transition: 0.3s all;
 			align-items: center;
 
@@ -65,7 +65,7 @@
 				margin-top: 0.25em;
 			}
 			a:hover & {
-				color: var(--theme_color-900);
+				// color: var(--theme_color-900);
 			}
 
 			@include header_tags {

@@ -1,6 +1,3 @@
-.event_list--section {
- padding: var(--gap) 0;
-}
 .event_list--text_area {
  grid-column: 3/-3;
  display: flex;
@@ -40,6 +37,6 @@
 }
 .event_list--list .empty_state {
  padding: 1.5rem 1rem;
- color: var(--theme_color-500);
+ color: #213d85;
  text-align: center;
 }

@@ -16,7 +16,7 @@
 		&item {
 			display: flex;
 			flex-direction: column;
-			gap: 20/16 * 1rem;
+			gap: 16/16 * 1rem;
 		}
 		&media_area {
 			position: relative;
@@ -24,7 +24,7 @@
 		&media_content {
 			@include cover_container;
 			padding-top: 100%;
-			border-radius: 12/16 * 1rem;
+			border-radius: 4/16 * 1rem;
 			img {
 				@include image_cover;
 			}
@@ -58,12 +58,15 @@
 
 		&name {
 			font-weight: 600;
-			margin-top: 0.25rem;
+			color: $brand-900;
 		}
 		&event {
-			color: var(--theme_color-500);
+			color: $brand-700;
 			font-weight: 600;
-			font-size: 14/16 * 1rem;
+			font-family: $sans_font-condensed;
+			font-style: italic;
+			text-transform: uppercase;
+			opacity: 0.8;
 		}
 	}
 }
