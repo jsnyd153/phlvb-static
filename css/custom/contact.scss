@@ -114,12 +114,20 @@
 	}
 	&item {
 		border-top: 1px solid white;
+		transition: 300ms all;
+
+		&:hover {
+			border-color: $brand-900;
+		}
+		&:hover + & {
+			border-color: $brand-900;
+		}
 		@include md {
 			flex-grow: 1;
 		}
 		@include xs {
-			border-top: 0px solid white;
-			border-left: 1px solid white;
+			border-top: 0px solid;
+			border-left: 1px solid;
 		}
 	}
 	&link {
@@ -133,17 +141,26 @@
 		transition: 0.4s all;
 		position: relative;
 		overflow: hidden;
+		box-sizing: border-box;
 
 		&::before {
 			content: "";
 			display: block;
 			@include image_cover;
-			background-color: black;
+			background-color: $brand-500;
 			z-index: -1;
 			opacity: 0.35;
 			translate: -100% 0;
-			transition: 0.3s all;
-			backdrop-filter: blur(0.5rem);
+			transition: 300ms all;
+
+			.facebook & {
+			}
+			.instagram & {
+				background-color: $indoor-500;
+			}
+			.opensports & {
+				background-color: $grass-500;
+			}
 		}
 
 		@include md {
@@ -164,17 +181,21 @@
 		}
 
 		&:hover {
-			color: var(--theme_color-500);
+			color: $brand-900;
+
 			&::before {
+				opacity: 1;
 				translate: 0% 0%;
 			}
 		}
 		h3 {
 			color: inherit;
+			font-family: $sans_font-condensed;
+			margin-top: -0.2em;
 			font-size: 2.625rem;
-			font-size: clamp(1rem, 8cqi, 2.625rem);
-			font-style: normal;
-			font-weight: 500;
+			font-size: clamp(1rem, 5cqi, 2.625rem);
+			font-style: italic;
+			font-weight: 900;
 			line-height: 100%;
 			letter-spacing: -0.0525rem;
 			text-transform: uppercase;

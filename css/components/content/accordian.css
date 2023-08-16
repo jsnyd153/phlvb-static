@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*css/components/content/accordian.scss*/
-/*css/components/content/location_list.scss*/
+/*css/components/content/accordian.scss*/
 .accordion {
  display: flex;
  flex-direction: column;
@@ -24,6 +24,8 @@
  display: flex;
  justify-content: space-between;
  gap: var(--spacing);
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
+ font-weight: 400;
 }
 .accordion--content {
  display: grid;

@@ -61,12 +61,11 @@
 			color: $brand-900;
 		}
 		&event {
-			color: $brand-700;
+			color: var(--theme_color-500);
 			font-weight: 600;
 			font-family: $sans_font-condensed;
 			font-style: italic;
 			text-transform: uppercase;
-			opacity: 0.8;
 		}
 	}
 }

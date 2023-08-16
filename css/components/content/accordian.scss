@@ -6,7 +6,7 @@
 // Dependancy: none
 
 //================================================
-/*css/components/content/location_list.scss*/
+/*css/components/content/accordian.scss*/
 //================================================
 .accordion {
 	display: flex;
@@ -31,6 +31,8 @@
 				display: flex;
 				justify-content: space-between;
 				gap: var(--spacing);
+				font-family: $serif_font;
+				font-weight: 400;
 			}
 		}
 		&content {

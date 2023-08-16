@@ -36,7 +36,7 @@
 
 	.faux-mask {
 		@include image_cover;
-		background-color: var(--theme_color-900);
+		background-color: $brand-800;
 		height: 105%;
 		width: 105%;
 	}

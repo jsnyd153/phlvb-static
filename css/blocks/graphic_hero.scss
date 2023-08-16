@@ -41,6 +41,7 @@
 			@include cover_obj;
 		}
 		&layer_1 {
+			@include cover_obj;
 			&::after {
 				content: "";
 				display: block;
@@ -50,6 +51,11 @@
 			}
 			img {
 				@include cover_obj;
+			}
+			.faux_mask {
+				@include cover_obj;
+				background: $brand-200;
+				z-index: 2;
 			}
 		}
 		&layer_2 {

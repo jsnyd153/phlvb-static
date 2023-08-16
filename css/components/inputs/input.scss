@@ -5,7 +5,8 @@
 	top: 0.5em;
 	font-size: 0.75em;
 	translate: 0 0%;
-	color: var(--theme_color-500);
+	color: $brand-700;
+	left: 1.5em;
 }
 
 .input_area {
@@ -14,7 +15,7 @@
 	justify-content: stretch;
 	width: 100%;
 	label {
-		font-family: Roc Grotesk;
+		font-family: $sans_font;
 		font-size: 1em;
 		font-weight: 400;
 		line-height: 100%;
@@ -23,7 +24,7 @@
 		translate: 0 -50%;
 		left: 1.5em;
 		pointer-events: none;
-		color: var(--theme_color-200);
+		color: $brand-700;
 		transition: 0.3s all;
 	}
 }
@@ -31,14 +32,14 @@
 input[type="text"],
 input[type="number"] {
 	display: flex;
-	padding: 18/16 * 1em 1.5em 10/16 * 1em 1.5em;
+	padding: 18/16 * 1em 1em 10/16 * 1em 1em;
 	align-items: flex-start;
 	align-self: stretch;
-	border-radius: 1.5em;
-	border: 1px solid var(--theme_color-700t);
-	background: var(--theme_color-800t);
-	color: var(--theme_color-100);
-	font-family: Roc Grotesk;
+	border-radius: 0.25em;
+	border: 1px solid $brand-200;
+	background: $brand-100;
+	color: $brand-900;
+	font-family: $sans_font;
 	font-size: 1em;
 	font-style: normal;
 	font-weight: 400;
@@ -51,7 +52,7 @@ input[type="number"] {
 
 	&:focus {
 		outline-offset: 0.25em;
-		outline: 1px solid var(--theme_color-100);
+		outline: 1px solid $brand-600;
 		& + label {
 			@include label_active;
 		}
@@ -68,16 +69,16 @@ textarea {
 	padding: 18/16 * 1em 1.5em 10/16 * 1em 1.5em;
 	align-items: flex-start;
 	align-self: stretch;
-	border-radius: 1.5em;
-	border: 1px solid var(--theme_color-700t);
-	background: var(--theme_color-800t);
-	color: var(--theme_color-100);
+	border-radius: 0.25em;
+	border: 1px solid $brand-200;
+	background: $brand-100;
+	color: $brand-700;
 	font-size: 1em;
 	font-weight: 400;
 	width: 100%;
 	transition: 0.3s all;
 
-	& + label {
+	.input_area & + label {
 		top: 1em;
 		translate: 0 0;
 	}
@@ -88,7 +89,7 @@ textarea {
 
 	&:focus {
 		outline-offset: 0.25em;
-		outline: 1px solid var(--theme_color-100);
+		outline: 1px solid $brand-600;
 		& + label {
 			@include label_active;
 		}

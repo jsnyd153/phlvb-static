@@ -20,6 +20,15 @@
 	background-color: var(--_inital_background);
 
 	font-size: 18/16 * 1rem;
+	@include md {
+		font-size: 17/16 * 1rem;
+	}
+	@include sm {
+		font-size: 16/16 * 1rem;
+	}
+	@include sm {
+		font-size: 15/16 * 1rem;
+	}
 	display: flex;
 	padding: 11/18 * 1em 20/18 * 1em 13/18 * 1em 20/18 * 1em;
 	align-items: flex-start;

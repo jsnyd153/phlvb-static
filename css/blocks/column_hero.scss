@@ -23,6 +23,14 @@
 		&column {
 			grid-column: span 6;
 			text-align: center;
+			margin-block: auto;
+
+			@include sm {
+				grid-column: 3/-3;
+			}
+			@include xs {
+				grid-column: 2/-2;
+			}
 
 			&.center-content {
 				@include f-center;

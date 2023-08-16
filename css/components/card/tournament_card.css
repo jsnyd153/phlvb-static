@@ -68,6 +68,10 @@ a:hover .tournament_card--body .host {
 aside .tournament_card--body {
  display: none;
 }
+.tournament_card--location {
+ display: flex;
+ align-items: flex-end;
+}
 @media (max-width: 767px) {
  .tournament_card--location {
   grid-row: 1;

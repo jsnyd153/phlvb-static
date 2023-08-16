@@ -38,7 +38,7 @@
  inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
- background-color: var(--theme_color-900);
+ background-color: #1c326f;
  height: 105%;
  width: 105%;
 }

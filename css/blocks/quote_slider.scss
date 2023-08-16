@@ -1,0 +1,114 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+/*css/blocks/grid_content.scss*/
+// Visual:
+// Dependancy: text_area, media_area
+
+.quote_slider-- {
+	&slider_area {
+		grid-column: 3/-3;
+	}
+	&button-container {
+		grid-column: span 2/-3;
+		display: flex;
+		gap: 1rem;
+		justify-content: flex-end;
+	}
+	&button {
+		padding: 10/16 * 1rem;
+		border-radius: 0.25rem;
+		background: $brand-100;
+		position: relative;
+		inset: auto;
+		height: auto;
+		&::after {
+			display: none;
+		}
+		svg {
+			// width: ;
+			path {
+				stroke: $brand-900;
+				stroke-width: 1.5;
+			}
+		}
+	}
+	&slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: var(--gap);
+		.text_area {
+			padding-left: var(--gap);
+			box-sizing: border-box;
+		}
+		h3 {
+			display: inline-block;
+			overflow: hidden;
+			line-height: 135%;
+			span {
+				display: block;
+				width: 100%;
+				transition: all 400ms ease-in-out;
+				transform: translateY(100%);
+				opacity: 0;
+
+				@for $i from 1 through 10 {
+					&:nth-child(#{$i}) {
+						transition-delay: #{$i / 10}s;
+					}
+				}
+
+				.highlight {
+					position: relative;
+					display: inline;
+
+					&::before {
+						content: "";
+						position: absolute;
+						width: 0%;
+						height: 100%;
+						top: 0;
+						left: -10/16 * 1rem;
+						background: $brand-100;
+						z-index: -1;
+						padding-right: 20/16 * 1rem;
+						transition: all 700ms 300ms ease-in-out;
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+	&slide.swiper-slide-active {
+		transition: all 1000ms ease-in-out;
+		h3 {
+			span {
+				display: inline-block;
+				transition: all 1000ms ease-in-out;
+				transform: translateY(0%);
+				opacity: 1;
+
+				.highlight {
+					&::before {
+						width: 100%;
+						left: -10/16 * 1rem;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	&media_area {
+		.media_content {
+			background: $brand-500;
+			border-radius: 50%;
+			opacity: 1;
+			box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 10px $brand-500,
+				0px 0px 0px 11px $brand-900;
+			img {
+			}
+		}
+	}
+}

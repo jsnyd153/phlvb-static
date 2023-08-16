@@ -1,0 +1,114 @@
+/*css/blocks/grid_content.scss*/
+.quote_slider--slider_area {
+ grid-column: 3/-3;
+}
+.quote_slider--button-container {
+ grid-column: span 2/-3;
+ display: flex;
+ gap: 1rem;
+ justify-content: flex-end;
+}
+.quote_slider--button {
+ padding: 0.625rem;
+ border-radius: 0.25rem;
+ background: #bccceb;
+ position: relative;
+ inset: auto;
+ height: auto;
+}
+.quote_slider--button::after {
+ display: none;
+}
+.quote_slider--button svg path {
+ stroke: #192d62;
+ stroke-width: 1.5;
+}
+.quote_slider--slide {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: var(--gap);
+}
+.quote_slider--slide .text_area {
+ padding-left: var(--gap);
+ box-sizing: border-box;
+}
+.quote_slider--slide h3 {
+ display: inline-block;
+ overflow: hidden;
+ line-height: 135%;
+}
+.quote_slider--slide h3 span {
+ display: block;
+ width: 100%;
+ transition: all 400ms ease-in-out;
+ transform: translateY(100%);
+ opacity: 0;
+}
+.quote_slider--slide h3 span:nth-child(1) {
+ transition-delay: 0.1s;
+}
+.quote_slider--slide h3 span:nth-child(2) {
+ transition-delay: 0.2s;
+}
+.quote_slider--slide h3 span:nth-child(3) {
+ transition-delay: 0.3s;
+}
+.quote_slider--slide h3 span:nth-child(4) {
+ transition-delay: 0.4s;
+}
+.quote_slider--slide h3 span:nth-child(5) {
+ transition-delay: 0.5s;
+}
+.quote_slider--slide h3 span:nth-child(6) {
+ transition-delay: 0.6s;
+}
+.quote_slider--slide h3 span:nth-child(7) {
+ transition-delay: 0.7s;
+}
+.quote_slider--slide h3 span:nth-child(8) {
+ transition-delay: 0.8s;
+}
+.quote_slider--slide h3 span:nth-child(9) {
+ transition-delay: 0.9s;
+}
+.quote_slider--slide h3 span:nth-child(10) {
+ transition-delay: 1s;
+}
+.quote_slider--slide h3 span .highlight {
+ position: relative;
+ display: inline;
+}
+.quote_slider--slide h3 span .highlight::before {
+ content: "";
+ position: absolute;
+ width: 0%;
+ height: 100%;
+ top: 0;
+ left: -0.625rem;
+ background: #bccceb;
+ z-index: -1;
+ padding-right: 1.25rem;
+ transition: all 700ms 300ms ease-in-out;
+ opacity: 0;
+}
+.quote_slider--slide.swiper-slide-active {
+ transition: all 1000ms ease-in-out;
+}
+.quote_slider--slide.swiper-slide-active h3 span {
+ display: inline-block;
+ transition: all 1000ms ease-in-out;
+ transform: translateY(0%);
+ opacity: 1;
+}
+.quote_slider--slide.swiper-slide-active h3 span .highlight::before {
+ width: 100%;
+ left: -0.625rem;
+ opacity: 1;
+}
+.quote_slider--media_area .media_content {
+ background: #76affe;
+ border-radius: 50%;
+ opacity: 1;
+ box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 10px #76affe, 0px 0px 0px 11px #192d62;
+}

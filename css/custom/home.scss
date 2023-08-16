@@ -1,0 +1,153 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+.home_hero-- {
+	&section {
+		overflow: visible;
+		padding: 0;
+		grid-row-gap: 0;
+		overflow: hidden;
+	}
+	&overlay {
+		opacity: 0.5;
+		background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+		mix-blend-mode: multiply;
+		grid-column: 1/-1;
+		height: 140/16 * 1rem;
+		position: relative;
+		z-index: 10;
+	}
+
+	&text_area {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 1rem;
+		grid-column: 2 / span 8;
+		padding-block: var(--fr_unit);
+		z-index: 20;
+		margin-bottom: clamp(0rem, calc(10rem - 10vw), 240 / 16 * 1rem);
+		@include sm {
+			grid-column: 2 / span 10;
+		}
+		@include xs {
+			grid-column: 2 / span 12;
+		}
+	}
+	&text_content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: flex-start;
+
+		.eyebrow {
+			color: $white;
+		}
+		h1,
+		p {
+			color: $white;
+			max-width: 50ch;
+		}
+		h1 {
+			@include fluid_size_text(1.639, $floor: 32.4789/16);
+		}
+	}
+
+	&pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10/16 * 1rem;
+		margin-block: var(--gap);
+		grid-column: 2/-2;
+		position: relative;
+		z-index: 11;
+		span {
+			width: 30/16 * 1rem;
+			background-color: $brand-100;
+			opacity: 0.5;
+			border-radius: 0.25rem;
+			height: 0.25rem;
+			&.active {
+				background-color: $brand-500;
+				opacity: 1;
+				width: 80/16 * 1rem;
+			}
+		}
+	}
+
+	&media_area {
+		@include cover_obj;
+	}
+	&layer_1 {
+		@include cover_obj;
+		overflow: hidden;
+		z-index: 1;
+		&::after {
+			content: "";
+			display: block;
+			background-color: black;
+			opacity: 0.25;
+			@include cover_obj;
+		}
+		> img {
+			@include cover_obj;
+		}
+	}
+
+	$overflow-size: 10%;
+	&layer_2 {
+		z-index: 2;
+		--initial_rotation: 35deg;
+		height: 100% + $overflow-size;
+		aspect-ratio: 1;
+		// transform: translate(0%, 0%) rotate(35deg);
+		translate: 10% 5%;
+		rotate: var(--initial_rotation);
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-radius: 50%;
+		overflow: hidden;
+		transition: 300ms all;
+		img {
+			min-height: 100%;
+			object-fit: cover;
+		}
+		@include md {
+			height: 80%;
+			translate: 10% 5%;
+			bottom: 0;
+		}
+		@include sm {
+			height: 80%;
+			bottom: 0%;
+			right: 0%;
+			translate: 10% 5%;
+		}
+		@include xs {
+			height: 100vw;
+			translate: 25% 5%;
+		}
+	}
+	&layer_3 {
+		z-index: 3;
+		@include t-center;
+		height: 70%;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		overflow: hidden;
+		&::after {
+			content: "";
+			display: block;
+			background-color: black;
+			opacity: 0.15;
+			@include cover_obj;
+		}
+		img {
+			min-height: 100%;
+			object-fit: cover;
+			rotate: calc(var(--initial_rotation) * -1);
+		}
+	}
+} //--

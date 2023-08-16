@@ -134,6 +134,13 @@
 }
 .social_list--item {
  border-top: 1px solid white;
+ transition: 300ms all;
+}
+.social_list--item:hover {
+ border-color: #192d62;
+}
+.social_list--item:hover + .social_list--item {
+ border-color: #192d62;
 }
 @media (max-width: 991px) {
  .social_list--item {
@@ -142,8 +149,8 @@
 }
 @media (max-width: 576px) {
  .social_list--item {
-  border-top: 0px solid white;
-  border-left: 1px solid white;
+  border-top: 0px solid;
+  border-left: 1px solid;
  }
 }
 .social_list--link {
@@ -157,6 +164,7 @@
  transition: 0.4s all;
  position: relative;
  overflow: hidden;
+ box-sizing: border-box;
 }
 .social_list--link::before {
  content: "";
@@ -167,13 +175,17 @@
  inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
- background-color: black;
+ background-color: #76affe;
  z-index: -1;
  opacity: 0.35;
  translate: -100% 0;
- transition: 0.3s all;
- -webkit-backdrop-filter: blur(0.5rem);
-         backdrop-filter: blur(0.5rem);
+ transition: 300ms all;
+}
+.instagram .social_list--link::before {
+ background-color: #f16122;
+}
+.opensports .social_list--link::before {
+ background-color: #94d13d;
 }
 @media (max-width: 991px) {
  .social_list--link {
@@ -193,17 +205,20 @@
  fill: currentColor;
 }
 .social_list--link:hover {
- color: var(--theme_color-500);
+ color: #192d62;
 }
 .social_list--link:hover::before {
+ opacity: 1;
  translate: 0% 0%;
 }
 .social_list--link h3 {
  color: inherit;
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
+ margin-top: -0.2em;
  font-size: 2.625rem;
- font-size: clamp(1rem, 8cqi, 2.625rem);
- font-style: normal;
- font-weight: 500;
+ font-size: clamp(1rem, 5cqi, 2.625rem);
+ font-style: italic;
+ font-weight: 900;
  line-height: 100%;
  letter-spacing: -0.0525rem;
  text-transform: uppercase;

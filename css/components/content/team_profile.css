@@ -47,10 +47,9 @@
  color: #192d62;
 }
 .team_profile--event {
- color: #213d85;
+ color: var(--theme_color-500);
  font-weight: 600;
  font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
  font-style: italic;
  text-transform: uppercase;
- opacity: 0.8;
 }

@@ -178,7 +178,7 @@
  inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
- background-color: var(--theme_color-900);
+ background-color: #1c326f;
  height: 105%;
  width: 105%;
 }
@@ -330,12 +330,11 @@ li:hover .person_profile--text_area {
  color: #192d62;
 }
 .team_profile--event {
- color: #213d85;
+ color: var(--theme_color-500);
  font-weight: 600;
  font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
  font-style: italic;
  text-transform: uppercase;
- opacity: 0.8;
 }
 
 /*css/components/content/text_area.scss*/
@@ -347,6 +346,10 @@ li:hover .person_profile--text_area {
  align-items: stretch;
  position: relative;
 }
+.text_area.centered-text {
+ align-items: center;
+ text-align: center;
+}
 
 .text_content {
  gap: 0.5rem;
@@ -355,6 +358,10 @@ li:hover .person_profile--text_area {
  justify-content: center;
  align-items: flex-start;
  position: relative;
+}
+.text_content.centered-text {
+ align-items: center;
+ text-align: center;
 }
 
 /*css/components/content/location_list.scss*/
@@ -410,7 +417,7 @@ li:hover .person_profile--text_area {
 }
 
 /*css/components/content/accordian.scss*/
-/*css/components/content/location_list.scss*/
+/*css/components/content/accordian.scss*/
 .accordion {
  display: flex;
  flex-direction: column;
@@ -434,6 +441,8 @@ li:hover .person_profile--text_area {
  display: flex;
  justify-content: space-between;
  gap: var(--spacing);
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
+ font-weight: 400;
 }
 .accordion--content {
  display: grid;

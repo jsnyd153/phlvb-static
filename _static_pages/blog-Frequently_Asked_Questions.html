@@ -46,20 +46,30 @@
 
 	<body class="theme_light">
 		<main>
-			<section class="feature_hero--section">
-				<div class="background_block">
-					<div class="background_fill"></div>
+			<section class="basic_hero--section">
+				<div class="background_area">
+					<div class="background_fill">
+						<svg
+							class="ring"
+							width="500"
+							height="500"
+							viewBox="0 0 500 500"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<circle cx="250" cy="250" r="204.5" />
+						</svg>
+					</div>
 				</div>
-
-				<div class="text_area feature_hero--text_area">
-					<div class="text_content feature_hero--text_content">
+				<div class="text_area basic_hero--text_area">
+					<div class="text_content">
 						<h1>Frequently Asked Questions</h1>
 						<p class="post_summary">
 							Read up on some of our members most frequently asked questions.
 						</p>
 					</div>
 				</div>
-				<div class="media_area feature_hero--media_area">
+				<div class="media_area feature_hero--media_area" style="display: none">
 					<figure class="media_content feature_hero--media_content">
 						<img
 							src="../assets/media/Frequently_Asked_Questions-default.png"
@@ -69,504 +79,508 @@
 				</div>
 			</section>
 
-			<section class="blog_content--section">
-				<div class="background_block">
-					<div class="background_fill"></div>
-				</div>
-				<div class="blog_content--text_area text_area">
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								How do I join?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									You do not need any kind fo membership to play in Philly
-									Volleyball events, but it’s helpful to join our Facebook group
-									and follow us on instagrams to stay up-to-date about
-									opportunities to play in the community.
-								</p>
-								<p>
-									If you’re planning more than a couple times a year, we
-									recommend purchasing a membership which will give you
-									discounts on all Philadelphia Volleyball events.
-								</p>
-								<p>
-									The basic membership gets you $2 off every pickup event. The
-									friends and family gets you $2 off every pickup event for you
-									and any guests you sign up for. The basic membership costs
-									$10.95 so if you think you’ll go to more than 5 events per
-									year, we recommend purchasing a membership.
-								</p>
+			<section class="basic_content--section">
+				<article>
+					<div class="blog_content--text_area text_area">
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									How do I join?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										You do not need any kind fo membership to play in Philly
+										Volleyball events, but it’s helpful to join our Facebook
+										group and follow us on instagrams to stay up-to-date about
+										opportunities to play in the community.
+									</p>
+									<p>
+										If you’re planning more than a couple times a year, we
+										recommend purchasing a membership which will give you
+										discounts on all Philadelphia Volleyball events.
+									</p>
+									<p>
+										The basic membership gets you $2 off every pickup event. The
+										friends and family gets you $2 off every pickup event for
+										you and any guests you sign up for. The basic membership
+										costs $10.95 so if you think you’ll go to more than 5 events
+										per year, we recommend purchasing a membership.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								Who can play in events
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Any one over the age of 18 may join events. Most events will
-									have a target skill level, and some may be restricted to a
-									specific gender.
-								</p>
-								<p>
-									Teens aged 14-17 may play in tournaments with a
-									parental/guardian waiver.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									Who can play in events
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Any one over the age of 18 may join events. Most events will
+										have a target skill level, and some may be restricted to a
+										specific gender.
+									</p>
+									<p>
+										Teens aged 14-17 may play in tournaments with a
+										parental/guardian waiver.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								How do I sign up for events?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content text_content">
-								<p>
-									We use the app called opensports to organize and publicize
-									events. Events are open to the public, but you must have a
-									reservation through the app to attend.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									How do I sign up for events?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div
+									class="text_content blog_content--text_content text_content"
+								>
+									<p>
+										We use the app called opensports to organize and publicize
+										events. Events are open to the public, but you must have a
+										reservation through the app to attend.
+									</p>
 
-								<ul>
-									<li><p>Large Court (30x60)</p></li>
-									<li class="active"><p>No let serves</p></li>
-									<li><p>Block is not a touch</p></li>
-									<li><p>No open hand receives (unless hard driven)</p></li>
-									<li class="active">
-										<p>
-											No open-hand tips, sets over the net or No open-hand tips,
-											sets over the net or directional blocking
-										</p>
-									</li>
-									<li><p>Some events may use side out scoring.</p></li>
-								</ul>
+									<ul>
+										<li><p>Large Court (30x60)</p></li>
+										<li class="active"><p>No let serves</p></li>
+										<li><p>Block is not a touch</p></li>
+										<li><p>No open hand receives (unless hard driven)</p></li>
+										<li class="active">
+											<p>
+												No open-hand tips, sets over the net or No open-hand
+												tips, sets over the net or directional blocking
+											</p>
+										</li>
+										<li><p>Some events may use side out scoring.</p></li>
+									</ul>
 
-								<p>
-									<b>Recommended:</b> set up your sports cards (Indoor
-									volleyball, grass volleyball, sand volleyball)
-								</p>
-								<p>
-									Having trouble with Opensports? Check out our
-									<a href="#">blog post</a> for help.
-								</p>
+									<p>
+										<b>Recommended:</b> set up your sports cards (Indoor
+										volleyball, grass volleyball, sand volleyball)
+									</p>
+									<p>
+										Having trouble with Opensports? Check out our
+										<a href="#">blog post</a> for help.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								Where are events held?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Our events are typically hosted at gyms and parks throughout
-									Philadelphia and the surrounding area. You can see what
-									neighborhoods we have events in <a href="#">here</a> or you
-									see individual events on <a href="#">opensports</a>.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									Where are events held?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Our events are typically hosted at gyms and parks throughout
+										Philadelphia and the surrounding area. You can see what
+										neighborhoods we have events in <a href="#">here</a> or you
+										see individual events on <a href="#">opensports</a>.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								When does the season start? / How many seasons a year do you
-								have?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									We have pick up indoor pickup volleyball all year round and
-									grass volleyball during warmer months.
-								</p>
-								<p>
-									Our <a href="#">indoor leagues</a> run everyquarter. The next
-									season starts in August.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									When does the season start? / How many seasons a year do you
+									have?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										We have pick up indoor pickup volleyball all year round and
+										grass volleyball during warmer months.
+									</p>
+									<p>
+										Our <a href="#">indoor leagues</a> run everyquarter. The
+										next season starts in August.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								Do I need to be invited of can I just show up and play?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Any events posted on Opensports are open to the public. You do
-									not need to be invited, however you do need to sign up for a
-									spot.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									Do I need to be invited of can I just show up and play?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Any events posted on Opensports are open to the public. You
+										do not need to be invited, however you do need to sign up
+										for a spot.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								I noticed each event has a skill level listed. How do you ensure
-								players meet the skill level described in the event description?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									We encourage our members to honestly declare their skill level
-									on their OpenSports profile. That is usually enough for most
-									players to only attend events appropriate for them, however
-									levels are self reported. If a player is consistently
-									performing below the target skill level for an event, the
-									organizer may ask them to attend lower level events instead.
-								</p>
-								<p>
-									If you’re unsure of your skill level, start low, and if the
-									event is below your level multiple times (or below your level
-									by a wie margin), play up a level and repeat till you feel
-									satisfied with the play. It’s much harder to move upwards if
-									an organizer needs to ask you to attend lower level events.
-								</p>
-								<p>
-									As a group that organizes events for the public we cannot
-									guarantee the skill level will always be perfect, and it will
-									likely fluctuate a bit from week to week depending on players
-									interest an availability. We try our best to keep the average
-									level of even ts close to what they are labeled.
-								</p>
-								<div class="inline_alert--container small">
-									<div class="inline_alert--icon">i</div>
-									<div class="inline_alert--text_content text_content">
-										<p class="small">
-											Do not base your skill level by the attendees with whom
-											you've played, instead judge yourself in relation to the
-											skill level description or play at regional tournaments.
-										</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									I noticed each event has a skill level listed. How do you
+									ensure players meet the skill level described in the event
+									description?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										We encourage our members to honestly declare their skill
+										level on their OpenSports profile. That is usually enough
+										for most players to only attend events appropriate for them,
+										however levels are self reported. If a player is
+										consistently performing below the target skill level for an
+										event, the organizer may ask them to attend lower level
+										events instead.
+									</p>
+									<p>
+										If you’re unsure of your skill level, start low, and if the
+										event is below your level multiple times (or below your
+										level by a wie margin), play up a level and repeat till you
+										feel satisfied with the play. It’s much harder to move
+										upwards if an organizer needs to ask you to attend lower
+										level events.
+									</p>
+									<p>
+										As a group that organizes events for the public we cannot
+										guarantee the skill level will always be perfect, and it
+										will likely fluctuate a bit from week to week depending on
+										players interest an availability. We try our best to keep
+										the average level of even ts close to what they are labeled.
+									</p>
+									<div class="inline_alert--container small">
+										<div class="inline_alert--icon">i</div>
+										<div class="inline_alert--text_content text_content">
+											<p class="small">
+												Do not base your skill level by the attendees with whom
+												you've played, instead judge yourself in relation to the
+												skill level description or play at regional tournaments.
+											</p>
+										</div>
+									</div>
+									<div class="button-container">
+										<a href="#" class="button">Learn more about levels</a>
 									</div>
 								</div>
-								<div class="button-container">
-									<a href="#" class="button">Learn more about levels</a>
+							</div>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									I used to play volleyball, but it's been a while. Where do I
+									start?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										We recommend you read the event description for skill level
+										information. If the descriptions don't help, then simply
+										start low, and if the event is too easy, play up a level and
+										repeat till you feel satisfied with the play.
+									</p>
 								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								I used to play volleyball, but it's been a while. Where do I
-								start?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									We recommend you read the event description for skill level
-									information. If the descriptions don't help, then simply start
-									low, and if the event is too easy, play up a level and repeat
-									till you feel satisfied with the play.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									Is there a waitlist or a way to be notified when a spot
+									becomes available in a formerly full event?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										When an event fills on OpenSports, the waitlist feature is
+										automatically enabled. When you join the waitlist, you will
+										be notified if you get an opportunity to sign up.
+									</p>
+									<p>
+										If the opportunity to claim the spot passes, the next wait
+										list person is notified, and you will have to sign up for
+										the waitlist again. More than a day before the event, the
+										claim window is 2 hours. The day of the event, the claim
+										window is 30 minutes. In the last hour before the event the
+										claim window is 10 minutes.
+									</p>
+									<p>
+										If there are a lot of spots open close to the event start
+										time, a host may opt to cancel the waitlist to allow players
+										to sign up and fill the event.
+									</p>
+									<p>
+										You can <a href="#">read more</a> about the waitlist feature
+										here.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								Is there a waitlist or a way to be notified when a spot becomes
-								available in a formerly full event?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									When an event fills on OpenSports, the waitlist feature is
-									automatically enabled. When you join the waitlist, you will be
-									notified if you get an opportunity to sign up.
-								</p>
-								<p>
-									If the opportunity to claim the spot passes, the next wait
-									list person is notified, and you will have to sign up for the
-									waitlist again. More than a day before the event, the claim
-									window is 2 hours. The day of the event, the claim window is
-									30 minutes. In the last hour before the event the claim window
-									is 10 minutes.
-								</p>
-								<p>
-									If there are a lot of spots open close to the event start
-									time, a host may opt to cancel the waitlist to allow players
-									to sign up and fill the event.
-								</p>
-								<p>
-									You can <a href="#">read more</a> about the waitlist feature
-									here.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									How much does it cost to play?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Events range in costs based on the venue. The fees charged
+										for events go towards paying for gym time/permits for parks,
+										and volleyball equipment.
+									</p>
+									<p>
+										Gym time tends to cost more, and usually ranges between
+										$3-6/hour depending on the gym. Outdoor events are much
+										cheaper and usually cost $3 regardless of the length of the
+										event (and just $1 with a membership!)
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								How much does it cost to play?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Events range in costs based on the venue. The fees charged for
-									events go towards paying for gym time/permits for parks, and
-									volleyball equipment.
-								</p>
-								<p>
-									Gym time tends to cost more, and usually ranges between
-									$3-6/hour depending on the gym. Outdoor events are much
-									cheaper and usually cost $3 regardless of the length of the
-									event (and just $1 with a membership!)
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									Do you give refunds?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Refunds are automatically given, provided the attendee
+										cancels before the cancellation deadline listed on the event
+										page (typically between 24 and 4 hours before play, the
+										venue and organizer). That being said, an attendee should
+										cancel as early as possible for two reasons:
+									</p>
+									<ul>
+										<li>
+											<p>
+												it allows another player to attend giving everyone the
+												best possible experience
+											</p>
+										</li>
+										<li class="active">
+											<p>
+												a full event better funds the group to afford the
+												facilities in which we play, and other expenses
+											</p>
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								Do you give refunds?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Refunds are automatically given, provided the attendee cancels
-									before the cancellation deadline listed on the event page
-									(typically between 24 and 4 hours before play, the venue and
-									organizer). That being said, an attendee should cancel as
-									early as possible for two reasons:
-								</p>
-								<ul>
-									<li>
-										<p>
-											it allows another player to attend giving everyone the
-											best possible experience
-										</p>
-									</li>
-									<li class="active">
-										<p>
-											a full event better funds the group to afford the
-											facilities in which we play, and other expenses
-										</p>
-									</li>
-								</ul>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									How do I find out when events are happening?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Members of our OpenSports group receive notices via their
+										native phone app. The notifications go out to members with
+										the targeted skill levels for the event (most organizers
+										will use the “Sports Cards” for invites.) We also announce
+										larger events via social media like our Facebook group,
+										Instagram, and Twitter.
+									</p>
+									<p>
+										Recurring events are usually posted on Opensports around the
+										same time each week, but the timing will vary from organizer
+										to organizer.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								How do I find out when events are happening?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Members of our OpenSports group receive notices via their
-									native phone app. The notifications go out to members with the
-									targeted skill levels for the event (most organizers will use
-									the “Sports Cards” for invites.) We also announce larger
-									events via social media like our Facebook group, Instagram,
-									and Twitter.
-								</p>
-								<p>
-									Recurring events are usually posted on Opensports around the
-									same time each week, but the timing will vary from organizer
-									to organizer.
-								</p>
+						</article>
+						<article class="accordion">
+							<button
+								type="button"
+								aria-expanded="false"
+								class="accordion--trigger"
+								aria-controls="sect1"
+								id="accordion1id"
+							>
+								<h4 class="accordion--title">
+									Does Philly Volleyball have any youth events?
+									<span class="accordion--icon"></span>
+								</h4>
+							</button>
+							<div
+								id="sect1"
+								role="region"
+								aria-labelledby="accordion1id"
+								class="accordion--content"
+							>
+								<div class="text_content blog_content--text_content">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Itaque, repellendus labore reiciendis accusamus fugiat
+										officiis provident, mollitia sit, blanditiis possimus
+										repellat temporibus quisquam quam ducimus voluptatem rerum
+										delectus nemo ipsum.
+									</p>
+								</div>
 							</div>
-						</div>
-					</article>
-					<article class="accordion">
-						<button
-							type="button"
-							aria-expanded="false"
-							class="accordion--trigger"
-							aria-controls="sect1"
-							id="accordion1id"
-						>
-							<h4 class="accordion--title">
-								Does Philly Volleyball have any youth events?
-								<span class="accordion--icon"></span>
-							</h4>
-						</button>
-						<div
-							id="sect1"
-							role="region"
-							aria-labelledby="accordion1id"
-							class="accordion--content"
-						>
-							<div class="text_content blog_content--text_content">
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Itaque, repellendus labore reiciendis accusamus fugiat
-									officiis provident, mollitia sit, blanditiis possimus repellat
-									temporibus quisquam quam ducimus voluptatem rerum delectus
-									nemo ipsum.
-								</p>
-							</div>
-						</div>
-					</article>
-				</div>
+						</article>
+					</div>
+				</article>
 			</section>
 		</main>
 
