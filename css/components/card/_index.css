@@ -3,6 +3,7 @@
  padding: 2rem;
  border-radius: 0.75rem;
  transition: 0.3s all;
+ container-type: inline-size;
 }
 @media (min-width: 1440px) {
  .icon_card {
@@ -22,7 +23,7 @@
  gap: 0.5rem;
 }
 .icon_card--text_content p {
- color: #1c326f;
+ color: #213d85;
  transition: 0.3s all;
 }
 .icon_card--text_content .arrow_button {
@@ -43,6 +44,13 @@ a:hover .icon_card--text_content .arrow_button {
  gap: 1rem;
  transition: 0.3s all;
  align-items: center;
+}
+@container (max-width: 280px) {
+ .icon_card--header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+ }
 }
 .icon_card--header span {
  display: inline-block;
@@ -142,7 +150,7 @@ a:hover .resource_card--media_content img {
  }
 }
 .resource_card--text_content p {
- color: #1c326f;
+ color: #213d85;
  transition: 0.3s all;
 }
 a:hover .resource_card--text_content p {
@@ -174,7 +182,7 @@ a:hover .resource_card--text_content p {
 .location_card--text_content hr {
  width: 100%;
  display: block;
- color: #1c326f;
+ color: #213d85;
  border: 0;
  border-bottom: 1px solid currentColor;
  transition: 0.3s all;
@@ -267,6 +275,10 @@ a:hover .tournament_card--body .host {
 aside .tournament_card--body {
  display: none;
 }
+.tournament_card--location {
+ display: flex;
+ align-items: flex-end;
+}
 @media (max-width: 767px) {
  .tournament_card--location {
   grid-row: 1;
@@ -331,10 +343,10 @@ aside .tournament_card--location {
  line-height: 110%;
  transition: 0.5s color;
  font-weight: 600;
+ transition: 0.5s all;
 }
 @media (max-width: 767px) {
  .event_card--title h4 {
-  transition: 0.5s all;
   font-size: 1.25rem;
  }
 }
@@ -438,11 +450,11 @@ aside .tournament_card--location {
 }
 
 .card {
- border-radius: calc(0.75 * var(--corner));
+ border-radius: var(--corner);
  background-color: rgba(255, 255, 255, 0.8);
  -webkit-backdrop-filter: blur(0.5rem);
          backdrop-filter: blur(0.5rem);
- color: #1c326f;
+ color: #213d85;
 }
 
 a.card {
@@ -455,6 +467,6 @@ a.card {
 a.card:hover {
  background-color: var(--theme_color-500);
  box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.08);
- color: #192d62;
+ color: var(--brand-900);
  top: -0.2em;
 }

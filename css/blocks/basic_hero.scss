@@ -1,18 +1,22 @@
 @use "sass:color";
 @use "../abstracts" as *;
 
-// Featured Hero
-// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?node-id=134%3A20347&t=YZtFunZ3xKrlzhUX-1
-// Dependancy: /js/setCustomAttr.js  = $(".reel--wrapper").each(function(){});
+// Basic Hero
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=972%3A87817&mode=design&t=swyBTdn00Heee6KC-1
+// Dependancy:
 
+/*css/blocks/basic_hero.scss*/
 .basic_hero {
 	&-- {
 		&section {
-			height: clamp(50vh, 450/16 * 1rem, 90vh);
+			min-height: clamp(50vh, 450/16 * 1rem, 90vh);
 			overflow: hidden;
 			padding: 0;
-			--background_color: #{$brand-900};
+			--background_color: var(--brand-900);
 
+			.nav-transparent & {
+				padding-top: 80/16 * 1rem;
+			}
 			.background_area {
 				.ring {
 					opacity: 0.3;
@@ -20,9 +24,18 @@
 					bottom: 0;
 					left: 0;
 					translate: -30% 30%;
+					width: clamp(#{200/16 * 1rem}, calc(20rem + 10vw), #{500/16 * 1rem});
 					circle {
-						stroke: $brand-500;
+						stroke: var(--brand-500);
 						stroke-width: 90;
+					}
+				}
+				//if there's an image make it white and blended
+				img + .ring {
+					mix-blend-mode: soft-light;
+					opacity: 1;
+					circle {
+						stroke: var(--white);
 					}
 				}
 			}
@@ -30,17 +43,25 @@
 
 		&text_area {
 			grid-column: 2 / span 9;
-			display: flex;
-			flex-direction: column;
 			justify-content: flex-end;
 			padding-inline: var(--rp);
 			padding-block: var(--fr_unit);
 
-			@include header_tags {
-				color: $brand-50;
+			@include md {
+				padding-inline: 0rem;
+				grid-column: 2 / span 12;
 			}
-			p {
-				color: $brand-200;
+			@include sm {
+				padding-block: 1.5rem;
+			}
+			@include text_nodes {
+				color: var(--brand-100);
+			}
+		}
+
+		&section:has(.background_area img) &text_area {
+			@include text_nodes {
+				color: var(--brand-50);
 			}
 		}
 	} //--

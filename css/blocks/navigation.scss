@@ -8,10 +8,9 @@
 .header_nav {
 	&-- {
 		&container {
-			position: sticky;
-
-			.fixed-header & {
-				position: fixed;
+			position: relative;
+			.nav-transparent & {
+				position: absolute;
 			}
 
 			top: 0;
@@ -25,14 +24,14 @@
 			}
 			display: flex;
 
-			color: $brand-100;
+			color: var(--brand-100);
 			font-family: $sans_font;
 			font-size: 14/16 * 1rem;
 			font-weight: 500;
 			align-items: center;
 			transition: background-color 0.3s;
 			&.nav_open {
-				background: $brand-900;
+				background: var(--brand-900);
 			}
 		} //container
 		&branding {
@@ -55,7 +54,7 @@
 					fill: $white;
 				}
 				.logo-text_color {
-					fill: $brand-200;
+					fill: var(--brand-200);
 				}
 			}
 		}
@@ -104,7 +103,7 @@
 
 				overflow: hidden;
 				flex-direction: column;
-				background: $brand-800;
+				background: var(--brand-800);
 				gap: 24/16 * 1rem;
 				.nav_open & {
 					//adds padding to hte the top when animated out
@@ -163,7 +162,7 @@
 			@include sm {
 				font-size: 2rem;
 				font-weight: 500;
-				color: $brand-200;
+				color: var(--brand-200);
 				padding: 0;
 			}
 		}
@@ -173,7 +172,7 @@
 			border-radius: 12/16 * 1rem;
 			display: flex;
 			gap: 1rem;
-			background-color: $brand-800t;
+			background-color: var(--brand-800);
 			backdrop-filter: blur(2px);
 			position: absolute;
 			top: 70%;
@@ -242,10 +241,10 @@
 		transition: 0.3s all;
 		align-items: center;
 		.current & {
-			color: $brand-100;
+			color: var(--brand-100);
 		}
 		&[aria-current="page"] {
-			color: $brand-500;
+			color: var(--brand-500);
 		}
 
 		&::after {
@@ -262,7 +261,7 @@
 			}
 		}
 		&:hover {
-			color: $brand-500;
+			color: var(--brand-500);
 
 			&::after {
 				width: 100%;
@@ -300,7 +299,7 @@
 			height: 24/16 * 1rem;
 			border: 1/16 * 1rem solid currentColor;
 			font-size: 13/16 * 1rem;
-			color: $brand-200;
+			color: var(--brand-200);
 			background-color: transparent;
 			font-family: $sans_font;
 			border-radius: 0.25rem;
@@ -322,13 +321,13 @@
 			}
 		}
 		&selector:hover &button {
-			border: 1/16 * 1rem solid $brand-500;
-			color: $brand-500;
+			border: 1/16 * 1rem solidvar(--brand-500);
+			color: var(--brand-500);
 		}
 		&selector.active &button {
-			color: $brand-900;
-			background-color: $brand-200;
-			border: 2/16 * 1rem solid $brand-200;
+			color: var(--brand-900);
+			background-color: var(--brand-200);
+			border: 2/16 * 1rem solid var(--brand-200);
 			&::after {
 				border-bottom: 0.25rem solid currentColor;
 				border-top: 0rem solid currentColor;
@@ -342,7 +341,7 @@
 			border-radius: 12/16 * 1rem;
 			display: flex;
 			gap: 1rem;
-			background-color: $brand-700t;
+			background-color: var(--brand-700);
 			backdrop-filter: blur(2px);
 			position: absolute;
 			top: 70%;
@@ -416,11 +415,15 @@
 }
 
 #navigation--background {
-	background-color: $brand-900;
+	background-color: var(--brand-900);
 	// backdrop-filter: blur(0.25rem);
 	@include image_cover;
 	z-index: -1;
 	opacity: 1;
+
+	.nav-transparent & {
+		background-color: transparent;
+	}
 }
 
 #close_nav {

@@ -43,10 +43,10 @@
  line-height: 110%;
  transition: 0.5s color;
  font-weight: 600;
+ transition: 0.5s all;
 }
 @media (max-width: 767px) {
  .event_card--title h4 {
-  transition: 0.5s all;
   font-size: 1.25rem;
  }
 }

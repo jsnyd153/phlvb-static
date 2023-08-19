@@ -22,6 +22,19 @@
 		rgba($brand-900, 0) 0%,
 		rgba($brand-900, 1) 100%
 	);
+	--white: #ffffff;
+	--brand-50: #edf0f8;
+	--brand-500: #{$brand-500};
+	--brand-100: #{$brand-100};
+	--brand-200: #{$brand-200};
+	--brand-900: #{$brand-900};
+	--brand-800: #{$brand-800};
+	--brand-700: #{$brand-700};
+	--brand_fade: linear-gradient(
+		180deg,
+		rgba($brand-900, 0) 0%,
+		rgba($brand-900, 1) 100%
+	);
 }
 
 .theme_brand {

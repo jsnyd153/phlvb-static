@@ -6,12 +6,12 @@
  flex-direction: column;
  align-items: stretch;
  text-align: left;
- gap: var(--spacing);
- border-bottom: 1px solid var(--theme_color-800);
+ gap: var(--gap);
+ border-bottom: 1px solid var(--brand-100);
  --spacing: 1.5rem;
 }
 .accordion:last-child {
- border-bottom: 0px solid var(--theme_color-800);
+ border-bottom: 0px solid var(--brand-100);
 }
 .accordion--trigger {
  border: 0;
@@ -23,7 +23,7 @@
 .accordion--trigger h4 {
  display: flex;
  justify-content: space-between;
- gap: var(--spacing);
+ gap: var(--gap);
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 400;
 }
@@ -42,7 +42,7 @@
  grid-template-rows: 1fr;
 }
 [aria-expanded=true] + .accordion--content > .text_content {
- padding-bottom: var(--spacing);
+ padding-bottom: 0.5rem;
 }
 .accordion--icon::after {
  content: "+";

@@ -5,23 +5,7 @@
  	minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
  	minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
  	var(--page_margin);
- --gap: 1.5rem;
  --page_margin: clamp(0.25rem, calc(5vw - var(--gap)), 3.75rem);
-}
-@media (max-width: 767px) {
- :root {
-  --gap: 1.25rem;
- }
-}
-@media (max-width: 477px) {
- :root {
-  --gap: 1rem;
- }
-}
-@media (min-width: 1280px) {
- :root {
-  --gap: 1.5rem;
- }
 }
 @media (min-width: 1440px) {
  :root {
@@ -274,7 +258,7 @@ section {
  }
 }
 
-@media (max-width: 477px) {
+@media (max-width: 576px) {
  .block.col-xs-1 {
   --column_span: 1;
   --column_start: 8;

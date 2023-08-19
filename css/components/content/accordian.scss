@@ -13,11 +13,11 @@
 	flex-direction: column;
 	align-items: stretch;
 	text-align: left;
-	gap: var(--spacing);
-	border-bottom: 1px solid var(--theme_color-800);
+	gap: var(--gap);
+	border-bottom: 1px solid var(--brand-100);
 	--spacing: 1.5rem;
 	&:last-child {
-		border-bottom: 0px solid var(--theme_color-800);
+		border-bottom: 0px solid var(--brand-100);
 	}
 	&-- {
 		&trigger {
@@ -30,7 +30,7 @@
 			h4 {
 				display: flex;
 				justify-content: space-between;
-				gap: var(--spacing);
+				gap: var(--gap);
 				font-family: $serif_font;
 				font-weight: 400;
 			}
@@ -50,7 +50,7 @@
 			[aria-expanded="true"] + & {
 				grid-template-rows: 1fr;
 				> .text_content {
-					padding-bottom: var(--spacing);
+					padding-bottom: 0.5rem;
 				}
 			}
 		}

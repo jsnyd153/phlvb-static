@@ -1,7 +1,10 @@
 .graphic_hero--section {
- height: clamp(50vh, 39.0625rem, 90vh);
+ height: clamp(50vh, 35.3125rem, 90vh);
  overflow: hidden;
  padding: 0;
+}
+.nav-transparent .graphic_hero--section {
+ padding-top: 5rem;
 }
 .graphic_hero--text_area {
  display: flex;

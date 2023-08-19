@@ -13,6 +13,7 @@
 	padding: 32/16 * 1rem;
 	border-radius: 12/16 * 1rem;
 	transition: 0.3s all;
+	container-type: inline-size;
 
 	@include xl {
 		padding: 48/16 * 1rem 32/16 * 1rem;
@@ -33,15 +34,10 @@
 			p {
 				color: $brand-700;
 				transition: 0.3s all;
-				a:hover & {
-					// color: var(--theme_color-900);
-				}
 			}
 			.arrow_button {
-				// color: var(--theme_color-500);
 				transition: 0.3s all;
 				a:hover & {
-					// color: var(--theme_color-900);
 					transform: translateX(1rem);
 				}
 				svg {
@@ -56,16 +52,17 @@
 		&header {
 			display: flex;
 			gap: 16/16 * 1rem;
-			// color: var(--theme_color-500);
 			transition: 0.3s all;
 			align-items: center;
+			@container (max-width: 280px) {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 4/16 * 1rem;
+			}
 
 			span {
 				display: inline-block;
 				margin-top: 0.25em;
-			}
-			a:hover & {
-				// color: var(--theme_color-900);
 			}
 
 			@include header_tags {

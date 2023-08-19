@@ -10,10 +10,10 @@
 //================================================
 
 .button {
-	--_inital_text: #{$brand-200};
-	--_inital_background: #{$brand-900};
+	--_inital_text: var(--brand-200);
+	--_inital_background: var(--brand-900);
 	--_active_color: var(--theme_color-500);
-	--_active_text: #{$brand-900};
+	--_active_text: var(--theme_color-900);
 
 	color: var(--_inital_text);
 	border: 1px solid var(--_inital_background);
@@ -29,9 +29,7 @@
 	@include sm {
 		font-size: 15/16 * 1rem;
 	}
-	display: flex;
 	padding: 11/18 * 1em 20/18 * 1em 13/18 * 1em 20/18 * 1em;
-	align-items: flex-start;
 	gap: 0.75em;
 	border-radius: 4/16 * 1rem;
 	position: relative;
@@ -85,15 +83,15 @@
 	}
 
 	&.is-theme-500 {
-		--_inital_text: #{$brand-900};
+		--_inital_text: var(--brand-900);
 		--_inital_background: var(--theme_color-500);
-		--_active_color: #{$brand-900};
-		--_active_text: #{$brand-500};
+		--_active_color: var(--brand-900);
+		--_active_text: var(--theme_color-500);
 	}
 	&.is-brand-200 {
-		--_inital_text: #{$brand-900};
-		--_inital_background: #{$brand-200};
-		--_active_color: #{$brand-500};
-		--_active_text: #{$brand-900};
+		--_inital_text: var(--brand-900);
+		--_inital_background: var(--brand-200);
+		--_active_color: var(--brand-500);
+		--_active_text: var(--brand-900);
 	}
 }

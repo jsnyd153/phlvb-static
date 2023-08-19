@@ -20,7 +20,7 @@
  display: grid;
  grid-template-columns: repeat(2, 1fr);
  padding: 0.1875rem;
- border-radius: 2em;
+ border-radius: var(--corner);
 }
 .toggle--thumb .indicator {
  display: block;
@@ -29,13 +29,14 @@
  background-color: red;
  height: 100%;
  width: 100%;
- border-radius: 2em;
+ border-radius: var(--corner);
  transition: 0.3s all;
 }
 [data-toggle=indoor-outdoor] .toggle--thumb .indicator {
  background-color: #f16122;
 }
 .toggle--thumb .option {
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-size: 0.6875rem;
  grid-column: 1;
  grid-row: 1;
@@ -45,17 +46,19 @@
  padding: 0.5rem 0.875rem;
  line-height: 100%;
  display: block;
- color: white;
+ font-weight: 600;
 }
 .toggle--thumb .option:last-child {
  grid-column: 2;
- color: var(--theme_color-200);
+ color: var(--brand-900);
+ font-weight: 400;
 }
 input:checked + .toggle--thumb .option {
- color: var(--theme_color-200);
+ color: var(--brand-900);
+ font-weight: 400;
 }
 input:checked + .toggle--thumb .option:last-child {
- color: white;
+ font-weight: 600;
 }
 input:checked + .toggle--thumb .indicator {
  transform: translateX(100%);
@@ -75,13 +78,17 @@ input:checked + .toggle--thumb .indicator {
 }
 .toggle--content.initial {
  grid-template-rows: 1fr;
+ transition: 0.5s 0.5s grid-template-rows;
 }
 [toggle-state=checked] .toggle--content.initial {
  grid-template-rows: 0fr;
+ transition: 0.5s grid-template-rows;
 }
 .toggle--content.toggled {
  grid-template-rows: 0fr;
+ transition: 0.5s grid-template-rows;
 }
 [toggle-state=checked] .toggle--content.toggled {
  grid-template-rows: 1fr;
+ transition: 0.5s 0.5s grid-template-rows;
 }

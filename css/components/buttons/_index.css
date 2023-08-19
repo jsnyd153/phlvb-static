@@ -1,9 +1,9 @@
 /*css/components/buttons/button.scss*/
 .button {
- --_inital_text: #a9bfeb;
- --_inital_background: #192d62;
+ --_inital_text: var(--brand-200);
+ --_inital_background: var(--brand-900);
  --_active_color: var(--theme_color-500);
- --_active_text: #192d62;
+ --_active_text: var(--theme_color-900);
  color: var(--_inital_text);
  border: 1px solid var(--_inital_background);
  background-color: var(--_inital_background);
@@ -69,16 +69,16 @@
  font-size: 1rem;
 }
 .button.is-theme-500 {
- --_inital_text: #192d62;
+ --_inital_text: var(--brand-900);
  --_inital_background: var(--theme_color-500);
- --_active_color: #192d62;
- --_active_text: #76affe;
+ --_active_color: var(--brand-900);
+ --_active_text: var(--theme_color-500);
 }
 .button.is-brand-200 {
- --_inital_text: #192d62;
- --_inital_background: #a9bfeb;
- --_active_color: #76affe;
- --_active_text: #192d62;
+ --_inital_text: var(--brand-900);
+ --_inital_background: var(--brand-200);
+ --_active_color: var(--brand-500);
+ --_active_text: var(--brand-900);
 }
 
 /*css/components/buttons/filters.scss*/

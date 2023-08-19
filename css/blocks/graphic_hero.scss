@@ -8,9 +8,12 @@
 .graphic_hero {
 	&-- {
 		&section {
-			height: clamp(50vh, 625/16 * 1rem, 90vh);
+			height: clamp(50vh, 565/16 * 1rem, 90vh);
 			overflow: hidden;
 			padding: 0;
+			.nav-transparent & {
+				padding-top: 80/16 * 1rem;
+			}
 		}
 
 		&text_area {

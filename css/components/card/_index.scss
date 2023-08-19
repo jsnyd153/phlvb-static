@@ -9,7 +9,7 @@
 @forward "league_card";
 
 .card {
-	border-radius: calc(0.75 * var(--corner));
+	border-radius: var(--corner);
 	background-color: rgba(255, 255, 255, 0.8);
 
 	backdrop-filter: blur(0.5rem);
@@ -26,7 +26,7 @@ a.card {
 	&:hover {
 		background-color: var(--theme_color-500);
 		box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.08);
-		color: $brand-900;
+		color: var(--brand-900);
 		top: -0.2em;
 	}
 }

@@ -2,7 +2,7 @@
 /*css/components/text_styles.scss*/
 h1 {
  font-size: 7.25rem;
- font-size: clamp(2.9997734375rem, 4.2657vw + 2rem, 5.83913rem);
+ font-size: calc(4.2657vw + 2rem);
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 500;
  line-height: 105%;
@@ -10,39 +10,59 @@ h1 {
  color: #192d62;
  text-wrap: balance;
 }
+@media (min-width: 1440px) {
+ h1 {
+  font-size: 5.83913rem;
+ }
+}
 
 h2 {
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 400;
- font-size: clamp(1.554696875rem, 1.439vw + 1.21743125rem, 2.51253125rem);
+ font-size: calc(1.839vw + 1.341875rem);
  line-height: 115%;
  letter-spacing: -0.02em;
  text-wrap: balance;
  color: #192d62;
 }
+@media (min-width: 1440px) {
+ h2 {
+  font-size: 2.996975rem;
+ }
+}
 
 h3 {
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 400;
- font-size: clamp(1.1257859375rem, 0.9273vw + 0.90845rem, 1.74302rem);
+ font-size: calc(1.2073vw + 1.09595rem);
  line-height: 125%;
  letter-spacing: -0.02em;
  color: #192d62;
  text-wrap: balance;
+}
+@media (min-width: 1440px) {
+ h3 {
+  font-size: 2.18252rem;
+ }
 }
 
 h4 {
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
- font-weight: 500;
- font-size: clamp(1.0937515625rem, 0.8695vw + 0.8899625rem, 1.6725125rem);
+ font-weight: 600;
+ font-size: calc(0.8695vw + 0.8899625rem);
  line-height: 125%;
  letter-spacing: -0.02em;
  color: #192d62;
  text-wrap: balance;
 }
+@media (min-width: 1440px) {
+ h4 {
+  font-size: 1.6725125rem;
+ }
+}
 
 h5 {
- font-size: clamp(0.929690625rem, 0.6878vw + 0.7684875rem, 1.3875075rem);
+ font-size: calc(0.6878vw + 0.7684875rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 600;
  line-height: 120%;
@@ -50,19 +70,24 @@ h5 {
  color: #213d85;
  text-wrap: balance;
 }
+@media (min-width: 1440px) {
+ h5 {
+  font-size: 1.3875075rem;
+ }
+}
 
 h6 {
- font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
  font-style: italic;
  font-weight: 900;
  line-height: 120%;
- letter-spacing: 0.125em;
+ letter-spacing: 0.05em;
  color: #76affe;
  text-transform: uppercase;
 }
 
 p {
- font-size: clamp(0.8491125rem, 0.344vw + 0.7684875rem, 1.0780875rem);
+ font-size: calc(0.384vw + 0.8309875rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 300;
  line-height: 135%;
@@ -70,17 +95,37 @@ p {
  color: #213d85;
  text-wrap: balance;
 }
+@media (min-width: 1440px) {
+ p {
+  font-size: 1.1765875rem;
+ }
+}
 p b {
  font-weight: 600;
 }
 p.small {
- font-size: clamp(0.812503125rem, 0.1878vw + 0.7684875rem, 0.9375075rem);
+ font-size: calc(0.3264vw + 0.706339375rem);
 }
-p.jumbo {
- font-size: clamp(1.3125078125rem, 0.8451vw + 1.1144375rem, 1.8750275rem);
+@media (min-width: 1440px) {
+ p.small {
+  font-size: 1.000099375rem;
+ }
 }
 p.large {
- font-size: clamp(1.1250046875rem, 0.2817vw + 1.05898125rem, 1.31251125rem);
+ font-size: calc(0.48vw + 1.038734375rem);
+}
+@media (min-width: 1440px) {
+ p.large {
+  font-size: 1.470734375rem;
+ }
+}
+p.jumbo {
+ font-size: calc(0.612vw + 1.324386328rem);
+}
+@media (min-width: 1440px) {
+ p.jumbo {
+  font-size: 1.875186328rem;
+ }
 }
 p a {
  color: #76affe;

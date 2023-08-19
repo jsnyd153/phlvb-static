@@ -1,17 +1,16 @@
 //compile block styles
 
 //Hero Blocks
-@forward "graphic_hero";
-@forward "column_hero";
-@forward "basic_hero";
 
+@forward "basic_hero"; //
+@forward "graphic_hero";
+
+@forward "call_to_action";
+@forward "column_hero";
+@forward "offset_block"; //
 @forward "basic_content";
 @forward "story_block";
-
 @forward "event_list";
-@forward "offset_block";
 @forward "grid_content";
-@forward "call_to_action";
-
 @forward "quote_slider";
 // @forward "blog_content";

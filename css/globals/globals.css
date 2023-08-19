@@ -55,5 +55,5 @@ hr {
  border-bottom-color: currentcolor;
  border-bottom-style: none;
  border-bottom-width: 0px;
- border-bottom: 1px solid var(--theme_color-800);
+ border-bottom: 1px solid var(--brand-100);
 }

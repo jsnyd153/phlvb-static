@@ -11,24 +11,7 @@
 		minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
 		var(--page_margin);
 
-	--gap: #{24/16 * 1rem};
 	--page_margin: clamp(#{4/16 * 1rem}, calc(5vw - var(--gap)), #{60/16 * 1rem});
-
-	@include md {
-		// --gap: 1.5rem;
-	}
-
-	@include sm {
-		--gap: #{20/16 * 1rem};
-	}
-
-	@include xs {
-		--gap: #{16/16 * 1rem};
-	}
-
-	@include lg {
-		--gap: #{24/16 * 1rem};
-	}
 
 	@include xl {
 		$max-width: 80rem;
