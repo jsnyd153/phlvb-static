@@ -37,7 +37,7 @@
  opacity: 0.4;
  transition: 1s all;
 }
-.call_to_action--action .background_fill img {
+.call_to_action--action .background_fill picture {
  position: absolute;
  width: 100%;
  height: 100%;
@@ -46,7 +46,7 @@
     object-fit: cover;
  transition: 1s all;
 }
-.call_to_action--action:hover .background_fill img {
+.call_to_action--action:hover .background_fill picture {
  transform: scale(1.125);
 }
 .call_to_action--action:hover .background_fill::after {

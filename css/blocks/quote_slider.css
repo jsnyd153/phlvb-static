@@ -2,11 +2,26 @@
 .quote_slider--slider_area {
  grid-column: 3/-3;
 }
+@media (max-width: 991px) {
+ .quote_slider--slider_area {
+  grid-column: 2/-3;
+ }
+}
+@media (max-width: 767px) {
+ .quote_slider--slider_area {
+  grid-column: 3/-3;
+ }
+}
 .quote_slider--button-container {
  grid-column: span 2/-3;
  display: flex;
  gap: 1rem;
  justify-content: flex-end;
+}
+@media (max-width: 991px) {
+ .quote_slider--button-container {
+  grid-column: 2/-3;
+ }
 }
 .quote_slider--button {
  padding: 0.625rem;
@@ -28,10 +43,18 @@
  justify-content: center;
  align-items: center;
  gap: var(--gap);
+ position: relative;
 }
 .quote_slider--slide .text_area {
- padding-left: var(--gap);
+ transition: 0.3s all;
  box-sizing: border-box;
+ margin-left: calc((var(--gap) + var(--fr_unit) + var(--gap)) * -1);
+ margin-top: calc(var(--gap) + var(--fr_unit) + var(--gap));
+}
+@media (max-width: 767px) {
+ .quote_slider--slide .text_area {
+  margin: 0;
+ }
 }
 .quote_slider--slide h3 {
  display: inline-block;
@@ -75,23 +98,6 @@
 .quote_slider--slide h3 span:nth-child(10) {
  transition-delay: 1s;
 }
-.quote_slider--slide h3 span .highlight {
- position: relative;
- display: inline;
-}
-.quote_slider--slide h3 span .highlight::before {
- content: "";
- position: absolute;
- width: 0%;
- height: 100%;
- top: 0;
- left: -0.625rem;
- background: #bccceb;
- z-index: -1;
- padding-right: 1.25rem;
- transition: all 700ms 300ms ease-in-out;
- opacity: 0;
-}
 .quote_slider--slide.swiper-slide-active {
  transition: all 1000ms ease-in-out;
 }
@@ -101,14 +107,23 @@
  transform: translateY(0%);
  opacity: 1;
 }
-.quote_slider--slide.swiper-slide-active h3 span .highlight::before {
- width: 100%;
- left: -0.625rem;
- opacity: 1;
+@media (max-width: 767px) {
+ .quote_slider--media_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem;
+  translate: -50% -50%;
+ }
 }
 .quote_slider--media_area .media_content {
  background: #76affe;
  border-radius: 50%;
- opacity: 1;
- box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 10px #76affe, 0px 0px 0px 11px #192d62;
+ opacity: 0.3;
+ transition: 0.3s all;
+}
+.quote_slider--media_area .media_content img {
+ transition: 0.3s all;
+ opacity: 0.5;
+ filter: grayscale(1);
 }

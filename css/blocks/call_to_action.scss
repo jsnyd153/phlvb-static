@@ -34,13 +34,16 @@
 					opacity: 0.4;
 					transition: 1s all;
 				}
-				img {
+				// picture {
+				// 	display: contents;
+				// }
+				picture {
 					@include image_cover;
 					transition: 1s all;
 				}
 			}
 
-			&:hover .background_fill img {
+			&:hover .background_fill picture {
 				transform: scale(1.125);
 			}
 			&:hover .background_fill::after {

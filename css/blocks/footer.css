@@ -94,7 +94,14 @@ footer {
  text-decoration: none;
 }
 .footer_nav--item.header {
- font-weight: 500;
+ font-weight: 800;
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
+ font-style: italic;
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+}
+.footer_nav--item.header:hover {
+ color: var(--brand-500);
 }
 
 .play_link--media {
@@ -141,7 +148,6 @@ a:hover .play_link--media::after {
  color: #fff;
 }
 .play_link--text h3 {
- text-transform: uppercase;
  color: inherit;
  font-size: calc(0.9273vw + 2.3345rem);
 }

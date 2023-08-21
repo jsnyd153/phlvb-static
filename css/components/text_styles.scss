@@ -29,9 +29,8 @@ h1 {
 	font-family: $serif_font;
 	font-weight: 500;
 	line-height: 105%;
-	letter-spacing: -0.02em;
-	color: $brand-900;
-	text-wrap: balance;
+
+	color: var(--brand-900);
 }
 
 h2 {
@@ -39,9 +38,8 @@ h2 {
 	font-weight: 400;
 	@include fluid_size_text(1.839, $floor: 21.47/16);
 	line-height: 115%;
-	letter-spacing: -0.02em;
-	text-wrap: balance;
-	color: $brand-900;
+
+	color: var(--brand-900);
 }
 
 h3 {
@@ -49,27 +47,22 @@ h3 {
 	font-weight: 400;
 	@include fluid_size_text($scale: 1.2073, $floor: 17.5352/16);
 	line-height: 125%;
-	letter-spacing: -0.02em;
-	color: $brand-900;
-	text-wrap: balance;
+	color: var(--brand-900);
 }
 h4 {
 	font-family: $sans_font;
 	font-weight: 600;
 	@include fluid_size_text($scale: 0.8695, $floor: 14.2394/16);
 	line-height: 125%;
-	letter-spacing: -0.02em;
-	color: $brand-900;
-	text-wrap: balance;
+
+	color: var(--brand-900);
 }
 h5 {
 	@include fluid_size_text($scale: 0.6878, $floor: 12.2958/16);
 	font-family: $sans_font;
 	font-weight: 600;
 	line-height: 120%;
-	letter-spacing: -0.02em;
-	color: $brand-700;
-	text-wrap: balance;
+	color: var(--brand-900);
 }
 h6 {
 	font-family: $sans_font-condensed;
@@ -77,7 +70,7 @@ h6 {
 	font-weight: 900;
 	line-height: 120%;
 	letter-spacing: 0.05em;
-	color: $brand-500;
+	color: var(--brand-900);
 	text-transform: uppercase;
 }
 
@@ -85,10 +78,8 @@ p {
 	@include fluid_size_text($scale: 0.384, $floor: 0.8309875);
 	font-family: $sans_font;
 	font-weight: 300;
-	line-height: 135%;
-	letter-spacing: -0.02em;
+	line-height: 145%;
 	color: $brand-700;
-	text-wrap: balance;
 
 	b {
 		font-weight: 600;

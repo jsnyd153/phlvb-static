@@ -20,6 +20,9 @@
 			@include sm {
 				min-height: 480/16 * 1rem;
 			}
+			@include xs {
+				min-height: 580/16 * 1rem;
+			}
 		} //media
 
 		&media_content {

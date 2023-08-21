@@ -5,6 +5,7 @@ const loadTl = gsap.timeline({
 
 window.addEventListener("DOMContentLoaded", () => {
 	loadTl.add(pageFadeIn());
+	loadTl.add(layer3());
 });
 
 function pageFadeIn() {
@@ -18,20 +19,32 @@ function pageFadeIn() {
 		.from(
 			".graphic_hero--layer_3",
 			{
-				scale: 2,
+				scale: 1.5,
 				duration: 1,
 				ease: "power2.inOut",
 				rotate: 35,
 			},
 			"start"
 		)
-		.from(
-			".graphic_hero--layer_1",
-			{ scale: 1.1, duration: 1.5, ease: "power2.inOut" },
-			"start"
-		);
+		.from(".graphic_hero--layer_1", { scale: 1.1, duration: 1.5, ease: "power2.inOut" }, "start");
 	return tl;
 }
+
+// function layer3() {
+// 	const tl = gsap.timeline();
+// 	tl.add("start")
+// 		.from(
+// 			".graphic_hero--layer_3",
+// 			{
+// 				scale: 2,
+// 				duration: 1,
+// 				ease: "power2.inOut",
+// 				rotate: 35,
+// 			},
+// 			"start"
+// 		)
+// 	return tl;
+// }
 
 setTimeout(() => {
 	ScrollTrigger.defaults({

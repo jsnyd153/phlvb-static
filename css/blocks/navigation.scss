@@ -23,7 +23,6 @@
 				--page_margin: 5rem;
 			}
 			display: flex;
-
 			color: var(--brand-100);
 			font-family: $sans_font;
 			font-size: 14/16 * 1rem;
@@ -138,22 +137,9 @@
 			padding: 24/16 * 1rem 20/16 * 1rem;
 			color: inherit;
 			text-decoration: none;
-			&::after {
-				content: "";
-				display: block;
-				width: 0;
-				height: 0.125em;
-				background-color: currentColor;
-				transition: 0.3s all;
-			}
+
 			&:hover {
 				color: $brand-500;
-				&::after {
-					width: 100%;
-					@include sm {
-						width: 0%;
-					}
-				}
 			}
 
 			@include md {
@@ -247,25 +233,8 @@
 			color: var(--brand-500);
 		}
 
-		&::after {
-			content: "";
-			display: block;
-			flex-grow: 1;
-			background-color: currentColor;
-			height: 1/16 * 1rem;
-			transition: 0.3s all;
-			width: 0;
-			flex-grow: 0;
-			.current & {
-				width: 100%;
-			}
-		}
 		&:hover {
 			color: var(--brand-500);
-
-			&::after {
-				width: 100%;
-			}
 		}
 	}
 	&indicator {

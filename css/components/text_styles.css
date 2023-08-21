@@ -6,9 +6,7 @@ h1 {
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 500;
  line-height: 105%;
- letter-spacing: -0.02em;
- color: #192d62;
- text-wrap: balance;
+ color: var(--brand-900);
 }
 @media (min-width: 1440px) {
  h1 {
@@ -21,9 +19,7 @@ h2 {
  font-weight: 400;
  font-size: calc(1.839vw + 1.341875rem);
  line-height: 115%;
- letter-spacing: -0.02em;
- text-wrap: balance;
- color: #192d62;
+ color: var(--brand-900);
 }
 @media (min-width: 1440px) {
  h2 {
@@ -36,9 +32,7 @@ h3 {
  font-weight: 400;
  font-size: calc(1.2073vw + 1.09595rem);
  line-height: 125%;
- letter-spacing: -0.02em;
- color: #192d62;
- text-wrap: balance;
+ color: var(--brand-900);
 }
 @media (min-width: 1440px) {
  h3 {
@@ -51,9 +45,7 @@ h4 {
  font-weight: 600;
  font-size: calc(0.8695vw + 0.8899625rem);
  line-height: 125%;
- letter-spacing: -0.02em;
- color: #192d62;
- text-wrap: balance;
+ color: var(--brand-900);
 }
 @media (min-width: 1440px) {
  h4 {
@@ -66,9 +58,7 @@ h5 {
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 600;
  line-height: 120%;
- letter-spacing: -0.02em;
- color: #213d85;
- text-wrap: balance;
+ color: var(--brand-900);
 }
 @media (min-width: 1440px) {
  h5 {
@@ -82,7 +72,7 @@ h6 {
  font-weight: 900;
  line-height: 120%;
  letter-spacing: 0.05em;
- color: #76affe;
+ color: var(--brand-900);
  text-transform: uppercase;
 }
 
@@ -90,10 +80,8 @@ p {
  font-size: calc(0.384vw + 0.8309875rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 300;
- line-height: 135%;
- letter-spacing: -0.02em;
+ line-height: 145%;
  color: #213d85;
- text-wrap: balance;
 }
 @media (min-width: 1440px) {
  p {
