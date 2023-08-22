@@ -110,10 +110,6 @@
 		border-radius: 50%;
 		overflow: hidden;
 		transition: 300ms all;
-		img {
-			min-height: 100%;
-			object-fit: cover;
-		}
 		@include md {
 			height: 80%;
 			translate: 10% 5%;
@@ -151,3 +147,27 @@
 		}
 	}
 } //--
+
+.home_hero--layer_1 {
+	@include cover_obj;
+	img {
+		width: 100%;
+	}
+}
+.home_hero--layer_2 {
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide {
+		transition: 0.3s all;
+	}
+	.swiper-slide-next {
+		translate: 50% 0;
+	}
+
+	.swiper-slide-inner {
+		width: 100%;
+		height: 100%;
+	}
+}
