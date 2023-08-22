@@ -1,64 +1,40 @@
-.impact--wrapper {
- grid-column: 2/-2;
- --columns: 12;
- display: grid;
- grid-column: 2/-2;
- grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
- gap: var(--gap);
- gap: 0;
-}
-.impact--intro_area {
- padding: var(--rp);
- grid-column: 1/span 5;
- grid-row: 1;
-}
-.impact--media_area {
- grid-column: span 6/-1;
- grid-row: 1/span 2;
- border-radius: 0.25rem 0.25rem 0rem 0rem;
-}
-.impact--stat_wrapper {
- grid-column: 1/span 8;
- grid-row: 2/span 2;
- padding: var(--rp);
- background: #192d62;
- position: relative;
- border-radius: 0.25rem 0.25rem 0rem 0.25rem;
-}
-.impact--stat_list {
- display: grid;
- grid-template-columns: 1fr 1fr;
- grid-template-rows: 1fr 1fr;
- gap: var(--gap);
- height: 100%;
-}
-.impact--stat_item {
- text-align: center;
+.stat--list {
  display: flex;
+ padding: var(--rp);
+ gap: var(--rp);
+ border-radius: var(--corner);
+ background: linear-gradient(130deg, #192d62 0%, #213d85 100%);
+ box-shadow: 0px 7px 20px 0px rgba(44, 87, 200, 0.25);
+ flex-wrap: wrap;
  justify-content: center;
- align-items: center;
- flex-direction: column;
- gap: 0.5rem;
 }
-.impact--stat_item .number {
- color: #76affe;
+.stat--item {
+ display: flex;
+ padding: var(--gap);
+ flex-direction: column;
+ align-items: center;
+ gap: var(--gap);
+ flex: 1 0 0;
+ border-radius: var(--corner, 0.25rem);
+ text-align: center;
+ min-width: 17.8125rem;
+}
+.stat--item .number {
+ color: var(--brand-500);
+ text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.19);
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ font-size: 5.6875rem;
+ font-style: normal;
+ font-weight: 800;
+ line-height: 100%;
+}
+.stat--item .label {
+ color: var(--brand-500);
  font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
- font-size: 4.98931rem;
+ font-size: 1.5rem;
  font-style: italic;
  font-weight: 800;
- line-height: 100%; /* 4.98931rem */
-}
-.impact--stat_item p {
- color: #bccceb;
-}
-.impact--action {
- grid-column: span 4/-1;
- grid-row: 3;
- padding: var(--rp);
- background: #76affe;
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- gap: 0.5rem;
- border-radius: 0rem 0rem 0.25rem 0rem;
+ line-height: 100%;
+ letter-spacing: 0.05em;
+ text-transform: uppercase;
 }

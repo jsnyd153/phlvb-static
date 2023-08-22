@@ -52,8 +52,8 @@
 }
 
 .list_type--locations {
-	columns: 2;
-	gap: 0.75rem;
+	display: flex;
+	flex-wrap: wrap;
 	li {
 		@include fluid_size_text($scale: 0.384, $floor: 0.8309875);
 		font-family: $sans_font;
@@ -61,9 +61,16 @@
 		line-height: 135%;
 		letter-spacing: -0.02em;
 		display: flex;
-		gap: 1rem;
 		align-items: center;
 		margin-block: 0.375rem;
+		color: var(--brand-700);
+
+		gap: 0.5rem;
+
+		display: flex;
+		gap: 0.5rem;
+		width: clamp(300px, 50%, 500px);
+
 		&::before {
 			content: "";
 			display: block;

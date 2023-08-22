@@ -40,7 +40,7 @@
 		<style></style>
 	</head>
 
-	<body class="">
+	<body class="theme_indoor">
 		<main>
 			<section class="basic_hero--section">
 				<div class="background_area">
@@ -60,10 +60,7 @@
 				<div class="text_area basic_hero--text_area">
 					<div class="text_content">
 						<h1>Locations</h1>
-						<p class="large">
-							We play all over the city of Philadelphia and the surrounding
-							area.
-						</p>
+						<p class="large">We play all over the city of Philadelphia and the surrounding area.</p>
 					</div>
 				</div>
 			</section>
@@ -76,63 +73,85 @@
 
 			<section class="basic_content--section">
 				<article>
-					<div class="text_content">
-						<h2>Neighborhoods</h2>
+					<div class="text_area">
+						<div class="text_content">
+							<h2>Neighborhoods</h2>
+						</div>
 					</div>
-					<div class="basic_content--columns text_content">
-						<ul class="list_type--locations locations--list columns-2">
-							<li data-copies="3" location-data="beach  indoor">
-								<p>Point Breeze</p>
+					<div class="text_area">
+						<ul class="list_type--locations locations--list">
+							<li location-data="indoor grass">
+								Art Museum
 								<i data-indicator="grass"></i><i data-indicator="beach"></i
 								><i data-indicator="indoor"></i>
 							</li>
-							<li data-copies="3" location-data="grass indoor">
-								<p>Point Breeze</p>
-								<i data-indicator="grass"></i><i data-indicator="beach"></i
+							<li location-data="grass">
+								Cherry Hill<i data-indicator="grass"></i><i data-indicator="beach"></i
 								><i data-indicator="indoor"></i>
 							</li>
-							<li data-copies="3" location-data="grass  ">
-								<p>Point Breeze</p>
-								<i data-indicator="grass"></i><i data-indicator="beach"></i
+							<li location-data="indoor">
+								Chinatown<i data-indicator="grass"></i><i data-indicator="beach"></i
 								><i data-indicator="indoor"></i>
 							</li>
-							<li data-copies="3" location-data="grass beach indoor">
-								<p>Point Breeze</p>
-								<i data-indicator="grass"></i><i data-indicator="beach"></i
+							<li location-data="grass">
+								Fairmount Park<i data-indicator="grass"></i><i data-indicator="beach"></i
 								><i data-indicator="indoor"></i>
 							</li>
-							<li data-copies="3" location-data="grass  indoor">
-								<p>Point Breeze</p>
-								<i data-indicator="grass"></i><i data-indicator="beach"></i
+							<li location-data="grass">
+								Filter Square<i data-indicator="grass"></i><i data-indicator="beach"></i
 								><i data-indicator="indoor"></i>
 							</li>
-							<li data-copies="3" location-data="  indoor">
-								<p>Point Breeze</p>
-								<i data-indicator="grass"></i><i data-indicator="beach"></i
+							<li location-data="grass indoor">
+								Fishtown<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="indoor">
+								King of Prussia<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="indoor">
+								Manayunk<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="indoor">
+								Marlton<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="grass">
+								Navy Yard<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="grass">
+								Point Breeze<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="grass">
+								South Philly<i data-indicator="grass"></i><i data-indicator="beach"></i
+								><i data-indicator="indoor"></i>
+							</li>
+							<li location-data="grass beach">
+								University Cityy<i data-indicator="grass"></i><i data-indicator="beach"></i
 								><i data-indicator="indoor"></i>
 							</li>
 						</ul>
 					</div>
 					<div class="text_content">
 						<p class="jumbo">
-							Know a gym or field you think would be great for running
-							volleyball events? <br />We’re always looking for more locations.
+							Know a gym or field you think would be great for running volleyball events?
+							<br />We’re always looking for more locations.
 						</p>
 					</div>
 					<div class="text_content">
-						<a href="#" class="button">Let us Know</a>
+						<a href="contact.html" class="button">Let us Know</a>
 					</div>
 				</article>
 			</section>
 
-			<section class="call_to_action--section">
-				<a href="tournament_tips.html" class="call_to_action--action">
+			<section class="call_to_action--section no-image">
+				<a href="pickup.html" class="call_to_action--action">
 					<div class="background_area">
 						<div class="background_fill">
-							<img
-								src="../assets/media/banner-tournament_tips-default.png"
-								alt=" background"
-							/>
+							<!-- <img src="../assets/media/banner-tournament_tips-default.png" alt=" background" /> -->
 						</div>
 					</div>
 					<div class="call_to_action--text_area text_area">
@@ -155,7 +174,12 @@
 		<script src="../js/headerNavigation.js"></script>
 		<script src="../js/navigation.js"></script>
 
-		<script></script>
+		<script>
+			$("[data-map]").hover(function () {
+				const mapSRC = $(this).attr("data-map");
+				$("#googleMap").attr("src", mapSRC);
+			});
+		</script>
 
 		<script></script>
 	</body>

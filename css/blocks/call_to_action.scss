@@ -11,6 +11,13 @@
 			--top: 3rem;
 			isolation: isolate;
 			padding: 0;
+
+			&.no-image .button {
+				--_inital_text: var(--brand-900);
+				--_inital_background: var(--brand-50);
+				--_active_color: var(--brand-900);
+				--_active_text: var(--theme_color-500);
+			}
 		}
 
 		&action {
@@ -24,7 +31,7 @@
 
 			.background_fill {
 				@include cover_obj;
-				background-color: var(--brand-900);
+				background-color: var(--theme_color-500);
 				overflow: hidden;
 				&::after {
 					content: "";
@@ -33,10 +40,10 @@
 					background-color: black;
 					opacity: 0.4;
 					transition: 1s all;
+					.no-image & {
+						display: none;
+					}
 				}
-				// picture {
-				// 	display: contents;
-				// }
 				picture {
 					@include image_cover;
 					transition: 1s all;
@@ -79,6 +86,11 @@
 			text-align: center;
 			@include text_nodes {
 				color: $white;
+			}
+			.no-image & {
+				@include text_nodes {
+					color: var(--brand-900);
+				}
 			}
 		}
 	}

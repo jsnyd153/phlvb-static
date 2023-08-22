@@ -52,20 +52,13 @@ $('[html-data="use_CardTournaments"]').each(function () {
 			console.log("cardTournamentsElement", cardTournamentsElement);
 
 			// Find the element with attribute html-data="use_CardTournaments"
-			const elementToReplace = document.querySelector(
-				'[html-data="use_CardTournaments"]'
-			);
+			const elementToReplace = document.querySelector('[html-data="use_CardTournaments"]');
 
 			// Replace the element with cardTournamentsElement
 			if (elementToReplace) {
-				elementToReplace.parentNode.replaceChild(
-					cardTournamentsElement,
-					elementToReplace
-				);
+				elementToReplace.parentNode.replaceChild(cardTournamentsElement, elementToReplace);
 			} else {
-				console.error(
-					'Element with attribute html-data="use_CardTournaments" not found.'
-				);
+				console.error('Element with attribute html-data="use_CardTournaments" not found.');
 			}
 		})
 		.catch((error) => {
@@ -88,20 +81,13 @@ $('[html-data="use_CardClinic"]').each(function () {
 			console.log("cardClinicElement", cardClinicElement);
 
 			// Find the element with attribute html-data="use_CardClinic"
-			const elementToReplace = document.querySelector(
-				'[html-data="use_CardClinic"]'
-			);
+			const elementToReplace = document.querySelector('[html-data="use_CardClinic"]');
 
 			// Replace the element with cardClinicElement
 			if (elementToReplace) {
-				elementToReplace.parentNode.replaceChild(
-					cardClinicElement,
-					elementToReplace
-				);
+				elementToReplace.parentNode.replaceChild(cardClinicElement, elementToReplace);
 			} else {
-				console.error(
-					'Element with attribute html-data="use_CardClinic" not found.'
-				);
+				console.error('Element with attribute html-data="use_CardClinic" not found.');
 			}
 		})
 		.catch((error) => {
@@ -124,20 +110,13 @@ $('[html-data="use_CardPickup"]').each(function () {
 			console.log("cardPickupElement", cardPickupElement);
 
 			// Find the element with attribute html-data="use_CardPickup"
-			const elementToReplace = document.querySelector(
-				'[html-data="use_CardPickup"]'
-			);
+			const elementToReplace = document.querySelector('[html-data="use_CardPickup"]');
 
 			// Replace the element with cardTournamentsElement
 			if (elementToReplace) {
-				elementToReplace.parentNode.replaceChild(
-					cardPickupElement,
-					elementToReplace
-				);
+				elementToReplace.parentNode.replaceChild(cardPickupElement, elementToReplace);
 			} else {
-				console.error(
-					'Element with attribute html-data="use_CardPickup" not found.'
-				);
+				console.error('Element with attribute html-data="use_CardPickup" not found.');
 			}
 		})
 		.catch((error) => {
@@ -160,20 +139,13 @@ $('[html-data="use_CardLeagues"]').each(function () {
 			console.log("cardLeaguesElement", cardLeaguesElement);
 
 			// Find the element with attribute html-data="use_CardLeagues"
-			const elementToReplace = document.querySelector(
-				'[html-data="use_CardLeagues"]'
-			);
+			const elementToReplace = document.querySelector('[html-data="use_CardLeagues"]');
 
 			// Replace the element with cardTournamentsElement
 			if (elementToReplace) {
-				elementToReplace.parentNode.replaceChild(
-					cardLeaguesElement,
-					elementToReplace
-				);
+				elementToReplace.parentNode.replaceChild(cardLeaguesElement, elementToReplace);
 			} else {
-				console.error(
-					'Element with attribute html-data="use_CardLeagues" not found.'
-				);
+				console.error('Element with attribute html-data="use_CardLeagues" not found.');
 			}
 		})
 		.catch((error) => {
@@ -198,8 +170,7 @@ $("[data-resource]").each(function () {
 	var originalElement = $(this);
 
 	// Fetch the HTML file
-	var fetchedPageURL =
-		"../_static_pages/" + originalElement.data("resource") + ".html";
+	var fetchedPageURL = "../_static_pages/" + originalElement.data("resource") + ".html";
 	fetch(fetchedPageURL)
 		.then(function (response) {
 			return response.text();
@@ -210,12 +181,8 @@ $("[data-resource]").each(function () {
 
 			// Get the required elements from the fetched HTML
 			var headline = fetchedHTML.find(".feature_hero--section h1").text();
-			var featureImage = fetchedHTML
-				.find(".feature_hero--section img")
-				.prop("outerHTML");
-			var postSummary = fetchedHTML
-				.find(".feature_hero--section .post_summary")
-				.html();
+			var featureImage = fetchedHTML.find(".feature_hero--section img").prop("outerHTML");
+			var postSummary = fetchedHTML.find(".feature_hero--section .post_summary").html();
 
 			// Create the new element
 			var newElement = $("<a>", {

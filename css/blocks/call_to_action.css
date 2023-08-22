@@ -3,6 +3,12 @@
  isolation: isolate;
  padding: 0;
 }
+.call_to_action--section.no-image .button {
+ --_inital_text: var(--brand-900);
+ --_inital_background: var(--brand-50);
+ --_active_color: var(--brand-900);
+ --_active_text: var(--theme_color-500);
+}
 .call_to_action--action {
  padding: 3.75rem 0;
  display: grid;
@@ -21,7 +27,7 @@
  inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
- background-color: var(--brand-900);
+ background-color: var(--theme_color-500);
  overflow: hidden;
 }
 .call_to_action--action .background_fill::after {
@@ -36,6 +42,9 @@
  background-color: black;
  opacity: 0.4;
  transition: 1s all;
+}
+.no-image .call_to_action--action .background_fill::after {
+ display: none;
 }
 .call_to_action--action .background_fill picture {
  position: absolute;
@@ -93,4 +102,13 @@
 .call_to_action--text_content h6,
 .call_to_action--text_content p {
  color: #ffffff;
+}
+.no-image .call_to_action--text_content h1,
+.no-image .call_to_action--text_content h2,
+.no-image .call_to_action--text_content h3,
+.no-image .call_to_action--text_content h4,
+.no-image .call_to_action--text_content h5,
+.no-image .call_to_action--text_content h6,
+.no-image .call_to_action--text_content p {
+ color: var(--brand-900);
 }

@@ -20,13 +20,6 @@
  stroke: var(--brand-500);
  stroke-width: 90;
 }
-.basic_hero--section .background_area img + .ring {
- mix-blend-mode: soft-light;
- opacity: 1;
-}
-.basic_hero--section .background_area img + .ring circle {
- stroke: var(--white);
-}
 .basic_hero--text_area {
  grid-column: 2/span 9;
  justify-content: flex-end;
@@ -53,12 +46,30 @@
 .basic_hero--text_area p {
  color: var(--brand-100);
 }
-.basic_hero--section:has(.background_area img) .basic_hero--text_area h1,
-.basic_hero--section:has(.background_area img) .basic_hero--text_area h2,
-.basic_hero--section:has(.background_area img) .basic_hero--text_area h3,
-.basic_hero--section:has(.background_area img) .basic_hero--text_area h4,
-.basic_hero--section:has(.background_area img) .basic_hero--text_area h5,
-.basic_hero--section:has(.background_area img) .basic_hero--text_area h6,
-.basic_hero--section:has(.background_area img) .basic_hero--text_area p {
+.basic_hero--section.has-image h1,
+.basic_hero--section.has-image h2,
+.basic_hero--section.has-image h3,
+.basic_hero--section.has-image h4,
+.basic_hero--section.has-image h5,
+.basic_hero--section.has-image h6,
+.basic_hero--section.has-image p {
  color: var(--brand-50);
+}
+
+.mask-circle_corner {
+ -webkit-mask-image: url(../../assets/media/circle_corner.svg);
+         mask-image: url(../../assets/media/circle_corner.svg);
+ -webkit-mask-repeat: no-repeat;
+         mask-repeat: no-repeat;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+}
+.mask-circle_corner img,
+.mask-circle_corner picture {
+ scale: 1.15;
+ rotate: 3deg;
 }

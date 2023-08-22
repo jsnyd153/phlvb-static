@@ -47,9 +47,8 @@
 }
 
 .list_type--locations {
- -moz-columns: 2;
-      columns: 2;
- gap: 0.75rem;
+ display: flex;
+ flex-wrap: wrap;
 }
 .list_type--locations li {
  font-size: calc(0.384vw + 0.8309875rem);
@@ -58,9 +57,13 @@
  line-height: 135%;
  letter-spacing: -0.02em;
  display: flex;
- gap: 1rem;
  align-items: center;
  margin-block: 0.375rem;
+ color: var(--brand-700);
+ gap: 0.5rem;
+ display: flex;
+ gap: 0.5rem;
+ width: clamp(300px, 50%, 500px);
 }
 @media (min-width: 1440px) {
  .list_type--locations li {

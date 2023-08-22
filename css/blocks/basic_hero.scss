@@ -17,6 +17,7 @@
 			.nav-transparent & {
 				padding-top: 80/16 * 1rem;
 			}
+
 			.background_area {
 				.ring {
 					opacity: 0.3;
@@ -28,14 +29,6 @@
 					circle {
 						stroke: var(--brand-500);
 						stroke-width: 90;
-					}
-				}
-				//if there's an image make it white and blended
-				img + .ring {
-					mix-blend-mode: soft-light;
-					opacity: 1;
-					circle {
-						stroke: var(--white);
 					}
 				}
 			}
@@ -59,10 +52,23 @@
 			}
 		}
 
-		&section:has(.background_area img) &text_area {
+		&section.has-image {
 			@include text_nodes {
 				color: var(--brand-50);
 			}
 		}
 	} //--
+}
+
+//Could use this elsewher but it's currently localized
+.mask-circle_corner {
+	mask-image: url(../../assets/media/circle_corner.svg);
+	mask-repeat: no-repeat;
+	@include cover_obj;
+
+	img,
+	picture {
+		scale: 1.15;
+		rotate: 3deg;
+	}
 }
