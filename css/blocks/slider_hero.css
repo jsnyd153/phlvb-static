@@ -1,4 +1,16 @@
 /*css/blocks/slider_hero.scss*/
+h1.emphasis {
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
+ font-size: 10.04375rem;
+ font-style: normal;
+ font-weight: 900;
+ line-height: 100%;
+ text-transform: uppercase;
+ font-family: trade-gothic-next-condensed, sans-serif;
+ font-weight: 800;
+ font-style: normal;
+}
+
 .slider_hero--slider_area {
  position: absolute;
  width: 100%;
@@ -6,6 +18,21 @@
  inset: 0;
  -o-object-fit: cover;
     object-fit: cover;
+ overflow: hidden;
+}
+.slider_hero--slider_area::after {
+ display: block;
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background: black;
+ z-index: 1;
+ opacity: 0.5;
+ mix-blend-mode: multiply;
+ pointer-events: none;
 }
 .slider_hero--slide img {
  width: 100%;
@@ -14,14 +41,15 @@
     object-fit: cover;
 }
 .slider_hero--text_area {
- grid-column: 2/span 7;
+ grid-column: 2/span 5;
  position: relative;
  z-index: 2;
- padding: var(--fr_unit) 0;
- margin: var(--rp) 0;
+ padding: var(--section_padding) 0;
 }
 .slider_hero--text_area h1 {
- font-weight: 700;
+ color: #fff;
+}
+.slider_hero--text_area p {
  color: var(--theme_color-50, #edf0f8);
 }
 .slider_hero--overlay {
@@ -54,18 +82,4 @@
 .slider_hero--pagination .swiper-pagination-bullet-active {
  background-color: var(--swiper-pagination-bullet-active-color);
  width: var(--swiper-pagination-bullet-active-width);
-}
-
-.faux_mask {
- position: absolute;
- width: 100%;
- height: 100%;
- inset: 0;
- -o-object-fit: cover;
-    object-fit: cover;
- background-color: var(--theme_color-500);
- transition: 0.5s 0.5s all;
-}
-.swiper-slide-active .faux_mask {
- transform: translateX(-100%);
 }

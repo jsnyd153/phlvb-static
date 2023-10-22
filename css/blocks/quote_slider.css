@@ -1,129 +1,76 @@
-/*css/blocks/grid_content.scss*/
-.quote_slider--slider_area {
+/*css/blocks/quote_slider.scss*/
+.quote_slider--slider {
  grid-column: 3/-3;
+ margin-bottom: auto;
+ overflow: hidden;
 }
-@media (max-width: 991px) {
- .quote_slider--slider_area {
-  grid-column: 2/-3;
- }
-}
-@media (max-width: 767px) {
- .quote_slider--slider_area {
-  grid-column: 3/-3;
- }
-}
-.quote_slider--button-container {
- grid-column: span 2/-3;
+.quote_slider--controls {
+ grid-column: 3/-3;
  display: flex;
- gap: 1rem;
+ gap: 0.625rem;
  justify-content: flex-end;
 }
-@media (max-width: 991px) {
- .quote_slider--button-container {
-  grid-column: 2/-3;
- }
-}
-.quote_slider--button {
- padding: 0.625rem;
- border-radius: 0.25rem;
- background: #bccceb;
- position: relative;
- inset: auto;
- height: auto;
-}
-.quote_slider--button::after {
- display: none;
-}
-.quote_slider--button svg path {
- stroke: #192d62;
- stroke-width: 1.5;
-}
-.quote_slider--slide {
+.quote_slider--button-next, .quote_slider--button-prev {
  display: flex;
- justify-content: center;
- align-items: center;
- gap: var(--gap);
- position: relative;
-}
-.quote_slider--slide .text_area {
+ padding: 0.66819rem;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 0.66819rem;
+ border-radius: 0.26725rem;
+ background: var(--brand-100);
+ border: 0;
  transition: 0.3s all;
- box-sizing: border-box;
- margin-left: calc((var(--gap) + var(--fr_unit) + var(--gap)) * -1);
- margin-top: calc(var(--gap) + var(--fr_unit) + var(--gap));
 }
-@media (max-width: 767px) {
- .quote_slider--slide .text_area {
-  margin: 0;
- }
+.quote_slider--button-next:hover, .quote_slider--button-prev:hover {
+ background: var(--brand-500);
 }
-.quote_slider--slide h3 {
- display: inline-block;
- overflow: hidden;
- line-height: 135%;
+.quote_slider--button-next svg *, .quote_slider--button-prev svg * {
+ stroke: var(--brand-900);
+ stroke-width: 1.625;
 }
-.quote_slider--slide h3 span {
- display: block;
- width: 100%;
- transition: all 400ms ease-in-out;
- transform: translateY(100%);
- opacity: 0;
-}
-.quote_slider--slide h3 span:nth-child(1) {
- transition-delay: 0.1s;
-}
-.quote_slider--slide h3 span:nth-child(2) {
- transition-delay: 0.2s;
-}
-.quote_slider--slide h3 span:nth-child(3) {
- transition-delay: 0.3s;
-}
-.quote_slider--slide h3 span:nth-child(4) {
- transition-delay: 0.4s;
-}
-.quote_slider--slide h3 span:nth-child(5) {
- transition-delay: 0.5s;
-}
-.quote_slider--slide h3 span:nth-child(6) {
- transition-delay: 0.6s;
-}
-.quote_slider--slide h3 span:nth-child(7) {
- transition-delay: 0.7s;
-}
-.quote_slider--slide h3 span:nth-child(8) {
- transition-delay: 0.8s;
-}
-.quote_slider--slide h3 span:nth-child(9) {
- transition-delay: 0.9s;
-}
-.quote_slider--slide h3 span:nth-child(10) {
- transition-delay: 1s;
-}
-.quote_slider--slide.swiper-slide-active {
- transition: all 1000ms ease-in-out;
-}
-.quote_slider--slide.swiper-slide-active h3 span {
- display: inline-block;
- transition: all 1000ms ease-in-out;
- transform: translateY(0%);
- opacity: 1;
-}
-@media (max-width: 767px) {
- .quote_slider--media_area {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5rem;
-  translate: -50% -50%;
- }
-}
-.quote_slider--media_area .media_content {
- background: #76affe;
+.quote_slider--image_area {
+ position: absolute;
+ width: calc(var(--fr_unit) * 3);
+ height: calc(var(--fr_unit) * 3);
  border-radius: 50%;
+ overflow: hidden;
+ top: 0;
+ left: var(--rp);
+ scale: 0;
+ transition: 500ms all;
+ background: #76affe;
  opacity: 0.3;
- transition: 0.3s all;
 }
-.quote_slider--media_area .media_content img {
- transition: 0.3s all;
- opacity: 0.5;
- filter: grayscale(1);
+.swiper-slide-active .quote_slider--image_area {
+ scale: 1;
+ transition: 500ms 500ms all;
+}
+.quote_slider--image_area img {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+ opacity: 0.8;
+}
+.quote_slider--text_area {
+ margin-top: var(--fr_unit);
+ display: grid;
+ --columns: 10;
+ display: grid;
+ grid-column: 2/-2;
+ grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+ gap: var(--gap);
+}
+.quote_slider--text_area .text_content {
+ grid-column: span 8/-1;
+ translate: 0 100%;
+ opacity: 0;
+ transition: 500ms all;
+}
+.swiper-slide-active .quote_slider--text_area .text_content {
+ translate: 0 0;
+ opacity: 1;
+ transition: 500ms 500ms all;
 }

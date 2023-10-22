@@ -17,6 +17,7 @@
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 		<link rel="stylesheet" href="../css/globals/globals.css" />
 		<link rel="stylesheet" href="../css/utilities/grids/_index.css" />
@@ -42,29 +43,24 @@
 
 	<body class="theme_grass nav-transparent">
 		<main>
-			<section class="graphic_hero--section">
-				<div class="graphic_hero--media_area">
-					<div class="graphic_hero--layer_1">
+			<section class="basic_hero--section has-image">
+				<div class="background_area">
+					<div class="background_fill">
 						<img
+							class=""
 							src="https://lh3.googleusercontent.com/pw/AIL4fc_oenr5-2dQW_hN49mXPxF3JM9QGs8pdDdQ4ssEOskcOr0VRP3RU4gobLDRqshsF-YrD_iYzKzMrqSnZ4_P4Ay9jSd0X4lrVCRKTa9b3DpRWhFES6PXSMtiX5Q5300UBIPw1wQfTMgZVOVX5l2_409rsg=w1430-h950-s-no?authuser=0"
 							alt=""
 						/>
-					</div>
-					<div class="graphic_hero--layer_2">
-						<img
-							src="https://lh3.googleusercontent.com/pw/AIL4fc_oenr5-2dQW_hN49mXPxF3JM9QGs8pdDdQ4ssEOskcOr0VRP3RU4gobLDRqshsF-YrD_iYzKzMrqSnZ4_P4Ay9jSd0X4lrVCRKTa9b3DpRWhFES6PXSMtiX5Q5300UBIPw1wQfTMgZVOVX5l2_409rsg=w1430-h950-s-no?authuser=0"
-							alt=""
-						/>
-					</div>
-					<div class="graphic_hero--layer_3">
-						<img
-							src="https://lh3.googleusercontent.com/pw/AIL4fc_oenr5-2dQW_hN49mXPxF3JM9QGs8pdDdQ4ssEOskcOr0VRP3RU4gobLDRqshsF-YrD_iYzKzMrqSnZ4_P4Ay9jSd0X4lrVCRKTa9b3DpRWhFES6PXSMtiX5Q5300UBIPw1wQfTMgZVOVX5l2_409rsg=w1430-h950-s-no?authuser=0"
-							alt=""
-						/>
+						<div class="mask-circle_corner">
+							<img
+								src="https://lh3.googleusercontent.com/pw/AIL4fc_oenr5-2dQW_hN49mXPxF3JM9QGs8pdDdQ4ssEOskcOr0VRP3RU4gobLDRqshsF-YrD_iYzKzMrqSnZ4_P4Ay9jSd0X4lrVCRKTa9b3DpRWhFES6PXSMtiX5Q5300UBIPw1wQfTMgZVOVX5l2_409rsg=w1430-h950-s-no?authuser=0"
+								alt=""
+							/>
+						</div>
 					</div>
 				</div>
-				<div class="text_area graphic_hero--text_area">
-					<div class="text_content graphic_hero--text_content">
+				<div class="text_area basic_hero--text_area">
+					<div class="text_content">
 						<h6 class="eyebrow">Play</h6>
 						<h1>Grass Volleyball</h1>
 						<p class="large">
@@ -78,14 +74,10 @@
 				<div class="story_block--single">
 					<div class="text_area">
 						<div class="text_content">
-							<h2>
-								What makes grass volleyball so special, is that despite it being an athletically
-								demanding sport, it tends to have a more relaxed vibe.
-							</h2>
-							<p>
-								You can usually find players hanging out in the sun with a beer in hand (at
-								locations that allow it) while waiting their turn to play. It’s great as a way to
-								wind down after work, or to hang out with friends on the weekend.
+							<p class="jumbo">
+								Grass volleyball intro statement Lorem ipsum dolor sit amet, consectetur adipisicing
+								elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+								minim veniam,
 							</p>
 						</div>
 						<div class="text_content">
@@ -101,11 +93,30 @@
 			</section>
 
 			<section class="story_block--section">
-				<div class="story_block--row">
+				<div class="story_block--row" distribute-columns="1:1">
 					<div class="story_block--media_area media_area">
-						<figure class="media_content mask-reveal">
-							<img src="../assets/media/swingfest-mens-doubles-grass.png" alt="" />
+						<figure class="media_content image_slider">
+							<div class="image_slider--slider_area">
+								<div class="image_slider--slider swiper-wrapper">
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/doubles-dairy-grass-alt-hero-2.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/smei-candid-outdoor-group.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/swingfest-quads-attack-grass.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/doubles-dairy-grass-alt-hero-2.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/smei-candid-outdoor-group.png" alt="" />
+									</article>
+								</div>
+							</div>
 						</figure>
+						<div class="image_slider--pagination swiper-pagination"></div>
 					</div>
 					<div class="story_block--text_area text_area">
 						<div class="text_content">
@@ -119,7 +130,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="story_block--row">
+				<div class="story_block--row" distribute-columns="1:1">
 					<div class="story_block--text_area text_area">
 						<div class="text_content">
 							<p class="large">
@@ -266,6 +277,8 @@
 		<script src="../js/navigation.js"></script>
 		<script src="../js/scrollAnimations.js"></script>
 		<script src="../js/loadAnimation.js"></script>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../js/sliders.js"></script>
 
 		<script>
 			// Dealy till after content is loaded

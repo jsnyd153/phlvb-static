@@ -1,0 +1,159 @@
+@use "sass:color";
+@use "../../abstracts" as *;
+
+// Icon Card
+// Visual: https://www.figma.com/file/oxtfUo8w4dRLkkJmcEBwpA/PHLVB---Website?type=design&node-id=230%3A60458&t=qtCFQvZbBAM85yM2-1
+// Dependancy: none
+
+//================================================
+/*css/components/cards/icon_card.scss*/
+//================================================
+
+// &grid_area {
+// 	display: grid;
+// 	gap: var(--gap);
+// 	--items_per_row: 3;
+// 	grid-template-columns: repeat(var(--items_per_row), minmax(0, 1fr));
+
+// 	&.auto_grid {
+// 		grid-template-columns: repeat(auto-fit, minmax(var(--minsize), 1fr));
+// 	}
+
+// 	&.arrange-min {
+// 		//set min width for card before stacking
+// 		//https://blog.logrocket.com/flexible-layouts-without-media-queries/
+// 		--min-card-width: 15rem;
+// 		--preferred-value: ((var(--min-card-width) * var(--items_per_row) - var(--gap) * 2) - 100%) *
+// 			999;
+// 		grid-template-columns: repeat(auto-fit, minmax(min(var(--preferred-value), 100%), 1fr));
+// 	}
+// }
+
+.image_card {
+	padding: 32/16 * 1rem;
+	border-radius: 4/16 * 1rem;
+	transition: 0.3s all;
+	container-type: inline-size;
+	overflow: hidden;
+
+	@include xl {
+		padding: 48/16 * 1rem 32/16 * 1rem;
+	}
+
+	&-- {
+		&media_area {
+			@include cover_obj;
+			overflow: hidden;
+			img {
+				@include cover_obj;
+			}
+			&::after {
+				@include psuedo_el;
+				background-color: black;
+				opacity: 0.4;
+			}
+		}
+
+		&text_area {
+			display: flex;
+			flex-direction: column;
+			gap: 24/16 * 1rem;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			min-height: 500px;
+			container-type: inline-size;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+		&text_content {
+			display: flex;
+			flex-direction: column;
+			gap: 10/16 * 1rem;
+			text-align: center;
+			color: #fff;
+
+			p {
+				color: #fff;
+				transition: 0.3s all;
+			}
+			.arrow_button {
+				transition: 0.3s all;
+				// a:hover & {
+				// 	transform: translateX(1rem);
+				// }
+				svg {
+					width: 2rem;
+					.stroke {
+						stroke: currentColor;
+						stroke-width: 2.5;
+					}
+				}
+			}
+		}
+		&header {
+			display: flex;
+			gap: 4/16 * 1rem;
+			transition: 0.3s all;
+			align-items: center;
+			flex-direction: column;
+			font-family: "Trade Gothic Next LT Pro";
+			font-style: italic;
+			font-weight: 800;
+			text-align: center;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+
+			font-size: 11cqi;
+
+			span {
+				display: inline-block;
+				margin-top: 0.25em;
+			}
+
+			flex-grow: 1;
+			color: #fff;
+		}
+		&icon {
+			width: 1.5em;
+			height: 1.5em;
+			flex-shrink: 0;
+			.fill {
+				fill: currentColor;
+			}
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	.image_card--text_area {
+		transition: 0.5s all;
+	}
+	.image_card--media_area {
+		img {
+			transition: 0.5s all;
+			scale: 1.1;
+		}
+		&::after {
+			transition: 0.5s all;
+		}
+	}
+
+	&:hover {
+		.image_card--text_area {
+			scale: 1.1;
+			transition: 1s all;
+		}
+		.image_card--media_area {
+			img {
+				scale: 1;
+				transition: 2s all;
+			}
+			&::after {
+				opacity: 0.6;
+				transition: 2s all;
+			}
+		}
+	}
+}

@@ -10,7 +10,7 @@
 //================================================
 
 .text_area {
-	gap: 24/16 * 1rem;
+	gap: var(--gap);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -22,7 +22,7 @@
 	}
 }
 .text_content {
-	gap: 8/16 * 1rem;
+	gap: 12/16 * 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

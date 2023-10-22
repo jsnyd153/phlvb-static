@@ -88,10 +88,22 @@
 		--_active_color: var(--brand-900);
 		--_active_text: var(--theme_color-500);
 	}
+	&.is-brand-500 {
+		--_inital_text: var(--brand-900);
+		--_inital_background: var(--brand-500);
+		--_active_color: var(--brand-900);
+		--_active_text: var(--brand-500);
+	}
 	&.is-brand-200 {
 		--_inital_text: var(--brand-900);
 		--_inital_background: var(--brand-200);
 		--_active_color: var(--brand-500);
+		--_active_text: var(--brand-900);
+	}
+	&.is-theme-200 {
+		--_inital_text: var(--brand-900);
+		--_inital_background: var(--theme_color-200);
+		--_active_color: var(--theme_color-500);
 		--_active_text: var(--brand-900);
 	}
 }

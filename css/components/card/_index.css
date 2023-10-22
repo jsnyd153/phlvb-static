@@ -141,13 +141,8 @@ a:hover .resource_card--media_content img {
  justify-content: flex-start;
 }
 .resource_card--text_content h4 {
- font-size: calc(0.8695vw + 0.6399625rem);
+ font-size: clamp(0.8437515625rem, 0.8695vw + 0.6399625rem, 1.3355625rem);
  font-weight: 600;
-}
-@media (min-width: 1440px) {
- .resource_card--text_content h4 {
-  font-size: 1.4225125rem;
- }
 }
 .resource_card--text_content p {
  color: #213d85;

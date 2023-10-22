@@ -1,0 +1,128 @@
+/*css/components/cards/icon_card.scss*/
+.image_card {
+ padding: 2rem;
+ border-radius: 0.25rem;
+ transition: 0.3s all;
+ container-type: inline-size;
+ overflow: hidden;
+}
+@media (min-width: 1440px) {
+ .image_card {
+  padding: 3rem 2rem;
+ }
+}
+.image_card--media_area {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+ overflow: hidden;
+}
+.image_card--media_area img {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+}
+.image_card--media_area::after {
+ display: block;
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background-color: black;
+ opacity: 0.4;
+}
+.image_card--text_area {
+ display: flex;
+ flex-direction: column;
+ gap: 1.5rem;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ min-height: 500px;
+ container-type: inline-size;
+ max-width: 400px;
+ margin: 0 auto;
+}
+.image_card--text_content {
+ display: flex;
+ flex-direction: column;
+ gap: 0.625rem;
+ text-align: center;
+ color: #fff;
+}
+.image_card--text_content p {
+ color: #fff;
+ transition: 0.3s all;
+}
+.image_card--text_content .arrow_button {
+ transition: 0.3s all;
+}
+.image_card--text_content .arrow_button svg {
+ width: 2rem;
+}
+.image_card--text_content .arrow_button svg .stroke {
+ stroke: currentColor;
+ stroke-width: 2.5;
+}
+.image_card--header {
+ display: flex;
+ gap: 0.25rem;
+ transition: 0.3s all;
+ align-items: center;
+ flex-direction: column;
+ font-family: "Trade Gothic Next LT Pro";
+ font-style: italic;
+ font-weight: 800;
+ text-align: center;
+ letter-spacing: 0.05em;
+ text-transform: uppercase;
+ font-size: 11cqi;
+ flex-grow: 1;
+ color: #fff;
+}
+.image_card--header span {
+ display: inline-block;
+ margin-top: 0.25em;
+}
+.image_card--icon {
+ width: 1.5em;
+ height: 1.5em;
+ flex-shrink: 0;
+}
+.image_card--icon .fill {
+ fill: currentColor;
+}
+
+a {
+ text-decoration: none;
+}
+a .image_card--text_area {
+ transition: 0.5s all;
+}
+a .image_card--media_area img {
+ transition: 0.5s all;
+ scale: 1.1;
+}
+a .image_card--media_area::after {
+ transition: 0.5s all;
+}
+a:hover .image_card--text_area {
+ scale: 1.1;
+ transition: 1s all;
+}
+a:hover .image_card--media_area img {
+ scale: 1;
+ transition: 2s all;
+}
+a:hover .image_card--media_area::after {
+ opacity: 0.6;
+ transition: 2s all;
+}

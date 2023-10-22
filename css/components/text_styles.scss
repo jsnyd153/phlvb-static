@@ -25,7 +25,7 @@
 
 h1 {
 	font-size: 116/16 * 1rem;
-	@include fluid_size_text($scale: 4.2657, $floor: 32/16);
+	@include fluid_size_text($scale: 4.25, $floor: 34/16);
 	font-family: $serif_font;
 	font-weight: 500;
 	line-height: 105%;
@@ -36,7 +36,7 @@ h1 {
 h2 {
 	font-family: $serif_font;
 	font-weight: 400;
-	@include fluid_size_text(1.839, $floor: 21.47/16);
+	@include fluid_size_text(1.5, $floor: 26/16);
 	line-height: 115%;
 
 	color: var(--brand-900);
@@ -45,20 +45,22 @@ h2 {
 h3 {
 	font-family: $serif_font;
 	font-weight: 400;
-	@include fluid_size_text($scale: 1.2073, $floor: 17.5352/16);
+	@include fluid_size_text($scale: 1, $floor: 20/16);
 	line-height: 125%;
 	color: var(--brand-900);
 }
 h4 {
 	font-family: $sans_font;
 	font-weight: 600;
-	@include fluid_size_text($scale: 0.8695, $floor: 14.2394/16);
+	@include fluid_size_text($scale: 0.875, $floor: 16/16);
 	line-height: 125%;
-
 	color: var(--brand-900);
+	&.serif {
+		font-family: $serif_font;
+	}
 }
 h5 {
-	@include fluid_size_text($scale: 0.6878, $floor: 12.2958/16);
+	@include fluid_size_text($scale: 0.6875, $floor: 14/16);
 	font-family: $sans_font;
 	font-weight: 600;
 	line-height: 120%;
@@ -72,10 +74,11 @@ h6 {
 	letter-spacing: 0.05em;
 	color: var(--brand-900);
 	text-transform: uppercase;
+	font-size: 1rem;
 }
 
 p {
-	@include fluid_size_text($scale: 0.384, $floor: 0.8309875);
+	@include fluid_size_text($scale: 0.375, $floor: 14/16);
 	font-family: $sans_font;
 	font-weight: 300;
 	line-height: 145%;
@@ -85,14 +88,14 @@ p {
 		font-weight: 600;
 	}
 	&.small {
-		@include fluid_size_text($scale: 0.3264, $floor: 0.706339375);
+		@include fluid_size_text($scale: 0.25, $floor: 12/16);
 	}
 
 	&.large {
-		@include fluid_size_text($scale: 0.48, $floor: 1.038734375);
+		@include fluid_size_text($scale: 0.525, $floor: 16/16);
 	}
 	&.jumbo {
-		@include fluid_size_text($scale: 0.612, $floor: 1.324386328);
+		@include fluid_size_text($scale: 0.735, $floor: 18/16);
 	}
 	a {
 		color: $brand-500;
@@ -137,4 +140,60 @@ p {
 	.is-#{nth($type, 1)} {
 		color: #{nth($type, 2)};
 	}
+}
+
+//repeat
+
+.h1 {
+	font-size: 116/16 * 1rem;
+	@include fluid_size_text($scale: 4.25, $floor: 34/16);
+	font-family: $serif_font;
+	font-weight: 500;
+	line-height: 105%;
+
+	color: var(--brand-900);
+}
+
+.h2 {
+	font-family: $serif_font;
+	font-weight: 400;
+	@include fluid_size_text(1.5, $floor: 26/16);
+	line-height: 115%;
+
+	color: var(--brand-900);
+}
+
+.h3 {
+	font-family: $serif_font;
+	font-weight: 400;
+	@include fluid_size_text($scale: 1, $floor: 20/16);
+	line-height: 125%;
+	color: var(--brand-900);
+}
+.h4 {
+	font-family: $sans_font;
+	font-weight: 600;
+	@include fluid_size_text($scale: 0.875, $floor: 16/16);
+	line-height: 125%;
+	color: var(--brand-900);
+	&.serif {
+		font-family: $serif_font;
+	}
+}
+.h5 {
+	@include fluid_size_text($scale: 0.6875, $floor: 14/16);
+	font-family: $sans_font;
+	font-weight: 600;
+	line-height: 120%;
+	color: var(--brand-900);
+}
+.h6 {
+	font-family: $sans_font-condensed;
+	font-style: italic;
+	font-weight: 900;
+	line-height: 120%;
+	letter-spacing: 0.05em;
+	color: var(--brand-900);
+	text-transform: uppercase;
+	font-size: 1rem;
 }

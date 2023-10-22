@@ -1,8 +1,5 @@
 .event_list--text_area {
  grid-column: 3/-3;
- display: flex;
- flex-direction: column;
- gap: var(--gap);
 }
 @media (max-width: 991px) {
  .event_list--text_area {
@@ -13,11 +10,8 @@
  grid-column: 2/-2;
 }
 .event_list--text_content {
- display: flex;
- flex-direction: column;
  gap: 0.625rem;
  justify-content: flex-start;
- align-items: flex-start;
 }
 .event_list--list {
  grid-column: 3/-3;

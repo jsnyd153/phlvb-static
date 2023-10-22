@@ -1,114 +1,87 @@
 @use "sass:color";
 @use "../abstracts" as *;
 
-/*css/blocks/grid_content.scss*/
+/*css/blocks/quote_slider.scss*/
 // Visual:
 // Dependancy: text_area, media_area
 
 .quote_slider-- {
-	&slider_area {
-		grid-column: 3/-3;
-		@include md {
-			grid-column: 2/-3;
-		}
-		@include sm {
-			grid-column: 3/-3;
-		}
-	}
-	&button-container {
-		grid-column: span 2/-3;
-		display: flex;
-		gap: 1rem;
-		justify-content: flex-end;
-		@include md {
-			grid-column: 2/-3;
-		}
+	&slider {
+		grid-column: 3 / -3;
+		margin-bottom: auto;
+		overflow: hidden;
 	}
 
-	&button {
-		padding: 10/16 * 1rem;
-		border-radius: 0.25rem;
-		background: $brand-100;
-		position: relative;
-		inset: auto;
-		height: auto;
-		&::after {
-			display: none;
+	&controls {
+		grid-column: 3/-3;
+		display: flex;
+		gap: 10/16 * 1rem;
+		justify-content: flex-end;
+	}
+	&button-next,
+	&button-prev {
+		display: flex;
+		padding: 0.66819rem;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.66819rem;
+		border-radius: 0.26725rem;
+		background: var(--brand-100);
+		border: 0;
+		transition: 0.3s all;
+
+		&:hover {
+			background: var(--brand-500);
 		}
 		svg {
-			// width: ;
-			path {
-				stroke: $brand-900;
-				stroke-width: 1.5;
+			* {
+				stroke: var(--brand-900);
+				stroke-width: 1.625;
 			}
 		}
 	}
-	&slide {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: var(--gap);
-		position: relative;
-		.text_area {
-			transition: 0.3s all;
 
-			box-sizing: border-box;
-			margin-left: calc((var(--gap) + var(--fr_unit) + var(--gap)) * -1);
-			margin-top: calc((var(--gap) + var(--fr_unit) + var(--gap)));
-			@include sm {
-				margin: 0;
-			}
+	&image_area {
+		position: absolute;
+		width: calc(var(--fr_unit) * 3);
+		height: calc(var(--fr_unit) * 3);
+		border-radius: 50%;
+		overflow: hidden;
+		top: 0;
+		left: var(--rp);
+		scale: 0;
+		//transition out timing
+		transition: 500ms all;
+
+		background: #76affe;
+		opacity: 0.3;
+
+		.swiper-slide-active & {
+			scale: 1;
+			//transition in timing
+			transition: 500ms 500ms all;
 		}
-
-		h3 {
-			display: inline-block;
-			overflow: hidden;
-			line-height: 135%;
-			span {
-				display: block;
-				width: 100%;
-				transition: all 400ms ease-in-out;
-				transform: translateY(100%);
-				opacity: 0;
-
-				@for $i from 1 through 10 {
-					&:nth-child(#{$i}) {
-						transition-delay: #{$i / 10}s;
-					}
-				}
-			}
+		img {
+			@include cover_obj;
+			opacity: 0.8;
 		}
 	}
-	&slide.swiper-slide-active {
-		transition: all 1000ms ease-in-out;
-		h3 {
-			span {
-				display: inline-block;
-				transition: all 1000ms ease-in-out;
-				transform: translateY(0%);
+	&text_area {
+		margin-top: var(--fr_unit);
+		display: grid;
+		@include inner_grid($c: 10);
+		.text_content {
+			grid-column: span 8 / -1;
+			translate: 0 100%;
+			opacity: 0;
+			//transition out timing
+			transition: 500ms all;
+
+			.swiper-slide-active & {
+				translate: 0 0;
 				opacity: 1;
-			}
-		}
-	}
-
-	&media_area {
-		@include sm {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 80/16 * 1rem;
-			translate: -50% -50%;
-		}
-		.media_content {
-			background: $brand-500;
-			border-radius: 50%;
-			opacity: 0.3;
-			transition: 0.3s all;
-
-			img {
-				transition: 0.3s all;
-				opacity: 0.5;
-				filter: grayscale(1);
+				//transition in timing
+				transition: 500ms 500ms all;
 			}
 		}
 	}

@@ -2,68 +2,46 @@
 /*css/components/text_styles.scss*/
 h1 {
  font-size: 7.25rem;
- font-size: calc(4.2657vw + 2rem);
+ font-size: clamp(3.12109375rem, 4.25vw + 2.125rem, 5.525rem);
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 500;
  line-height: 105%;
  color: var(--brand-900);
 }
-@media (min-width: 1440px) {
- h1 {
-  font-size: 5.83913rem;
- }
-}
 
 h2 {
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 400;
- font-size: calc(1.839vw + 1.341875rem);
+ font-size: clamp(1.9765625rem, 1.5vw + 1.625rem, 2.825rem);
  line-height: 115%;
  color: var(--brand-900);
-}
-@media (min-width: 1440px) {
- h2 {
-  font-size: 2.996975rem;
- }
 }
 
 h3 {
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 400;
- font-size: calc(1.2073vw + 1.09595rem);
+ font-size: clamp(1.484375rem, 1vw + 1.25rem, 2.05rem);
  line-height: 125%;
  color: var(--brand-900);
-}
-@media (min-width: 1440px) {
- h3 {
-  font-size: 2.18252rem;
- }
 }
 
 h4 {
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 600;
- font-size: calc(0.8695vw + 0.8899625rem);
+ font-size: clamp(1.205078125rem, 0.875vw + 1rem, 1.7rem);
  line-height: 125%;
  color: var(--brand-900);
 }
-@media (min-width: 1440px) {
- h4 {
-  font-size: 1.6725125rem;
- }
+h4.serif {
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
 }
 
 h5 {
- font-size: calc(0.6878vw + 0.7684875rem);
+ font-size: clamp(1.0361328125rem, 0.6875vw + 0.875rem, 1.425rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 600;
  line-height: 120%;
  color: var(--brand-900);
-}
-@media (min-width: 1440px) {
- h5 {
-  font-size: 1.3875075rem;
- }
 }
 
 h6 {
@@ -74,46 +52,27 @@ h6 {
  letter-spacing: 0.05em;
  color: var(--brand-900);
  text-transform: uppercase;
+ font-size: 1rem;
 }
 
 p {
- font-size: calc(0.384vw + 0.8309875rem);
+ font-size: clamp(0.962890625rem, 0.375vw + 0.875rem, 1.175rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 300;
  line-height: 145%;
  color: #213d85;
 }
-@media (min-width: 1440px) {
- p {
-  font-size: 1.1765875rem;
- }
-}
 p b {
  font-weight: 600;
 }
 p.small {
- font-size: calc(0.3264vw + 0.706339375rem);
-}
-@media (min-width: 1440px) {
- p.small {
-  font-size: 1.000099375rem;
- }
+ font-size: clamp(0.80859375rem, 0.25vw + 0.75rem, 0.95rem);
 }
 p.large {
- font-size: calc(0.48vw + 1.038734375rem);
-}
-@media (min-width: 1440px) {
- p.large {
-  font-size: 1.470734375rem;
- }
+ font-size: clamp(1.123046875rem, 0.525vw + 1rem, 1.42rem);
 }
 p.jumbo {
- font-size: calc(0.612vw + 1.324386328rem);
-}
-@media (min-width: 1440px) {
- p.jumbo {
-  font-size: 1.875186328rem;
- }
+ font-size: clamp(1.297265625rem, 0.735vw + 1.125rem, 1.713rem);
 }
 p a {
  color: #76affe;
@@ -279,4 +238,59 @@ p a.arrow:hover svg {
 
 .is-beach-100 {
  color: #ebe6cd;
+}
+
+.h1 {
+ font-size: 7.25rem;
+ font-size: clamp(3.12109375rem, 4.25vw + 2.125rem, 5.525rem);
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
+ font-weight: 500;
+ line-height: 105%;
+ color: var(--brand-900);
+}
+
+.h2 {
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
+ font-weight: 400;
+ font-size: clamp(1.9765625rem, 1.5vw + 1.625rem, 2.825rem);
+ line-height: 115%;
+ color: var(--brand-900);
+}
+
+.h3 {
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
+ font-weight: 400;
+ font-size: clamp(1.484375rem, 1vw + 1.25rem, 2.05rem);
+ line-height: 125%;
+ color: var(--brand-900);
+}
+
+.h4 {
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ font-weight: 600;
+ font-size: clamp(1.205078125rem, 0.875vw + 1rem, 1.7rem);
+ line-height: 125%;
+ color: var(--brand-900);
+}
+.h4.serif {
+ font-family: p22-mackinac-pro, Libre Baskerville, serif;
+}
+
+.h5 {
+ font-size: clamp(1.0361328125rem, 0.6875vw + 0.875rem, 1.425rem);
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ font-weight: 600;
+ line-height: 120%;
+ color: var(--brand-900);
+}
+
+.h6 {
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
+ font-style: italic;
+ font-weight: 900;
+ line-height: 120%;
+ letter-spacing: 0.05em;
+ color: var(--brand-900);
+ text-transform: uppercase;
+ font-size: 1rem;
 }

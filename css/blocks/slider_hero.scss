@@ -6,12 +6,33 @@
 // Visual:
 // Dependancy: swiper.js
 
+h1.emphasis {
+	font-family: $sans_font-condensed;
+	font-size: 10.04375rem;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 100%;
+	text-transform: uppercase;
+	font-family: trade-gothic-next-condensed, sans-serif;
+	font-weight: 800;
+	font-style: normal;
+}
+
 .slider_hero {
 	&-- {
 		&section {
 		}
 		&slider_area {
-			@include image_cover;
+			@include cover_obj;
+			overflow: hidden;
+			&::after {
+				@include psuedo_el;
+				background: black;
+				z-index: 1;
+				opacity: 0.5;
+				mix-blend-mode: multiply;
+				pointer-events: none;
+			}
 		}
 		&slide {
 			img {
@@ -21,24 +42,22 @@
 			}
 		}
 		&text_area {
-			grid-column: 2 / span 7;
+			grid-column: 2 / span 5;
 			position: relative;
 			z-index: 2;
-			padding: var(--fr_unit) 0;
-			margin: var(--rp) 0;
+			padding: var(--section_padding) 0;
+			// margin: var(--rp) 0;
 			h1 {
-				font-weight: 700;
+				color: #fff;
+			}
+			p {
 				color: var(--theme_color-50, #edf0f8);
 			}
 		}
 		&overlay {
 			pointer-events: none;
 			@include image_cover;
-			background: linear-gradient(
-					0deg,
-					rgba(0, 0, 0, 0.2) 0%,
-					rgba(0, 0, 0, 0.2) 100%
-				),
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
 				linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 28.13%);
 			mix-blend-mode: multiply;
 			z-index: 1;
@@ -67,12 +86,12 @@
 	} //--
 }
 
-.faux_mask {
-	@include image_cover;
-	background-color: var(--theme_color-500);
-	transition: 0.5s 0.5s all;
+// .faux_mask {
+// 	@include image_cover;
+// 	background-color: var(--theme_color-500);
+// 	transition: 0.5s 0.5s all;
 
-	.swiper-slide-active & {
-		transform: translateX(-100%);
-	}
-}
+// 	.swiper-slide-active & {
+// 		transform: translateX(-100%);
+// 	}
+// }

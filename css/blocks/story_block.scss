@@ -41,7 +41,8 @@
 			}
 		} //row
 
-		&media_area {
+		&media_area,
+		&text_area + &text_area:nth-child(2) {
 			//default distribution is text=7:image=5
 			//ratios labeled using base value of 12
 			//uses calc so it still works with only 10 columns
@@ -111,6 +112,13 @@
 				grid-column: 1/-1;
 				padding: 0;
 			}
+
+			.has-text-text & {
+				//replace selector when firefox adds :has support
+				// section:has(.text_area + .text_area) .text_area {
+
+				justify-content: flex-start;
+			}
 		} //text
 
 		// =====================[singlecolumn centered] =====================
@@ -149,6 +157,7 @@
 					justify-content: center;
 					align-items: center;
 					gap: 6/16 * 1rem;
+
 					.button-container {
 						justify-content: center;
 						align-items: center;

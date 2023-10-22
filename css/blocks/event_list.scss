@@ -11,9 +11,9 @@
 		}
 		&text_area {
 			grid-column: 3/-3;
-			display: flex;
-			flex-direction: column;
-			gap: var(--gap);
+			// display: flex;
+			// flex-direction: column;
+			// gap: var(--gap);
 			@include md {
 				grid-column: 2/-2;
 			}
@@ -22,11 +22,11 @@
 			}
 		}
 		&text_content {
-			display: flex;
-			flex-direction: column;
+			// display: flex;
+			// flex-direction: column;
 			gap: 10/16 * 1rem;
 			justify-content: flex-start;
-			align-items: flex-start;
+			// align-items: flex-start;
 		}
 		&list {
 			grid-column: 3/-3;

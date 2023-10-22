@@ -4,11 +4,10 @@
 @use "_fonts" as *;
 
 @mixin fluid_size_text($scale: 2.5, $floor: 38/16) {
-	$cap: $scale * 1440 / 100 /16 * 1;
-	font-size: calc($scale * 1vw + $floor * 1rem);
-	@include xl() {
-		font-size: calc($cap * 1rem + $floor * 1rem);
-	}
+	$max: #{$scale * 1280rem / 1600 + $floor * 1rem};
+	$min: #{$scale * 375rem / 1600 + $floor * 1rem};
+
+	font-size: clamp($min, calc($scale * 1vw + $floor * 1rem), $max);
 }
 
 @mixin fluid_line-height($scale: 2.5, $floor: 38/16) {

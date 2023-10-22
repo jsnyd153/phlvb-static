@@ -5,7 +5,7 @@
  grid-column: var(--start)/span var(--span);
  display: flex;
  flex-direction: column;
- gap: 2rem;
+ gap: calc(var(--gap) * 1.5);
 }
 .inset .basic_content--section article {
  --span: 8;

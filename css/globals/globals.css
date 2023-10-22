@@ -11,23 +11,28 @@ body {
  --fr_unit: 5vw;
  --rp: calc(var(--fr_unit) * 0.5);
  --corner: 0.25rem;
+ --section_padding: 3.75rem;
+ --text_content_gap: 0.75rem;
 }
 @media (max-width: 991px) {
  :root {
-  --gap: 1.25rem;
+  --gap: 1.5rem;
   --rp: calc(var(--fr_unit) * 0.75);
+  --section_padding: 3.4375rem;
  }
 }
 @media (max-width: 767px) {
  :root {
-  --gap: 1rem;
+  --gap: 1.25rem;
   --rp: calc(var(--fr_unit) * 1);
+  --section_padding: 3.125rem;
  }
 }
 @media (max-width: 576px) {
  :root {
-  --gap: 0.75rem;
+  --gap: 1rem;
   --rp: calc(var(--fr_unit) * 1.5);
+  --section_padding: 2.8125rem;
  }
 }
 

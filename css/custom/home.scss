@@ -7,6 +7,8 @@
 		padding: 0;
 		grid-row-gap: 0;
 		overflow: hidden;
+		--bottom_break: #{90/16 * 1rem};
+		padding-bottom: var(--bottom_break);
 	}
 	&overlay {
 		opacity: 0.5;
@@ -68,7 +70,7 @@
 			opacity: 0.5;
 			border-radius: 0.25rem;
 			height: 0.25rem;
-			&.active {
+			&.swiper-pagination-bullet-active {
 				background-color: $brand-500;
 				opacity: 1;
 				width: 80/16 * 1rem;
@@ -78,6 +80,7 @@
 
 	&media_area {
 		@include cover_obj;
+		height: calc(100% - var(--bottom_break));
 	}
 	&layer_1 {
 		@include cover_obj;
@@ -98,12 +101,12 @@
 	$overflow-size: 10%;
 	&layer_2 {
 		z-index: 2;
-		--initial_rotation: 35deg;
+		// --initial_rotation: 0deg;
 		height: 100% + $overflow-size;
 		aspect-ratio: 1;
 		// transform: translate(0%, 0%) rotate(35deg);
 		translate: 10% 5%;
-		rotate: var(--initial_rotation);
+		// rotate: var(--initial_rotation);
 		position: absolute;
 		bottom: 0;
 		right: 0;
@@ -143,27 +146,38 @@
 		img {
 			min-height: 100%;
 			object-fit: cover;
-			rotate: calc(var(--initial_rotation) * -1);
+			// rotate: calc(var(--initial_rotation) * -1);
 		}
 	}
 } //--
 
 .home_hero--layer_1 {
 	@include cover_obj;
+	.swiper-slide-inner {
+		height: 100%;
+	}
 	img {
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 .home_hero--layer_2 {
 	img {
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
 	}
 	.swiper-slide {
-		transition: 0.3s all;
+		transition: 0.5s all;
 	}
 	.swiper-slide-next {
-		translate: 50% 0;
+		translate: 30% 0;
+		// rotate: 35deg;
+		scale: 1.5;
+	}
+	.swiper-slide-active {
+		scale: 1.1;
 	}
 
 	.swiper-slide-inner {
