@@ -45,8 +45,8 @@ window.fsAttributes.push([
     const categories = collectCategories(products);
 
     // Create the new filters and append the to the parent wrapper
-    for (const category of categories) {
-      const newFilter = createFilter(category, filterTemplateElement);
+    for (const start of categories) {
+      const newFilter = createFilter(start, filterTemplateElement);
       if (!newFilter) continue;
 
       filtersWrapper.append(newFilter);
@@ -63,7 +63,7 @@ window.fsAttributes.push([
  */
 const fetchProducts = async () => {
   try {
-    const response = await fetch('https://fakestoreapi.com/products');
+    const response = await fetch('https://osapi.opensports.ca/app/posts/listFiltered?groupID=43');
     const data: Product[] = await response.json();
 
     return data;
@@ -84,16 +84,16 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   const newItem = templateElement.cloneNode(true) as HTMLDivElement;
 
   // Query inner elements
-  const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
+  // const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
-  const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
-  const description = newItem.querySelector<HTMLParagraphElement>('[data-element="test"]');
+  const start = newItem.querySelector<HTMLDivElement>('[data-element="start"]');
+  const end = newItem.querySelector<HTMLParagraphElement>('[data-element="end"]');
 
   // Populate inner elements
-  if (image) image.src = product.image;
+  // if (image) image.src = product.image;
   if (title) title.textContent = product.title;
-  if (category) category.textContent = product.category;
-  if (description) description.textContent = product.description;
+  if (start) start.textContent = product.start;
+  if (end) end.textContent = product.end;
 
   return newItem;
 };
@@ -105,10 +105,10 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
  * @returns An array of {@link Product} categories.
  */
 const collectCategories = (products: Product[]) => {
-  const categories: Set<Product['category']> = new Set();
+  const categories: Set<Product['start']> = new Set();
 
-  for (const { category } of products) {
-    categories.add(category);
+  for (const { start } of products) {
+    categories.add(start);
   }
 
   return [...categories];
@@ -116,12 +116,12 @@ const collectCategories = (products: Product[]) => {
 
 /**
  * Creates a new radio filter from the template element.
- * @param category The filter value.
+ * @param start The filter value.
  * @param templateElement The template element.
  *
- * @returns A new category radio filter.
+ * @returns A new start radio filter.
  */
-const createFilter = (category: Product['category'], templateElement: HTMLLabelElement) => {
+const createFilter = (start: Product['start'], templateElement: HTMLLabelElement) => {
   // Clone the template element
   const newFilter = templateElement.cloneNode(true) as HTMLLabelElement;
 
@@ -132,8 +132,8 @@ const createFilter = (category: Product['category'], templateElement: HTMLLabelE
   if (!label || !radio) return;
 
   // Populate inner elements
-  label.textContent = category;
-  radio.value = category;
+  label.textContent = start;
+  radio.value = start;
 
   return newFilter;
 };

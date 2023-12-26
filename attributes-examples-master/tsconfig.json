@@ -11,7 +11,7 @@
     "strict": true /* Enable all strict type-checking options. */,
 
     /* Additional Checks */
-    "importsNotUsedAsValues": "error",
+    // "importsNotUsedAsValues": "error",
 
     /* Module Resolution Options */
     "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
