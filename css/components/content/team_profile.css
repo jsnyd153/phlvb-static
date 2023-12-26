@@ -41,10 +41,13 @@
 .team_profile--text_content {
  display: flex;
  flex-direction: column;
+ gap: 0rem;
 }
 .team_profile--name {
  font-weight: 600;
  color: #192d62;
+ margin-bottom: 0.25rem;
+ line-height: 125%;
 }
 .team_profile--event {
  color: var(--theme_color-500);
@@ -52,4 +55,8 @@
  font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
  font-style: italic;
  text-transform: uppercase;
+}
+
+.team_profile--list_pagination {
+ grid-column: 1/-1;
 }

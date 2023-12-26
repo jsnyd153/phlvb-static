@@ -23,7 +23,7 @@
 			font-weight: $sans_font;
 			text-transform: uppercase;
 			display: flex;
-			gap: 10/16 * 1rem;
+			gap: 0;
 			align-items: justify;
 			align-items: center;
 			@include sm {
@@ -32,9 +32,16 @@
 			.date {
 				font-weight: 500;
 				display: flex;
-				gap: inherit;
 				border-right: 1px solid currentColor;
-				padding-right: 10/16 * 1rem;
+				padding-right: 0.625em;
+				margin-right: 0.625em;
+				gap: inherit;
+			}
+			.type-indicator.dot {
+				margin-right: 0.625em;
+			}
+			.comma {
+				margin-right: 0.25em;
 			}
 		}
 

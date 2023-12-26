@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*css/components/content/accordian.scss*/
-/*css/components/content/accordian.scss*/
 .accordion {
  display: flex;
  flex-direction: column;
@@ -19,6 +18,7 @@
  margin: 0;
  background: transparent;
  text-align: left;
+ width: 100%;
 }
 .accordion--trigger h4 {
  display: flex;
@@ -38,10 +38,10 @@
  transition: 0.5s padding;
  gap: 1rem;
 }
-[aria-expanded=true] + .accordion--content {
+.accordion--content[aria-expanded=true] {
  grid-template-rows: 1fr;
 }
-[aria-expanded=true] + .accordion--content > .text_content {
+.accordion--content[aria-expanded=true] > .text_content {
  padding-bottom: 0.5rem;
 }
 .accordion--icon::after {

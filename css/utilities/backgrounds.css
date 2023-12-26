@@ -48,34 +48,14 @@
  --background_color: #1c326f;
 }
 
-.has-brand-800t-background {
- --background_color: rgba(29, 52, 114, 0.8);
-}
-.has-brand-800t-background > * {
- --background_color: rgba(29, 52, 114, 0.8);
-}
-.has-brand-800t-background.background_fill {
- --background_color: rgba(29, 52, 114, 0.8);
-}
-
 .has-brand-800-background {
- --background_color: #1c326f;
+ --background_color: #213d85;
 }
 .has-brand-800-background > * {
- --background_color: #1c326f;
+ --background_color: #213d85;
 }
 .has-brand-800-background.background_fill {
- --background_color: #1c326f;
-}
-
-.has-brand-800t-background {
- --background_color: rgba(33, 60, 131, 0.8);
-}
-.has-brand-800t-background > * {
- --background_color: rgba(33, 60, 131, 0.8);
-}
-.has-brand-800t-background.background_fill {
- --background_color: rgba(33, 60, 131, 0.8);
+ --background_color: #213d85;
 }
 
 .has-brand-500-background {
@@ -128,16 +108,6 @@
  --background_color: #662e1a;
 }
 
-.has-indoor-800t-background {
- --background_color: rgba(105, 47, 27, 0.8);
-}
-.has-indoor-800t-background > * {
- --background_color: rgba(105, 47, 27, 0.8);
-}
-.has-indoor-800t-background.background_fill {
- --background_color: rgba(105, 47, 27, 0.8);
-}
-
 .has-indoor-800-background {
  --background_color: #70321d;
 }
@@ -146,16 +116,6 @@
 }
 .has-indoor-800-background.background_fill {
  --background_color: #70321d;
-}
-
-.has-indoor-800t-background {
- --background_color: rgba(121, 55, 31, 0.8);
-}
-.has-indoor-800t-background > * {
- --background_color: rgba(121, 55, 31, 0.8);
-}
-.has-indoor-800t-background.background_fill {
- --background_color: rgba(121, 55, 31, 0.8);
 }
 
 .has-indoor-500-background {
@@ -208,16 +168,6 @@
  --background_color: #456010;
 }
 
-.has-grass-800t-background {
- --background_color: rgba(72, 99, 17, 0.8);
-}
-.has-grass-800t-background > * {
- --background_color: rgba(72, 99, 17, 0.8);
-}
-.has-grass-800t-background.background_fill {
- --background_color: rgba(72, 99, 17, 0.8);
-}
-
 .has-grass-800-background {
  --background_color: #4f6e13;
 }
@@ -226,16 +176,6 @@
 }
 .has-grass-800-background.background_fill {
  --background_color: #4f6e13;
-}
-
-.has-grass-800t-background {
- --background_color: rgba(84, 117, 20, 0.8);
-}
-.has-grass-800t-background > * {
- --background_color: rgba(84, 117, 20, 0.8);
-}
-.has-grass-800t-background.background_fill {
- --background_color: rgba(84, 117, 20, 0.8);
 }
 
 .has-grass-500-background {
@@ -288,16 +228,6 @@
  --background_color: #6f611c;
 }
 
-.has-beach-800t-background {
- --background_color: rgba(114, 100, 29, 0.8);
-}
-.has-beach-800t-background > * {
- --background_color: rgba(114, 100, 29, 0.8);
-}
-.has-beach-800t-background.background_fill {
- --background_color: rgba(114, 100, 29, 0.8);
-}
-
 .has-beach-500-background {
  --background_color: #f9d452;
 }
@@ -306,16 +236,6 @@
 }
 .has-beach-500-background.background_fill {
  --background_color: #f9d452;
-}
-
-.has-beach-300t-background {
- --background_color: rgba(223, 215, 176, 0.8);
-}
-.has-beach-300t-background > * {
- --background_color: rgba(223, 215, 176, 0.8);
-}
-.has-beach-300t-background.background_fill {
- --background_color: rgba(223, 215, 176, 0.8);
 }
 
 .has-beach-300-background {
@@ -488,136 +408,4 @@
 }
 .overlay-gradient-from_right {
  --direction: 270deg;
-}
-.overlay-gradient-brand-900 {
- --color_start: #192d62;
- --color_end: rgba(25, 45, 98, 0);
-}
-.overlay-gradient-brand-800 {
- --color_start: #1c326f;
- --color_end: rgba(28, 50, 111, 0);
-}
-.overlay-gradient-brand-800t {
- --color_start: rgba(29, 52, 114, 0.8);
- --color_end: rgba(29, 52, 114, 0);
-}
-.overlay-gradient-brand-800 {
- --color_start: #1c326f;
- --color_end: rgba(28, 50, 111, 0);
-}
-.overlay-gradient-brand-800t {
- --color_start: rgba(33, 60, 131, 0.8);
- --color_end: rgba(33, 60, 131, 0);
-}
-.overlay-gradient-brand-500 {
- --color_start: #76affe;
- --color_end: rgba(118, 175, 254, 0);
-}
-.overlay-gradient-brand-200 {
- --color_start: #a9bfeb;
- --color_end: rgba(169, 191, 235, 0);
-}
-.overlay-gradient-brand-100 {
- --color_start: #bccceb;
- --color_end: rgba(188, 204, 235, 0);
-}
-.overlay-gradient-indoor-900 {
- --color_start: #592817;
- --color_end: rgba(89, 40, 23, 0);
-}
-.overlay-gradient-indoor-800 {
- --color_start: #662e1a;
- --color_end: rgba(102, 46, 26, 0);
-}
-.overlay-gradient-indoor-800t {
- --color_start: rgba(105, 47, 27, 0.8);
- --color_end: rgba(105, 47, 27, 0);
-}
-.overlay-gradient-indoor-800 {
- --color_start: #70321d;
- --color_end: rgba(112, 50, 29, 0);
-}
-.overlay-gradient-indoor-800t {
- --color_start: rgba(121, 55, 31, 0.8);
- --color_end: rgba(121, 55, 31, 0);
-}
-.overlay-gradient-indoor-500 {
- --color_start: #f16122;
- --color_end: rgba(241, 97, 34, 0);
-}
-.overlay-gradient-indoor-200 {
- --color_start: #f0c4b5;
- --color_end: rgba(240, 196, 181, 0);
-}
-.overlay-gradient-indoor-100 {
- --color_start: #ebd5cd;
- --color_end: rgba(235, 213, 205, 0);
-}
-.overlay-gradient-grass-900 {
- --color_start: #3b520e;
- --color_end: rgba(59, 82, 14, 0);
-}
-.overlay-gradient-grass-800 {
- --color_start: #456010;
- --color_end: rgba(69, 96, 16, 0);
-}
-.overlay-gradient-grass-800t {
- --color_start: rgba(72, 99, 17, 0.8);
- --color_end: rgba(72, 99, 17, 0);
-}
-.overlay-gradient-grass-800 {
- --color_start: #4f6e13;
- --color_end: rgba(79, 110, 19, 0);
-}
-.overlay-gradient-grass-800t {
- --color_start: rgba(84, 117, 20, 0.8);
- --color_end: rgba(84, 117, 20, 0);
-}
-.overlay-gradient-grass-500 {
- --color_start: #94d13d;
- --color_end: rgba(148, 209, 61, 0);
-}
-.overlay-gradient-grass-200 {
- --color_start: #d1f095;
- --color_end: rgba(209, 240, 149, 0);
-}
-.overlay-gradient-grass-100 {
- --color_start: #e2f5ba;
- --color_end: rgba(226, 245, 186, 0);
-}
-.overlay-gradient-beach-900 {
- --color_start: #625619;
- --color_end: rgba(98, 86, 25, 0);
-}
-.overlay-gradient-beach-800 {
- --color_start: #6f611c;
- --color_end: rgba(111, 97, 28, 0);
-}
-.overlay-gradient-beach-800t {
- --color_start: rgba(114, 100, 29, 0.8);
- --color_end: rgba(114, 100, 29, 0);
-}
-.overlay-gradient-beach-500 {
- --color_start: #f9d452;
- --color_end: rgba(249, 212, 82, 0);
-}
-.overlay-gradient-beach-300t {
- --color_start: rgba(223, 215, 176, 0.8);
- --color_end: rgba(223, 215, 176, 0);
-}
-.overlay-gradient-beach-300 {
- --color_start: #f0e6b5;
- --color_end: rgba(240, 230, 181, 0);
-}
-.overlay-gradient-beach-200t {
- --color_start: rgba(229, 223, 190, 0.8);
- --color_end: rgba(229, 223, 190, 0);
-}
-.overlay-gradient-beach-200 {
- --color_start: #f0e6b5;
- --color_end: rgba(240, 230, 181, 0);
-}
-.overlay-gradient-beach-100 {
- --color_start: #ebe6cd;
- --color_end: rgba(235, 230, 205, 0);
 }

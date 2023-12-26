@@ -34,6 +34,7 @@
 		<link rel="stylesheet" href="../css/blocks/_index.css" />
 		<link rel="stylesheet" href="../css/blocks/navigation.css" />
 		<link rel="stylesheet" href="../css/blocks/footer.css" />
+		<link rel="stylesheet" href="../css/blocks/image_slider.css" />
 
 		<link rel="stylesheet" href="../css/utilities/items_per_row.css" />
 		<link rel="stylesheet" href="../css/custom/grass.css" />
@@ -95,7 +96,7 @@
 			<section class="story_block--section">
 				<div class="story_block--row" distribute-columns="1:1">
 					<div class="story_block--media_area media_area">
-						<figure class="media_content image_slider">
+						<figure class="media_content image_slider mask-reveal" slider-data="first">
 							<div class="image_slider--slider_area">
 								<div class="image_slider--slider swiper-wrapper">
 									<article class="image_slider--slide swiper-slide">
@@ -116,7 +117,7 @@
 								</div>
 							</div>
 						</figure>
-						<div class="image_slider--pagination swiper-pagination"></div>
+						<div class="image_slider--pagination swiper-pagination" slider-data="first"></div>
 					</div>
 					<div class="story_block--text_area text_area">
 						<div class="text_content">
@@ -144,9 +145,28 @@
 						</div>
 					</div>
 					<div class="story_block--media_area media_area">
-						<figure class="media_content mask-reveal">
-							<img src="../assets/media/swingfest-womens-doubles-grass.png" alt="" />
+						<figure class="media_content image_slider mask-reveal" slider-data="second">
+							<div class="image_slider--slider_area">
+								<div class="image_slider--slider swiper-wrapper">
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/doubles-dairy-grass-alt-hero-2.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/smei-candid-outdoor-group.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/swingfest-quads-attack-grass.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/doubles-dairy-grass-alt-hero-2.png" alt="" />
+									</article>
+									<article class="image_slider--slide swiper-slide">
+										<img src="../assets/media/smei-candid-outdoor-group.png" alt="" />
+									</article>
+								</div>
+							</div>
 						</figure>
+						<div class="image_slider--pagination swiper-pagination" slider-data="second"></div>
 					</div>
 				</div>
 			</section>
@@ -185,13 +205,7 @@
 					</div>
 					<div class="offset_block--text_content text_content">
 						<p>
-							<a href="../article/grass_rules" class="arrow"
-								>Read the full rules
-								<svg viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M0 6H17.075" class="stroke" />
-									<path d="M11.3828 1L17.0745 6L11.3828 11" class="stroke" />
-								</svg>
-							</a>
+							<a href="../article/grass_rules" class="arrow">Read the full rules </a>
 						</p>
 					</div>
 				</div>
@@ -201,6 +215,10 @@
 				<div class="event_list--text_area text_area">
 					<div class="text_content">
 						<h2>Upcoming Events</h2>
+						<p>
+							Grass events are dependent on weather. Our organizers will usually run events whenever
+							we have nice weather and sunlight. The season usually runs between April and October.
+						</p>
 					</div>
 				</div>
 				<div class="event_list--list">
@@ -247,6 +265,7 @@
 				</div>
 				<div class="event_list--list">
 					<img src="../assets/media/optx-ball.png" alt="" class="" id="optix-grass-2" />
+
 					<a href="#opensports" class="card tournament_card" data-copies="5">
 						<div class="tournament_card--date">
 							<span class="type-indicator dot"></span>

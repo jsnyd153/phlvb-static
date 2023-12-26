@@ -12,6 +12,7 @@
 .media_area {
 	@include f-center;
 	position: relative;
+	flex-direction: column;
 }
 .media_content {
 	border-radius: var(--corner);
@@ -25,6 +26,9 @@
 		display: block;
 	}
 
+	&.inset {
+		padding: var(--gap);
+	}
 	&.cover {
 		--ratio: 9/16;
 		padding-top: calc(var(--ratio) * 100%);
@@ -39,5 +43,6 @@
 		background-color: $brand-800;
 		height: 105%;
 		width: 105%;
+		z-index: 1;
 	}
 }

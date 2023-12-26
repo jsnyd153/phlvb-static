@@ -6,7 +6,7 @@
 // Dependancy: none
 
 //================================================
-/*css/components/cards/icon_card.scss*/
+/*css/components/cards/image_card.scss*/
 //================================================
 
 // &grid_area {
@@ -61,10 +61,13 @@
 			align-items: center;
 			justify-content: center;
 			position: relative;
-			min-height: 500px;
+			min-height: 500/16 * 1rem;
 			container-type: inline-size;
-			max-width: 400px;
+			max-width: 400/16 * 1rem;
 			margin: 0 auto;
+			@include sm {
+				min-height: 300/16 * 1rem;
+			}
 		}
 		&text_content {
 			display: flex;
@@ -97,22 +100,36 @@
 			transition: 0.3s all;
 			align-items: center;
 			flex-direction: column;
-			font-family: "Trade Gothic Next LT Pro";
-			font-style: italic;
-			font-weight: 800;
-			text-align: center;
-			letter-spacing: 0.05em;
-			text-transform: uppercase;
-
-			font-size: 11cqi;
-
-			span {
-				display: inline-block;
-				margin-top: 0.25em;
-			}
-
 			flex-grow: 1;
 			color: #fff;
+			font-size: 11cqi;
+			width: 100%;
+
+			h3 {
+				display: inline-block;
+				margin-top: 0.25em;
+				font-family: "Trade Gothic Next LT Pro";
+				font-style: italic;
+				font-weight: 800;
+				text-align: center;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				font-size: inherit;
+				color: inherit;
+				position: relative;
+				&::after {
+					display: block;
+					content: "";
+					width: 0;
+					height: 0.075em;
+					color: inherit;
+					background-color: currentColor;
+					position: absolute;
+					left: 50%;
+					translate: -50% 0;
+					transition: 0.3s all;
+				}
+			}
 		}
 		&icon {
 			width: 1.5em;
@@ -144,6 +161,11 @@ a {
 		.image_card--text_area {
 			scale: 1.1;
 			transition: 1s all;
+			h3 {
+				&:after {
+					width: 100%;
+				}
+			}
 		}
 		.image_card--media_area {
 			img {

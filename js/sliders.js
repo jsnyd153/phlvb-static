@@ -98,10 +98,51 @@ $(".slider_hero--section").each(function () {
 	});
 });
 
-$(".image_slider").each(function () {
+// $(".image_slider").each(function () {
+// 	var $Speed = 1000;
+// 	var $Timer = 5000;
+// 	var sliderData = $(this).attr("slider-data");
+
+// 	var imageSwiper = new Swiper(".image_slider--slider_area", {
+// 		mousewheel: {
+// 			forceToAxis: true,
+// 		},
+// 		speed: $Speed,
+// 		autoplay: {
+// 			delay: $Timer,
+// 		},
+// 		loop: true, // Not recommended to enable!!!
+// 		longSwipesRatio: 0.01,
+// 		followFinger: false,
+// 		grabCursor: true,
+// 		watchSlidesProgress: true,
+// 		// parallax: true,
+// 		lazy: {
+// 			loadPrevNext: true,
+// 		},
+// 		hashNavigation: {
+// 			watchState: true,
+// 		},
+// 		pagination: {
+// 			el: `[slider-data="` + sliderData + `"].swiper-pagination`,
+// 			clickable: true,
+// 		},
+// 	});
+// });
+
+$(".image_slider").each(function (index, element) {
+	var $this = $(this);
 	var $Speed = 1000;
 	var $Timer = 5000;
-	var quoteSwiper = new Swiper(".image_slider--slider_area", {
+
+	//append index value to to elements so that multiple instances of the image slider don't interfere with each other
+	$this.find(".image_slider--slider_area").addClass("slider_area-" + index);
+	$this
+		.parents(".media_area")
+		.find(".swiper-pagination")
+		.addClass("swiper-pagination-" + index);
+
+	var swiper = new Swiper(".slider_area-" + index, {
 		mousewheel: {
 			forceToAxis: true,
 		},
@@ -109,22 +150,23 @@ $(".image_slider").each(function () {
 		autoplay: {
 			delay: $Timer,
 		},
-		loop: true, // Not recommended to enable!!!
+		loop: true,
 		longSwipesRatio: 0.01,
 		followFinger: false,
 		grabCursor: true,
 		watchSlidesProgress: true,
-		// parallax: true,
 		lazy: {
 			loadPrevNext: true,
 		},
-		navigation: {
-			nextEl: ".quote_slider--button-next",
-			prevEl: ".quote_slider--button-prev",
-		},
 		pagination: {
-			el: ".swiper-pagination",
+			el: ".swiper-pagination-" + index,
 			clickable: true,
 		},
 	});
+});
+
+$("a.arrow").each(function () {
+	const arrowSVG =
+		'<svg viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6H17.075" class="stroke" /><path d="M11.3828 1L17.0745 6L11.3828 11" class="stroke" /></svg>';
+	$(this).append(arrowSVG);
 });

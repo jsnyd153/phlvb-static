@@ -43,21 +43,16 @@
 			grid-template-columns: repeat(var(--items_per_row), minmax(0, 1fr));
 
 			&.auto_grid {
-				grid-template-columns: repeat(auto-fit, minmax(var(--minsize), 1fr));
+				grid-template-columns: repeat(auto-fit, minmax(var(--min-card-width), 1fr));
 			}
 
 			&.arrange-min {
 				//set min width for card before stacking
 				//https://blog.logrocket.com/flexible-layouts-without-media-queries/
 				--min-card-width: 15rem;
-				--preferred-value: (
-						(var(--min-card-width) * var(--items_per_row) - var(--gap) * 2) -
-							100%
-					) * 999;
-				grid-template-columns: repeat(
-					auto-fit,
-					minmax(min(var(--preferred-value), 100%), 1fr)
-				);
+				--preferred-value: ((var(--min-card-width) * var(--items_per_row) - var(--gap) * 2) - 100%) *
+					999;
+				grid-template-columns: repeat(auto-fit, minmax(min(var(--preferred-value), 100%), 1fr));
 			}
 		}
 
@@ -83,9 +78,7 @@
 				> * {
 					min-width: auto;
 					flex: 0 1 auto;
-					--distributed_gap: calc(
-						var(--gap) * (var(--items_per_row) - 1) / var(--items_per_row)
-					);
+					--distributed_gap: calc(var(--gap) * (var(--items_per_row) - 1) / var(--items_per_row));
 					width: calc(100% / var(--items_per_row) - var(--distributed_gap));
 				}
 			}

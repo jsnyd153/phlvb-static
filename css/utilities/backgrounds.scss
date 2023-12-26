@@ -67,11 +67,7 @@
 	--color_end: #{rgba($brand-900, 0)};
 	--direction: 0deg;
 
-	background: linear-gradient(
-		var(--direction),
-		var(--color_start) 10%,
-		var(--color_end) 90%
-	);
+	background: linear-gradient(var(--direction), var(--color_start) 10%, var(--color_end) 90%);
 
 	&-from_bottom {
 		//default values
@@ -89,10 +85,10 @@
 		--direction: 270deg;
 	}
 
-	@each $type in $colors_full {
-		&-#{nth($type, 1)} {
-			--color_start: #{nth($type, 2)};
-			--color_end: #{rgba(nth($type, 2), 0)};
-		}
-	}
+	// @each $type in $colors_full {
+	// 	&-#{nth($type, 1)} {
+	// 		--color_start: #{nth($type, 2)};
+	// 		--color_end: #{rgba(nth($type, 2), 0)};
+	// 	}
+	// }
 }

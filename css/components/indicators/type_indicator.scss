@@ -15,34 +15,6 @@
 //================================================
 
 .type-indicator {
-	&[type="grass"],
-	[type="grass"] & {
-		--_theme_color-500: #{$grass-500};
-		--_theme_color-200: #{$grass-200};
-	}
-
-	&[type="indoor"],
-	[type="indoor"] & {
-		--_theme_color-500: #{$indoor-500};
-		--_theme_color-200: #{$indoor-200};
-	}
-
-	&[type="beach"],
-	[type="beach"] & {
-		--_theme_color-500: #{$beach-500};
-		--_theme_color-200: #{$beach-200};
-	}
-
-	&[type="clinic"],
-	[type="clinic"] & {
-		--_theme_color-500: #{$brand-500};
-		--_theme_color-200: #{$brand-200};
-	}
-	&[type="sitting"],
-	[type="sitting"] & {
-		--_theme_color-500: #{$brand-500};
-		--_theme_color-200: #{$brand-200};
-	}
 }
 
 .type-indicator.text {

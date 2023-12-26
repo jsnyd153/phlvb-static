@@ -10,49 +10,68 @@
 //================================================
 
 //
-.locations--list {
-	li {
-	}
-	i {
-		color: var(--theme_color-900);
-		border-radius: 0.25rem;
-		display: none;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		line-height: 200%;
-		padding: 0/16 * 1rem 10/16 * 1rem;
-		gap: 6/16 * 1rem;
-		font-size: 11/16 * 1rem;
-		font-weight: 500;
-	}
-}
+.location_list {
+	&-- {
+		&wrapper {
+			width: 100%;
+			max-width: 800/16 * 1rem;
+		}
+		&list {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+			column-gap: var(--gap);
+			row-gap: 0.875rem;
+			width: 100%;
+		}
+		&item {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			color: var(--theme_color-900);
+			&::before {
+				content: "";
+				display: block;
+				border: 0.125em solid currentColor;
+				border-radius: 50%;
+				height: 0.5em;
+				width: 0.5em;
+				flex-shrink: 0;
+				margin-top: 0.25em;
+			}
+		}
+		&indicator {
+			color: var(--theme_color-900);
+			border-radius: 0.25rem;
+			// display: none;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			line-height: 200%;
+			padding: 0/16 * 1rem 10/16 * 1rem 3/16 * 1rem 10/16 * 1rem;
+			gap: 6/16 * 1rem;
+			font-size: 11/16 * 1rem;
+			font-weight: 500;
+			text-transform: capitalize;
 
-[data-indicator="grass"] {
-	&:after {
-		content: "Grass";
-	}
-	background: $grass-500;
-}
-[data-indicator="indoor"] {
-	&:after {
-		content: "Indoor";
-	}
-	background: $indoor-500;
-}
-[data-indicator="beach"] {
-	&:after {
-		content: "Beach";
-	}
-	background: $beach-500;
-}
+			background-color: var(--theme_color-500);
 
-[location-data~="grass"] i[data-indicator="grass"] {
-	display: flex;
-}
-[location-data~="indoor"] i[data-indicator="indoor"] {
-	display: flex;
-}
-[location-data~="beach"] i[data-indicator="beach"] {
-	display: flex;
+			a:hover & {
+				background-color: var(--theme_color-900);
+				color: var(--theme_color-200);
+			}
+
+			&.grass,
+			[event-type="grass"] & {
+				background: $grass-500;
+			}
+			&.indoor,
+			[event-type="indoor"] & {
+				background: $indoor-500;
+			}
+			&.beach,
+			[event-type="beach"] & {
+				background: $beach-500;
+			}
+		}
+	}
 }

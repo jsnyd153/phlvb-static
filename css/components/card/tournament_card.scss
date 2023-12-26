@@ -49,20 +49,37 @@
 				font-weight: 600;
 			}
 		}
+		&host {
+			font-family: $sans_font-condensed;
+			font-style: italic;
+			font-weight: 800;
+			font-size: 14px;
+			line-height: 135%;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+
+			.host_name {
+				color: var(--_theme_color-500);
+				transition: 0.3s all;
+				a:hover & {
+					color: var(--brand-900);
+				}
+			}
+		}
 
 		&body {
 			p {
 				font-size: 15/16 * 1rem;
 			}
-			.host {
-				font-weight: 600;
-				text-decoration: underline;
-				transition: 0.5s color;
-				color: var(--theme_color-100);
-				a:hover & {
-					color: var(--theme_color-900);
-				}
-			}
+			// .host {
+			// 	font-weight: 600;
+			// 	text-decoration: underline;
+			// 	transition: 0.5s color;
+			// 	color: var(--theme_color-100);
+			// 	a:hover & {
+			// 		color: var(--theme_color-900);
+			// 	}
+			// }
 			@include sm {
 				grid-column: 1;
 			}

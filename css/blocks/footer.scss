@@ -31,9 +31,13 @@ footer {
 		&branding {
 			width: 200/16 * 1rem;
 		}
+		&logo {
+			width: 100%;
+			max-width: 200/16 * 1rem;
+		}
 		&navigation {
 			flex-grow: 1;
-			grid-column: 5 / span 8;
+			grid-column: 6 / span 7;
 			max-width: 800/16 * 1rem;
 			display: grid;
 			gap: 1.5rem;
@@ -94,6 +98,13 @@ footer {
 			a {
 				color: inherit;
 				text-decoration: none;
+				font-family: $sans_font;
+				font-weight: 400;
+				font-size: 14/16 * 1rem;
+				color: var(--brand-100);
+				&:hover {
+					color: var(--brand-500);
+				}
 			}
 			&.header {
 				// margin-bottom: 12/16 * 1rem;

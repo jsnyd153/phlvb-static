@@ -1,7 +1,6 @@
 /*css/components/cards/icon_card.scss*/
 .icon_card {
  padding: 2rem;
- border-radius: 0.75rem;
  transition: 0.3s all;
  container-type: inline-size;
 }

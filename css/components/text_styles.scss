@@ -36,7 +36,7 @@ h1 {
 h2 {
 	font-family: $serif_font;
 	font-weight: 400;
-	@include fluid_size_text(1.5, $floor: 26/16);
+	@include fluid_size_text(1.5, $floor: 22/16);
 	line-height: 115%;
 
 	color: var(--brand-900);
@@ -84,7 +84,8 @@ p {
 	line-height: 145%;
 	color: $brand-700;
 
-	b {
+	b,
+	strong {
 		font-weight: 600;
 	}
 	&.small {
@@ -103,34 +104,28 @@ p {
 		position: relative;
 		text-decoration: none;
 		font-weight: 600;
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 0;
-			top: 80%;
-			height: 3/32 * 1em;
-			left: 0;
-			background-color: currentColor;
-			transition: all 0.25s ease-in 0s;
-		}
+		@include hover_underline();
+
 		&:not(.arrow):hover:after {
 			width: 100%;
 		}
-		&.arrow {
-			svg {
-				margin-left: 0.75em;
-				height: 0.75em;
-				transition: 300ms all;
-				.stroke {
-					stroke: currentColor;
-					stroke-width: 1.5;
-				}
+	}
+}
+
+a {
+	&.arrow {
+		svg {
+			margin-left: 0.75em;
+			height: 0.75em;
+			transition: 300ms all;
+			.stroke {
+				stroke: currentColor;
+				stroke-width: 1.5;
 			}
-			&:hover {
-				svg {
-					margin-left: 1.25em;
-				}
+		}
+		&:hover {
+			svg {
+				margin-left: 1.25em;
 			}
 		}
 	}
@@ -196,4 +191,119 @@ p {
 	color: var(--brand-900);
 	text-transform: uppercase;
 	font-size: 1rem;
+}
+
+.blog_content {
+	@include header_tags {
+		margin-top: 0.5em;
+		margin-bottom: 0.25em;
+	}
+	h5 {
+		font-weight: 400;
+		line-height: 135%;
+	}
+	p {
+		margin-top: 0.5em;
+	}
+	ul {
+		padding: 0.5rem 1rem;
+	}
+
+	li {
+		@include fluid_size_text($scale: 0.375, $floor: 14/16);
+		font-family: $sans_font;
+		font-weight: 300;
+		line-height: 135%;
+		letter-spacing: -0.02em;
+		display: flex;
+		align-items: flex-start;
+		margin-block: 0.375rem;
+		color: var(--brand-700);
+		gap: 0.5rem;
+
+		&::before {
+			content: "";
+			display: block;
+			border: 2/16 * 1em solid currentColor;
+			border-radius: 50%;
+			height: 0.5em;
+			width: 0.5em;
+			flex-shrink: 0;
+			margin-top: 0.375em;
+		}
+
+		b,
+		strong {
+			font-weight: 600;
+		}
+	}
+	blockquote {
+		padding: 24/16 * 1rem;
+		border-radius: 4/16 * 1rem;
+		border: 1px dashed $brand-900;
+		display: flex;
+		gap: 24/16 * 1rem;
+		align-items: center;
+		background-color: rgba(118, 175, 254, 0.05);
+		width: 100%;
+		box-sizing: border-box;
+		color: $brand-900;
+		@include fluid_size_text($scale: 0.375, $floor: 14/16);
+
+		&::before {
+			content: "i";
+			display: flex;
+			flex-shrink: 0;
+			font-family: Times;
+			color: $brand-200;
+			font-size: 1em;
+			background-color: $brand-900;
+			width: 20/16 * 1em;
+			height: 20/16 * 1em;
+			@include f-center;
+			border-radius: 50%;
+			font-style: italic;
+		}
+	}
+}
+
+html:not(.wf-design-mode) {
+	@include text_nodes {
+		&:empty {
+			display: none;
+		}
+	}
+}
+
+.text-list {
+	li {
+		@include fluid_size_text($scale: 0.375, $floor: 14/16);
+		font-family: $sans_font;
+		font-weight: 300;
+		line-height: 135%;
+		letter-spacing: -0.02em;
+		display: flex;
+		align-items: flex-start;
+		margin-block: 0.375rem;
+		color: var(--brand-700);
+		gap: 0.5rem;
+
+		&::before {
+			content: "";
+			display: block;
+			border: 2/16 * 1em solid currentColor;
+			border-radius: 50%;
+			height: 0.5em;
+			width: 0.5em;
+			flex-shrink: 0;
+			margin-top: 0.375em;
+		}
+	}
+}
+
+.text-arrow {
+	font-size: 1.25em;
+	font-family: "proxima-nova", sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }

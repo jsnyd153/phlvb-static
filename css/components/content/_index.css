@@ -90,17 +90,12 @@
  display: flex;
  gap: 1rem;
  align-items: center;
- font-size: calc(0.384vw + 0.8309875rem);
+ font-size: clamp(0.9209875rem, 0.384vw + 0.8309875rem, 1.1381875rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 300;
  line-height: 135%;
  letter-spacing: -0.02em;
  color: var(--brand-200);
-}
-@media (min-width: 1440px) {
- .list_type--hightlight_numbers li {
-  font-size: 1.1765875rem;
- }
 }
 .list_type--hightlight_numbers li::before {
  content: counter(li);
@@ -131,7 +126,7 @@
  flex-wrap: wrap;
 }
 .list_type--locations li {
- font-size: calc(0.384vw + 0.8309875rem);
+ font-size: clamp(0.9209875rem, 0.384vw + 0.8309875rem, 1.1381875rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 300;
  line-height: 135%;
@@ -144,11 +139,6 @@
  display: flex;
  gap: 0.5rem;
  width: clamp(300px, 50%, 500px);
-}
-@media (min-width: 1440px) {
- .list_type--locations li {
-  font-size: 1.1765875rem;
- }
 }
 .list_type--locations li::before {
  content: "";
@@ -167,7 +157,7 @@
  gap: 0.75rem;
 }
 .list-type--bullet-open li {
- font-size: calc(0.384vw + 0.8309875rem);
+ font-size: clamp(0.9209875rem, 0.384vw + 0.8309875rem, 1.1381875rem);
  font-family: trade-gothic-next, "Gothic A1", sans-serif;
  font-weight: 300;
  line-height: 135%;
@@ -175,11 +165,6 @@
  display: flex;
  color: var(--brand-700);
  gap: 1rem;
-}
-@media (min-width: 1440px) {
- .list-type--bullet-open li {
-  font-size: 1.1765875rem;
- }
 }
 .list-type--bullet-open li::before {
  content: "";
@@ -198,6 +183,7 @@
  justify-content: center;
  align-items: center;
  position: relative;
+ flex-direction: column;
 }
 
 .media_content {
@@ -235,6 +221,7 @@
  background-color: #1c326f;
  height: 105%;
  width: 105%;
+ z-index: 1;
 }
 
 /*css/components/content/person_profile.scss*/
@@ -393,7 +380,7 @@ li:hover .person_profile--text_area {
 
 /*css/components/content/text_area.scss*/
 .text_area {
- gap: 1.5rem;
+ gap: var(--gap);
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -406,7 +393,7 @@ li:hover .person_profile--text_area {
 }
 
 .text_content {
- gap: 0.5rem;
+ gap: 0.75rem;
  display: flex;
  flex-direction: column;
  justify-content: center;

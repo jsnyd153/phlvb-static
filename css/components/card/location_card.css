@@ -1,7 +1,7 @@
 /*css/components/cards/location_card.scss*/
 .location_card {
  padding: 1.5rem;
- border-radius: 0.75rem;
+ border-radius: var(--corner);
  transition: 0.3s all;
  display: flex;
  flex-direction: column;
@@ -23,7 +23,7 @@
 .location_card--text_content hr {
  width: 100%;
  display: block;
- color: #1c326f;
+ color: #213d85;
  border: 0;
  border-bottom: 1px solid currentColor;
  transition: 0.3s all;

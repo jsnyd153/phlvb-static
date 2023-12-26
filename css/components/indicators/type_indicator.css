@@ -1,25 +1,4 @@
 /*css/components/indicators/type_indicatior.scss*/
-.type-indicator[type=grass], [type=grass] .type-indicator {
- --_theme_color-500: #94d13d;
- --_theme_color-200: #d1f095;
-}
-.type-indicator[type=indoor], [type=indoor] .type-indicator {
- --_theme_color-500: #f16122;
- --_theme_color-200: #f0c4b5;
-}
-.type-indicator[type=beach], [type=beach] .type-indicator {
- --_theme_color-500: #f9d452;
- --_theme_color-200: #f0e6b5;
-}
-.type-indicator[type=clinic], [type=clinic] .type-indicator {
- --_theme_color-500: #76affe;
- --_theme_color-200: #a9bfeb;
-}
-.type-indicator[type=sitting], [type=sitting] .type-indicator {
- --_theme_color-500: #76affe;
- --_theme_color-200: #a9bfeb;
-}
-
 .type-indicator.text {
  display: flex;
  justify-content: center;

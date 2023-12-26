@@ -20,6 +20,17 @@
  --columns: 14;
  text-decoration: none;
 }
+.call_to_action--action.inset {
+ grid-column: 2/-2;
+ border-radius: var(--corner);
+ overflow: hidden;
+ --columns: 12;
+ display: grid;
+ grid-column: 2/-2;
+ grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+ gap: var(--gap);
+ --columns: 12;
+}
 .call_to_action--action .background_fill {
  position: absolute;
  width: 100%;
@@ -46,7 +57,7 @@
 .no-image .call_to_action--action .background_fill::after {
  display: none;
 }
-.call_to_action--action .background_fill picture {
+.call_to_action--action .background_fill img {
  position: absolute;
  width: 100%;
  height: 100%;
@@ -55,7 +66,7 @@
     object-fit: cover;
  transition: 1s all;
 }
-.call_to_action--action:hover .background_fill picture {
+.call_to_action--action:hover .background_fill img {
  transform: scale(1.125);
 }
 .call_to_action--action:hover .background_fill::after {

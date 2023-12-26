@@ -48,17 +48,24 @@
 .tournament_card--title h6 {
  font-weight: 600;
 }
+.tournament_card--host {
+ font-family: trade-gothic-next-condensed, "Gothic A1", sans-serif;
+ font-style: italic;
+ font-weight: 800;
+ font-size: 14px;
+ line-height: 135%;
+ letter-spacing: 0.05em;
+ text-transform: uppercase;
+}
+.tournament_card--host .host_name {
+ color: var(--_theme_color-500);
+ transition: 0.3s all;
+}
+a:hover .tournament_card--host .host_name {
+ color: var(--brand-900);
+}
 .tournament_card--body p {
  font-size: 0.9375rem;
-}
-.tournament_card--body .host {
- font-weight: 600;
- text-decoration: underline;
- transition: 0.5s color;
- color: var(--theme_color-100);
-}
-a:hover .tournament_card--body .host {
- color: var(--theme_color-900);
 }
 @media (max-width: 767px) {
  .tournament_card--body {

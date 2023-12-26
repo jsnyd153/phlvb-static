@@ -29,6 +29,14 @@
 			--columns: 14;
 			text-decoration: none;
 
+			&.inset {
+				grid-column: 2/-2;
+				border-radius: var(--corner);
+				overflow: hidden;
+				@include inner_grid;
+				--columns: 12;
+			}
+
 			.background_fill {
 				@include cover_obj;
 				background-color: var(--theme_color-500);
@@ -44,13 +52,13 @@
 						display: none;
 					}
 				}
-				picture {
+				img {
 					@include image_cover;
 					transition: 1s all;
 				}
 			}
 
-			&:hover .background_fill picture {
+			&:hover .background_fill img {
 				transform: scale(1.125);
 			}
 			&:hover .background_fill::after {

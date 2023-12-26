@@ -16,43 +16,69 @@
  transition: 500ms all;
  flex-shrink: 0;
 }
+@media (max-width: 576px) {
+ .person_profile--media_area {
+  height: 3.75em;
+  width: 3.75em;
+ }
+}
 .secondary .person_profile--media_area {
  height: 3.75em;
  width: 3.75em;
 }
-.person_profile--media_area img {
- opacity: 0.5;
+@media (max-width: 576px) {
+ .secondary .person_profile--media_area {
+  height: 3.125em;
+  width: 3.125em;
+ }
 }
-li:hover .person_profile--media_area {
+.person_profile--media_area img {
+ opacity: 0.8;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
+}
+.person_profile--item:hover .person_profile--media_area {
  opacity: 1;
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #76affe, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f16122, 0px 0px 0px 11px #192d62, 0px 0px 0px 15px #f9d452, 0px 0px 0px 16px #192d62;
 }
-.secondary li:hover .person_profile--media_area {
+.secondary .person_profile--item:hover .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #76affe, 0px 0px 0px 6px #192d62;
 }
-li:hover .person_profile--media_area img {
+.person_profile--item:hover .person_profile--media_area img {
  opacity: 1;
 }
-.secondary li:hover[type=grass] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type=grass] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62;
 }
-.secondary li:hover[type=indoor] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type=indoor] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #f16122, 0px 0px 0px 6px #192d62;
 }
-.secondary li:hover[type=beach] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type=beach] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #f9d452, 0px 0px 0px 6px #192d62;
 }
-.secondary li:hover[type~=grass][type~=beach] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type~=grass][event-type~=beach] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f9d452, 0px 0px 0px 11px #192d62;
 }
-.secondary li:hover[type~=grass][type~=indoor] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type~=grass][event-type~=indoor] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f16122, 0px 0px 0px 11px #192d62;
 }
-.secondary li:hover[type~=beach][type~=indoor] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type~=beach][event-type~=indoor] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #f16122, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f9d452, 0px 0px 0px 11px #192d62;
 }
-.secondary li:hover[type~=beach][type~=indoor][type~=grass] .person_profile--media_area {
+.secondary .person_profile--item:hover[event-type~=beach][event-type~=indoor][event-type~=grass] .person_profile--media_area {
  box-shadow: 0px 0px 0px 1px #192d62, 0px 0px 0px 5px #94d13d, 0px 0px 0px 6px #192d62, 0px 0px 0px 10px #f16122, 0px 0px 0px 11px #192d62, 0px 0px 0px 15px #f9d452, 0px 0px 0px 16px #192d62;
+}
+.person_profile--media_content {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ inset: 0;
+ -o-object-fit: cover;
+    object-fit: cover;
 }
 .person_profile--text_area {
  position: relative;
@@ -60,8 +86,11 @@ li:hover .person_profile--media_area img {
  flex-grow: 1;
  transition: 500ms all;
 }
-li:hover .person_profile--text_area {
+.person_profile--item:hover .person_profile--text_area {
  margin: 0 -3em 0 0;
+}
+.person_profile--text_content {
+ gap: 0rem;
 }
 .person_profile--title {
  color: #76affe;
@@ -78,13 +107,28 @@ li:hover .person_profile--text_area {
  font-size: 1.375em;
  font-weight: 400;
 }
+@media (max-width: 576px) {
+ .person_profile--name {
+  font-size: 1.125em;
+ }
+}
 .secondary .person_profile--name {
  font-size: 1.1875em;
+}
+@media (max-width: 576px) {
+ .secondary .person_profile--name {
+  font-size: 1em;
+ }
 }
 .person_profile--pronouns {
  color: #192d62;
  font-size: 0.75em;
  font-weight: 400;
+}
+@media (max-width: 576px) {
+ .person_profile--pronouns {
+  font-size: 0.625em;
+ }
 }
 .person_profile--locations {
  color: #76affe;
@@ -94,4 +138,9 @@ li:hover .person_profile--text_area {
  font-weight: 700;
  line-height: 135%;
  letter-spacing: -0.0175rem;
+}
+@media (max-width: 576px) {
+ .person_profile--locations {
+  font-size: 0.8125em;
+ }
 }

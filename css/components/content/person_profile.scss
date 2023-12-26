@@ -30,22 +30,32 @@
 			overflow: hidden;
 			transition: 500ms all;
 			flex-shrink: 0;
-			.secondary & {
+
+			@include xs {
 				height: 60/16 * 1em;
 				width: 60/16 * 1em;
 			}
+			.secondary & {
+				height: 60/16 * 1em;
+				width: 60/16 * 1em;
 
-			img {
-				opacity: 0.5;
+				@include xs {
+					height: 50/16 * 1em;
+					width: 50/16 * 1em;
+				}
 			}
 
-			li:hover & {
+			img {
+				opacity: 0.8;
+				@include cover_obj;
+			}
+
+			.person_profile--item:hover & {
 				opacity: 1;
 
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $brand-500,
-					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $indoor-500,
-					0px 0px 0px 11px $brand-900, 0px 0px 0px 15px $beach-500,
-					0px 0px 0px 16px $brand-900;
+					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $indoor-500, 0px 0px 0px 11px $brand-900,
+					0px 0px 0px 15px $beach-500, 0px 0px 0px 16px $brand-900;
 
 				.secondary & {
 					box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $brand-500,
@@ -57,48 +67,53 @@
 				}
 			}
 
-			.secondary li:hover[type="grass"] & {
+			.secondary .person_profile--item:hover[event-type="grass"] & {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $grass-500,
 					0px 0px 0px 6px $brand-900;
 			}
-			.secondary li:hover[type="indoor"] & {
+			.secondary .person_profile--item:hover[event-type="indoor"] & {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $indoor-500,
 					0px 0px 0px 6px $brand-900;
 			}
-			.secondary li:hover[type="beach"] & {
+			.secondary .person_profile--item:hover[event-type="beach"] & {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $beach-500,
 					0px 0px 0px 6px $brand-900;
 			}
-			.secondary li:hover[type~="grass"][type~="beach"] & {
+			.secondary .person_profile--item:hover[event-type~="grass"][event-type~="beach"] & {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $grass-500,
-					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $beach-500,
-					0px 0px 0px 11px $brand-900;
+					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $beach-500, 0px 0px 0px 11px $brand-900;
 			}
-			.secondary li:hover[type~="grass"][type~="indoor"] & {
+			.secondary .person_profile--item:hover[event-type~="grass"][event-type~="indoor"] & {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $grass-500,
-					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $indoor-500,
-					0px 0px 0px 11px $brand-900;
+					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $indoor-500, 0px 0px 0px 11px $brand-900;
 			}
-			.secondary li:hover[type~="beach"][type~="indoor"] & {
+			.secondary .person_profile--item:hover[event-type~="beach"][event-type~="indoor"] & {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $indoor-500,
-					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $beach-500,
-					0px 0px 0px 11px $brand-900;
+					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $beach-500, 0px 0px 0px 11px $brand-900;
 			}
-			.secondary li:hover[type~="beach"][type~="indoor"][type~="grass"] & {
+			.secondary
+				.person_profile--item:hover[event-type~="beach"][event-type~="indoor"][event-type~="grass"]
+				& {
 				box-shadow: 0px 0px 0px 1px $brand-900, 0px 0px 0px 5px $grass-500,
-					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $indoor-500,
-					0px 0px 0px 11px $brand-900, 0px 0px 0px 15px $beach-500,
-					0px 0px 0px 16px $brand-900;
+					0px 0px 0px 6px $brand-900, 0px 0px 0px 10px $indoor-500, 0px 0px 0px 11px $brand-900,
+					0px 0px 0px 15px $beach-500, 0px 0px 0px 16px $brand-900;
 			}
+		}
+
+		&media_content {
+			@include cover_obj;
 		}
 		&text_area {
 			position: relative;
 			margin: 1em 0 0 -3em;
 			flex-grow: 1;
 			transition: 500ms all;
-			li:hover & {
+			.person_profile--item:hover & {
 				margin: 0 -3em 0 0;
 			}
+		}
+		&text_content {
+			gap: 0rem;
 		}
 
 		&title {
@@ -115,15 +130,23 @@
 			color: $brand-900;
 			font-size: 22/16 * 1em;
 			font-weight: 400;
-
+			@include xs {
+				font-size: 18/16 * 1em;
+			}
 			.secondary & {
 				font-size: 19/16 * 1em;
+				@include xs {
+					font-size: 16/16 * 1em;
+				}
 			}
 		}
 		&pronouns {
 			color: $brand-900;
 			font-size: 12/16 * 1em;
 			font-weight: 400;
+			@include xs {
+				font-size: 10/16 * 1em;
+			}
 		}
 		&locations {
 			color: $brand-500;
@@ -133,6 +156,9 @@
 			font-weight: 700;
 			line-height: 135%;
 			letter-spacing: -0.0175rem;
+			@include xs {
+				font-size: 13/16 * 1em;
+			}
 		}
 	}
 }

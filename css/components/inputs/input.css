@@ -16,10 +16,13 @@
  pointer-events: none;
  color: #213d85;
  transition: 0.3s all;
+ margin-bottom: 0;
 }
 
 input[type=text],
-input[type=number] {
+input[type=number],
+input[type=email],
+input[type=tel] {
  display: flex;
  padding: 1.125em 1em 0.625em 1em;
  align-items: flex-start;
@@ -34,41 +37,50 @@ input[type=number] {
  font-weight: 400;
  width: 100%;
  transition: 0.3s all;
+ margin-bottom: 0;
 }
 input[type=text]:hover,
-input[type=number]:hover {
+input[type=number]:hover,
+input[type=email]:hover,
+input[type=tel]:hover {
  border: 1px solid var(--theme_color-500);
 }
 input[type=text]:focus,
-input[type=number]:focus {
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=tel]:focus {
  outline-offset: 0.25em;
  outline: 1px solid #1b40a6;
 }
 input[type=text]:focus + label,
-input[type=number]:focus + label {
+input[type=number]:focus + label,
+input[type=email]:focus + label,
+input[type=tel]:focus + label {
  top: 0.5em;
- font-size: 0.75em;
+ font-size: 0.675em;
  translate: 0 0%;
  color: #213d85;
  left: 1.5em;
 }
-input[type=text]:not(:-moz-placeholder-shown) + label, input[type=number]:not(:-moz-placeholder-shown) + label {
+input[type=text]:not(:-moz-placeholder-shown) + label, input[type=number]:not(:-moz-placeholder-shown) + label, input[type=email]:not(:-moz-placeholder-shown) + label, input[type=tel]:not(:-moz-placeholder-shown) + label {
  top: 0.5em;
- font-size: 0.75em;
+ font-size: 0.675em;
  translate: 0 0%;
  color: #213d85;
  left: 1.5em;
 }
 input[type=text]:not(:placeholder-shown) + label,
-input[type=number]:not(:placeholder-shown) + label {
+input[type=number]:not(:placeholder-shown) + label,
+input[type=email]:not(:placeholder-shown) + label,
+input[type=tel]:not(:placeholder-shown) + label {
  top: 0.5em;
- font-size: 0.75em;
+ font-size: 0.675em;
  translate: 0 0%;
  color: #213d85;
  left: 1.5em;
 }
 
-textarea {
+textarea.contact_form--field {
  display: flex;
  padding: 1.125em 1.5em 0.625em 1.5em;
  align-items: flex-start;
@@ -81,36 +93,66 @@ textarea {
  font-weight: 400;
  width: 100%;
  transition: 0.3s all;
+ margin-bottom: 0;
 }
-.input_area textarea + label {
+.input_area textarea.contact_form--field + label {
  top: 1em;
  translate: 0 0;
 }
-textarea:hover {
+textarea.contact_form--field:hover {
  border: 1px solid var(--theme_color-500);
 }
-textarea:focus {
+textarea.contact_form--field:focus {
  outline-offset: 0.25em;
  outline: 1px solid #1b40a6;
 }
-textarea:focus + label {
+textarea.contact_form--field:focus + label {
  top: 0.5em;
- font-size: 0.75em;
+ font-size: 0.675em;
  translate: 0 0%;
  color: #213d85;
  left: 1.5em;
 }
-textarea:not(:-moz-placeholder-shown) + label {
+textarea.contact_form--field:not(:-moz-placeholder-shown) + label {
  top: 0.5em;
- font-size: 0.75em;
+ font-size: 0.675em;
  translate: 0 0%;
  color: #213d85;
  left: 1.5em;
 }
-textarea:not(:placeholder-shown) + label {
+textarea.contact_form--field:not(:placeholder-shown) + label {
  top: 0.5em;
- font-size: 0.75em;
+ font-size: 0.675em;
  translate: 0 0%;
  color: #213d85;
  left: 1.5em;
+}
+
+.contact_form--radio {
+ display: flex;
+ gap: var(--gap);
+}
+.contact_form--radio .contact_form--radio_option {
+ position: relative;
+}
+.contact_form--radio .w-radio-input {
+ display: none;
+}
+.contact_form--radio .w-radio:before,
+.contact_form--radio .w-radio:after {
+ content: " ";
+ width: 1em;
+ height: 1em;
+ display: block;
+ border: 2px solid currentColor;
+ border-radius: 50%;
+}
+.contact_form--radio .w-radio {
+ display: flex;
+}
+.contact_form--radio .w-radio::after {
+ width: 0.875em;
+ background: red;
+ height: 0.875em;
+ position: absolute;
 }

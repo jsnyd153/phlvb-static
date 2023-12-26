@@ -3,7 +3,7 @@
 
 @mixin label_active {
 	top: 0.5em;
-	font-size: 0.75em;
+	font-size: 0.675em;
 	translate: 0 0%;
 	color: $brand-700;
 	left: 1.5em;
@@ -26,11 +26,14 @@
 		pointer-events: none;
 		color: $brand-700;
 		transition: 0.3s all;
+		margin-bottom: 0; //webflow override
 	}
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
 	display: flex;
 	padding: 18/16 * 1em 1em 10/16 * 1em 1em;
 	align-items: flex-start;
@@ -45,6 +48,7 @@ input[type="number"] {
 	font-weight: 400;
 	width: 100%;
 	transition: 0.3s all;
+	margin-bottom: 0; //webflow override
 
 	&:hover {
 		border: 1px solid var(--theme_color-500);
@@ -64,7 +68,7 @@ input[type="number"] {
 	}
 }
 
-textarea {
+textarea.contact_form--field {
 	display: flex;
 	padding: 18/16 * 1em 1.5em 10/16 * 1em 1.5em;
 	align-items: flex-start;
@@ -77,6 +81,7 @@ textarea {
 	font-weight: 400;
 	width: 100%;
 	transition: 0.3s all;
+	margin-bottom: 0;
 
 	.input_area & + label {
 		top: 1em;
@@ -98,5 +103,34 @@ textarea {
 		& + label {
 			@include label_active;
 		}
+	}
+}
+
+.contact_form--radio {
+	display: flex;
+	gap: var(--gap);
+	.contact_form--radio_option {
+		position: relative;
+	}
+	.w-radio-input {
+		display: none;
+	}
+	.w-radio:before,
+	.w-radio:after {
+		content: " ";
+		width: 1em;
+		height: 1em;
+		display: block;
+		border: 2px solid currentColor;
+		border-radius: 50%;
+	}
+	.w-radio {
+		display: flex;
+	}
+	.w-radio::after {
+		width: 0.875em;
+		background: red;
+		height: 0.875em;
+		position: absolute;
 	}
 }

@@ -142,26 +142,25 @@
 	-webkit-text-fill-color: transparent;
 }
 
-// @mixin hover_underline() {
-//   &::after {
-//     color: inherit;
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     bottom: -0.125rem;
-//     left: 0;
-//     height: 0.125rem;
-//     width: 0%;
-//     transition: 0.15s all;
-//     background: currentColor;
-//   }
+@mixin hover_underline() {
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		bottom: 0;
+		height: 3/32 * 1em;
+		left: 0;
+		background-color: currentColor;
+		transition: all 0.25s ease-in 0s;
+	}
 
-//   &:hover {
-//     &::after {
-//       width: 100%;
-//     }
-//   }
-// }
+	&:hover {
+		&::after {
+			width: 100%;
+		}
+	}
+}
 
 // @mixin hover_underline_span() {
 //   span {

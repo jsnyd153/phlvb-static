@@ -1,0 +1,90 @@
+@use "sass:color";
+@use "../abstracts" as *;
+
+/*css/blocks/slider_hero.scss*/
+// Slider Hero
+// Visual:
+// Dependancy: swiper.js, swiper-bundle.min.js
+
+.image_slider {
+	--aspect_ratio: #{115 / 160};
+	padding-top: calc(100% * var(--aspect_ratio));
+	&-- {
+		&section {
+		}
+		&slider_area {
+			@include cover_obj;
+			overflow: hidden;
+
+			// &::after {
+			// 	@include psuedo_el;
+			// 	background: black;
+			// 	z-index: 1;
+			// 	opacity: 0.5;
+			// 	mix-blend-mode: multiply;
+			// 	pointer-events: none;
+			// }
+		}
+		&slide {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&text_area {
+			grid-column: 2 / span 5;
+			position: relative;
+			z-index: 2;
+			padding: var(--section_padding) 0;
+			// margin: var(--rp) 0;
+			h1 {
+				color: #fff;
+			}
+			p {
+				color: var(--theme_color-50, #edf0f8);
+			}
+		}
+		&overlay {
+			pointer-events: none;
+			@include image_cover;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+				linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 28.13%);
+			mix-blend-mode: multiply;
+			z-index: 1;
+		}
+		&pagination {
+			--swiper-pagination-bullet-horizontal-gap: #{10/16 * 1rem};
+			--swiper-pagination-bottom: auto;
+			transition: 0.3s all;
+			position: relative;
+			margin-top: 0.25rem;
+
+			.swiper-pagination-bullet {
+				transition: 0.3s all;
+				--swiper-pagination-bullet-width: #{30/16 * 1rem};
+				--swiper-pagination-bullet-height: #{4/16 * 1rem};
+				--swiper-pagination-bullet-border-radius: 1rem;
+				--swiper-pagination-bullet-inactive-color: var(--brand-200);
+				--swiper-pagination-bullet-inactive-opacity: 0.5;
+				--swiper-pagination-bullet-active-width: #{80/16 * 1rem};
+				--swiper-pagination-bullet-active-color: var(--theme_color-500);
+			}
+
+			.swiper-pagination-bullet-active {
+				background-color: var(--swiper-pagination-bullet-active-color);
+				width: var(--swiper-pagination-bullet-active-width);
+			}
+		}
+	} //--
+}
+
+// .faux_mask {
+// 	@include image_cover;
+// 	background-color: var(--theme_color-500);
+// 	transition: 0.5s 0.5s all;
+
+// 	.swiper-slide-active & {
+// 		transform: translateX(-100%);
+// 	}
+// }

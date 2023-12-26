@@ -6,18 +6,6 @@
 // Visual:
 // Dependancy: swiper.js
 
-h1.emphasis {
-	font-family: $sans_font-condensed;
-	font-size: 10.04375rem;
-	font-style: normal;
-	font-weight: 900;
-	line-height: 100%;
-	text-transform: uppercase;
-	font-family: trade-gothic-next-condensed, sans-serif;
-	font-weight: 800;
-	font-style: normal;
-}
-
 .slider_hero {
 	&-- {
 		&section {
@@ -34,6 +22,18 @@ h1.emphasis {
 				pointer-events: none;
 			}
 		}
+		&pagination {
+			position: absolute;
+			--swiper-pagination-bottom: 0;
+			bottom: 0;
+			width: 100%;
+			left: 0;
+			right: 0;
+			padding: var(--gap);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 		&slide {
 			img {
 				width: 100%;
@@ -42,17 +42,57 @@ h1.emphasis {
 			}
 		}
 		&text_area {
-			grid-column: 2 / span 5;
+			grid-column: 4 / span 8;
 			position: relative;
 			z-index: 2;
 			padding: var(--section_padding) 0;
-			// margin: var(--rp) 0;
-			h1 {
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			@include header_tags {
 				color: #fff;
+
+				&[event-type="grass"],
+				[event-type="grass"] & {
+					--_theme_color-500: #{$grass-500};
+					--_theme_color-200: #{$grass-200};
+				}
+
+				&[event-type="indoor"],
+				[event-type="indoor"] & {
+					--_theme_color-500: #{$indoor-500};
+					--_theme_color-200: #{$indoor-200};
+				}
+
+				&[event-type="beach"],
+				[event-type="beach"] & {
+					--_theme_color-500: #{$beach-500};
+					--_theme_color-200: #{$beach-200};
+				}
+
+				&[event-type="clinic"],
+				[event-type="clinic"] & {
+					--_theme_color-500: #{$brand-500};
+					--_theme_color-200: #{$brand-200};
+				}
+				&[event-type="sitting"],
+				[event-type="sitting"] & {
+					--_theme_color-500: #{$brand-500};
+					--_theme_color-200: #{$brand-200};
+				}
+			}
+
+			h6 {
+				color: var(--_theme_color-500);
 			}
 			p {
 				color: var(--theme_color-50, #edf0f8);
 			}
+		}
+		&text_content {
+			align-items: center;
+			justify-content: center;
+			text-align: center;
 		}
 		&overlay {
 			pointer-events: none;

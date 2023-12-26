@@ -14,34 +14,57 @@
 			padding: 0;
 			--background_color: var(--brand-900);
 
+			&[overlap="true"] {
+				min-height: clamp(50vh, 530/16 * 1rem, 90vh);
+			}
 			.nav-transparent & {
 				padding-top: 80/16 * 1rem;
 			}
 
-			.background_area {
-				.ring {
-					opacity: 0.3;
-					position: absolute;
-					bottom: 0;
-					left: 0;
-					translate: -30% 30%;
-					width: clamp(#{200/16 * 1rem}, calc(20rem + 10vw), #{500/16 * 1rem});
-					circle {
-						stroke: var(--brand-500);
-						stroke-width: 90;
-					}
+			&.has-image .background_area::after {
+				display: block;
+				content: "";
+				width: 100%;
+				height: 60%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				opacity: 0.65;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+				mix-blend-mode: multiply;
+			}
+		}
+
+		&ring {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			translate: -30% 30%;
+			width: clamp(#{200/16 * 1rem}, calc(20rem + 10vw), #{500/16 * 1rem});
+			opacity: 0.3;
+			.has-image & {
+				opacity: 1;
+				mix-blend-mode: soft-light;
+			}
+			circle {
+				stroke: var(--brand-500);
+				stroke-width: 90;
+				.has-image & {
+					stroke: white;
+					mix-blend-mode: soft-light;
 				}
 			}
 		}
 
 		&text_area {
-			grid-column: 2 / span 9;
+			grid-column: 2 / span 8;
 			justify-content: flex-end;
-			padding-inline: var(--rp);
+			// padding-inline: var(--rp);
 			padding-block: var(--fr_unit);
 
 			@include md {
-				padding-inline: 0rem;
+				// padding-inline: 0rem;
 				grid-column: 2 / span 12;
 			}
 			@include sm {
@@ -60,15 +83,24 @@
 	} //--
 }
 
-//Could use this elsewher but it's currently localized
-.mask-circle_corner {
-	mask-image: url(../../assets/media/circle_corner.svg);
-	mask-repeat: no-repeat;
-	@include cover_obj;
+// .background_fill {
+// 	img {
+// 		filter: brightness(0.95);
+// 	}
 
-	img,
-	picture {
-		scale: 1.15;
-		rotate: 3deg;
-	}
-}
+// }
+
+//Could use this elsewher but it's currently localized
+// .mask-circle_corner {
+// 	mask-image: url(https://uploads-ssl.webflow.com/6538694ee32907f177d68704/65387370fd6d2c4f70d757b4_circle_corner.svg);
+// 	mask-repeat: no-repeat;
+// 	@include cover_obj;
+// 	mask-position: bottom left;
+
+// 	img,
+// 	picture {
+// 		scale: 1.15;
+// 		// rotate: 3deg;
+// 		filter: brightness(1.05);
+// 	}
+// }

@@ -11,7 +11,7 @@
 
 .location_card {
 	padding: 24/16 * 1rem;
-	border-radius: 12/16 * 1rem;
+	border-radius: var(--corner);
 	transition: 0.3s all;
 	display: flex;
 	flex-direction: column;

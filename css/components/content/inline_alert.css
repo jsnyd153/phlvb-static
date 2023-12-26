@@ -44,3 +44,6 @@
  color: #213d85;
  font-weight: 300;
 }
+.inline_alert--text_content.center {
+ align-items: center;
+}

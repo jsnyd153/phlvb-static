@@ -8,16 +8,11 @@
 .header_nav {
 	&-- {
 		&container {
-			position: relative;
-			.nav-transparent & {
-				position: absolute;
-			}
+			position: sticky;
 
 			top: 0;
 			z-index: 100;
-			width: calc(
-				100% - var(--page_margin) - var(--page_margin) - var(--gap) - var(--gap)
-			);
+			width: 100%;
 			padding: 0 calc(var(--page_margin) + var(--gap));
 			@include xl {
 				--page_margin: 5rem;
@@ -25,7 +20,13 @@
 			display: flex;
 			color: var(--brand-100);
 			font-family: $sans_font;
-			font-size: 14/16 * 1rem;
+			font-size: 16/16 * 1rem;
+			@include md {
+				font-size: 15/16 * 1rem;
+			}
+			@include sm {
+				font-size: 14/16 * 1rem;
+			}
 			font-weight: 500;
 			align-items: center;
 			transition: background-color 0.3s;
@@ -73,13 +74,13 @@
 
 			@include sm {
 				position: absolute;
-				top: calc(100% + 1px);
+				top: 100%;
 				left: 0;
 				right: 0;
 				display: grid;
 				grid-template-rows: 0fr;
 				transition: grid-template-rows 0.5s;
-				box-shadow: 0px 6/16 * 1rem 28/16 * 1rem rgba(0, 0, 0, 0.4);
+				box-shadow: 0px 1.375rem 1.75rem rgba(0, 0, 0, 0.4);
 
 				.nav_open & {
 					grid-template-rows: 1fr;
@@ -99,20 +100,20 @@
 			@include sm {
 				//sets inline padding so it doens't change when opened
 				padding: 0 2rem;
-
 				overflow: hidden;
 				flex-direction: column;
-				background: var(--brand-800);
+				background: var(--brand-900);
+				// border-top: 1px solid var(--brand-700);
 				gap: 24/16 * 1rem;
 				.nav_open & {
 					//adds padding to hte the top when animated out
 					padding: 2rem;
-					max-height: 80vh;
-					overflow: scroll;
+					max-height: 80svh;
+					// overflow: scroll;
 				}
 			}
 			&:hover {
-				> li {
+				> .primary_nav--item {
 					opacity: 0.5;
 					transition: 0.3s all;
 					@include sm {
@@ -126,6 +127,7 @@
 		}
 		&item {
 			position: relative;
+			letter-spacing: 0.05em;
 			@include sm {
 				display: flex;
 				flex-direction: column;
@@ -137,25 +139,54 @@
 			padding: 24/16 * 1rem 20/16 * 1rem;
 			color: inherit;
 			text-decoration: none;
+			font-family: $sans_font-condensed;
+			text-transform: uppercase;
+			font-weight: 700;
 
-			&:hover {
+			&:hover,
+			&[hover="true"] {
 				color: $brand-500;
+				// font-style: italic;
 			}
 
 			@include md {
 				padding: 20/16 * 1rem 20/16 * 1rem;
 			}
 			@include sm {
-				font-size: 2rem;
-				font-weight: 500;
+				// font-style: italic;
+				font-size: 1.325rem;
+				letter-spacing: 0.05em;
+				margin-bottom: 0.5rem;
 				color: var(--brand-200);
 				padding: 0;
+				margin-right: auto;
 			}
+		}
+
+		&text {
+			position: relative;
+			letter-spacing: 0.05em;
+		}
+		&item &text::after {
+			color: inherit;
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -0.25rem;
+			left: 0;
+			height: 0.125rem;
+			width: 0%;
+			transition: 0.15s all;
+			background: currentColor;
+		}
+		&item:hover &text::after,
+		&item[hover="true"] &text::after {
+			width: 100%;
 		}
 
 		&dropdown {
 			padding: 24/16 * 1rem;
-			border-radius: 12/16 * 1rem;
+			border-radius: var(--corner);
 			display: flex;
 			gap: 1rem;
 			background-color: var(--brand-800);
@@ -168,7 +199,8 @@
 			transform: rotateX(-60deg);
 			transform-origin: top center;
 			pointer-events: none;
-			li:hover & {
+			.primary_nav--item:hover &,
+			.primary_nav--item[hover="true"] & {
 				opacity: 1;
 				top: 90%;
 				transform: rotateY(0) skewY(0);
@@ -181,7 +213,9 @@
 				opacity: 1;
 				background: transparent;
 				padding: 0;
-				li:hover & {
+				pointer-events: auto;
+				.primary_nav--item:hover &,
+				.primary_nav--item[hover="true"] & {
 					top: 0;
 					transform: translate(0);
 					opacity: 1;
@@ -197,6 +231,9 @@
 			display: flex;
 			flex-direction: column;
 			gap: 12/16 * 1rem;
+			@include sm {
+				gap: 0.5rem;
+			}
 			&.hide-xs {
 				@include xs {
 					display: none;
@@ -233,7 +270,8 @@
 			color: var(--brand-500);
 		}
 
-		&:hover {
+		&:hover,
+		&[hover="true"] {
 			color: var(--brand-500);
 		}
 	}
@@ -389,19 +427,16 @@
 	@include image_cover;
 	z-index: -1;
 	opacity: 1;
-
-	.nav-transparent & {
-		background-color: transparent;
-	}
 }
 
 #close_nav {
-	font-family: "Roc Grotesk";
+	font-family: $sans_font-condensed;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 800;
+	font-style: italic;
 	font-size: 20/16 * 1rem;
 	line-height: 115%;
-	letter-spacing: -0.02em;
+	// letter-spacing: -0.02em;
 	text-transform: uppercase;
 	color: $brand-500;
 
@@ -427,5 +462,12 @@
 #nav_resources {
 	.primary_nav--dropdown {
 		right: 0;
+	}
+}
+
+.header_nav--container[overlap="true"] {
+	position: fixed;
+	#navigation--background {
+		background: var(--nav_color);
 	}
 }

@@ -52,20 +52,18 @@
 				grid-column: span 10 / -2;
 				padding: var(--rp) var(--rp);
 			}
-
+		} //text
+		&text_content {
 			@include header_tags {
 				color: var(--theme_color-500);
 			}
-			// p,
-			// li {
-			// 	color: $brand-50;
-			// }
-			p a {
-				color: var(--theme_color-500);
+			p {
+				color: $brand-50;
 			}
-		} //text
-		&text_content {
-			gap: 0.5rem;
+			a.arrow {
+				color: var(--theme_color-500);
+				font-weight: 700;
+			}
 		}
 	}
 }

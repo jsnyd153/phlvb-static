@@ -1,0 +1,128 @@
+/*css/components/inputs/filters.scss*/
+.filter--section {
+ display: flex;
+ flex-direction: column;
+ gap: 0.75rem;
+ margin-block: var(--gap);
+}
+.filter--label {
+ font-weight: 700;
+ font-size: 1.25rem;
+}
+@media (max-width: 767px) {
+ .filter--label {
+  font-size: 1rem;
+ }
+}
+.filter--list {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 0.5rem;
+}
+@media (max-width: 767px) {
+ .filter--list {
+  gap: 0.75rem;
+ }
+}
+.filter--list .w-checkbox {
+ margin: 0;
+ padding: 0;
+}
+.filter--list input[type=checkbox] {
+ display: none;
+}
+.filter--list .w-form-label {
+ border: 1px solid var(--brand-900);
+ padding: 6px 15px;
+ border-radius: 0.25rem;
+ font-size: 0.875rem;
+ margin: 0;
+ transition: 0.3s all;
+}
+@media (max-width: 767px) {
+ .filter--list .w-form-label {
+  font-size: 1rem;
+ }
+}
+.filter--list .w-form-label:hover {
+ background: var(--brand-700);
+ color: var(--theme_color-500);
+}
+.filter--button {
+ font-size: 0.875rem;
+ margin-right: auto;
+}
+@media (max-width: 767px) {
+ .filter--button {
+  font-size: 1rem;
+ }
+}
+.filter--mobile_indicator, .filter--mobile_back {
+ display: none;
+}
+
+.fs-cmsfilter_active .w-form-label {
+ background: var(--brand-900);
+ color: var(--theme_color-500);
+}
+
+@media (max-width: 767px) {
+ form.filter--form {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1.5rem;
+  border-radius: 0.75rem 0.75rem 0rem 0rem;
+  background: #fff;
+  transform: translateY(100%);
+  z-index: 201;
+  transition: 0.3s all;
+ }
+ .filter-active form.filter--form {
+  transform: translateY(0%);
+ }
+ form.filter--form .close_tab {
+  display: block;
+  background-color: var(--brand-200);
+  border-radius: 1rem;
+  width: 2.5rem;
+  height: 0.25rem;
+  margin: 0 auto;
+ }
+ .filter--mobile_indicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--brand-900);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  gap: 0.25rem;
+  transition: 0.3s all;
+  align-items: center;
+ }
+ .filter--mobile_indicator:hover {
+  background: var(--brand-900);
+  color: var(--theme_color-500);
+ }
+ .filter--mobile_indicator svg {
+  stroke: currentColor;
+  stroke-width: 1.5;
+  width: 1em;
+ }
+ .filter--mobile_back {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 200;
+ }
+ .filter-active .filter--mobile_back {
+  opacity: 1;
+  pointer-events: auto;
+ }
+}

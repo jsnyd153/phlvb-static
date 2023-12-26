@@ -25,6 +25,9 @@
 			text-align: center;
 			margin-block: auto;
 
+			&.first {
+				grid-column: 2 / span 6;
+			}
 			@include sm {
 				grid-column: 3/-3;
 			}

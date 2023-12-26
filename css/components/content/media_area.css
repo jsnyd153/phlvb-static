@@ -4,6 +4,7 @@
  justify-content: center;
  align-items: center;
  position: relative;
+ flex-direction: column;
 }
 
 .media_content {
@@ -17,6 +18,9 @@
  width: 100%;
  height: auto;
  display: block;
+}
+.media_content.inset {
+ padding: var(--gap);
 }
 .media_content.cover {
  --ratio: 9/16;
@@ -41,4 +45,5 @@
  background-color: #1c326f;
  height: 105%;
  width: 105%;
+ z-index: 1;
 }

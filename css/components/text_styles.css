@@ -12,7 +12,7 @@ h1 {
 h2 {
  font-family: p22-mackinac-pro, Libre Baskerville, serif;
  font-weight: 400;
- font-size: clamp(1.9765625rem, 1.5vw + 1.625rem, 2.825rem);
+ font-size: clamp(1.7265625rem, 1.5vw + 1.375rem, 2.575rem);
  line-height: 115%;
  color: var(--brand-900);
 }
@@ -62,7 +62,8 @@ p {
  line-height: 145%;
  color: #213d85;
 }
-p b {
+p b,
+p strong {
  font-weight: 600;
 }
 p.small {
@@ -81,30 +82,35 @@ p a {
  text-decoration: none;
  font-weight: 600;
 }
-p a:after {
+p a::after {
+ color: inherit;
  content: "";
  display: block;
  position: absolute;
- width: 0;
- top: 80%;
- height: 0.09375em;
+ bottom: -0.125rem;
  left: 0;
- background-color: currentColor;
- transition: all 0.25s ease-in 0s;
+ height: 0.125rem;
+ width: 0%;
+ transition: 0.15s all;
+ background: currentColor;
+}
+p a:hover::after {
+ width: 100%;
 }
 p a:not(.arrow):hover:after {
  width: 100%;
 }
-p a.arrow svg {
+
+a.arrow svg {
  margin-left: 0.75em;
  height: 0.75em;
  transition: 300ms all;
 }
-p a.arrow svg .stroke {
+a.arrow svg .stroke {
  stroke: currentColor;
  stroke-width: 1.5;
 }
-p a.arrow:hover svg {
+a.arrow:hover svg {
  margin-left: 1.25em;
 }
 
@@ -116,16 +122,8 @@ p a.arrow:hover svg {
  color: #1c326f;
 }
 
-.is-brand-800t {
- color: rgba(29, 52, 114, 0.8);
-}
-
 .is-brand-800 {
  color: #213d85;
-}
-
-.is-brand-800t {
- color: rgba(33, 60, 131, 0.8);
 }
 
 .is-brand-500 {
@@ -148,16 +146,8 @@ p a.arrow:hover svg {
  color: #662e1a;
 }
 
-.is-indoor-800t {
- color: rgba(105, 47, 27, 0.8);
-}
-
 .is-indoor-800 {
  color: #70321d;
-}
-
-.is-indoor-800t {
- color: rgba(121, 55, 31, 0.8);
 }
 
 .is-indoor-500 {
@@ -180,16 +170,8 @@ p a.arrow:hover svg {
  color: #456010;
 }
 
-.is-grass-800t {
- color: rgba(72, 99, 17, 0.8);
-}
-
 .is-grass-800 {
  color: #4f6e13;
-}
-
-.is-grass-800t {
- color: rgba(84, 117, 20, 0.8);
 }
 
 .is-grass-500 {
@@ -212,16 +194,8 @@ p a.arrow:hover svg {
  color: #6f611c;
 }
 
-.is-beach-800t {
- color: rgba(114, 100, 29, 0.8);
-}
-
 .is-beach-500 {
  color: #f9d452;
-}
-
-.is-beach-300t {
- color: rgba(223, 215, 176, 0.8);
 }
 
 .is-beach-300 {
@@ -293,4 +267,119 @@ p a.arrow:hover svg {
  color: var(--brand-900);
  text-transform: uppercase;
  font-size: 1rem;
+}
+
+.blog_content h1,
+.blog_content h2,
+.blog_content h3,
+.blog_content h4,
+.blog_content h5,
+.blog_content h6 {
+ margin-top: 0.5em;
+ margin-bottom: 0.25em;
+}
+.blog_content h5 {
+ font-weight: 400;
+ line-height: 135%;
+}
+.blog_content p {
+ margin-top: 0.5em;
+}
+.blog_content ul {
+ padding: 0.5rem 1rem;
+}
+.blog_content li {
+ font-size: clamp(0.962890625rem, 0.375vw + 0.875rem, 1.175rem);
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ font-weight: 300;
+ line-height: 135%;
+ letter-spacing: -0.02em;
+ display: flex;
+ align-items: flex-start;
+ margin-block: 0.375rem;
+ color: var(--brand-700);
+ gap: 0.5rem;
+}
+.blog_content li::before {
+ content: "";
+ display: block;
+ border: 0.125em solid currentColor;
+ border-radius: 50%;
+ height: 0.5em;
+ width: 0.5em;
+ flex-shrink: 0;
+ margin-top: 0.375em;
+}
+.blog_content li b,
+.blog_content li strong {
+ font-weight: 600;
+}
+.blog_content blockquote {
+ padding: 1.5rem;
+ border-radius: 0.25rem;
+ border: 1px dashed #192d62;
+ display: flex;
+ gap: 1.5rem;
+ align-items: center;
+ background-color: rgba(118, 175, 254, 0.05);
+ width: 100%;
+ box-sizing: border-box;
+ color: #192d62;
+ font-size: clamp(0.962890625rem, 0.375vw + 0.875rem, 1.175rem);
+}
+.blog_content blockquote::before {
+ content: "i";
+ display: flex;
+ flex-shrink: 0;
+ font-family: Times;
+ color: #a9bfeb;
+ font-size: 1em;
+ background-color: #192d62;
+ width: 1.25em;
+ height: 1.25em;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+ font-style: italic;
+}
+
+html:not(.wf-design-mode) h1:empty,
+html:not(.wf-design-mode) h2:empty,
+html:not(.wf-design-mode) h3:empty,
+html:not(.wf-design-mode) h4:empty,
+html:not(.wf-design-mode) h5:empty,
+html:not(.wf-design-mode) h6:empty,
+html:not(.wf-design-mode) p:empty {
+ display: none;
+}
+
+.text-list li {
+ font-size: clamp(0.962890625rem, 0.375vw + 0.875rem, 1.175rem);
+ font-family: trade-gothic-next, "Gothic A1", sans-serif;
+ font-weight: 300;
+ line-height: 135%;
+ letter-spacing: -0.02em;
+ display: flex;
+ align-items: flex-start;
+ margin-block: 0.375rem;
+ color: var(--brand-700);
+ gap: 0.5rem;
+}
+.text-list li::before {
+ content: "";
+ display: block;
+ border: 0.125em solid currentColor;
+ border-radius: 50%;
+ height: 0.5em;
+ width: 0.5em;
+ flex-shrink: 0;
+ margin-top: 0.375em;
+}
+
+.text-arrow {
+ font-size: 1.25em;
+ font-family: "proxima-nova", sans-serif;
+ font-weight: 700;
+ font-style: normal;
 }

@@ -33,11 +33,6 @@
 }
 @media (max-width: 767px) {
  .button {
-  font-size: 1rem;
- }
-}
-@media (max-width: 767px) {
- .button {
   font-size: 0.9375rem;
  }
 }
@@ -61,10 +56,21 @@
  display: flex;
  gap: 1rem;
  align-items: flex-start;
+ flex-wrap: wrap;
 }
 
 .button.small {
- font-size: 1rem;
+ font-size: 0.875rem;
+}
+@media (max-width: 991px) {
+ .button.small {
+  font-size: 0.8125rem;
+ }
+}
+@media (max-width: 767px) {
+ .button.small {
+  font-size: 0.75rem;
+ }
 }
 .button.is-theme-500 {
  --_inital_text: var(--brand-900);

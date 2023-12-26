@@ -1,12 +1,12 @@
 //compile button styles
 @use "../../abstracts" as *;
-@forward "icon_card";
-@forward "resource_card";
-@forward "location_card";
+// @forward "icon_card";
+// @forward "resource_card";
+// @forward "location_card";
 
-@forward "tournament_card";
-@forward "event_card";
-@forward "league_card";
+// @forward "tournament_card";
+// @forward "event_card";
+// @forward "league_card";
 
 .card {
 	border-radius: var(--corner);
@@ -14,6 +14,42 @@
 
 	backdrop-filter: blur(0.5rem);
 	color: $brand-700;
+
+	--_theme_color-500: var(--theme_color-500);
+
+	&[event-type="grass"],
+	[event-type="grass"] & {
+		--theme_color-500: #{$grass-500};
+		--theme_color-200: #{$grass-200};
+		--theme_color-900: #{$grass-900};
+	}
+
+	&[event-type="indoor"],
+	[event-type="indoor"] & {
+		--theme_color-500: #{$indoor-500};
+		--theme_color-200: #{$indoor-200};
+		--theme_color-900: #{$indoor-900};
+	}
+
+	&[event-type="beach"],
+	[event-type="beach"] & {
+		--theme_color-500: #{$beach-500};
+		--theme_color-200: #{$beach-200};
+		--theme_color-900: #{$beach-900};
+	}
+
+	&[event-type="clinic"],
+	[event-type="clinic"] & {
+		--theme_color-500: #{$brand-500};
+		--theme_color-200: #{$brand-200};
+		--theme_color-900: #{$brand-900};
+	}
+	&[event-type="sitting"],
+	[event-type="sitting"] & {
+		--theme_color-500: #{$brand-500};
+		--theme_color-200: #{$brand-200};
+		--theme_color-900: #{$brand-900};
+	}
 }
 
 a.card {
@@ -24,7 +60,7 @@ a.card {
 	top: 0;
 
 	&:hover {
-		background-color: var(--theme_color-500);
+		background-color: var(--_theme_color-500);
 		box-shadow: 0px 10px 16px -4px rgba(0, 0, 0, 0.08);
 		color: var(--brand-900);
 		top: -0.2em;
