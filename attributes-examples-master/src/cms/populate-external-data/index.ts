@@ -87,7 +87,7 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
   const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
-  const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]');
+  const description = newItem.querySelector<HTMLParagraphElement>('[data-element="test"]');
 
   // Populate inner elements
   if (image) image.src = product.image;

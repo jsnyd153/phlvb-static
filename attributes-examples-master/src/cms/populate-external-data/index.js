@@ -1,3 +1,7 @@
+(() => {
+    // src/cms/populate-external-data/index.ts
+
+
 window.fsAttributes = window.fsAttributes || [];
 window.fsAttributes.push([
     'cmsfilter',
@@ -70,4 +74,4 @@ const createFilter = (category, templateElement) => {
     radio.value = category;
     return newFilter;
 };
-export {};
+})();
