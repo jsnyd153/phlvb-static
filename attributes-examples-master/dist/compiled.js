@@ -33,7 +33,7 @@
   ]);
   const fetchProducts = async () => {
       try {
-          const response = await fetch('https://osapi.opensports.ca/app/posts/listFiltered?groupID=43');
+          const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIData.json');
           const data = await response.json();
           return data;
       }
