@@ -12,7 +12,7 @@ window.fsAttributes.push([
 
 		//Save copy fo the template
     const [item] = listInstance.items;
-    const itemTemplateElement = item.element;
+    const itemTemplateElement = item.element; 
 
 		// Fetch the external data
 
@@ -56,13 +56,13 @@ const newItem = (product: Product, templateElement: HTMLDivElement) => {
   //Query
   // const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]')
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]')
-  const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]')
+  const level = newItem.querySelector<HTMLDivElement>('[data-element="level"]')
   const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]')
 
   //Populate
   // if(image) image.src = product.image; 
   if(title) title.textContent = product.title;
-  if(category) category.textContent = product.category;
+  if(level) level.textContent = product.level;
   if(description) description.textContent = product.description;
 
 

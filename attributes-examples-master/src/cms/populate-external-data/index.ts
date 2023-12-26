@@ -77,7 +77,7 @@ const fetchProducts = async () => {
  * @param product The product data to create the item from.
  * @param templateElement The template element.
  *
- * @returns A new Collection Item element.
+ * @returns A new Collection Item element.B
  */
 const createItem = (product: Product, templateElement: HTMLDivElement) => {
   // Clone the template element

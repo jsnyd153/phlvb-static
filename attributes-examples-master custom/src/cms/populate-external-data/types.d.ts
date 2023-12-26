@@ -3,12 +3,12 @@ export interface Product {
   title: string;
   price: number;
   description: string;
-  category: Category;
+  level: Level;
   image: string;
   rating: Rating;
 }
 
-const enum Category {
+const enum Levels {
   Electronics = 'electronics',
   Jewelery = 'jewelery',
   MenSClothing = "men's clothing",
