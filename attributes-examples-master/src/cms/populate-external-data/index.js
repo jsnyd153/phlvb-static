@@ -43,6 +43,7 @@ const createItem = (product, templateElement) => {
     const title = newItem.querySelector('[data-element="title"]');
     const category = newItem.querySelector('[data-element="category"]');
     const description = newItem.querySelector('[data-element="description"]');
+    const level = newItem.querySelector('[data-element="level"]');
     if (date)
         date.textContent = product.start;
     if (title)
@@ -51,6 +52,8 @@ const createItem = (product, templateElement) => {
         category.textContent = product.category;
     if (description)
         description.textContent = product.description;
+    if (level)
+        level.textContent = product.data.level.title;
     return newItem;
 };
 const collectCategories = (products) => {

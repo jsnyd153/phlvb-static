@@ -90,6 +90,7 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
   const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
   const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]');
+  const level = newItem.querySelector<HTMLParagraphElement>('[data-element="level"]');
 
   // Populate inner elements
   // if (image) image.src = product.image;
@@ -97,6 +98,7 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   if (title) title.textContent = product.title;
   if (category) category.textContent = product.category;
   if (description) description.textContent = product.description;
+  if (level) level.textContent = product.data.level.title;
 
   return newItem;
 };
