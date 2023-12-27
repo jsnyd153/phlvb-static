@@ -110,7 +110,7 @@
 		}],
 		"requireInAppPayment": true,
 		"data": {
-			"rating": {
+			"level": {
 				"title": "A",
 				"value": 0.8
 			},
