@@ -63,7 +63,7 @@ window.fsAttributes.push([
  */
 const fetchProducts = async () => {
   try {
-    const response = await fetch('https://fakestoreapi.com/products');
+    const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIDataEdit.json');
     const data: Product[] = await response.json();
 
     return data;
@@ -84,13 +84,16 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   const newItem = templateElement.cloneNode(true) as HTMLDivElement;
 
   // Query inner elements
-  const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
+  // const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
+
+  const date = newItem.querySelector<HTMLDivElement>('[data-element="date"]');
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
   const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
   const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]');
 
   // Populate inner elements
-  if (image) image.src = product.image;
+  // if (image) image.src = product.image;
+  if (date) date.textContent = product.start;
   if (title) title.textContent = product.title;
   if (category) category.textContent = product.category;
   if (description) description.textContent = product.description;

@@ -43,12 +43,12 @@
   };
   const createItem = (product, templateElement) => {
       const newItem = templateElement.cloneNode(true);
-      const image = newItem.querySelector('[data-element="image"]');
+      const date = newItem.querySelector('[data-element="date"]');
       const title = newItem.querySelector('[data-element="title"]');
       const category = newItem.querySelector('[data-element="category"]');
       const description = newItem.querySelector('[data-element="description"]');
-      if (image)
-          image.src = product.image;
+      if (date)
+          date.textContent = product.start;
       if (title)
           title.textContent = product.title;
       if (category)

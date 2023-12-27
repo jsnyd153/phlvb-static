@@ -29,7 +29,7 @@ window.fsAttributes.push([
 ]);
 const fetchProducts = async () => {
     try {
-        const response = await fetch('https://fakestoreapi.com/products');
+        const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIDataEdit.json');
         const data = await response.json();
         return data;
     }
@@ -39,12 +39,12 @@ const fetchProducts = async () => {
 };
 const createItem = (product, templateElement) => {
     const newItem = templateElement.cloneNode(true);
-    const image = newItem.querySelector('[data-element="image"]');
+    const date = newItem.querySelector('[data-element="date"]');
     const title = newItem.querySelector('[data-element="title"]');
     const category = newItem.querySelector('[data-element="category"]');
     const description = newItem.querySelector('[data-element="description"]');
-    if (image)
-        image.src = product.image;
+    if (date)
+        date.textContent = product.start;
     if (title)
         title.textContent = product.title;
     if (category)
