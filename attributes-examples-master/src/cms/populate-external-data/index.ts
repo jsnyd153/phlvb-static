@@ -87,21 +87,50 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   // const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
 
   const date = newItem.querySelector<HTMLDivElement>('[data-element="date"]');
+
+  //create formatted string
+  const startDateTime = new Date(product.start);
+  const endDateTime = new Date(product.end);
+
+  const options: Intl.DateTimeFormatOptions = {
+    weekday: 'long',     // Displays the full name of the day of the week
+    month: 'short',      // Displays the abbreviated name of the month
+    day: 'numeric',      // Displays the day of the month
+    hour: 'numeric',     // Displays the hour
+    minute: 'numeric',   // Displays the minute
+    hour12: true         // Uses 12-hour clock format
+  };
+
+  const startFormatted = new Intl.DateTimeFormat('en-US', options).format(startDateTime);
+  const endFormatted = new Intl.DateTimeFormat('en-US', options).format(endDateTime);
+
+  const dateRange = `${startFormatted} | ${endFormatted}`;
+
+
+
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
   const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
   const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]');
   const level = newItem.querySelector<HTMLParagraphElement>('[data-element="level"]');
+
   const type = newItem.querySelector<HTMLParagraphElement>('[data-element="type"]');
+
+
   const gender = newItem.querySelector<HTMLParagraphElement>('[data-element="gender"]');
+  //Map the values of genderID to the text values
   const genderType =
   product.data.genderID === 0 ? "Mens" :
   product.data.genderID === 1 ? "Womens" :
   product.data.genderID === 2 ? "All" :
-  "Unknown"; // Default value if genderID doesn't match any condition
+  "Unknown";
+
+  
+
+
 
   // Populate inner elements
   // if (image) image.src = product.image;
-  if (date) date.textContent = product.start;
+  if (date) date.textContent = dateRange;
   if (title) title.textContent = product.title;
   if (category) category.textContent = product.category;
   if (description) description.textContent = product.description;

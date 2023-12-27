@@ -40,6 +40,19 @@ const fetchProducts = async () => {
 const createItem = (product, templateElement) => {
     const newItem = templateElement.cloneNode(true);
     const date = newItem.querySelector('[data-element="date"]');
+    const startDateTime = new Date(product.start);
+    const endDateTime = new Date(product.end);
+    const options = {
+        weekday: 'long',
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+    };
+    const startFormatted = new Intl.DateTimeFormat('en-US', options).format(startDateTime);
+    const endFormatted = new Intl.DateTimeFormat('en-US', options).format(endDateTime);
+    const dateRange = `${startFormatted} | ${endFormatted}`;
     const title = newItem.querySelector('[data-element="title"]');
     const category = newItem.querySelector('[data-element="category"]');
     const description = newItem.querySelector('[data-element="description"]');
@@ -51,7 +64,7 @@ const createItem = (product, templateElement) => {
             product.data.genderID === 2 ? "All" :
                 "Unknown";
     if (date)
-        date.textContent = product.start;
+        date.textContent = dateRange;
     if (title)
         title.textContent = product.title;
     if (category)

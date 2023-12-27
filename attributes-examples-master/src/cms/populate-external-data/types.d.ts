@@ -6,6 +6,7 @@ export interface Product {
   category: Category;
   image: string;
   start: string;
+  end: string;
   rating: Rating;
   place: Place;
   aliasID:string;
