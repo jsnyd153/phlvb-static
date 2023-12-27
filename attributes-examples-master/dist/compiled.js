@@ -55,8 +55,12 @@
           hour12: true
       };
       const startFormatted = new Intl.DateTimeFormat('en-US', options).format(startDateTime);
-      const endFormatted = new Intl.DateTimeFormat('en-US', options).format(endDateTime);
-      const dateRange = `${startFormatted} | ${endFormatted}`;
+      const endFormatted = new Intl.DateTimeFormat('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true
+      }).format(endDateTime);
+      const dateRange = `${startFormatted} - ${endFormatted}`;
       const title = newItem.querySelector('[data-element="title"]');
       const category = newItem.querySelector('[data-element="category"]');
       const description = newItem.querySelector('[data-element="description"]');
@@ -100,6 +104,7 @@
       radio.value = category;
       return newFilter;
   };
+
   
 
     //==

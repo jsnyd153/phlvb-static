@@ -93,19 +93,22 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   const endDateTime = new Date(product.end);
 
   const options: Intl.DateTimeFormatOptions = {
-    weekday: 'long',     // Displays the full name of the day of the week
-    month: 'short',      // Displays the abbreviated name of the month
-    day: 'numeric',      // Displays the day of the month
-    hour: 'numeric',     // Displays the hour
-    minute: 'numeric',   // Displays the minute
-    hour12: true         // Uses 12-hour clock format
+    weekday: 'long',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
   };
-
+  
   const startFormatted = new Intl.DateTimeFormat('en-US', options).format(startDateTime);
-  const endFormatted = new Intl.DateTimeFormat('en-US', options).format(endDateTime);
-
-  const dateRange = `${startFormatted} | ${endFormatted}`;
-
+  const endFormatted = new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true
+  }).format(endDateTime);
+  
+  const dateRange = `${startFormatted} - ${endFormatted}`;
 
 
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
