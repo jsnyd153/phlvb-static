@@ -1,0 +1,1629 @@
+
+[{
+		"id": 156168,
+		"dateCreated": "2023-12-20T02:12:52.561Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Tue | ⬆️BB - A | Indoor Co-ed Sixes 🏐",
+		"headerMediaURL": "https://assets.opensports.net/events/143171xPuKlOLjT.BqvMe6cNKu.jpg",
+		"category": "2023-12-26T22:45:30.990Z",
+		"end": "2023-12-27T00:45:30.990Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Crane Community Center",
+			"latlng": {
+				"latitude": 39.957496,
+				"longitude": -75.15556
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA",
+			"zipCode": "19107",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 143171,
+		"firstName": "Sharron",
+		"lastName": "Vaughn",
+		"photoURL": "https://assets.opensports.net/profiles/143171TRC9Y6Lgt-4G6Ng0YNTS.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229236,
+			"price": 13,
+			"title": "⬆️BB/A - Libero or MH2",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229237,
+			"price": 13,
+			"title": "⬆️BB/A - Middle",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229238,
+			"price": 13,
+			"title": "⬆️BB/A - Opposite",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229239,
+			"price": 13,
+			"title": "⬆️BB/A - Outside",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 6,
+			"quantityTotal": 6,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229240,
+			"price": 13,
+			"title": "⬆️BB/A - Setter",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"rating": {
+				"title": "A",
+				"value": 0.8
+			},
+			"genderID": 0,
+			"sportName": "Volleyball",
+			"repeatedPostID": 154995,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["BB-A", "1-court", "membership-discount", "Tuesday"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 18,
+		"aliasID": "6553f378143171f30200b2",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 143171,
+			"isPublic": true,
+			"lastName": "Vaughn",
+			"photoURL": "https://assets.opensports.net/profiles/143171TRC9Y6Lgt-4G6Ng0YNTS.jpg",
+			"firstName": "Sharron",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "👥 Intended for UPPER 🅱️🅱️ players and above. One indoor court. Indoor rules. Games to 21. 18 players max, 3 rotating teams, repeating the rotation till the event ends.\n\n## 🅿️ PARKING\n\nThere is street parking available and a paid lot on 11th street.\n\n## 🔞 AGE REQUIREMENT\n\nYou must be 18 or older to participate.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Curious how the wait list works? Read this:\nhttps://opensports.net/waitlist\n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\n## RANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A \"B\" player makes mistakes often.\n\n🅱️🅱️ players knows where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A \"BB\" player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n⬇️BB (lower-BB) and ⬆️BB (upper-BB) refers to how consistent you are at passing, setting, spiking, blocking, digging and serving. ⬆️BB is 80% consistent at every skill point for your physical characteristics.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful. Level A players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes, and are extremely competitive.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane court rental\n💵🔙 Refund deadline is EIGHT hours before the event.\n🔄 This event repeats weekly\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball: https://phlvb.com/flistatec-volleyball\n➖➖➖➖\n\n🦠 COVID-19 PRECAUTIONS\n🚫 If you or your guest are not feeling well, please do not show up for the pick up game.\n🚫 Please do not show up, if in the last 14 days, you OR your guest:\n    · have been confirmed COVID-19 positive\n    · have any of these symptoms: fever, sore throat, dry cough or chills.\n    · traveled internationally\n    · traveled locally from a COVID hot spot locations\n    · have been in contact with someone presumed COVID-19 positive.",
+		"waitlist": {
+			"count": 9
+		}
+	}, {
+		"id": 156232,
+		"dateCreated": "2023-12-20T19:15:31.191Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Tue | ⬇️BB - ⬆️BB | Men's Indoor Sixes 🏐",
+		"headerMediaURL": "https://assets.opensports.net/events/181763jb20YYaYj.zns8OlBz2q.jpg",
+		"category": "2023-12-26T22:45:32.458Z",
+		"end": "2023-12-27T00:45:32.458Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Crane Community Center",
+			"latlng": {
+				"latitude": 39.957496,
+				"longitude": -75.15556
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA",
+			"zipCode": "19107",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 181763,
+		"firstName": "Derek",
+		"lastName": "Chan",
+		"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229309,
+			"price": 13,
+			"title": "Libero / Middle Blocker",
+			"schema": {
+				"name": "Position Confirmarion",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Are you able to play the position you sign up and agree to play the position on your ticket?": {
+						"enum": ["Yes", "No"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "61488211-bf6e-44b3-be09-f719c01586c7",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229310,
+			"price": 13,
+			"title": "Middle Blocker",
+			"schema": {
+				"name": "Position Confirmarion",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Are you able to play the position you sign up and agree to play the position on your ticket?": {
+						"enum": ["Yes", "No"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "61488211-bf6e-44b3-be09-f719c01586c7",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229311,
+			"price": 13,
+			"title": "Pin Hitter (OH, OPP)",
+			"schema": {
+				"name": "Position Confirmarion",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Are you able to play the position you sign up and agree to play the position on your ticket?": {
+						"enum": ["Yes", "No"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "61488211-bf6e-44b3-be09-f719c01586c7",
+			"salesStart": null,
+			"quantitySold": 9,
+			"quantityTotal": 9,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229312,
+			"price": 13,
+			"title": "Setter",
+			"schema": {
+				"name": "Position Confirmarion",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Are you able to play the position you sign up and agree to play the position on your ticket?": {
+						"enum": ["Yes", "No"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "61488211-bf6e-44b3-be09-f719c01586c7",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "BB",
+				"value": 0.6
+			},
+			"genderID": 2,
+			"sportName": "Volleyball",
+			"repeatedPostID": 155610,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["membership-discount", "1-court", "Chinatown", "BB", "sixes", "Tuesday"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 18,
+		"aliasID": "tue-bb-bb-mens-indoor-sixes--F7v0EtX9g",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 181763,
+			"isPublic": true,
+			"lastName": "Chan",
+			"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+			"firstName": "Derek",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "**‼️‼️READ THE SKILL LEVEL DESCRIPTIONS BEFORE SIGNING UP. PLAYERS WITHOUT THE APPROPRIATE FOOTWORK AND SKILLS ARE AN INJURY RISK TO EVERYONE ON THE COURT.** If you have any questions about level prior to signing up, please message Derek.\n\n**‼️YOU MUST PLAY THE POSITION YOU SIGN UP FOR - PLEASE DOUBLE CHECK YOUR TICKET.** Trading for another position is at the discretion of the players involved and is not guaranteed.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\n**RANKING SYSTEM (low to high):** \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A \"B\" player makes mistakes often.\n\n🅱️🅱️ players knows where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A \"BB\" player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n> ⬇️BB (lower-BB) and ⬆️BB (upper-BB) refers to how consistent you are at passing, setting, spiking, blocking, digging and serving. ⬆️BB is 80% consistent at every skill point for your physical characteristics.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful. Level A players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes, and are extremely competitive.\n\n**‼️ You MUST play on the court on which you signed up.**\n\n## 🔞 AGE REQUIREMENT\n\nYou must be 18 or older to participate. \n\n## 🅿️ PARKING\n\nStreet parking and a paid lot.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Read more on [how the wait list works](https://opensports.net/waitlist).\n\n## Looking to improve?\n\nVisit this YouTube page and find the skills videos: [youtu.be/GoldMedalSquared](https://youtube.com/user/GoldMedalSquared) \n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane Center rental\n💵🔙 Refund deadline is 2️⃣4️⃣ hours before the event.\n🔄 This event repeats weekly - every first Sunday of the month, the event will be from 3PM - 6PM\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball: [flistatec volleyball](https://phlvb.com/flistatec-volleyball)",
+		"waitlist": {
+			"count": 14
+		}
+	}, {
+		"id": 156219,
+		"dateCreated": "2023-12-20T17:20:12.111Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Tue | A - AA | Indoor Coed Sixes 🏐",
+		"headerMediaURL": "https://assets.opensports.net/events/6849_8FzTrvSJ.O__7Pa054l.jpg",
+		"category": "2023-12-26T22:50:40.000Z",
+		"end": "2023-12-27T01:45:40.000Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Hillside Recreation Center",
+			"latlng": {
+				"latitude": 40.0332907,
+				"longitude": -75.22968
+			},
+			"address": "201 Fountain St, Philadelphia, PA  19128, United States",
+			"zipCode": "19128"
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 11324,
+		"firstName": "Zheng",
+		"lastName": "Huang",
+		"photoURL": "https://s3.amazonaws.com/opensportsmedia/profiles/11324.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229288,
+			"price": 9,
+			"title": "Libero",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229289,
+			"price": 9,
+			"title": "Middle Blocker",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229290,
+			"price": 9,
+			"title": "Opposite Hitter",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229291,
+			"price": 9,
+			"title": "Outside Hitter",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 6,
+			"quantityTotal": 6,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229292,
+			"price": 9,
+			"title": "Setter",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 2,
+			"quantityTotal": 2,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "A",
+				"value": 0.8
+			},
+			"genderID": 0,
+			"sportName": "Indoor Volleyball",
+			"repeatedPostID": 155625,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["A-AA", "1-court", "sixes", "6v6", "Tuesday"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 17,
+		"aliasID": "123b182911324b9b740c7",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 11324,
+			"isPublic": true,
+			"lastName": "Huang",
+			"photoURL": "https://s3.amazonaws.com/opensportsmedia/profiles/11324.jpg",
+			"firstName": "Zheng",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "# ❗️IMPORTANT❗️\n\n**YOU WILL HAVE A CHANCE TO SIGN UP FOR THE POSITION YOU WANT TO PLAY WHEN THE EVENT IS POSTED. PLEASE REFRAIN FROM SIGNING UP FOR A POSITION THAT YOU ARE NOT FAMILIAR WITH OR IF YOU THINK YOU MIGHT BE A LIABILITY AGAINST OTHER A LEVEL PLAYERS AT THAT POSITION.** \n\n• ✋🏼 first time attendees please reach out to the event host to verify your level. You will be asked to leave the event if your skill level is below the expectation.\n\n👥 Intended for **A-level players or better**.   *🅰️/🅰️🅰️players have priority to sign up until Monday night.* \n\n🅰️ players are __above average competitive__ players. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful. Level A players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes.\n\n🅰️🅰️ players are __extremely competitive__ players. These individuals may possess the skills needed to play professionally. These players are current professional or former athletes from D1 or D2 schools.\n\n## MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n• 🔞 Must be at least 18 years old to attend\n• 🔕 Profiles lacking *indoor volleyball* as a sport on their profile will be removed\n• 📞 Message the organizer with any questions.\n\n➖➖➖➖",
+		"waitlist": {
+			"count": 6
+		}
+	}, {
+		"id": 156234,
+		"dateCreated": "2023-12-20T21:25:14.029Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Tue | BB - ⬆️BB | Indoor Sixes",
+		"headerMediaURL": "https://assets.opensports.net/posts/6849UQMghQsfo._7TdbfmXHE.jpg",
+		"category": "2023-12-27T00:00:46.015Z",
+		"end": "2023-12-27T03:00:46.015Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "North Light Community Center",
+			"latlng": {
+				"latitude": 40.0286812,
+				"longitude": -75.2242269
+			},
+			"address": "North Light Community Center, 175 Green Ln, Philadelphia, PA 19127, USA",
+			"zipCode": "19127",
+			"description": "North Light’s vision is to support and strengthen our diverse neighborhoods by meeting the evolving needs of individuals and families."
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 9491,
+		"firstName": "Berto",
+		"lastName": "Arteaga",
+		"photoURL": "https://assets.opensports.net/profiles/9491PLOXaJxXV-XnfX7sezjU.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229314,
+			"price": 15,
+			"title": "⬇️BB - ⬆️BB players or better",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 18,
+			"quantityTotal": 18,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "BB",
+				"value": 0.6
+			},
+			"genderID": 0,
+			"sportName": "Indoor Volleyball",
+			"repeatedPostID": 152717,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["Tuesday", "1-court", "BB", "coed", "indoor", "sixes"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 18,
+		"aliasID": "tue-bb-bb-indoor-sixes-pBrU_dF_O",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 9491,
+			"isPublic": true,
+			"lastName": "Arteaga",
+			"photoURL": "https://assets.opensports.net/profiles/9491PLOXaJxXV-XnfX7sezjU.jpg",
+			"firstName": "Berto",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "👥 Intended for 🅱️🅱️ players or better. One indoor court. Indoor rules. Games to 21. 18 players max, 3 rotating teams, where the teams rotate until the event ends. \n\n## 🔞 AGE REQUIREMENT \n\nYou must be 18 or older to participate.\n\n## 🅿️ PARKING\n\nNorth Light has a dedicated parking lot behind the center at 206 Carson St.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Curious how the wait list works? Read this:\nhttps://opensports.net/waitlist\n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\nRANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A \"B\" player makes mistakes often.\n\n🅱️🅱️ players knows where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A \"BB\" player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n⬇️BB (lower-BB) and ⬆️BB (upper-BB) refers to how consistent you are at passing, setting, spiking, blocking, digging and serving. ⬆️BB is 80% consistent at every skill point for your physical characteristics.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful. Level A players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes, and are extremely competitive.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the North Light rental\n💵🔙 Refund deadline is 24 hours before the event.\n🔄 This event repeats weekly\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball: https://phlvb.com/flistatec-volleyball",
+		"waitlist": {
+			"count": 2
+		}
+	}, {
+		"id": 156313,
+		"dateCreated": "2023-12-21T15:03:38.938Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Wed | B - ⬇BB | Indoor Coed Sixes 🏐 ",
+		"headerMediaURL": "https://assets.opensports.net/events/6849KPijiUhNg.YnW_ab9n53.jpg",
+		"category": "2023-12-27T23:30:44.000Z",
+		"end": "2023-12-28T01:30:44.000Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Crane Community Center",
+			"latlng": {
+				"latitude": 39.957496,
+				"longitude": -75.15556
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA",
+			"zipCode": "19107",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 9692,
+		"firstName": "Tim",
+		"lastName": "Royer",
+		"photoURL": "https://assets.opensports.net/profiles/96924VV8VfpJh-60GcH2C4Zw.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229393,
+			"price": 13,
+			"title": "Player",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 18,
+			"quantityTotal": 18,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "B",
+				"value": 0.4
+			},
+			"genderID": 0,
+			"sportName": "Volleyball",
+			"repeatedPostID": 155577,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["membership-discount", "1-court", "Chinatown", "Wednesday", "B-BB"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 18,
+		"aliasID": "wed-b-bb-indoor-coed-sixes--yRMJQqtVs",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 9692,
+			"isPublic": true,
+			"lastName": "Royer",
+			"photoURL": "https://assets.opensports.net/profiles/96924VV8VfpJh-60GcH2C4Zw.jpg",
+			"firstName": "Tim",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "👥 Intended for 🅱️ players or better. One indoor court. Indoor rules. Games to 21. 18 players max, 3 rotating teams, where the teams rotate until the event ends. \n\n## 🔞 AGE REQUIREMENT \n\nYou must be 18 or older to play.\n\n## 🅿️ PARKING\n\nStreet parking and a paid lot.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Curious how the wait list works? Read this:\nhttps://opensports.net/waitlist\n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\n## RANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A \"B\" player makes mistakes often.\n\n🅱️🅱️ players knows where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A \"BB\" player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n⬇️BB (lower-BB) and ⬆️BB (upper-BB) refers to how consistent you are at passing, setting, spiking, blocking, digging and serving. ⬆️BB is 80% consistent at every skill point for your physical characteristics.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful. Level A players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes, and are extremely competitive.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane Center rental\n💵🔙 Refund deadline is 4️⃣ hours before the event.\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball is the [flistatec-volleyball](https://phlvb.com/flistatec-volleyball)",
+		"waitlist": {
+			"count": 22
+		}
+	}, {
+		"id": 156347,
+		"dateCreated": "2023-12-22T00:40:47.270Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Wed | ⬆️BB - A | Indoor Coed Sixes 🏐 ",
+		"headerMediaURL": "https://assets.opensports.net/events/120728LImYTAFbS.q3wwSx5Tqj.jpg",
+		"category": "2023-12-28T01:30:43.388Z",
+		"end": "2023-12-28T03:30:43.388Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Crane Community Center",
+			"latlng": {
+				"latitude": 39.957496,
+				"longitude": -75.15556
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA",
+			"zipCode": "19107",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 181763,
+		"firstName": "Derek",
+		"lastName": "Chan",
+		"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229433,
+			"price": 13,
+			"title": "Libero / Middle Blocker",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 2,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229434,
+			"price": 13,
+			"title": "Middle Blocker",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 2,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229435,
+			"price": 13,
+			"title": "Pin Hitter (OH, OPP)",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 8,
+			"quantityTotal": 9,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229436,
+			"price": 13,
+			"title": "Setter",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "A",
+				"value": 0.8
+			},
+			"genderID": 0,
+			"sportName": "Volleyball",
+			"repeatedPostID": 155611,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["BB-A", "membership-discount", "1-court", "Chinatown", "Wednesday"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 15,
+		"aliasID": "wed-bb-a-indoor-coed-sixes--m1qWNqeBI",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 181763,
+			"isPublic": true,
+			"lastName": "Chan",
+			"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+			"firstName": "Derek",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "👥 Intended for **upper 🅱️🅱️ players or better**. One indoor court. Indoor rules. Games to 21. 18 players max, 3 rotating teams, where the teams rotate until the event ends. \n\n## 🔞 AGE REQUIREMENT \n\nYou **must** be 18 or older to play.\n\n## 🅿️ PARKING\n\nStreet parking and a paid lot.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Read [how the wait list works](https://opensports.net/waitlist).\n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\n### RANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A **B** player makes mistakes often.\n\n🅱️🅱️ players know where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A **BB** player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n⬇️BB **(lower-BB)** and ⬆️BB **(upper-BB)** refers to how consistent you are at passing, setting, spiking, blocking, digging and serving. ⬆️BB is 80% consistent at every skill point for your physical characteristics.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play and use advanced strategies to be successful. Level **A** players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes and are extremely competitive.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane Center rental\n💵🔙 Refund deadline is 4️⃣ hours before the event.\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball is the [flistatec-volleyball](https://phlvb.com/flistatec-volleyball)",
+		"waitlist": {
+			"count": 20
+		}
+	}, {
+		"id": 156508,
+		"dateCreated": "2023-12-23T18:39:36.321Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "*SPECIAL EVENT* Thu | ⬆️BB - A | Indoor Coed Sixes 🏐 ",
+		"headerMediaURL": "https://assets.opensports.net/events/120728LImYTAFbS.q3wwSx5Tqj.jpg",
+		"category": "2023-12-29T01:00:43.388Z",
+		"end": "2023-12-29T04:00:43.388Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Crane Community Center",
+			"latlng": {
+				"latitude": 39.957496,
+				"longitude": -75.15556
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA",
+			"zipCode": "19107",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 181763,
+		"firstName": "Derek",
+		"lastName": "Chan",
+		"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229551,
+			"price": 19,
+			"title": "Libero / Middle Blocker",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229552,
+			"price": 19,
+			"title": "Middle Blocker",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229553,
+			"price": 19,
+			"title": "Pin Hitter (OH, OPP)",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 9,
+			"quantityTotal": 9,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229554,
+			"price": 19,
+			"title": "Setter",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "A",
+				"value": 0.8
+			},
+			"genderID": 0,
+			"sportName": "Volleyball",
+			"repeatedPostID": 156347,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["BB-A", "membership-discount", "1-court", "Chinatown", "Wednesday"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 18,
+		"aliasID": "special-event-thu-bb-a-indoor-coed-sixes--2rxl-MeI-",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 181763,
+			"isPublic": true,
+			"lastName": "Chan",
+			"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+			"firstName": "Derek",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "👥 Intended for **upper 🅱️🅱️ players or better**. One indoor court. Indoor rules. Games to 21. 18 players max, 3 rotating teams, where the teams rotate until the event ends. \n\n## 🔞 AGE REQUIREMENT \n\nYou **must** be 18 or older to play.\n\n## 🅿️ PARKING\n\nStreet parking and a paid lot.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Read [how the wait list works](https://opensports.net/waitlist).\n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\n### RANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A **B** player makes mistakes often.\n\n🅱️🅱️ players know where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A **BB** player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n⬇️BB **(lower-BB)** and ⬆️BB **(upper-BB)** refers to how consistent you are at passing, setting, spiking, blocking, digging and serving. ⬆️BB is 80% consistent at every skill point for your physical characteristics.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play and use advanced strategies to be successful. Level **A** players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes and are extremely competitive.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane Center rental\n💵🔙 Refund deadline is 4️⃣ hours before the event.\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball is the [flistatec-volleyball](https://phlvb.com/flistatec-volleyball)",
+		"waitlist": {
+			"count": 19
+		}
+	}, {
+		"id": 155986,
+		"dateCreated": "2023-12-18T00:27:48.347Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "FRI | BB | Indoor Coed Quads",
+		"headerMediaURL": "https://assets.opensports.net/events/138786hvTvDKrAl.N8BQ17VdBG.jpg",
+		"category": "2023-12-30T00:00:00.000Z",
+		"end": "2023-12-30T03:30:00.000Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "King of Prussia",
+			"title": "Aspiring Champions Inc",
+			"latlng": {
+				"latitude": 40.0875091,
+				"longitude": -75.3986206
+			},
+			"address": "970 Pulaski Dr, King of Prussia, PA 19406, USA",
+			"zipCode": "19406",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 138786,
+		"firstName": "Jeremy",
+		"lastName": "Snyder",
+		"photoURL": "https://assets.opensports.net/profiles/1387867iw6qPzNg-YTqSmj8fhe.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 228971,
+			"price": 15,
+			"title": "Player",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 9,
+			"quantityTotal": 9,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 228972,
+			"price": 15,
+			"title": "Setter",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "BB",
+				"value": 0.6
+			},
+			"genderID": 0,
+			"sportName": "Indoor Volleyball",
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["1-court", "BB", "Coed", "Quads", "Saturday"],
+		"minAttendees": null,
+		"maxAttendees": 12,
+		"registeredAttendees": 12,
+		"aliasID": "indoor-coed-quads-CKyR_hm7Y",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 138786,
+			"isPublic": true,
+			"lastName": "Snyder",
+			"photoURL": "https://assets.opensports.net/profiles/1387867iw6qPzNg-YTqSmj8fhe.jpg",
+			"firstName": "Jeremy",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "# Indoor Quads\nThis event will be Coed Quads format. We will have 3 teams per court, rotating through (each team will play 2 games then sit for 1).\n\n**This event is intended for BB or higher level players.**\n\nBB players can execute all skills well (serving, receiving, setting, hitting) but vary in their consistency. They usually will get 3 touches each play, have a good understanding of positioning, and are consistent in their serves, passes, and attacks. They know the basic footwork and how to approach hitting effectively from an assigned position. You should be able to consistently serve receive for this event.\n\n🔞 You must be 18 years of age or older to participate.\n\n## Rules\n + Games will be rally to 21, win by 2, Cap at 23.\n + No rotation required however you must serve in order\n + Hand setting/pushing the ball over the net is NOT permitted\n + No open hand tips/dinks\n + No directional blocking (redirecting the ball with fingertips)\n + A player may cross under the net as long as they do not make contact with the net or interfere with the opponent's play. (If you pass under the net while blocking/hitting/jousting and there is a player attempting to play the ball on the other side, it is a fault. You do not need to contact a player for it to be considered interference)\n\n---\n\n### 📛 MEMBERSHIP\n We have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Visit the group link under this event's title, then visit the membership tab.\n\n### 📝 WAITLIST\nIs this event full? Join the waitlist, it's free! Curious how the waitlist works? Read this:\n https://opensports.net/waitlist\n\n---\n\n## Understanding Levels:\n\nOur organizers can only evaluate people once they see them play at an event, so we rely on members self reporting their level. Understanding what level you are, and accurately self reporting it, is vital for helping us keep our pickup events fun and safe for everyone. When rating yourself, remember to rate yourself against the descriptions, rather than other people who you've seen at events. The level of attendees at individual events can fluctuate.\n\n`Beginner --> B --> BB --> A --> AA --> Open`\n\n#### Beginner Level (Recreational)\n\n\"Beginner\" players are playing recreational level volleyball. They're still learning how to play and the focus is keeping the ball in the air and getting the ball back over the net rather than getting 3 touches and bump/set/spike.\n\n\n\n#### B Level\n\n\"B\" players are not beginners, but are still in the early learning stages of the game. They can maintain a rally, have a basic understanding of positioning and try to get 3 touches on the ball each play. They know how to bump, set (a little), and spike, but need a lot of practice to be able to do these skills consistently. They should already be getting a good pass at least 30% of the time when receiving a serve. Players aren’t necessarily specialized into positions yet, so most games will either have the player in the middle front setting, or sometimes running a 4-2 system (2 setters across from each other, each setting when they are in the front row).\n\n**_B level is the lowest level of competition, but it is still a level of competition at most tournaments. B is not the same as Beginner._**\n\n#### BB Level\n\nBB players can execute all skills well (serving, receiving, setting, hitting) but vary in their consistency. They usually will get 3 touches each play, have a good understanding of positioning and rotations, and are consistent in their serves, passes, and attacks. They know the basic footwork and how to approach hitting effectively from an assigned position. BB players will begin to specialize a bit, know how to run a 5-1 (or 6-2), and can play a position in these systems.\n\nSome events might differentiate between **Upper BB** and **Lower BB**.\n\nThe core differences between **Upper BB** and **Lower BB** is the level of consistency and athleticism. Lower BB may only be executing on the core skills roughly 50-60% (serving, passing, setting, and hitting) of the time  and/or may be physically more limited. At the Upper BB level you should be able to effectively play your position, not just generally know where to be, and are 70-80% consistent at all the core skills. Specific positions may have slightly different requirements, for example an Upper BB Libero has a higher expectation for passing than other positions. Players are hitting the ball harder at this level so front row players should be able to block at the net.\n\n#### A Level\n\nA level players have the skills needed to play at a high level. They are in excellent physical condition and can do all the skills required of their position very consistently — Liberos/OHs are giving a good (3 point) pass on most plays, front row players are able to both effectively hit and block, Setters can effectively run all options on offense and deliver the ball to their hitters consistently...etc\n\nThey have in-depth knowledge of offensive and defensive game play. Many of these players are former club and/or college athletes.\n\n\n#### AA Level\n\nAA players are superb athletes who execute their skills with the highest of power and efficiency. Most of these players played in college at D1/D2 school and are still in peak physical condition. This is the last stop before becoming a \"Pro\" or \"Open Level\" player.",
+		"waitlist": {
+			"count": 13
+		}
+	}, {
+		"id": 155987,
+		"dateCreated": "2023-12-18T00:29:10.440Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "FRI | A | indoor Coed Quads",
+		"headerMediaURL": "https://assets.opensports.net/events/138786goK2S7qHh.PkpUZv2xkm.jpg",
+		"category": "2023-12-30T00:00:00.000Z",
+		"end": "2023-12-30T03:30:00.000Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "King of Prussia",
+			"title": "Aspiring Champions Inc",
+			"latlng": {
+				"latitude": 40.0875091,
+				"longitude": -75.3986206
+			},
+			"address": "970 Pulaski Dr, King of Prussia, PA 19406, USA",
+			"zipCode": "19406",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 138786,
+		"firstName": "Jeremy",
+		"lastName": "Snyder",
+		"photoURL": "https://assets.opensports.net/profiles/1387867iw6qPzNg-YTqSmj8fhe.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 228975,
+			"price": 15,
+			"title": "Left Side",
+			"schema": null,
+			"status": 200,
+			"autoHide": false,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 6,
+			"quantityTotal": 6,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 228976,
+			"price": 15,
+			"title": "Middle Back",
+			"schema": null,
+			"status": 200,
+			"autoHide": false,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 7,
+			"quantityTotal": 7,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 228973,
+			"price": 15,
+			"title": "Right Side",
+			"schema": null,
+			"status": 200,
+			"autoHide": false,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 5,
+			"quantityTotal": 5,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 228974,
+			"price": 15,
+			"title": "Setter",
+			"schema": null,
+			"status": 200,
+			"autoHide": false,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 6,
+			"quantityTotal": 6,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "A",
+				"value": 0.8
+			},
+			"genderID": 0,
+			"sportName": "Indoor Volleyball",
+			"repeatedPostID": 155986,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["1-court", "Coed", "Quads", "Saturday", "A-AA"],
+		"minAttendees": null,
+		"maxAttendees": 24,
+		"registeredAttendees": 24,
+		"aliasID": "fef31f17138786abb81d45",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 138786,
+			"isPublic": true,
+			"lastName": "Snyder",
+			"photoURL": "https://assets.opensports.net/profiles/1387867iw6qPzNg-YTqSmj8fhe.jpg",
+			"firstName": "Jeremy",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "# Indoor Quads\nThis event will be Coed Quads format. We will have 3 teams per court, rotating through (each team will play 2 games then sit for 1).\n\n**This event is intended for A or higher level players.**\nIf you are unfamiliar with the level system, please read through the descriptions at the bottom of the event.\n\n**the “Middle” position is not the same as middle blocker in 6s. You will be expected to serve receive (usually as the primary passer on your team)**\n\n🔞 You must be 18 years of age or older to participate.\n\n## Rules\n + Games will be rally to 21, win by 2, Cap at 23.\n + No rotation required however you must serve in order\n + Hand setting/pushing the ball over the net is NOT permitted\n + No open hand tips/dinks\n + No directional blocking (redirecting the ball with fingertips)\n + A player may cross under the net as long as they do not make contact with the net or interfere with the opponent's play. (If you pass under the net while blocking/hitting/jousting and there is a player attempting to play the ball on the other side, it is a fault. You do not need to contact a player for it to be considered interference)\n\n\n---\n\n\n### 📛 MEMBERSHIP\n We have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Visit the group link under this event's title, then visit the membership tab.\n\n### 📝 WAITLIST\nIs this event full? Join the waitlist, it's free! Curious how the waitlist works? Read this:\n https://opensports.net/waitlist\n\n\n---\n\n\n## Understanding Levels:\n\nOur organizers can only evaluate people once they see them play at an event, so we rely on members self reporting their level. Understanding what level you are, and accurately self reporting it, is vital for helping us keep our pickup events fun and safe for everyone.\n\nWhen rating yourself, remember to rate yourself against the descriptions, rather than other people who you've seen at events. The level of attendees at individual events can fluctuate.\n\n`Beginner --> B --> BB --> A --> AA --> Open`\n\n#### Beginner Level (Recreational)\n\n\"Beginner\" players are playing recreational level volleyball. They're still learning how to play and the focus is keeping the ball in the air and getting the ball back over the net rather than getting 3 touches and bump/set/spike.\n\n\n\n#### B Level\n\n\"B\" players are not beginners, but are still in the early learning stages of the game. They can maintain a rally, have a basic understanding of positioning and try to get 3 touches on the ball each play. They know how to bump, set (a little), and spike, but need a lot of practice to be able to do these skills consistently. They should already be getting a good pass at least 30% of the time when receiving a serve. Players aren’t necessarily specialized into positions yet, so most games will either have the player in the middle front setting, or sometimes running a 4-2 system (2 setters across from each other, each setting when they are in the front row).\n\n**_B level is the lowest level of competition, but it is still a level of competition at most tournaments. B is not the same as Beginner._**\n\n#### BB Level\n\nBB players can execute all skills well (serving, receiving, setting, hitting) but vary in their consistency. They usually will get 3 touches each play, have a good understanding of positioning and rotations, and are consistent in their serves, passes, and attacks. They know the basic footwork and how to approach hitting effectively from an assigned position. BB players will begin to specialize a bit, know how to run a 5-1 (or 6-2), and can play a position in these systems.\n\nSome events might differentiate between **Upper BB** and **Lower BB**.\n\nThe core differences between **Upper BB** and **Lower BB** is the level of consistency and athleticism. Lower BB may only be executing on the core skills roughly 50-60% (serving, passing, setting, and hitting) of the time  and/or may be physically more limited. At the Upper BB level you should be able to effectively play your position, not just generally know where to be, and are 70-80% consistent at all the core skills. Specific positions may have slightly different requirements, for example an Upper BB Libero has a higher expectation for passing than other positions. Players are hitting the ball harder at this level so front row players should be able to block at the net.\n\n#### A Level\n\nA level players have the skills needed to play at a high level. They are in excellent physical condition and can do all the skills required of their position very consistently — Liberos/OHs are giving a good (3 point) pass on most plays, front row players are able to both effectively hit and block, Setters can effectively run all options on offense and deliver the ball to their hitters consistently...etc\n\nThey have in-depth knowledge of offensive and defensive game play. Many of these players are former club and/or college athletes.\n\n\n#### AA Level\n\nAA players are superb athletes who execute their skills with the highest of power and efficiency. Most of these players played in college at D1/D2 school and are still in peak physical condition. This is the last stop before becoming a \"Pro\" or \"Open Level\" player.",
+		"waitlist": {
+			"count": 17
+		}
+	}, {
+		"id": 156584,
+		"dateCreated": "2023-12-25T00:51:32.242Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Sun | B - ⬇️BB | Indoor Coed Sixes 🏐 ",
+		"headerMediaURL": "https://assets.opensports.net/events/90807VfEg29RY.PP08vrqaHP.jpg",
+		"category": "2023-12-31T18:30:21.000Z",
+		"end": "2023-12-31T21:30:21.000Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"city": "Philadelphia",
+			"title": "Crane Community Center",
+			"latlng": {
+				"latitude": 39.957496,
+				"longitude": -75.15556
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA",
+			"zipCode": "19107",
+			"description": ""
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 9692,
+		"firstName": "Tim",
+		"lastName": "Royer",
+		"photoURL": "https://assets.opensports.net/profiles/96924VV8VfpJh-60GcH2C4Zw.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229607,
+			"price": 19,
+			"title": "B and ⬇️BB players or better",
+			"schema": {
+				"name": "B/BB Event Questions",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"What is your preferred position?": {
+						"type": "text",
+						"index": 0,
+						"widget": "text",
+						"required": true
+					},
+					"Do you WANT to play on a 5-1 team (if possible)?": {
+						"type": "text",
+						"index": 2,
+						"widget": "text",
+						"required": true
+					},
+					"Do you know how to play in a 5-1? (Not required for this event)": {
+						"type": "text",
+						"index": 1,
+						"widget": "text",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "fa13b036-3c75-4c82-99e4-8c87cfb211ef",
+			"salesStart": null,
+			"quantitySold": 18,
+			"quantityTotal": 18,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "B",
+				"value": 0.4
+			},
+			"genderID": 0,
+			"sportName": "Volleyball",
+			"repeatedPostID": 155976,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["B-BB", "membership-discount", "1-court", "Open Play", "Sunday"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 18,
+		"aliasID": "sun-b-bb-indoor-coed-sixes--OsGlEZtuy",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 9692,
+			"isPublic": true,
+			"lastName": "Royer",
+			"photoURL": "https://assets.opensports.net/profiles/96924VV8VfpJh-60GcH2C4Zw.jpg",
+			"firstName": "Tim",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "👥 Intended for 🅱️ players or better. 3 teams (18 players) max per court. Your team will play on one side of the court, then play on the other side of the court for the next game, then rest during the third game, repeating till the event ends.\n\n‼️ You MUST play on the court on which you signed up.\n\n**🔞 AGE REQUIREMENT:** You must be at least 18 years old to play at this event \n\n**🅿️ PARKING:** Street parking and a pay lot.\n\n**🗒️ GYM RULES:** No eating or drinking (except water bottles) on the courts.  No vaping.\n\n## 📝 WAIT LIST\n\nIs this event full? Join the wait list, it's free! Curious how the wait list works? Read this:\nhttps://opensports.net/waitlist\n\n## 📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $10 plan which saves $2 on your ticket, and a second $15 plan that saves $2 on your ticket and $2 for every guest ticket. Get your membership by clicking _[here](https://opensports.net/PhiladelphiaVolleyball/memberships)_.\n\n## 🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\nRANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\nA \"Beginner\" should know the basics of volleyball, and played some volleyball before, but they are just beginning to bump, set, and spike. They should not join an event which includes \"BB\" or \"A\" level players.\n(Unless in a supervised, specifically managed All Levels event)\n\n🅱️ players are still in the early learning stages of the game but knows the skills. They know how to bump, set (a little), and spike, but have a lot of practice yet to go to be able to do these skills consistently. A \"B\" player makes mistakes often.\n\n🅱️🅱️ players knows where to be on the court at all times when plays are developing. They know where to be when the opponent is hitting. They know the footwork of and how to approach hitting effectively. A \"BB\" player knows how to run a 5-1, a 6-2, and needlessly, a 4-2.\n\n🅰️ players are above average competitive players. These individuals may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful. Level A players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes, and are extremely competitive.\n\n## 🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane Center rental\n💵🔙 Refund deadline is 2️⃣4️⃣ hours before the event.  Refunds will be issued in the form of Philadelphia Volleyball credit.\n🔄 This event repeats weekly\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball: https://phlvb.com/flistatec-volleyball\n&nbsp;",
+		"waitlist": {
+			"count": 23
+		}
+	}, {
+		"id": 156794,
+		"dateCreated": "2023-12-26T17:56:02.865Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Sun | A | Indoor Coed Sixes 🏐 ",
+		"headerMediaURL": "https://assets.opensports.net/events/120728LImYTAFbS.q3wwSx5Tqj.jpg",
+		"category": "2023-12-31T18:30:39.350Z",
+		"end": "2023-12-31T21:30:39.350Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"title": "Crane Chinatown",
+			"latlng": {
+				"latitude": 39.95733,
+				"longitude": -75.15560289999999
+			},
+			"address": "1001 Vine St, Philadelphia, PA 19107, USA"
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 181763,
+		"firstName": "Derek",
+		"lastName": "Chan",
+		"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 229715,
+			"price": 19,
+			"title": "Libero",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 2,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229716,
+			"price": 19,
+			"title": "Middle Blocker",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 0,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229717,
+			"price": 19,
+			"title": "Pin Hitter (OH, OPP)",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 9,
+			"quantityTotal": 9,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}, {
+			"id": 229718,
+			"price": 19,
+			"title": "Setter",
+			"schema": {
+				"name": "Position Confirmation",
+				"type": "object",
+				"required": true,
+				"properties": {
+					"Please double check your ticket and confirm you selected the position you intend to play (Setter, Middle, DS/L, Pin).  Do you agree to play the position on your ticket?": {
+						"enum": ["Yes", "No (you will be removed)"],
+						"type": "text",
+						"index": 0,
+						"widget": "select",
+						"required": true
+					}
+				}
+			},
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": "175e48d5-9e77-4205-8c94-1e6c534ddc70",
+			"salesStart": null,
+			"quantitySold": 3,
+			"quantityTotal": 3,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "A",
+				"value": 0.8
+			},
+			"genderID": 0,
+			"sportName": "Volleyball",
+			"repeatedPostID": 156102,
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["BB-A", "membership-discount", "1-court", "Chinatown", "Sunday"],
+		"minAttendees": null,
+		"maxAttendees": 18,
+		"registeredAttendees": 14,
+		"aliasID": "sun-a-indoor-coed-sixes--ObS_rMfbV",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 181763,
+			"isPublic": true,
+			"lastName": "Chan",
+			"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+			"firstName": "Derek",
+			"isPrimary": true
+		}, {
+			"title": "Event Host",
+			"userID": 30892,
+			"isPublic": true,
+			"lastName": "Pascual",
+			"photoURL": "https://assets.opensports.net/profiles/30892-3NOMEGdU-EvFcz5GqJB.jpg",
+			"firstName": "Jacob",
+			"isPrimary": false
+		}, {
+			"title": "Host",
+			"userID": 181763,
+			"isPublic": true,
+			"lastName": "Chan",
+			"photoURL": "https://assets.opensports.net/profiles/181763f_9vm40Ld-fcNLJqHlTc.jpg",
+			"firstName": "Derek",
+			"isPrimary": true
+		}, {
+			"title": "Host",
+			"userID": 30892,
+			"isPublic": true,
+			"lastName": "Pascual",
+			"photoURL": "https://assets.opensports.net/profiles/30892-3NOMEGdU-EvFcz5GqJB.jpg",
+			"firstName": "Jacob",
+			"isPrimary": false
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "‼️‼️READ THE SKILL LEVEL DESCRIPTIONS BEFORE SIGNING UP. PLAYERS WITHOUT THE APPROPRIATE FOOTWORK AND SKILLS ARE AN INJURY RISK TO EVERYONE ON THE COURT. If you have any questions about level prior to signing up, message James or Jacob. If you are new to the event, feel free to reach out and introduce yourself!\n\n‼️YOU MUST PLAY THE POSITION YOU SIGN UP FOR - PLEASE DOUBLE CHECK YOUR TICKET. Trading for another position is at the discretion of the players involved and is not guaranteed.\n\n⬆️BB is 80% consistent at every skill point (serving, passing, setting, and hitting) for your physical characteristics. ⬆️BB players put a free ball to target every time and know footwork for at least one position.\n\n👥 Intended for upper 🅱️🅱️ players or better. One indoor court. Indoor rules. Games to 21. 18 players max, 3 rotating teams, where the teams rotate until the event ends. \n\n🅰️ players may possess the skills needed to play professionally. They have in depth knowledge of offensive and defensive game play, and use advanced strategies to be successful - they can do more than just hit a ball hard. “A” level players are typically in excellent physical condition and are able to compete at a high level. These players are former club and/or college athletes, and are extremely competitive.\n\n🅱️🅱️ players knows where to be on the court at all times when plays are developing. They know at least a basic perimeter defense. They know the footwork of and how to approach hitting effectively from an assigned position. A \"BB\" player knows how to run a 5-1 and a 6-2, and plays a position in these systems. ⬇️BB and ⬆️BB refers to how consistent you are at using volleyball skills within a 5-1 or a 6-2.\n\n\n‼️ You MUST play on the court on which you signed up.\n\n🔞 AGE REQUIREMENT \n\n🅿️ PARKING: Street parking and a paid lot.\n\n📝 WAIT LIST: Is this event full? Join the wait list, it's free! Curious how the wait list works? Read this:\nhttps://opensports.net/waitlist\n\n🤹 HOW TO DETERMINE YOUR SKILL LEVEL\n\nRANKING SYSTEM (low to high): \nBeginner ↗️ B ↗️ BB ↗️ A ↗️ AA ↗️ Pro\n\nLooking to improve? Visit this YouTube page and find the skills videos: https://youtube.com/user/GoldMedalSquared \n\n📛 MEMBERSHIP PERKS\n\nWe have two annual membership plans, one $11 plan which saves $2 on your ticket, and a second $16 plan that saves $2 on your ticket and $1 for every guest ticket. Visit group link under this event's title, then visit the membership tab.\n\n🗒️ ADDITIONAL NOTES\n\n🎫 Ticket required to attend this event\n🎟️ Ticket cost covers the Crane Center rental\n💵🔙 Refund deadline is 2️⃣4️⃣ hours before the event.\n🔄 This event repeats weekly - every first Sunday of the month, the event will be from 3PM - 6PM\n🔔 Invites are sent approximately 1 week prior to play\n🔕 Profiles lacking sport cards are not sent invites\n📞 Message the organizer with any questions.\n🏐 Official ball: https://phlvb.com/flistatec-volleyball\n➖➖➖➖",
+		"waitlist": {
+			"count": 0
+		}
+	}, {
+		"id": 155133,
+		"dateCreated": "2023-12-07T16:28:00.363Z",
+		"status": 200,
+		"statusOverride": 200,
+		"title": "Open Gym",
+		"headerMediaURL": "https://assets.opensports.net/posts/68495e8qeJMNQ.GVZfLOmhHU.jpg",
+		"category": "2024-01-01T18:00:00.000Z",
+		"end": "2024-01-01T22:00:00.000Z",
+		"timeZone": "America/New_York",
+		"facilityID": null,
+		"place": {
+			"title": "Aspiring Champions Inc",
+			"latlng": {
+				"latitude": 40.0875091,
+				"longitude": -75.3986206
+			},
+			"address": "970 Pulaski Dr, King of Prussia, PA 19406, USA"
+		},
+		"isPublic": true,
+		"ticketsRequireApproval": false,
+		"attendeesCanInvite": null,
+		"creatorGroupID": 43,
+		"groupName": "Philadelphia Volleyball",
+		"creatorID": 10765,
+		"firstName": "Jean",
+		"lastName": "Moran",
+		"photoURL": "https://graph.facebook.com/10159506969055262/picture",
+		"typeID": 2,
+		"sportID": 26,
+		"ticketsSummary": [{
+			"id": 228007,
+			"price": 16,
+			"title": "Player",
+			"schema": null,
+			"status": 200,
+			"autoHide": null,
+			"currency": "USD",
+			"salesEnd": null,
+			"schemaID": null,
+			"salesStart": null,
+			"quantitySold": 36,
+			"quantityTotal": 36,
+			"requiredForOrder": false,
+			"quantityRequested": 0
+		}],
+		"requireInAppPayment": true,
+		"data": {
+			"level": {
+				"title": "BB",
+				"value": 0.6
+			},
+			"genderID": 0,
+			"sportName": "Indoor Volleyball",
+			"hasSpecifiedPosition": true
+		},
+		"tags": ["Monday", "BB", "BB-A", "A-AA", "3-courts"],
+		"minAttendees": null,
+		"maxAttendees": null,
+		"registeredAttendees": 36,
+		"aliasID": "open-gym-XBoa_iJrg",
+		"killTime": null,
+		"killWarningTime": null,
+		"isSecret": false,
+		"hideQuantities": false,
+		"staffAssignments": [{
+			"title": "Event Host",
+			"userID": 10765,
+			"isPublic": true,
+			"lastName": "Moran",
+			"photoURL": "https://graph.facebook.com/10159506969055262/picture",
+			"firstName": "Jean",
+			"isPrimary": true
+		}],
+		"nextSessionStart": null,
+		"numSessions": null,
+		"numUpcomingSessions": null,
+		"description": "`THIS IS A GRASSROOTS EVENT ORGANIZED BY MEMBERS OF THE COMMUNITY, NOT BY PHILADELPHIA VOLLEYBALL OFFICIAL.`\n\nWork off the holiday stress! Open Gym\nKing of the Court style \n\nMake your own teams. Please note, I will make changes to teams if needed. We want everyone to have a good time.\n\nCourt 1 is where you’ll begin. You win, play on court 2, you win play on court 3 where the team remains until you take a loss. Then start at Court 1 again. \n\nThis event is BB+\nThis can be a stressful time of year, sports are meant to be fun. Please be kind to one another and treat everyone with grace and respect. Thank you!",
+		"waitlist": {
+			"count": 27
+		}
+	}]
