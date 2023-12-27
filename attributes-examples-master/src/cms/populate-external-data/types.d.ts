@@ -1,24 +1,21 @@
 export interface Product {
   id: number;
   title: string;
-  start: string;
-  end: string;
-  place: Place;
-  sportID: number;
-  data: Data;
+  price: number;
+  description: string;
+  category: Category;
+  image: string;
+  rating: Rating;
 }
 
-interface Place {
-    title: string;
-  }
+const enum Category {
+  Electronics = 'electronics',
+  Jewelery = 'jewelery',
+  MenSClothing = "men's clothing",
+  WomenSClothing = "women's clothing",
+}
 
-  interface Data {
-    level: Level;
-    genderID: number;
-  }
-  
-  interface Level {
-    title: string;
-    value: number;
-  }
-  
+interface Rating {
+  rate: number;
+  count: number;
+}
