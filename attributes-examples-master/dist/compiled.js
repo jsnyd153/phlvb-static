@@ -33,7 +33,7 @@
   ]);
   const fetchProducts = async () => {
       try {
-          const response = await fetch('https://fakestoreapi.com/products');
+          const response = await fetch('https://https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIDataEdit.json');
           const data = await response.json();
           return data;
       }
