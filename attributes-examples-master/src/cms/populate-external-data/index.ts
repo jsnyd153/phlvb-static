@@ -91,6 +91,13 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
   const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]');
   const level = newItem.querySelector<HTMLParagraphElement>('[data-element="level"]');
+  const type = newItem.querySelector<HTMLParagraphElement>('[data-element="type"]');
+  const gender = newItem.querySelector<HTMLParagraphElement>('[data-element="gender"]');
+  const genderType =
+  product.data.genderID === 0 ? "Mens" :
+  product.data.genderID === 1 ? "Womens" :
+  product.data.genderID === 2 ? "All" :
+  "Unknown"; // Default value if genderID doesn't match any condition
 
   // Populate inner elements
   // if (image) image.src = product.image;
@@ -99,6 +106,8 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   if (category) category.textContent = product.category;
   if (description) description.textContent = product.description;
   if (level) level.textContent = product.data.level.title;
+  if (type) type.textContent = product.data.sportName;
+  if (gender) gender.textContent = genderType;
 
   return newItem;
 };

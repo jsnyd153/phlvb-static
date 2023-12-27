@@ -44,6 +44,12 @@ const createItem = (product, templateElement) => {
     const category = newItem.querySelector('[data-element="category"]');
     const description = newItem.querySelector('[data-element="description"]');
     const level = newItem.querySelector('[data-element="level"]');
+    const type = newItem.querySelector('[data-element="type"]');
+    const gender = newItem.querySelector('[data-element="gender"]');
+    const genderType = product.data.genderID === 0 ? "Mens" :
+        product.data.genderID === 1 ? "Womens" :
+            product.data.genderID === 2 ? "All" :
+                "Unknown";
     if (date)
         date.textContent = product.start;
     if (title)
@@ -54,6 +60,10 @@ const createItem = (product, templateElement) => {
         description.textContent = product.description;
     if (level)
         level.textContent = product.data.level.title;
+    if (type)
+        type.textContent = product.data.sportName;
+    if (gender)
+        gender.textContent = genderType;
     return newItem;
 };
 const collectCategories = (products) => {
