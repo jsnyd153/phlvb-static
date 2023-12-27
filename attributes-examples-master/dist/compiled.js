@@ -11,6 +11,7 @@
           const [firstItem] = listInstance.items;
           const itemTemplateElement = firstItem.element;
           const products = await fetchProducts();
+          console.log(products);
           listInstance.clearItems();
           const newItems = products.map((product) => createItem(product, itemTemplateElement));
           await listInstance.addItems(newItems);
@@ -71,7 +72,7 @@
       radio.value = start;
       return newFilter;
   };
-  //==
+    //==
 })();
 
 
