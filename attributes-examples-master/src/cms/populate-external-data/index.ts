@@ -1,6 +1,10 @@
+
+
 import type { CMSFilters } from '../../types/CMSFilters';
 import type { Product } from './types';
 
+
+(() => {
 /**
  * Populate CMS Data from an external API.
  */
@@ -83,64 +87,81 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   // Clone the template element
   const newItem = templateElement.cloneNode(true) as HTMLDivElement;
 
-  // Query inner elements
-  // const image = newItem.querySelector<HTMLImageElement>('[data-element="image"]');
+  
 
-  const date = newItem.querySelector<HTMLDivElement>('[data-element="date"]');
+  
+//Map the values of genderID to the text values
+  const genderType =
+  product.data.genderID === 0 ? "All" :
+  product.data.genderID === 1 ? "Men's" :
+  product.data.genderID === 2 ? "Women's" :
+  "Unknown";
 
-  //create formatted string
-  const startDateTime = new Date(product.start);
-  const endDateTime = new Date(product.end);
 
-  const options: Intl.DateTimeFormatOptions = {
+//Map the values of genderID to the text values
+    const eventType =
+    product.data.sportName === "Volleyball" ? "Indoor" :
+    product.data.sportName === "Indoor Volleyball" ? "Indoor" :
+    product.data.sportName === "Grass Volleyball" ? "Grass" :
+    product.data.sportName === "Beach Volleyball" ? "Beach" :
+    "Unknown";
+  
+
+
+
+//start formated with day and month
+const startDateTime = new Date(product.start);
+  const startFormatted = new Intl.DateTimeFormat('en-US', {
     weekday: 'long',
     month: 'short',
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
     hour12: true
-  };
-  
-  const startFormatted = new Intl.DateTimeFormat('en-US', options).format(startDateTime);
+  }).format(startDateTime);
+//Just the time for end
+const endDateTime = new Date(product.end);
   const endFormatted = new Intl.DateTimeFormat('en-US', {
     hour: 'numeric',
     minute: 'numeric',
     hour12: true
   }).format(endDateTime);
+
+  //Final formatted date
+  const formattedDate = `${startFormatted} - ${endFormatted}`;
+
+  //Just the Day fo the Week for filtering
+  const dayofWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(startDateTime);
+
+  //create full URL from post aliasID
+  const eventURL = 'https://opensports.net/posts/' + product.aliasID;
   
-  const dateRange = `${startFormatted} - ${endFormatted}`;
 
-
+  // Query inner elements to modify
+  const date = newItem.querySelector<HTMLDivElement>('[data-element="date"]');
   const title = newItem.querySelector<HTMLHeadingElement>('[data-element="title"]');
   const category = newItem.querySelector<HTMLDivElement>('[data-element="category"]');
   const description = newItem.querySelector<HTMLParagraphElement>('[data-element="description"]');
   const level = newItem.querySelector<HTMLParagraphElement>('[data-element="level"]');
-
   const type = newItem.querySelector<HTMLParagraphElement>('[data-element="type"]');
-
-
+  const location = newItem.querySelector<HTMLParagraphElement>('[data-element="location"]');
   const gender = newItem.querySelector<HTMLParagraphElement>('[data-element="gender"]');
-  //Map the values of genderID to the text values
-  const genderType =
-  product.data.genderID === 0 ? "Mens" :
-  product.data.genderID === 1 ? "Womens" :
-  product.data.genderID === 2 ? "All" :
-  "Unknown";
-
-  
-
-
+  const day = newItem.querySelector<HTMLParagraphElement>('[data-element="day"]');
+  const link = newItem.querySelector<HTMLLinkElement>('[data-element="link"]');
 
   // Populate inner elements
-  // if (image) image.src = product.image;
-  if (date) date.textContent = dateRange;
+  //check if they exist first, set the content if they do
+  if (date) date.textContent = formattedDate;
   if (title) title.textContent = product.title;
   if (category) category.textContent = product.category;
   if (description) description.textContent = product.description;
   if (level) level.textContent = product.data.level.title;
-  if (type) type.textContent = product.data.sportName;
+  if (type) type.textContent = eventType;
   if (gender) gender.textContent = genderType;
-
+  if (day) day.textContent = dayofWeek;
+  if (location) location.textContent = product.place.title;
+  if (link) link.href = eventURL;
+  if (link) link.setAttribute('event-type',eventType)
   return newItem;
 };
 
@@ -183,3 +204,6 @@ const createFilter = (category: Product['category'], templateElement: HTMLLabelE
 
   return newFilter;
 };
+})();
+
+
