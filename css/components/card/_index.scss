@@ -18,21 +18,26 @@
 	--_theme_color-500: var(--theme_color-500);
 
 	&[event-type="grass"],
-	[event-type="grass"] & {
+	[event-type="grass"] &,
+	&[event-type="Grass"],
+	[event-type="Grass"] & {
 		--theme_color-500: #{$grass-500};
 		--theme_color-200: #{$grass-200};
 		--theme_color-900: #{$grass-900};
 	}
 
 	&[event-type="indoor"],
-	[event-type="indoor"] & {
+	[event-type="indoor"] &,
+	&[event-type="Indoor"],
+	[event-type="Indoor"] & {
 		--theme_color-500: #{$indoor-500};
 		--theme_color-200: #{$indoor-200};
 		--theme_color-900: #{$indoor-900};
 	}
 
 	&[event-type="beach"],
-	[event-type="beach"] & {
+	[event-type="beach"] & &[event-type="Beach"],
+	[event-type="Beach"] & {
 		--theme_color-500: #{$beach-500};
 		--theme_color-200: #{$beach-200};
 		--theme_color-900: #{$beach-900};

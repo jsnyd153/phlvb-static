@@ -7,9 +7,9 @@
             const { listInstance } = filtersInstance;
             const [firstItem] = listInstance.items;
             const itemTemplateElement = firstItem.element;
-            const products = await fetchProducts();
+            const events = await fetchEvents();
             listInstance.clearItems();
-            const newItems = products.map((product) => createItem(product, itemTemplateElement));
+            const newItems = events.map((event) => createItem(event, itemTemplateElement));
             await listInstance.addItems(newItems);
             const filterTemplateElement = filtersInstance.form.querySelector('[data-element="filter"]');
             if (!filterTemplateElement)
@@ -18,7 +18,7 @@
             if (!filtersWrapper)
                 return;
             filterTemplateElement.remove();
-            const categories = collectCategories(products);
+            const categories = collectCategories(events);
             for (const category of categories) {
                 const newFilter = createFilter(category, filterTemplateElement);
                 if (!newFilter)
@@ -28,28 +28,32 @@
             filtersInstance.storeFiltersData();
         },
     ]);
-    const fetchProducts = async () => {
+    const fetchEvents = async () => {
         try {
-            const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIDataEdit.json');
-            const data = await response.json();
-            return data;
+            const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIData.json');
+            const jsonData = await response.json();
+            const results = jsonData && jsonData.result && Array.isArray(jsonData.result)
+                ? jsonData.result
+                : [];
+            return results;
         }
         catch (error) {
+            console.error('Error fetching events:', error);
             return [];
         }
     };
-    const createItem = (product, templateElement) => {
+    const createItem = (event, templateElement) => {
         const newItem = templateElement.cloneNode(true);
-        const genderType = product.data.genderID === 0 ? "All" :
-            product.data.genderID === 1 ? "Men's" :
-                product.data.genderID === 2 ? "Women's" :
+        const genderType = event.data.genderID === 0 ? "Coed" :
+            event.data.genderID === 1 ? "Women's" :
+                event.data.genderID === 2 ? "Men's" :
                     "Unknown";
-        const eventType = product.data.sportName === "Volleyball" ? "Indoor" :
-            product.data.sportName === "Indoor Volleyball" ? "Indoor" :
-                product.data.sportName === "Grass Volleyball" ? "Grass" :
-                    product.data.sportName === "Beach Volleyball" ? "Beach" :
+        const eventType = event.data.sportName === "Volleyball" ? "Indoor" :
+            event.data.sportName === "Indoor Volleyball" ? "Indoor" :
+                event.data.sportName === "Grass Volleyball" ? "Grass" :
+                    event.data.sportName === "Beach Volleyball" ? "Beach" :
                         "Unknown";
-        const startDateTime = new Date(product.start);
+        const startDateTime = new Date(event.start);
         const startFormatted = new Intl.DateTimeFormat('en-US', {
             weekday: 'long',
             month: 'short',
@@ -58,7 +62,7 @@
             minute: 'numeric',
             hour12: true
         }).format(startDateTime);
-        const endDateTime = new Date(product.end);
+        const endDateTime = new Date(event.end);
         const endFormatted = new Intl.DateTimeFormat('en-US', {
             hour: 'numeric',
             minute: 'numeric',
@@ -66,7 +70,7 @@
         }).format(endDateTime);
         const formattedDate = `${startFormatted} - ${endFormatted}`;
         const dayofWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(startDateTime);
-        const eventURL = 'https://opensports.net/posts/' + product.aliasID;
+        const eventURL = 'https://opensports.net/posts/' + event.aliasID;
         const date = newItem.querySelector('[data-element="date"]');
         const title = newItem.querySelector('[data-element="title"]');
         const category = newItem.querySelector('[data-element="category"]');
@@ -80,13 +84,13 @@
         if (date)
             date.textContent = formattedDate;
         if (title)
-            title.textContent = product.title;
+            title.textContent = event.title;
         if (category)
-            category.textContent = product.category;
+            category.textContent = event.category;
         if (description)
-            description.textContent = product.description;
+            description.textContent = event.description;
         if (level)
-            level.textContent = product.data.level.title;
+            level.textContent = event.data.level.title;
         if (type)
             type.textContent = eventType;
         if (gender)
@@ -94,16 +98,16 @@
         if (day)
             day.textContent = dayofWeek;
         if (location)
-            location.textContent = product.place.title;
+            location.textContent = event.place.title;
         if (link)
             link.href = eventURL;
         if (link)
             link.setAttribute('event-type', eventType);
         return newItem;
     };
-    const collectCategories = (products) => {
+    const collectCategories = (events) => {
         const categories = new Set();
-        for (const { category } of products) {
+        for (const { category } of events) {
             categories.add(category);
         }
         return [...categories];

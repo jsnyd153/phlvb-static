@@ -6,17 +6,17 @@
  color: #213d85;
  --_theme_color-500: var(--theme_color-500);
 }
-.card[event-type=grass], [event-type=grass] .card {
+.card[event-type=grass], [event-type=grass] .card, .card[event-type=Grass], [event-type=Grass] .card {
  --theme_color-500: #94d13d;
  --theme_color-200: #d1f095;
  --theme_color-900: #3b520e;
 }
-.card[event-type=indoor], [event-type=indoor] .card {
+.card[event-type=indoor], [event-type=indoor] .card, .card[event-type=Indoor], [event-type=Indoor] .card {
  --theme_color-500: #f16122;
  --theme_color-200: #f0c4b5;
  --theme_color-900: #592817;
 }
-.card[event-type=beach], [event-type=beach] .card {
+.card[event-type=beach], [event-type=beach] .card .card[event-type=Beach], [event-type=Beach] .card {
  --theme_color-500: #f9d452;
  --theme_color-200: #f0e6b5;
  --theme_color-900: #625619;

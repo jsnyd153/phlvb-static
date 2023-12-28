@@ -1,7 +1,7 @@
 
 
 import type { CMSFilters } from '../../types/CMSFilters';
-import type { Product } from './types';
+import type { Event } from './types';
 
 
 (() => {
@@ -23,13 +23,13 @@ window.fsAttributes.push([
     const itemTemplateElement = firstItem.element;
 
     // Fetch external data
-    const products = await fetchProducts();
+    const events = await fetchEvents();
 
     // Remove existing items
     listInstance.clearItems();
 
     // Create the new items
-    const newItems = products.map((product) => createItem(product, itemTemplateElement));
+    const newItems = events.map((event) => createItem(event, itemTemplateElement));
 
     // Populate the list
     await listInstance.addItems(newItems);
@@ -46,7 +46,7 @@ window.fsAttributes.push([
     filterTemplateElement.remove();
 
     // Collect the categories
-    const categories = collectCategories(products);
+    const categories = collectCategories(events);
 
     // Create the new filters and append the to the parent wrapper
     for (const category of categories) {
@@ -62,28 +62,45 @@ window.fsAttributes.push([
 ]);
 
 /**
- * Fetches fake products from Fake Store API.
- * @returns An array of {@link Product}.
+ * Fetches fake events from Fake Store API.
+ * @returns An array of {@link Event}.
  */
-const fetchProducts = async () => {
-  try {
-    const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIDataEdit.json');
-    const data: Product[] = await response.json();
+// const fetchEvents = async () => {
+//   try {
+//     const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIData.json');
+//     const data: Event[] = await response.json();
 
-    return data;
+//     return data;
+//   } catch (error) {
+//     return [];
+//   }
+// };
+
+const fetchEvents = async (): Promise<Event[]> => {
+  try {
+    const response = await fetch('https://main--phlvb-static.netlify.app/attributes-examples-master/staticAPIData.json');
+    const jsonData = await response.json();
+
+    // Check if the "result" property exists and is an array
+    const results = jsonData && jsonData.result && Array.isArray(jsonData.result)
+      ? jsonData.result
+      : [];
+
+    return results;
   } catch (error) {
+    console.error('Error fetching events:', error);
     return [];
   }
 };
 
 /**
  * Creates an item from the template element.
- * @param product The product data to create the item from.
+ * @param event The event data to create the item from.
  * @param templateElement The template element.
  *
  * @returns A new Collection Item element.
  */
-const createItem = (product: Product, templateElement: HTMLDivElement) => {
+const createItem = (event: Event, templateElement: HTMLDivElement) => {
   // Clone the template element
   const newItem = templateElement.cloneNode(true) as HTMLDivElement;
 
@@ -92,25 +109,25 @@ const createItem = (product: Product, templateElement: HTMLDivElement) => {
   
 //Map the values of genderID to the text values
   const genderType =
-  product.data.genderID === 0 ? "All" :
-  product.data.genderID === 1 ? "Men's" :
-  product.data.genderID === 2 ? "Women's" :
+  event.data.genderID === 0 ? "Coed" :
+  event.data.genderID === 1 ? "Women's" :
+  event.data.genderID === 2 ? "Men's" :
   "Unknown";
 
 
 //Map the values of genderID to the text values
     const eventType =
-    product.data.sportName === "Volleyball" ? "Indoor" :
-    product.data.sportName === "Indoor Volleyball" ? "Indoor" :
-    product.data.sportName === "Grass Volleyball" ? "Grass" :
-    product.data.sportName === "Beach Volleyball" ? "Beach" :
+    event.data.sportName === "Volleyball" ? "Indoor" :
+    event.data.sportName === "Indoor Volleyball" ? "Indoor" :
+    event.data.sportName === "Grass Volleyball" ? "Grass" :
+    event.data.sportName === "Beach Volleyball" ? "Beach" :
     "Unknown";
   
 
 
 
 //start formated with day and month
-const startDateTime = new Date(product.start);
+const startDateTime = new Date(event.start);
   const startFormatted = new Intl.DateTimeFormat('en-US', {
     weekday: 'long',
     month: 'short',
@@ -120,7 +137,7 @@ const startDateTime = new Date(product.start);
     hour12: true
   }).format(startDateTime);
 //Just the time for end
-const endDateTime = new Date(product.end);
+const endDateTime = new Date(event.end);
   const endFormatted = new Intl.DateTimeFormat('en-US', {
     hour: 'numeric',
     minute: 'numeric',
@@ -134,7 +151,7 @@ const endDateTime = new Date(product.end);
   const dayofWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(startDateTime);
 
   //create full URL from post aliasID
-  const eventURL = 'https://opensports.net/posts/' + product.aliasID;
+  const eventURL = 'https://opensports.net/posts/' + event.aliasID;
   
 
   // Query inner elements to modify
@@ -152,29 +169,29 @@ const endDateTime = new Date(product.end);
   // Populate inner elements
   //check if they exist first, set the content if they do
   if (date) date.textContent = formattedDate;
-  if (title) title.textContent = product.title;
-  if (category) category.textContent = product.category;
-  if (description) description.textContent = product.description;
-  if (level) level.textContent = product.data.level.title;
+  if (title) title.textContent = event.title;
+  if (category) category.textContent = event.category;
+  if (description) description.textContent = event.description;
+  if (level) level.textContent = event.data.level.title;
   if (type) type.textContent = eventType;
   if (gender) gender.textContent = genderType;
   if (day) day.textContent = dayofWeek;
-  if (location) location.textContent = product.place.title;
+  if (location) location.textContent = event.place.title;
   if (link) link.href = eventURL;
   if (link) link.setAttribute('event-type',eventType)
   return newItem;
 };
 
 /**
- * Collects all the categories from the products' data.
- * @param products The products' data.
+ * Collects all the categories from the events' data.
+ * @param events The events' data.
  *
- * @returns An array of {@link Product} categories.
+ * @returns An array of {@link Event} categories.
  */
-const collectCategories = (products: Product[]) => {
-  const categories: Set<Product['category']> = new Set();
+const collectCategories = (events: Event[]) => {
+  const categories: Set<Event['category']> = new Set();
 
-  for (const { category } of products) {
+  for (const { category } of events) {
     categories.add(category);
   }
 
@@ -188,7 +205,7 @@ const collectCategories = (products: Product[]) => {
  *
  * @returns A new category radio filter.
  */
-const createFilter = (category: Product['category'], templateElement: HTMLLabelElement) => {
+const createFilter = (category: Event['category'], templateElement: HTMLLabelElement) => {
   // Clone the template element
   const newFilter = templateElement.cloneNode(true) as HTMLLabelElement;
 
